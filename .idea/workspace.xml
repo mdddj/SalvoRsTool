@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c8a435aa-927d-4af9-a94d-1e60e75f41b2" name="更改" comment="">
+      <change afterPath="$PROJECT_DIR$/.run/Run IDE with Plugin.run.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/GenerateDtoAction.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/GenerateRouterAction.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/GenerateServiceAction.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateDtoDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateRouterDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateServiceDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/i18n/MyPluginBundle.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/model/GenerateDtoConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/ExtendedFuntions.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/MyRsPsiElementManager.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/MyRsPsiFactory.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/Tools.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/widget/RsEditor.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/pluginIcon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/intentionDescriptions/GenerateDtosIntention/description.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_ar.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_de.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_en.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_fr.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_hk.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_it.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_ja.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_ko.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_nl.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_pl.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_pt.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_ru.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../FlutterX" beforeDir="false" afterPath="$PROJECT_DIR$/../FlutterX" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GSYVideoPlayer" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alibabacloud-push-flutter-plugin" beforeDir="false" afterPath="$PROJECT_DIR$/../alibabacloud-push-flutter-plugin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/actions/part.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/actions/part.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/actions/video.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/actions/video.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/api/part.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/api/part.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/models/fs_list.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/models/fs_list.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/models/fs_list.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/models/fs_list.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/provider/sites_provider.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/provider/sites_provider.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/provider/sites_provider.g.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/provider/sites_provider.g.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/tool/dialog.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/tool/dialog.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/ui/part.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/ui/part.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/ui/right_menu.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/ui/right_menu.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/ui/theme.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/ui/theme.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/widget/file_select_tree.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/widget/file_select_tree.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/widget/files.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/widget/files.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/widget/files_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/widget/files_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/lib/widget/main_toolbar.dart" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/lib/widget/main_toolbar.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/linux/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/linux/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/linux/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/macos/Flutter/GeneratedPluginRegistrant.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/macos/Podfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/macos/Podfile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/windows/flutter/generated_plugin_registrant.cc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../alist_app/windows/flutter/generated_plugins.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../alist_app/windows/flutter/generated_plugins.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../android-spreadsheet" beforeDir="false" afterPath="$PROJECT_DIR$/../android-spreadsheet" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/CHANGELOG.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/src/main/kotlin/com/example/example/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/src/main/res/values-night/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Flutter/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Flutter/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Podfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Podfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/Runner/Runner-Bridging-Header.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/ios/RunnerTests/RunnerTests.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/linux/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/linux/flutter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/linux/flutter/generated_plugin_registrant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/linux/flutter/generated_plugins.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/linux/main.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/linux/my_application.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/linux/my_application.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Flutter/Flutter-Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Flutter/Flutter-Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Podfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Podfile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Base.lproj/MainMenu.xib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Configs/AppInfo.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Configs/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Configs/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Configs/Warnings.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/DebugProfile.entitlements" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/MainFlutterWindow.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/Runner/Release.entitlements" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/macos/RunnerTests/RunnerTests.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/test/widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/web/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/web/icons/Icon-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/web/icons/Icon-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/web/icons/Icon-maskable-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/web/icons/Icon-maskable-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/web/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/flutter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/flutter/generated_plugin_registrant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/flutter/generated_plugins.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/runner/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/runner/Runner.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/runner/flutter_window.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/runner/flutter_window.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/runner/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/runner/resource.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/runner/resources/app_icon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/runner/runner.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/runner/utils.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/runner/utils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/runner/win32_window.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/example/windows/runner/win32_window.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/flutter_rust_bridge.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/lib/aria2_plugin.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/lib/model/aria_detail.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/lib/model/aria_detail.freezed.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/lib/model/aria_detail.g.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/lib/src/rust/api/aria.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/lib/src/rust/api/aria.freezed.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/lib/src/rust/frb_generated.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/lib/src/rust/frb_generated.io.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/lib/src/rust/frb_generated.web.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust/Cargo.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust/Cargo.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust/src/api/aria.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust/src/api/mod.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust/src/frb_generated.io.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust/src/frb_generated.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust/src/frb_generated.web.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust/src/lib.rs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/android/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_pod.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/bin/build_tool.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/build_tool.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/android_environment.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/artifacts_provider.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/build_cmake.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/build_gradle.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/build_pod.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/build_tool.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/builder.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/cargo.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/crate_hash.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/environment.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/logging.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/options.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/precompile_binaries.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/rustup.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/target.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/util.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/lib/src/verify_binaries.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/build_tool/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/cmake/cargokit.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/cmake/resolve_symlinks.ps1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/gradle/plugin.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/run_build_tool.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/cargokit/run_build_tool.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/ios/Classes/dummy_file.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/ios/rust_lib_aria2_plugin.podspec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/linux/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/macos/Classes/dummy_file.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/macos/rust_lib_aria2_plugin.podspec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/rust_builder/windows/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../aria2_plugin/test_driver/integration_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog" beforeDir="false" afterPath="$PROJECT_DIR$/../blog" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../blog_kotlin_api" beforeDir="false" afterPath="$PROJECT_DIR$/../blog_kotlin_api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../configurable_expansion_tile" beforeDir="false" afterPath="$PROJECT_DIR$/../configurable_expansion_tile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd_check_plugin" beforeDir="false" afterPath="$PROJECT_DIR$/../dd_check_plugin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd_flutter_idea_plugin" beforeDir="false" afterPath="$PROJECT_DIR$/../dd_flutter_idea_plugin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd_kotlin_util" beforeDir="false" afterPath="$PROJECT_DIR$/../dd_kotlin_util" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dd_server_admin" beforeDir="false" afterPath="$PROJECT_DIR$/../dd_server_admin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ddblog_by_uniapp" beforeDir="false" afterPath="$PROJECT_DIR$/../ddblog_by_uniapp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../devtools" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../fbroadcast" beforeDir="false" afterPath="$PROJECT_DIR$/../fbroadcast" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ffloat" beforeDir="false" afterPath="$PROJECT_DIR$/../ffloat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flui" beforeDir="false" afterPath="$PROJECT_DIR$/../flui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter-intellij" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter-intellij" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter-music-player" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter-music-player" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter_bluetooth_serial" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter_bluetooth_serial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter_bugly" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter_bugly" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter_mall" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter_network_connection" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter_network_connection" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter_shop" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter_shop" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter_swiper_null_safety" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter_swiper_null_safety" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter_ume" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter_ume" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter_websocket" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter_websocket" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../flutter_websocket_plugin" beforeDir="false" afterPath="$PROJECT_DIR$/../flutter_websocket_plugin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/src/main/kotlin/com/example/freezed_bug/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/src/main/res/drawable-v21/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/src/main/res/values-night/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Flutter/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Flutter/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/Runner/Runner-Bridging-Header.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/ios/RunnerTests/RunnerTests.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/linux/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/linux/flutter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/linux/flutter/generated_plugin_registrant.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/linux/flutter/generated_plugin_registrant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/linux/flutter/generated_plugins.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/linux/main.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/linux/my_application.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/linux/my_application.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Flutter/Flutter-Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Flutter/Flutter-Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Flutter/GeneratedPluginRegistrant.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_1024.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_16.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_256.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_32.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Assets.xcassets/AppIcon.appiconset/app_icon_64.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Base.lproj/MainMenu.xib" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Configs/AppInfo.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Configs/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Configs/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Configs/Warnings.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/DebugProfile.entitlements" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/MainFlutterWindow.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/Runner/Release.entitlements" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/macos/RunnerTests/RunnerTests.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/test/widget_test.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/web/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/web/icons/Icon-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/web/icons/Icon-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/web/icons/Icon-maskable-192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/web/icons/Icon-maskable-512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/web/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/web/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/flutter/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/flutter/generated_plugin_registrant.cc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/flutter/generated_plugin_registrant.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/flutter/generated_plugins.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/runner/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/runner/Runner.rc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/runner/flutter_window.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/runner/flutter_window.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/runner/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/runner/resource.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/runner/resources/app_icon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/runner/runner.exe.manifest" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/runner/utils.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/runner/utils.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/runner/win32_window.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../freezed_bug/windows/runner/win32_window.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../girlmerry_app_test_center" beforeDir="false" afterPath="$PROJECT_DIR$/../girlmerry_app_test_center" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../hive" beforeDir="false" afterPath="$PROJECT_DIR$/../hive" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intellij-community" beforeDir="false" afterPath="$PROJECT_DIR$/../intellij-community" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../intellij-plugins" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loader" beforeDir="false" afterPath="$PROJECT_DIR$/../loader" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loading_more_list" beforeDir="false" afterPath="$PROJECT_DIR$/../loading_more_list" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../loading_more_list_library" beforeDir="false" afterPath="$PROJECT_DIR$/../loading_more_list_library" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../music_flutter" beforeDir="false" afterPath="$PROJECT_DIR$/../music_flutter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../openssl" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../pull_to_refresh_notification" beforeDir="false" afterPath="$PROJECT_DIR$/../pull_to_refresh_notification" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../py12306" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rsmpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../rtmpdump" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../saver_gallery" beforeDir="false" afterPath="$PROJECT_DIR$/../saver_gallery" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shangmi_scan_data_flutter" beforeDir="false" afterPath="$PROJECT_DIR$/../shangmi_scan_data_flutter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../shopKotlinApi/dd_shop_kotlin_api" beforeDir="false" afterPath="$PROJECT_DIR$/../shopKotlinApi/dd_shop_kotlin_api" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../simple_shop_v2" beforeDir="false" afterPath="$PROJECT_DIR$/../simple_shop_v2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_player_rtmp_ext" beforeDir="false" afterPath="$PROJECT_DIR$/../video_player_rtmp_ext" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../video_stream_rtmp" beforeDir="false" afterPath="$PROJECT_DIR$/../video_stream_rtmp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../wakelock" beforeDir="false" afterPath="$PROJECT_DIR$/../wakelock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../xindalu_scan_flutter" beforeDir="false" afterPath="$PROJECT_DIR$/../xindalu_scan_flutter" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../youtube_player_flutter" beforeDir="false" afterPath="$PROJECT_DIR$/../youtube_player_flutter" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation>
+            <after_sync>
+              <task name="setupDependencies" />
+            </after_sync>
+          </activation>
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="intellij" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="InspectionDescription" />
+        <option value="Kotlin Object" />
+        <option value="Kotlin Class" />
+        <option value="Action" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="2elLWTYsSFV5Zc1TqTvSGZ7GKTD" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build SalvoRsTool.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Run Plugin.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.SalvoRsTool [buildPlugin].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SalvoRsTool [publishPlugin].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SalvoRsTool [setupDependencies].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SalvoRsTool [signPlugin].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.构建 SalvoRsTool.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/hlx/github/SalvoRsTool/src/main/resources/META-INF&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;kotlin-gradle-user-dirs&quot;: [
+      &quot;/Users/ldd/.gradle&quot;
+    ]
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/META-INF" />
+      <recent name="$PROJECT_DIR$/src/main/resources/messages" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Gradle.SalvoRsTool [buildPlugin]">
+    <configuration name="SalvoRsTool [buildPlugin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="buildPlugin" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SalvoRsTool [publishPlugin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="publishPlugin" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="SalvoRsTool [signPlugin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="signPlugin" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Gradle.SalvoRsTool [buildPlugin]" />
+        <item itemvalue="Gradle.SalvoRsTool [signPlugin]" />
+        <item itemvalue="Gradle.SalvoRsTool [publishPlugin]" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9f38398b9061-18abd8497189-intellij.indexing.shared.core-IU-241.14494.240" />
+        <option value="bundled-js-predefined-1d06a55b98c1-74d2a5396914-JavaScript-IU-241.14494.240" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
+    <option name="myConnectionId" value="" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>$USER_HOME$/.subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c8a435aa-927d-4af9-a94d-1e60e75f41b2" name="更改" comment="" />
+      <created>1705627167566</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1705627167566</updated>
+      <workItem from="1705627168581" duration="497000" />
+      <workItem from="1712474251275" duration="424000" />
+      <workItem from="1712474684435" duration="879000" />
+      <workItem from="1712478122024" duration="5775000" />
+      <workItem from="1712483939034" duration="193000" />
+      <workItem from="1712484135334" duration="281000" />
+      <workItem from="1712484422544" duration="56000" />
+      <workItem from="1712484483425" duration="457000" />
+      <workItem from="1712537707947" duration="25837000" />
+      <workItem from="1712577777502" duration="4541000" />
+      <workItem from="1712624308617" duration="49000" />
+      <workItem from="1712716435337" duration="282000" />
+      <workItem from="1712716727372" duration="1217000" />
+      <workItem from="1712717951747" duration="3223000" />
+      <workItem from="1712721199948" duration="293000" />
+      <workItem from="1712721508201" duration="740000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

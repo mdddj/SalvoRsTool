@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ResourceBundleManager">
+    <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_ar.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_de.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_en.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_fr.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_hk.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_it.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_ja.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_ko.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_nl.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_pl.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_pt.properties" />
+    <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_ru.properties" />
+    <custom-resource-bundle>
+      <file value="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle.properties" />
+      <base-name>pluginBundle</base-name>
+    </custom-resource-bundle>
+  </component>
+</project>

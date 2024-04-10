@@ -1,0 +1,25 @@
+<idea-plugin>
+    <id>shop.itbug.SalvoRsTool</id>
+    <name>SalvoRsTool</name>
+    <vendor email="hlxsmail@gmail.com" url="https://itbug.shop">梁典典</vendor>
+    <description><![CDATA[
+    The Salvo Generator plugin offers rapid and efficient generation of Salvo framework code within IntelliJ IDEA, greatly simplifying the development process and enhancing productivity
+  ]]></description>
+    <depends>com.intellij.modules.platform</depends>
+    <depends>com.jetbrains.rust</depends>
+    <resource-bundle>messages.pluginBundle</resource-bundle>
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+        <action id="GenerateDtoAction" class="shop.itbug.salvorstool.action.GenerateDtoAction">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+        <action id="GenerateServiceAction" class="shop.itbug.salvorstool.action.GenerateServiceAction">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+        <action id="GenerateRouterAction" class="shop.itbug.salvorstool.action.GenerateRouterAction" >
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+</idea-plugin>
