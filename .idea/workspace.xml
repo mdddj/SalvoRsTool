@@ -5,43 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8a435aa-927d-4af9-a94d-1e60e75f41b2" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.run/Run IDE with Plugin.run.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/GenerateDtoAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/GenerateRouterAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/GenerateServiceAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateDtoDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateRouterDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateServiceDialog.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/i18n/MyPluginBundle.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/model/GenerateDtoConfig.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/ExtendedFuntions.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/MyRsPsiElementManager.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/MyRsPsiFactory.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/Tools.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/widget/RsEditor.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/pluginIcon.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/intentionDescriptions/GenerateDtosIntention/description.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_ar.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_de.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_en.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_fr.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_hk.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_it.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_ja.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_ko.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_nl.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_pl.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_pt.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/messages/pluginBundle_ru.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../FlutterX" beforeDir="false" afterPath="$PROJECT_DIR$/../FlutterX" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GSYVideoPlayer" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../alibabacloud-push-flutter-plugin" beforeDir="false" afterPath="$PROJECT_DIR$/../alibabacloud-push-flutter-plugin" afterDir="false" />
@@ -490,6 +454,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "mdddj"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "git@github.com:mdddj/SalvoRsTool.git",
+    "accountId": "067b9acb-12e5-425a-8f7a-8cf428fdb9a1"
+  }
+}]]></component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
@@ -507,47 +483,48 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Gradle.Build SalvoRsTool.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Run Plugin.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.SalvoRsTool [buildPlugin].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [publishPlugin].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [setupDependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [signPlugin].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.构建 SalvoRsTool.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hlx/github/SalvoRsTool/src/main/resources/META-INF&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.Build SalvoRsTool.executor": "Run",
+    "Gradle.Run Plugin.executor": "Debug",
+    "Gradle.SalvoRsTool [buildPlugin].executor": "Run",
+    "Gradle.SalvoRsTool [publishPlugin].executor": "Run",
+    "Gradle.SalvoRsTool [setupDependencies].executor": "Run",
+    "Gradle.SalvoRsTool [signPlugin].executor": "Run",
+    "Gradle.构建 SalvoRsTool.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/hlx/github/SalvoRsTool/src/main/resources/META-INF",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "项目",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "File.Encoding",
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;kotlin-gradle-user-dirs&quot;: [
-      &quot;/Users/ldd/.gradle&quot;
+  "keyToStringList": {
+    "kotlin-gradle-user-dirs": [
+      "/Users/ldd/.gradle"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/META-INF" />
       <recent name="$PROJECT_DIR$/src/main/resources/messages" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SalvoRsTool [buildPlugin]">
+  <component name="RunManager" selected="Gradle.Run Plugin">
     <configuration name="SalvoRsTool [buildPlugin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -661,12 +638,15 @@
       <workItem from="1712716727372" duration="1217000" />
       <workItem from="1712717951747" duration="3223000" />
       <workItem from="1712721199948" duration="293000" />
-      <workItem from="1712721508201" duration="740000" />
+      <workItem from="1712721508201" duration="2558000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
