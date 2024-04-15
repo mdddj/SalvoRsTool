@@ -92,7 +92,7 @@ pub async fn add_$tabName(req: $structName) -> AppResult<$responseName> {
     let model = $tabName::ActiveModel {
 $sb
     };
-    let result = ${tabName.capitalizeFirstLetter()}::insert(model).exec(db).await?;
+    let result = ${tabName.underlineToCamel.capitalizeFirstLetter()}::insert(model).exec(db).await?;
     Ok($responseName {
         ${primaryField.myManager.name}: result.last_insert_id,
 $fsb
@@ -138,9 +138,9 @@ pub async fn update_$tabName(req: $structName) -> AppResult<$responseName> {
         .get()
         .ok_or(anyhow::anyhow!("Database connection failed."))?;
 
-    let find = ${tabName.capitalizeFirstLetter()}::find_by_id(req.${primaryField.myManager.name}).one(db).await?;
+    let find = ${tabName.underlineToCamel.capitalizeFirstLetter()}::find_by_id(req.${primaryField.myManager.name}).one(db).await?;
     if find.is_none() {
-        return Err(anyhow::anyhow!("${tabName.capitalizeFirstLetter()} does not exist.").into());
+        return Err(anyhow::anyhow!("${tabName.underlineToCamel.capitalizeFirstLetter()} does not exist.").into());
     }
     let mut model: $tabName::ActiveModel = find.unwrap().into();
 
@@ -169,7 +169,7 @@ $fsb
      let db = DB
          .get()
          .ok_or(anyhow::anyhow!("Database connection failed."))?;
-     ${tabName.capitalizeFirstLetter()}::delete_by_id(${primaryField.myManager.name}).exec(db).await?;
+     ${tabName.underlineToCamel.capitalizeFirstLetter()}::delete_by_id(${primaryField.myManager.name}).exec(db).await?;
      Ok(())
  }
          """.trimIndent()
@@ -195,7 +195,7 @@ pub async fn ${tabName+"_find_all"}() -> AppResult<Vec<$typeStructName>> {
     let db = DB
         .get()
         .ok_or(anyhow::anyhow!("Database connection failed."))?;
-    let $tabName = ${tabName.capitalizeFirstLetter()}::find().all(db).await?;
+    let $tabName = ${tabName.underlineToCamel.capitalizeFirstLetter()}::find().all(db).await?;
     let res = $tabName
         .into_iter()
         .map(|r| $typeStructName {

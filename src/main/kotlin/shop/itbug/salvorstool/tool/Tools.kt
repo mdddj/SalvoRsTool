@@ -82,7 +82,7 @@ object Tools {
             };
             use sea_orm::{ActiveModelTrait, ColumnTrait, EntityTrait, QueryFilter, Set, NotSet};
             use crate::dtos::$tabName::*;
-            use crate::entities::prelude::${tabName.capitalizeFirstLetter()};
+            use crate::entities::prelude::${tabName.underlineToCamel.capitalizeFirstLetter()};
         """.trimIndent()
     }
 
