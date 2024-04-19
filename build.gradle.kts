@@ -48,7 +48,10 @@ tasks {
     }
 
     publishPlugin {
-        token.set(pushToken)
+        if(pushToken != null) {
+            token.set(pushToken)
+        }
+
     }
 
     runIde {
