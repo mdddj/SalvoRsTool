@@ -41,11 +41,11 @@ tasks {
         """.trimIndent())
     }
 
-    signPlugin {
-        certificateChainFile.set(file("chain.crt"))
-        privateKeyFile.set(file("private.key"))
-        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
-    }
+//    signPlugin {
+//        certificateChainFile.set(file("chain.crt"))
+//        privateKeyFile.set(file("private.key"))
+//        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
+//    }
 
 //    publishPlugin {
 //        if(pushToken != null) {
