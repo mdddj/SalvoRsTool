@@ -1,27 +1,26 @@
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.9.22"
     id("org.jetbrains.intellij") version "1.17.2"
+    id("org.jetbrains.changelog") version "1.3.1"
 }
 
 group = "shop.itbug"
-version = "1.0-SNAPSHOT"
+version = "1.1.2"
 
 repositories {
     mavenCentral()
 }
 
-// Configure Gradle IntelliJ Plugin
-// Read more: https://plugins.jetbrains.com/docs/intellij/tools-gradle-intellij-plugin.html
+//
 intellij {
     version.set("LATEST-EAP-SNAPSHOT")
-    type.set("RR") // Target IDE Platform
+    type.set("RR")
     plugins.set(listOf("com.jetbrains.rust"))
 }
 
-val pushToken: String? = System.getenv("idea_push_token")
+val pushToken: String? = System.getenv("PUBLISH_TOKEN")
 
 tasks {
-    // Set the JVM compatibility versions
     withType<JavaCompile> {
         sourceCompatibility = "17"
         targetCompatibility = "17"
@@ -33,16 +32,28 @@ tasks {
     patchPluginXml {
         sinceBuild.set("232")
         untilBuild.set("242.*")
+        changeNotes.set("""
+            <div>
+            <h1>1.1.0</h1>
+            <p>
+            Optimize the presentation of underlined database table names, which will be changed to camel case naming method
+            </p>
+            </div>
+        """.trimIndent())
     }
 
     signPlugin {
-        certificateChainFile.set(file("chain.crt"))
-        privateKeyFile.set(file("private.key"))
+//        certificateChainFile.set(file("chain.crt"))
+//        privateKeyFile.set(file("private.key"))
+        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
+        privateKey.set(System.getenv("PRIVATE_KEY"))
         password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
     }
 
     publishPlugin {
-        token.set(pushToken)
+        if(pushToken != null) {
+            token.set(pushToken)
+        }
     }
 
     runIde {

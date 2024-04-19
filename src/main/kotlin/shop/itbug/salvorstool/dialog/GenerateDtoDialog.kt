@@ -25,6 +25,7 @@ import shop.itbug.salvorstool.i18n.MyI18n
 import shop.itbug.salvorstool.tool.MyRsPsiFactory
 import shop.itbug.salvorstool.tool.Tools
 import shop.itbug.salvorstool.tool.myManager
+import shop.itbug.salvorstool.tool.underlineToCamel
 import shop.itbug.salvorstool.widget.RsEditor
 import java.awt.Dimension
 import java.util.*
@@ -48,10 +49,11 @@ enum class GenerateDtoDialogResultEnum {
 
 ///获取struct名称,例如: "user"表名字,生成对象的名称:"UserAddRequest"
 fun GenerateDtoDialogResultEnum.getStructName(sqlTableName: String): String {
+
     return when (this) {
-        GenerateDtoDialogResultEnum.AddRequest -> sqlTableName + "AddRequest"
-        GenerateDtoDialogResultEnum.UpdateRequest -> sqlTableName + "UpdateRequest"
-        GenerateDtoDialogResultEnum.Response -> sqlTableName + "Response"
+        GenerateDtoDialogResultEnum.AddRequest -> sqlTableName.underlineToCamel + "AddRequest"
+        GenerateDtoDialogResultEnum.UpdateRequest -> sqlTableName.underlineToCamel + "UpdateRequest"
+        GenerateDtoDialogResultEnum.Response -> sqlTableName.underlineToCamel + "Response"
     }.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
 }
 

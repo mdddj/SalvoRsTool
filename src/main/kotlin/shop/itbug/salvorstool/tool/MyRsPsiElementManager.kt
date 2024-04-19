@@ -15,7 +15,7 @@ class MyRsPsiElementManager(context: PsiElement) {
 }
 
 /// struct操作管理
-class MyRsStructManager(val psiElement: RsStructItemImpl) {
+class MyRsStructManager(private val psiElement: RsStructItemImpl) {
 
 
     ///属性列表
@@ -40,7 +40,7 @@ class MyRsStructManager(val psiElement: RsStructItemImpl) {
 }
 
 
-
+///
 
 
 ///属性处理
