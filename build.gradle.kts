@@ -47,12 +47,12 @@ tasks {
         password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
     }
 
-    publishPlugin {
-        if(pushToken != null) {
-            token.set(pushToken)
-        }
-
-    }
+//    publishPlugin {
+//        if(pushToken != null) {
+//            token.set(pushToken)
+//        }
+//
+//    }
 
     runIde {
         jvmArgs = listOf("-XX:+AllowEnhancedClassRedefinition")
