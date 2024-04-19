@@ -1,6 +1,7 @@
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.9.22"
     id("org.jetbrains.intellij") version "1.17.2"
+    id("org.jetbrains.changelog") version "1.3.1"
 }
 
 group = "shop.itbug"
