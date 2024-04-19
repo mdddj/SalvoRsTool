@@ -5,12 +5,13 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "v1.1.1"
+version = "1.1.2"
 
 repositories {
     mavenCentral()
 }
 
+//
 intellij {
     version.set("LATEST-EAP-SNAPSHOT")
     type.set("RR")
