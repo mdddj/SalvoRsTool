@@ -17,7 +17,7 @@ intellij {
     plugins.set(listOf("com.jetbrains.rust"))
 }
 
-val pushToken: String? = System.getenv("idea_push_token")
+val pushToken: String? = System.getenv("PUBLISH_TOKEN")
 
 tasks {
     withType<JavaCompile> {
@@ -41,18 +41,19 @@ tasks {
         """.trimIndent())
     }
 
-//    signPlugin {
+    signPlugin {
 //        certificateChainFile.set(file("chain.crt"))
 //        privateKeyFile.set(file("private.key"))
-//        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
-//    }
+        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
+        privateKey.set(System.getenv("PRIVATE_KEY"))
+        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
+    }
 
-//    publishPlugin {
-//        if(pushToken != null) {
-//            token.set(pushToken)
-//        }
-//
-//    }
+    publishPlugin {
+        if(pushToken != null) {
+            token.set(pushToken)
+        }
+    }
 
     runIde {
         jvmArgs = listOf("-XX:+AllowEnhancedClassRedefinition")
