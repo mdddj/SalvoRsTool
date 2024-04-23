@@ -8,16 +8,13 @@ import org.rust.lang.RsLanguage
 import javax.swing.BorderFactory
 
 class RsEditor(project: Project, initText: String) : LanguageTextField(Language.findInstance(RsLanguage::class.java),project,initText,false) {
-    init {
-        border = BorderFactory.createEmptyBorder(0, 0, 0, 0)
-    }
 
     override fun createEditor(): EditorEx {
         return myCreateEditor(super.createEditor())
     }
 
 }
-private fun myCreateEditor(ex: EditorEx): EditorEx {
+ fun myCreateEditor(ex: EditorEx): EditorEx {
     ex.setVerticalScrollbarVisible(true)
     ex.setHorizontalScrollbarVisible(true)
     ex.setBorder(null)

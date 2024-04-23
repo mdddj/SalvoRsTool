@@ -7,6 +7,7 @@
   ]]></description>
     <depends>com.intellij.modules.platform</depends>
     <depends>com.jetbrains.rust</depends>
+    <depends>JavaScript</depends>
     <resource-bundle>messages.pluginBundle</resource-bundle>
     <extensions defaultExtensionNs="com.intellij">
     </extensions>
@@ -19,6 +20,10 @@
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
         <action id="GenerateRouterAction" class="shop.itbug.salvorstool.action.GenerateRouterAction" >
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
+        <action id="GenerateAntdFormAction" class="shop.itbug.salvorstool.action.GenerateAntdFormAction"
+                text="生成antd表单">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
     </actions>

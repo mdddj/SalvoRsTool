@@ -3,21 +3,19 @@ package shop.itbug.salvorstool.action
 import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
-import com.intellij.openapi.actionSystem.CommonDataKeys
-import org.rust.lang.core.psi.impl.RsStructItemImpl
 import shop.itbug.salvorstool.dialog.GenerateServiceDialog
 import shop.itbug.salvorstool.i18n.MyI18n
-import shop.itbug.salvorstool.tool.myManager
+import shop.itbug.salvorstool.tool.tryGetRsStructPsiElement
 
 class GenerateServiceAction : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
-        GenerateServiceDialog(e.project!!,e.getData(CommonDataKeys.PSI_ELEMENT) as RsStructItemImpl).show()
+        e.tryGetRsStructPsiElement()?.let {
+            GenerateServiceDialog(e.project!!, it).show()
+        }
     }
 
-
     override fun update(e: AnActionEvent) {
-        val psiElement = e.getData(CommonDataKeys.PSI_ELEMENT)
-        e.presentation.isVisible =  e.project != null && psiElement != null && psiElement.myManager.isStruct
+        e.presentation.isVisible = e.project != null && e.tryGetRsStructPsiElement() != null
         e.presentation.text = MyI18n.getMessage("g_service")
         super.update(e)
     }

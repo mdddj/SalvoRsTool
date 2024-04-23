@@ -5,17 +5,16 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "1.1.2"
+version = "1.3.0"
 
 repositories {
     mavenCentral()
 }
 
-//
 intellij {
     version.set("LATEST-EAP-SNAPSHOT")
     type.set("RR")
-    plugins.set(listOf("com.jetbrains.rust"))
+    plugins.set(listOf("com.jetbrains.rust","JavaScript"))
 }
 
 val pushToken: String? = System.getenv("PUBLISH_TOKEN")
@@ -32,19 +31,9 @@ tasks {
     patchPluginXml {
         sinceBuild.set("232")
         untilBuild.set("242.*")
-        changeNotes.set("""
-            <div>
-            <h1>1.1.0</h1>
-            <p>
-            Optimize the presentation of underlined database table names, which will be changed to camel case naming method
-            </p>
-            </div>
-        """.trimIndent())
     }
 
     signPlugin {
-//        certificateChainFile.set(file("chain.crt"))
-//        privateKeyFile.set(file("private.key"))
         certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
         privateKey.set(System.getenv("PRIVATE_KEY"))
         password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
@@ -60,4 +49,8 @@ tasks {
         jvmArgs = listOf("-XX:+AllowEnhancedClassRedefinition")
     }
 
+    dependencies {
+        implementation("com.alibaba.fastjson2:fastjson2-kotlin:2.0.49")
+        implementation("cn.hutool:hutool-extra:5.8.27")
+    }
 }
