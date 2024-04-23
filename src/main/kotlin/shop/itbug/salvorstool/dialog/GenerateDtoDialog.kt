@@ -107,7 +107,7 @@ fun GenerateDtoDialogParam.save(project: Project,psiElement: RsStructItemImpl) {
 
 
 ///生成dto对象
-class GenerateDtoDialog(private val project: Project,val  psiElement: RsStructItemImpl) : DialogWrapper(project) {
+class GenerateDtoDialog(private val project: Project, private val  psiElement: RsStructItemImpl) : DialogWrapper(project) {
 
     private val model = GenerateDtoDialogParam(
         addRequestText = MyRsPsiFactory.generateDto(GenerateDtoDialogResultEnum.AddRequest, psiElement),
