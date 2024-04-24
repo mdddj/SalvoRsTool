@@ -1,11 +1,12 @@
+
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.9.22"
     id("org.jetbrains.intellij") version "1.17.2"
-    id("org.jetbrains.changelog") version "1.3.1"
+    id("org.jetbrains.changelog") version "2.2.0"
 }
 
 group = "shop.itbug"
-version = "1.3.0"
+version = "1.3.3"
 
 repositories {
     mavenCentral()
@@ -49,8 +50,16 @@ tasks {
         jvmArgs = listOf("-XX:+AllowEnhancedClassRedefinition")
     }
 
-    dependencies {
-        implementation("com.alibaba.fastjson2:fastjson2-kotlin:2.0.49")
-        implementation("cn.hutool:hutool-extra:5.8.27")
+    test {
+        useJUnitPlatform()
     }
+}
+
+dependencies {
+    testImplementation(kotlin("test"))
+}
+
+changelog {
+    unreleasedTerm.set("Unreleased")
+    groups.empty()
 }

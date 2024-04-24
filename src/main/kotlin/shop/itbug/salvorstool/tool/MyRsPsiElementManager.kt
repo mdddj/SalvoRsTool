@@ -1,12 +1,9 @@
 package shop.itbug.salvorstool.tool
 
-import com.intellij.psi.PsiComment
 import com.intellij.psi.PsiElement
 import com.intellij.psi.impl.source.tree.PsiCommentImpl
 import com.intellij.psi.util.PsiTreeUtil
-import com.intellij.psi.util.firstLeaf
 import com.intellij.psi.util.lastLeaf
-import org.rust.lang.core.parser.RustDocTestInjectableParserDefinition
 import org.rust.lang.core.psi.RsMetaItem
 import org.rust.lang.core.psi.RsNamedFieldDecl
 import org.rust.lang.core.psi.RsOuterAttr
@@ -19,12 +16,14 @@ import org.rust.lang.core.psi.impl.RsStructItemImpl
 import org.rust.lang.doc.psi.RsDocTokenType
 import org.rust.lang.doc.psi.impl.RsDocCommentImpl
 
-val JavascriptType.typeScriptText get() = when (this) {
-    JavascriptType.Number -> "number"
-    JavascriptType.String -> "string"
-    JavascriptType.Bool -> "bool"
-    JavascriptType.Unknown -> "any"
-}
+val JavascriptType.typeScriptText
+    get() = when (this) {
+        JavascriptType.Number -> "number"
+        JavascriptType.String -> "string"
+        JavascriptType.Bool -> "bool"
+        JavascriptType.Unknown -> "any"
+    }
+
 //rs属性类型对应的js类型
 enum class JavascriptType {
     Number, String, Bool, Unknown
@@ -60,8 +59,19 @@ class MyRsStructManager(private val psiElement: RsStructItemImpl) {
     val primaryField = fieldList.find { it.myManager.isPrimaryKey }
 
     ///js 模型列表
-     val jsModelList: List<MyFieldPsiElementManager.JsModel> =
+    val jsModelList: List<MyFieldPsiElementManager.JsModel> =
         fieldList.mapNotNull { it.myManager.getJsModel }
+
+    ///获取ts模型
+    val getTSInterface: String get() {
+        val sb = StringBuilder()
+        sb.appendLine("interface PropInitValue {")
+        jsModelList.forEach {
+            sb.appendLine("\t\t${it.propTextString},")
+        }
+        sb.appendLine("}")
+        return sb.toString()
+    }
 
 }
 
@@ -81,12 +91,16 @@ class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
             //判断//
             val comm = PsiTreeUtil.getChildOfType(psiElement, PsiCommentImpl::class.java)
             if (comm != null) {
-                return comm.text.replace("//","")
+                return comm.text.replace("//", "")
             }
             val docPsi = PsiTreeUtil.getChildOfType(psiElement, RsDocCommentImpl::class.java)
             //判断///
+
             if (docPsi != null && docPsi.lastLeaf.elementType is RsDocTokenType) {
-                return docPsi.lastLeaf.text
+                val last = PsiTreeUtil.lastChild(docPsi)
+                if (last.elementType is RsDocTokenType) {
+                    return last.text
+                }
             }
             return null
         }
@@ -197,7 +211,7 @@ class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
         }
     }
 
-    data class JsModel(val type: JavascriptType, val fieldName: String, val comment: String?,val isOption: Boolean)
+    data class JsModel(val type: JavascriptType, val fieldName: String, val comment: String?, val isOption: Boolean)
 
     val getJsModel: JsModel?
         get() {
@@ -206,17 +220,31 @@ class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
             } else if (name == null) {
                 return null
             }
-            return JsModel(javaScriptType, name, comment = comment,isOption = isOption)
+            return JsModel(javaScriptType, name, comment = comment, isOption = isOption)
         }
 }
 
 
-val MyFieldPsiElementManager.JsModel.propTextString : String get() {
-    if(this.isOption) {
-        return "${fieldName}: ${type.typeScriptText} | undefined"
+/// interface 字段
+val MyFieldPsiElementManager.JsModel.propTextString: String
+    get() {
+        if (this.isOption) {
+            return "${fieldName}: ${type.typeScriptText} | undefined"
+        }
+        return "${fieldName}: ${type.typeScriptText}"
     }
-    return "${fieldName}: ${type.typeScriptText}"
-}
+
+/// antd 表格字段
+val MyFieldPsiElementManager.JsModel.antdTableColumnItem: String
+    get() {
+        val sb = StringBuilder()
+        sb.appendLine("{")
+        sb.appendLine("\t\tdataIndex: '${fieldName}', ")
+        sb.appendLine("\t\ttitle: '${comment ?: fieldName}',")
+        sb.appendLine("\t\tkey: '${fieldName}'")
+        sb.appendLine("}")
+        return "$sb"
+    }
 
 
 class MyRsOuterAttrPsiElementManager(private val psiElement: RsOuterAttr) {
@@ -271,3 +299,4 @@ class MyRsOuterAttrPsiElementManager(private val psiElement: RsOuterAttr) {
         return null
     }
 }
+

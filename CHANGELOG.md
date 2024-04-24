@@ -16,6 +16,11 @@
 ## [1.1.2]
 **Full Changelog**: https://github.com/mdddj/SalvoRsTool/compare/1.1.1.7...1.1.2
 
+## [1.3.3] - 2024-04-24
+
+- 添加antd table column 快速生成
+- 添加interface快速生成
+
 ## [1.3.0] - 2024-04-23
 
 - Add antd from form generation function
