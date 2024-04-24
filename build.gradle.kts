@@ -1,4 +1,3 @@
-import org.jetbrains.changelog.date
 
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.9.22"
@@ -7,7 +6,7 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "1.3.2"
+version = "1.3.3"
 
 repositories {
     mavenCentral()
@@ -61,11 +60,6 @@ dependencies {
 }
 
 changelog {
-    path.set(file("CHANGELOG.md").canonicalPath)
-    header.set(provider { "[${version.get()}] - ${date()}" })
-    headerParserRegex.set("""(\d+\.\d+)""".toRegex())
-    itemPrefix.set("-")
-    keepUnreleasedSection.set(true)
-    unreleasedTerm.set("[Unreleased]")
+    unreleasedTerm.set("Unreleased")
     groups.empty()
 }
