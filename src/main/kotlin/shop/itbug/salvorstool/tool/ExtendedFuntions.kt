@@ -3,10 +3,12 @@ package shop.itbug.salvorstool.tool
 import com.google.common.base.CaseFormat
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
+import com.intellij.openapi.ide.CopyPasteManager
 import com.intellij.psi.PsiElement
 import org.rust.lang.core.psi.RsNamedFieldDecl
 import org.rust.lang.core.psi.RsOuterAttr
 import org.rust.lang.core.psi.impl.RsStructItemImpl
+import java.awt.datatransfer.StringSelection
 import java.util.*
 
 val PsiElement.myManager get() = MyRsPsiElementManager(this)
@@ -34,4 +36,8 @@ fun AnActionEvent.tryGetRsStructPsiElement(): RsStructItemImpl? {
         return psiElement as? RsStructItemImpl
     }
     return null
+}
+
+fun String.copy(){
+    CopyPasteManager.getInstance().setContents(StringSelection(this))
 }

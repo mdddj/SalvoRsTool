@@ -10,8 +10,15 @@
     <depends>JavaScript</depends>
     <resource-bundle>messages.pluginBundle</resource-bundle>
     <extensions defaultExtensionNs="com.intellij">
+        <intentionAction>
+            <className>shop.itbug.salvorstool.intention.CopyAntdTableColumnAction</className>
+            <language>Rust</language>
+        </intentionAction>
+        <intentionAction>
+            <className>shop.itbug.salvorstool.intention.CopyTSInterfaceAction</className>
+            <language>Rust</language>
+        </intentionAction>
     </extensions>
-
     <actions>
         <action id="GenerateDtoAction" class="shop.itbug.salvorstool.action.GenerateDtoAction">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>

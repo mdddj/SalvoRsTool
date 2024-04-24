@@ -19,7 +19,8 @@ object AntdFactory {
     ///生成form
     fun generateAntdForm(psiElement: RsStructItemImpl): String {
         val sb = StringBuilder()
-        val jsModels = psiElement.myManager.jsModelList
+        val manager = psiElement.myManager
+        val jsModels = manager.jsModelList
 
         //1.添加参数
         sb.appendLine(
@@ -32,11 +33,7 @@ object AntdFactory {
         )
 
         //2.添加模型
-        sb.appendLine("interface PropInitValue {")
-        jsModels.forEach {
-            sb.appendLine("\t\t${it.propTextString},")
-        }
-        sb.appendLine("}")
+        sb.appendLine(manager.getTSInterface)
 
         //3.添加field
         val fieldSb = StringBuilder()
