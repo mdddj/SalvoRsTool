@@ -1,3 +1,4 @@
+import org.jetbrains.changelog.Changelog
 
 plugins {
     id("org.jetbrains.kotlin.jvm") version "1.9.22"
@@ -6,7 +7,7 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "1.3.3"
+version = "1.3.4"
 
 repositories {
     mavenCentral()
@@ -29,9 +30,23 @@ tasks {
         kotlinOptions.jvmTarget = "17"
     }
 
+
+
+    val myChangeLog =  provider {
+        changelog.renderItem(
+            changelog
+                .getUnreleased()
+                .withHeader(false)
+                .withEmptySections(false),
+            Changelog.OutputType.HTML
+        )
+    }
+
+
     patchPluginXml {
         sinceBuild.set("232")
         untilBuild.set("242.*")
+        changeNotes.set(myChangeLog)
     }
 
     signPlugin {
@@ -50,16 +65,11 @@ tasks {
         jvmArgs = listOf("-XX:+AllowEnhancedClassRedefinition")
     }
 
-    test {
-        useJUnitPlatform()
-    }
-}
-
-dependencies {
-    testImplementation(kotlin("test"))
 }
 
 changelog {
+    version = project.version as String
     unreleasedTerm.set("Unreleased")
+    path = file("CHANGELOG.md").canonicalPath
     groups.empty()
 }
