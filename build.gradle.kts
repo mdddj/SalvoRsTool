@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "1.3.1"
+version = "1.3.2"
 
 repositories {
     mavenCentral()
@@ -61,7 +61,6 @@ dependencies {
 }
 
 changelog {
-    version.set("1.3.1")
     path.set(file("CHANGELOG.md").canonicalPath)
     header.set(provider { "[${version.get()}] - ${date()}" })
     headerParserRegex.set("""(\d+\.\d+)""".toRegex())
