@@ -95,8 +95,7 @@ class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
             }
             val docPsi = PsiTreeUtil.getChildOfType(psiElement, RsDocCommentImpl::class.java)
             //判断///
-
-            if (docPsi != null && docPsi.lastLeaf.elementType is RsDocTokenType) {
+            if (docPsi != null) {
                 val last = PsiTreeUtil.lastChild(docPsi)
                 if (last.elementType is RsDocTokenType) {
                     return last.text
