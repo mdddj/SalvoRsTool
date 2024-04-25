@@ -65,14 +65,25 @@ class MyRsStructManager(private val psiElement: RsStructItemImpl) {
     ///获取ts模型
     val getTSInterface: String get() {
         val sb = StringBuilder()
-        sb.appendLine("interface PropInitValue {")
+        sb.appendLine("interface $structName {")
         jsModelList.forEach {
-            sb.appendLine("\t\t${it.propTextString},")
+            sb.appendLine("\t${it.propTextString},")
         }
         sb.appendLine("}")
         return sb.toString()
     }
 
+    /// 生成antd table 列
+    val getAntdTableColumnDefine: String get() {
+        val sb = StringBuilder()
+        sb.appendLine("[")
+        val ls = jsModelList
+        ls.map {
+            sb.append(it.antdTableColumnItem(it == ls.last()))
+        }
+        sb.appendLine("]")
+        return sb.toString()
+    }
 }
 
 
@@ -234,14 +245,14 @@ val MyFieldPsiElementManager.JsModel.propTextString: String
     }
 
 /// antd 表格字段
-val MyFieldPsiElementManager.JsModel.antdTableColumnItem: String
-    get() {
+fun MyFieldPsiElementManager.JsModel.antdTableColumnItem(isLast: Boolean): String
+     {
         val sb = StringBuilder()
         sb.appendLine("{")
-        sb.appendLine("\t\tdataIndex: '${fieldName}', ")
-        sb.appendLine("\t\ttitle: '${comment ?: fieldName}',")
-        sb.appendLine("\t\tkey: '${fieldName}'")
-        sb.appendLine("}")
+        sb.appendLine("\tdataIndex: '${fieldName}', ")
+        sb.appendLine("\ttitle: '${comment ?: fieldName}',")
+        sb.appendLine("\tkey: '${fieldName}'")
+        sb.appendLine("}${if (isLast) "" else ","}")
         return "$sb"
     }
 

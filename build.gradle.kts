@@ -35,13 +35,12 @@ tasks {
     val myChangeLog =  provider {
         changelog.renderItem(
             changelog
-                .getUnreleased()
+                .getOrNull(project.version as String) ?: changelog.getUnreleased()
                 .withHeader(false)
                 .withEmptySections(false),
             Changelog.OutputType.HTML
         )
     }
-
 
     patchPluginXml {
         sinceBuild.set("232")
@@ -69,7 +68,6 @@ tasks {
 
 changelog {
     version = project.version as String
-    unreleasedTerm.set("Unreleased")
     path = file("CHANGELOG.md").canonicalPath
     groups.empty()
 }
