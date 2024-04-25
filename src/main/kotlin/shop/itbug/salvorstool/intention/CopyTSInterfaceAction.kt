@@ -32,7 +32,7 @@ class CopyTSInterfaceAction: PsiElementBaseIntentionAction(),IntentionAction {
         var preview = IntentionPreviewInfo.Html("")
         val psiElement =  getElement(editor,file)?.parent as? RsStructItemImpl
         psiElement?.let {
-            preview = IntentionPreviewInfo.Html(it.myManager.getTSInterface)
+            preview = IntentionPreviewInfo.Html("<pre lang='typescript'>${it.myManager.getTSInterface}</pre>")
         }
         return preview
     }

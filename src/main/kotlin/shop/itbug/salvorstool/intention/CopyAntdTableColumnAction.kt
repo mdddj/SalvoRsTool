@@ -2,15 +2,17 @@ package shop.itbug.salvorstool.intention
 
 import com.intellij.codeInsight.intention.IntentionAction
 import com.intellij.codeInsight.intention.PsiElementBaseIntentionAction
+import com.intellij.codeInsight.intention.preview.IntentionPreviewInfo
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiElement
+import com.intellij.psi.PsiFile
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import shop.itbug.salvorstool.tool.antdTableColumnItem
 import shop.itbug.salvorstool.tool.copy
 import shop.itbug.salvorstool.tool.myManager
 
-class CopyAntdTableColumnAction: PsiElementBaseIntentionAction(),IntentionAction {
+class CopyAntdTableColumnAction : PsiElementBaseIntentionAction(), IntentionAction {
 
     override fun getFamilyName(): String {
         return "SalvoRsTool: Copy Antd Table Column"
@@ -26,16 +28,15 @@ class CopyAntdTableColumnAction: PsiElementBaseIntentionAction(),IntentionAction
 
     override fun invoke(project: Project, editor: Editor?, element: PsiElement) {
         val rs = element.parent as? RsStructItemImpl ?: return
-        val manager = rs.myManager
-        val sb = StringBuilder()
-        sb.appendLine("[")
-        manager.jsModelList.map {
-            sb.append("\n\t\t")
-            sb.append(it.antdTableColumnItem)
-            sb.append(",\n")
+        rs.myManager.getAntdTableColumnDefine.copy()
+    }
+
+    override fun generatePreview(project: Project, editor: Editor, file: PsiFile): IntentionPreviewInfo {
+        val rsPsi = getElement(editor, file)?.parent as? RsStructItemImpl
+        rsPsi?.let {
+            return IntentionPreviewInfo.Html("""<pre lang='json'>${rsPsi.myManager.getAntdTableColumnDefine}</pre>""".trimIndent())
         }
-        sb.appendLine("]")
-        sb.toString().copy()
+        return IntentionPreviewInfo.EMPTY
     }
 
 }
