@@ -46,7 +46,7 @@ class MyRsStructManager(private val psiElement: RsStructItemImpl) {
     ///获取struct名称
     val structName: String? = psiElement.name
 
-    ///获取表明
+    ///获取表名
     val getTableName: String?
         get() {
             val outerAttr = psiElement.outerAttrList.find { it.myManager.getSeaOrmTabName != null }
