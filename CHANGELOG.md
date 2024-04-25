@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+
+## [1.3.5] - 2024-04-25
+
+- 添加antd table column 和interface 预览
+- 优化action的展示逻辑
+
 ## [1.3.4] - 2024-04-24
 
 - 添加antd table column 快速生成
