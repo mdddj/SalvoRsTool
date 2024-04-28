@@ -44,8 +44,8 @@ class GenerateRouterDialog(private val project: Project, psiElement: RsStructIte
             row {
                 scrollCell(tabView)
             }
-            group(MyI18n.getMessage("save_to")) {
-                row(MyI18n.getMessage("select_directory")) {
+            group(MyI18n.saveTo) {
+                row(MyI18n.selectDir) {
                     textFieldWithBrowseButton(
                         project = project,
                         fileChooserDescriptor = FileChooserDescriptorFactory.createSingleFolderDescriptor().withRoots(

@@ -1,20 +1,14 @@
 package shop.itbug.salvorstool.dialog
 
-import com.intellij.lang.Language
-import com.intellij.openapi.application.runWriteAction
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.guessProjectDir
 import com.intellij.openapi.ui.DialogWrapper
-import com.intellij.openapi.vfs.LocalFileSystem
-import com.intellij.psi.PsiFileFactory
-import com.intellij.psi.PsiManager
 import com.intellij.ui.components.JBScrollPane
 import com.intellij.ui.components.JBTabbedPane
 import com.intellij.ui.dsl.builder.Align
 import com.intellij.ui.dsl.builder.bindText
 import com.intellij.ui.dsl.builder.panel
-import org.rust.lang.RsLanguage
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import shop.itbug.salvorstool.i18n.MyI18n
 import shop.itbug.salvorstool.tool.MyRsPsiFactory
@@ -83,8 +77,8 @@ class GenerateServiceDialog(private val project: Project, private val psiElement
                     scrollCell(tabView)
                 }
             }
-            group(MyI18n.getMessage("save_to")) {
-                row(MyI18n.getMessage("select_directory")) {
+            group(MyI18n.saveTo) {
+                row(MyI18n.selectDir) {
                     textFieldWithBrowseButton(
                         project = project,
                         fileChooserDescriptor = FileChooserDescriptorFactory.createSingleFolderDescriptor().withRoots(

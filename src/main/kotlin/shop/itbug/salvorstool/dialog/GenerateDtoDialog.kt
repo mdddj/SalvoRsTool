@@ -1,24 +1,13 @@
 package shop.itbug.salvorstool.dialog
 
-import com.intellij.lang.Language
-import com.intellij.openapi.application.runWriteAction
-import com.intellij.openapi.fileChooser.FileChooserDescriptor
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory
-import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.guessProjectDir
 import com.intellij.openapi.ui.DialogWrapper
-import com.intellij.openapi.vfs.LocalFileSystem
-import com.intellij.openapi.vfs.VirtualFile
-import com.intellij.openapi.vfs.VirtualFileManager
-import com.intellij.psi.PsiElement
-import com.intellij.psi.PsiFileFactory
-import com.intellij.psi.PsiManager
+import com.intellij.ui.components.JBTabbedPane
 import com.intellij.ui.dsl.builder.Align
-import com.intellij.ui.dsl.builder.LabelPosition
 import com.intellij.ui.dsl.builder.bindText
 import com.intellij.ui.dsl.builder.panel
-import org.rust.lang.RsLanguage
 import org.rust.lang.core.psi.RsNamedFieldDecl
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import shop.itbug.salvorstool.i18n.MyI18n
@@ -49,7 +38,6 @@ enum class GenerateDtoDialogResultEnum {
 
 ///获取struct名称,例如: "user"表名字,生成对象的名称:"UserAddRequest"
 fun GenerateDtoDialogResultEnum.getStructName(sqlTableName: String): String {
-
     return when (this) {
         GenerateDtoDialogResultEnum.AddRequest -> sqlTableName.underlineToCamel + "AddRequest"
         GenerateDtoDialogResultEnum.UpdateRequest -> sqlTableName.underlineToCamel + "UpdateRequest"
@@ -120,40 +108,45 @@ class GenerateDtoDialog(private val project: Project, private val  psiElement: R
         fileName = (psiElement.myManager.getTableName?:"root")
     )
 
+    private val tabView = JBTabbedPane()
+
     init {
         super.init()
         title = "Generate DTO Object"
+        tabView.add("Add Request Param", panel {
+            row("Name:") {
+                textField().bindText(model::addRequestName).enabled(false)
+            }
+            row("Generate Class:") {
+                scrollCell(RsEditor(project, model.addRequestText)).align(Align.FILL)
+            }
+        })
+        tabView.add("Update Request Param", panel {
+            row("Name:") {
+                textField().bindText(model::updateRequestName).enabled(false)
+            }
+            row("Generate Class:") {
+                scrollCell(RsEditor(project, model.updateRequestText)).align(Align.FILL)
+            }
+        })
+        tabView.add("Response Param", panel {
+            row("Name:") {
+                textField().bindText(model::responseName).enabled(false)
+            }
+            row("Generate Class:") {
+                scrollCell(RsEditor(project, model.responseText)).align(Align.FILL)
+            }
+        })
     }
 
     override fun createCenterPanel(): JComponent {
 
         return panel {
-            group("Add Request Param") {
-                row("Name:") {
-                    textField().bindText(model::addRequestName).enabled(false)
-                }
-                row("Generate Class:") {
-                    scrollCell(RsEditor(project, model.addRequestText))
-                }
+            row {
+                scrollCell(tabView).align(Align.FILL)
             }
-            group("Update Request Param") {
-                row("Name:") {
-                    textField().bindText(model::updateRequestName).enabled(false)
-                }
-                row("Generate Class:") {
-                    scrollCell(RsEditor(project, model.updateRequestText))
-                }
-            }
-            group("Response Param") {
-                row("Name:") {
-                    textField().bindText(model::responseName).enabled(false)
-                }
-                row("Generate Class:") {
-                    scrollCell(RsEditor(project, model.responseText))
-                }
-            }
-            group(MyI18n.getMessage("save_to")) {
-               row(MyI18n.getMessage("select_directory")) {
+            group(MyI18n.saveTo) {
+               row(MyI18n.selectDir) {
                    textFieldWithBrowseButton(
                        project = project,
                        fileChooserDescriptor = FileChooserDescriptorFactory.createSingleFolderDescriptor().withRoots(

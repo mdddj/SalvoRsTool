@@ -10,6 +10,9 @@ object MyI18n: MyPluginBundle(){
     override fun getMessage(key: String, vararg params: Any?): String {
         return super.getMessage(key, *params)
     }
+
+    val saveTo: String get() = getMessage("save_to")
+    val selectDir: String get() = getMessage("select_directory")
 }
 
 open class MyPluginBundle : AbstractBundle("messages.pluginBundle") {

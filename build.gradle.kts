@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "1.3.5"
+version = "1.5.0"
 
 repositories {
     mavenCentral()
