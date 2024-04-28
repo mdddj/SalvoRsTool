@@ -10,6 +10,7 @@
     <depends>JavaScript</depends>
     <resource-bundle>messages.pluginBundle</resource-bundle>
     <extensions defaultExtensionNs="com.intellij">
+
         <intentionAction>
             <className>shop.itbug.salvorstool.intention.CopyAntdTableColumnAction</className>
             <language>Rust</language>
@@ -18,6 +19,12 @@
             <className>shop.itbug.salvorstool.intention.CopyTSInterfaceAction</className>
             <language>Rust</language>
         </intentionAction>
+
+        <toolWindow factoryClass="shop.itbug.salvorstool.window.SalvoWindow" id="Salvo" anchor="bottom"
+                    icon="/icons/logo.svg"/>
+
+        <searchEverywhereContributor implementation="shop.itbug.salvorstool.searcheverywhere.SalvoSearchApi" />
+
     </extensions>
     <actions>
         <action id="GenerateDtoAction" class="shop.itbug.salvorstool.action.GenerateDtoAction">
@@ -33,5 +40,11 @@
                 text="生成antd表单">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
+
+
+        <action id="SalvoApiRefreshAction" class="shop.itbug.salvorstool.action.api.SalvoApiRefreshAction"/>
+        <group id="SalvoApiActionList">
+            <reference id="SalvoApiRefreshAction" />
+        </group>
     </actions>
 </idea-plugin>

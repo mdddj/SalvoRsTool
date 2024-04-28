@@ -3,11 +3,8 @@ package shop.itbug.salvorstool.dialog
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.ui.components.JBTabbedPane
-import com.intellij.ui.dsl.builder.panel
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import shop.itbug.salvorstool.tool.AntdFactory
-import shop.itbug.salvorstool.tool.MyFieldPsiElementManager
-import shop.itbug.salvorstool.tool.myManager
 import shop.itbug.salvorstool.widget.TypeJavaScriptEditor
 import java.awt.Dimension
 import javax.swing.JComponent

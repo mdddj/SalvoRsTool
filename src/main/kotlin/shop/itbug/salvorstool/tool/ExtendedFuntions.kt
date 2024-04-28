@@ -3,6 +3,7 @@ package shop.itbug.salvorstool.tool
 import com.google.common.base.CaseFormat
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
+import com.intellij.openapi.fileTypes.FileTypeManager
 import com.intellij.openapi.ide.CopyPasteManager
 import com.intellij.psi.PsiElement
 import org.rust.lang.core.psi.RsNamedFieldDecl
@@ -11,6 +12,7 @@ import org.rust.lang.core.psi.impl.RsStructItemImpl
 import java.awt.datatransfer.StringSelection
 import java.util.*
 
+val rsFileType = FileTypeManager.getInstance().getFileTypeByExtension("rs")
 val PsiElement.myManager get() = MyRsPsiElementManager(this)
 val RsStructItemImpl.myManager get() = MyRsStructManager(this)
 val RsNamedFieldDecl.myManager get() = MyFieldPsiElementManager(this)
