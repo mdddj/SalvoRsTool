@@ -5,7 +5,7 @@ import com.intellij.psi.util.PsiTreeUtil
 import org.rust.lang.core.psi.RsMethodCall
 import org.rust.lang.core.psi.impl.RsDotExprImpl
 import org.rust.lang.core.psi.impl.RsLetDeclImpl
-import org.rust.lang.core.psi.impl.RsMethodCallImpl
+import org.rust.lang.core.psi.impl.RsPathExprImpl
 import shop.itbug.salvorstool.model.SalvoApiItem
 import shop.itbug.salvorstool.model.SalvoApiItemMethod
 import java.util.*
@@ -14,7 +14,6 @@ val RsMethodCall.methodManager: RsMethodCallManager get() = RsMethodCallManager(
 
 /// method call
 class RsMethodCallManager(val psiElement: RsMethodCall) {
-
 
     private val myIdText: String get() = psiElement.identifier.text
 
@@ -26,6 +25,13 @@ class RsMethodCallManager(val psiElement: RsMethodCall) {
         get() {
             val va = psiElement.valueArgumentList
             return PsiTreeUtil.findChildOfType(va, RsDotExprImpl::class.java)
+        }
+
+    // rsPath
+     val rsPathChild: RsPathExprImpl?
+        get() {
+            val va = psiElement.valueArgumentList
+            return PsiTreeUtil.findChildOfType(va, RsPathExprImpl::class.java)
         }
 
     // method
