@@ -3,18 +3,16 @@ package shop.itbug.salvorstool.tool
 import com.intellij.psi.util.PsiTreeUtil
 import org.rust.lang.core.psi.RsTypeReference
 import org.rust.lang.core.psi.ext.block
-import org.rust.lang.core.psi.ext.leftLeaves
 import org.rust.lang.core.psi.impl.RsFunctionImpl
 import org.rust.lang.core.psi.impl.RsLetDeclImpl
-import org.rust.lang.core.psi.impl.RsPathTypeImpl
 
 val RsFunctionImpl.myManager: RsFunctionManager get() = RsFunctionManager(this)
 
 ///rs fun tool
-class RsFunctionManager(val rsFunction: RsFunctionImpl) {
+class RsFunctionManager(private val rsFunction: RsFunctionImpl) {
 
     //获取返回类型
-    fun getReturnType() : RsTypeReference? {
+    private fun getReturnType() : RsTypeReference? {
         val returnType = rsFunction.retType ?: return null
         return returnType.typeReference
     }

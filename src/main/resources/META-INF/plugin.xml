@@ -1,13 +1,10 @@
-<idea-plugin>
+<idea-plugin url="https://mdddj.github.io/SalvoRsToolDocument">
     <id>shop.itbug.SalvoRsTool</id>
     <name>SalvoRsTool</name>
     <vendor email="hlxsmail@gmail.com" url="https://itbug.shop">梁典典</vendor>
-    <description><![CDATA[
-    The Salvo Generator plugin offers rapid and efficient generation of Salvo framework code within IntelliJ IDEA, greatly simplifying the development process and enhancing productivity
-  ]]></description>
     <depends>com.intellij.modules.platform</depends>
     <depends>com.jetbrains.rust</depends>
-    <depends>JavaScript</depends>
+    <depends>JavaScriptBase</depends>
     <resource-bundle>messages.pluginBundle</resource-bundle>
     <extensions defaultExtensionNs="com.intellij">
 
@@ -46,5 +43,15 @@
         <group id="SalvoApiActionList">
             <reference id="SalvoApiRefreshAction" />
         </group>
+
+        <action id="AntdRequestCopyAction" class="shop.itbug.salvorstool.action.rightmenu.AntdRequestCopyAction" popup="true" />
+        <action id="CopyUrlAction" class="shop.itbug.salvorstool.action.rightmenu.CopyUrlAction" popup="true"/>
+        <group id="SalvoApiRightMenuActionGroup" popup="true">
+            <separator key="copy" />
+            <reference id="AntdRequestCopyAction" />
+            <reference id="CopyUrlAction" />
+        </group>
+
+
     </actions>
 </idea-plugin>

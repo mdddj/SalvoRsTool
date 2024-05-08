@@ -7,7 +7,6 @@ import com.intellij.openapi.progress.ProgressIndicator
 import com.intellij.openapi.project.Project
 import com.intellij.util.Processor
 import shop.itbug.salvorstool.model.SalvoApiItem
-import shop.itbug.salvorstool.model.navTo
 import shop.itbug.salvorstool.service.SalvoApiService
 import shop.itbug.salvorstool.window.SalvoApiItemRender
 import javax.swing.ListCellRenderer

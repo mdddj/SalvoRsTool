@@ -3,7 +3,6 @@ package shop.itbug.salvorstool.tool
 import com.intellij.psi.PsiElement
 import com.intellij.psi.impl.source.tree.PsiCommentImpl
 import com.intellij.psi.util.PsiTreeUtil
-import com.intellij.psi.util.lastLeaf
 import org.rust.lang.core.psi.RsMetaItem
 import org.rust.lang.core.psi.RsNamedFieldDecl
 import org.rust.lang.core.psi.RsOuterAttr

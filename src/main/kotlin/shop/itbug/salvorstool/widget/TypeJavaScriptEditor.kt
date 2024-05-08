@@ -1,16 +1,12 @@
 package shop.itbug.salvorstool.widget
 
-import com.intellij.ide.ui.UITheme
 import com.intellij.lang.Language
 import com.intellij.lang.javascript.dialects.TypeScriptJSXLanguageDialect
 import com.intellij.openapi.editor.colors.EditorColorsManager
 import com.intellij.openapi.editor.colors.EditorFontType
 import com.intellij.openapi.editor.ex.EditorEx
-import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.project.Project
 import com.intellij.ui.LanguageTextField
-import com.intellij.util.ui.JBFont
-import org.rust.lang.RsLanguage
 import java.awt.Font
 import javax.swing.BorderFactory
 import javax.swing.border.Border

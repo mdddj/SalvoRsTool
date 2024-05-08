@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "1.5.0"
+version = "1.5.1"
 
 repositories {
     mavenCentral()
@@ -16,7 +16,7 @@ repositories {
 intellij {
     version.set("LATEST-EAP-SNAPSHOT")
     type.set("RR")
-    plugins.set(listOf("com.jetbrains.rust","JavaScript"))
+    plugins.set(listOf("com.jetbrains.rust","JavaScriptBase"))
 }
 
 val pushToken: String? = System.getenv("PUBLISH_TOKEN")
@@ -42,10 +42,15 @@ tasks {
         )
     }
 
+    val descText = projectDir.resolve("DESCRIPTION.md").readText()
+
+    println(descText)
+
     patchPluginXml {
         sinceBuild.set("232")
         untilBuild.set("242.*")
         changeNotes.set(myChangeLog)
+        pluginDescription.set(descText)
     }
 
     signPlugin {
