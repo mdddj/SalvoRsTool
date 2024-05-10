@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "1.5.1"
+version = "1.5.2"
 
 repositories {
     mavenCentral()
@@ -15,6 +15,8 @@ repositories {
 
 intellij {
     version.set("LATEST-EAP-SNAPSHOT")
+//    localPath.set("/Users/ldd/Applications/RustRover.app/Contents")
+//    localSourcesPath.set("/Users/hlx/github/intellij-community")
     type.set("RR")
     plugins.set(listOf("com.jetbrains.rust","JavaScriptBase"))
 }
@@ -25,9 +27,6 @@ tasks {
     withType<JavaCompile> {
         sourceCompatibility = "17"
         targetCompatibility = "17"
-    }
-    withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "17"
     }
 
 
