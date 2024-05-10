@@ -8,7 +8,6 @@ import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
 import org.rust.lang.core.psi.impl.RsStructItemImpl
-import shop.itbug.salvorstool.tool.antdTableColumnItem
 import shop.itbug.salvorstool.tool.copy
 import shop.itbug.salvorstool.tool.myManager
 

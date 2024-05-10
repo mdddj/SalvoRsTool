@@ -6,7 +6,6 @@ import com.intellij.psi.util.PsiTreeUtil
 import org.rust.lang.core.psi.RsMetaItem
 import org.rust.lang.core.psi.RsNamedFieldDecl
 import org.rust.lang.core.psi.RsOuterAttr
-import org.rust.lang.core.psi.RsTypeArgumentList
 import org.rust.lang.core.psi.ext.elementType
 import org.rust.lang.core.psi.ext.stringValue
 import org.rust.lang.core.psi.impl.RsNamedFieldDeclImpl
@@ -117,27 +116,24 @@ class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
     ///参数类型文本
     val typeString: String?
         get() {
+            println("${psiElement.text} is options? ${isOption}")
             if (isOption) {
-                val typeList = typeArgumentList?.typeReferenceList
-                if (!typeList.isNullOrEmpty()) {
-                    return null
-                } else if (typeList != null && typeList.size == 1) {
-                    return typeList.first().text
-                }
-                return null
+                return extractTextBetweenBrackets(typePsiText?:"")
             }
             return psiElement.typeReference?.text
         }
 
-    ///判断是否为可空的属性,比如Option<i32> return true
-    private val isOption: Boolean get() = typeArgumentList != null
 
-    /// Option<i32> 获取 <i32>
-    private val typeArgumentList: RsTypeArgumentList?
-        get() = PsiTreeUtil.findChildOfType(
-            psiElement,
-            RsPathTypeImpl::class.java
-        )?.path?.typeArgumentList
+    private val getPathTypeImpl = PsiTreeUtil.findChildOfType(
+        psiElement,
+        RsPathTypeImpl::class.java
+    )
+
+    private val typePsiText = getPathTypeImpl?.text
+
+    ///判断是否为可空的属性,比如Option<i32> return true
+    private val isOption: Boolean get() = typePsiText?.startsWith("Option<") == true && typePsiText.endsWith(">")
+
 
     ///获取字段文本(除了宏以外)
     val getSimpleText: String
@@ -153,6 +149,7 @@ class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
     //获取JavaScript类型
     private val javaScriptType: JavascriptType
         get() {
+            println("type string is $typeString")
             if (typeString == null) {
                 return JavascriptType.Unknown
             }
@@ -231,6 +228,16 @@ class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
             }
             return JsModel(javaScriptType, name, comment = comment, isOption = isOption)
         }
+
+    private fun extractTextBetweenBrackets(input: String): String? {
+        val regex = "<([^>]*)>".toRegex()
+        val matchResult = regex.find(input)
+        return if (matchResult != null) {
+            matchResult.groupValues[1]
+        } else {
+            null
+        }
+    }
 }
 
 

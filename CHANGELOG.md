@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [1.5.2] - 2024-05-10
+
+- 修复struct属性为Option类型无法生成Typescript Interface字段的问题
+- <p><b><a href="https://mdddj.github.io/SalvoRsToolDocument/changelog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.html#1-5-1">更新日志</a></b></p>
+
 ## [1.5.1] - 2024-05-08
 
 - 适配RustRover2024.1.EAP
