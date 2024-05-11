@@ -53,5 +53,9 @@
         </group>
 
 
+        <action id="GenerateHookFormAction" class="shop.itbug.salvorstool.action.GenerateHookFormAction"
+                text="react hook form">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        </action>
     </actions>
 </idea-plugin>

@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "1.5.2"
+version = "1.6.0"
 
 repositories {
     mavenCentral()
@@ -15,8 +15,6 @@ repositories {
 
 intellij {
     version.set("LATEST-EAP-SNAPSHOT")
-//    localPath.set("/Users/ldd/Applications/RustRover.app/Contents")
-//    localSourcesPath.set("/Users/hlx/github/intellij-community")
     type.set("RR")
     plugins.set(listOf("com.jetbrains.rust","JavaScriptBase"))
 }
@@ -28,8 +26,6 @@ tasks {
         sourceCompatibility = "17"
         targetCompatibility = "17"
     }
-
-
 
     val myChangeLog =  provider {
         changelog.renderItem(
@@ -43,7 +39,6 @@ tasks {
 
     val descText = projectDir.resolve("DESCRIPTION.md").readText()
 
-    println(descText)
 
     patchPluginXml {
         sinceBuild.set("232")

@@ -1,6 +1,7 @@
 package shop.itbug.salvorstool.tool
 
 import com.intellij.lang.Language
+import com.intellij.lang.javascript.dialects.TypeScriptJSXLanguageDialect
 import com.intellij.openapi.application.runWriteAction
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.guessProjectDir
@@ -16,6 +17,11 @@ import java.io.File
 object Tools {
 
 
+    val jsxLanguage: TypeScriptJSXLanguageDialect = Language.findInstance(
+        TypeScriptJSXLanguageDialect::class.java
+    )
+
+    val rustLanguage: RsLanguage = Language.findInstance(RsLanguage::class.java)
     /**
      * 获取dto目录
      */
