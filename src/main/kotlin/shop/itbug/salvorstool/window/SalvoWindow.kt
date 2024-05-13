@@ -11,5 +11,10 @@ class SalvoWindow : ToolWindowFactory {
         val apiWindow = ApiScanWindow(project,toolWindow)
         val apiWindowContent = contentFactory.createContent(apiWindow,"Api",false)
         toolWindow.contentManager.addContent(apiWindowContent)
+
+        val tempWindow = TempFilesWindow(project)
+        val tempWindowContent = contentFactory.createContent(tempWindow,"Temp",false)
+        toolWindow.contentManager.addContent(tempWindowContent)
+
     }
 }

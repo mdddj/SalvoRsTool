@@ -10,12 +10,13 @@ import com.intellij.ui.EditorSettingsProvider
 import com.intellij.ui.LanguageTextField
 import com.intellij.util.ui.JBFont
 import org.rust.lang.RsLanguage
+import shop.itbug.salvorstool.tool.Tools
 import java.awt.Dimension
 import java.awt.Font
 import javax.swing.BorderFactory
 import javax.swing.border.Border
 
-class RsEditor(projectP: Project, initText: String) : LanguageTextField(Language.findInstance(RsLanguage::class.java),projectP,initText,false) {
+class RsEditor(projectP: Project, initText: String) : LanguageTextField(Tools.rustLanguage,projectP,initText,false) {
 
     override fun createEditor(): EditorEx {
         return myCreateEditor(super.createEditor())

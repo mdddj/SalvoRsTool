@@ -82,6 +82,16 @@ class MyRsStructManager(private val psiElement: RsStructItemImpl) {
         sb.appendLine("]")
         return sb.toString()
     }
+
+    val getHookForm: String get() {
+        val sb = StringBuilder()
+        jsModelList.forEach {
+            sb.appendLine(it.hookFormItem())
+        }
+        var temp = FilesUtil.loadTemplateFileList("temps/ts_dialog_warp.tsx")
+        temp = temp.replace("{model}",getTSInterface).replace("Model",structName?:"Model").replace("{fields}",sb.toString())
+        return temp
+    }
 }
 
 
@@ -116,7 +126,6 @@ class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
     ///参数类型文本
     val typeString: String?
         get() {
-            println("${psiElement.text} is options? ${isOption}")
             if (isOption) {
                 return extractTextBetweenBrackets(typePsiText?:"")
             }
@@ -149,7 +158,6 @@ class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
     //获取JavaScript类型
     private val javaScriptType: JavascriptType
         get() {
-            println("type string is $typeString")
             if (typeString == null) {
                 return JavascriptType.Unknown
             }
@@ -262,6 +270,43 @@ fun MyFieldPsiElementManager.JsModel.antdTableColumnItem(isLast: Boolean): Strin
         return "$sb"
     }
 
+
+/// react hook form
+fun MyFieldPsiElementManager.JsModel.hookFormItem() : String {
+    val sb = StringBuilder()
+
+    val requiredString = if(this.isOption){
+        ""
+    } else {
+        "rules={{ required: '请输入${this.comment}' }}"
+    }
+
+    when(this.type){
+        JavascriptType.Number -> {
+            sb.appendLine("""
+                <Controller render={function({ field, fieldState: { error } }) {
+            return <InputWrapper label={'${this.comment}'} bottomLeftLabel={error?.message}>
+              <input type={'number'} {...field} {...register("${this.fieldName}")} className={get_input_class(error?.message)} placeholder={'${this.comment}'}  />
+            </InputWrapper>;
+          }} name={'name'} control={control} $requiredString />
+            """.trimIndent())
+        }
+        JavascriptType.String -> {
+            sb.appendLine("""
+                <Controller render={function({ field, fieldState: { error } }) {
+            return <InputWrapper label={'${this.comment}'} bottomLeftLabel={error?.message}>
+              <input type={'text'} {...field} {...register("${this.fieldName}")} className={get_input_class(error?.message)} placeholder={'${this.fieldName}'}  />
+            </InputWrapper>;
+          }} name={'name'} control={control} $requiredString />
+            """.trimIndent())
+        }
+        JavascriptType.Bool -> {
+
+        }
+        JavascriptType.Unknown -> {}
+    }
+    return sb.toString()
+}
 
 class MyRsOuterAttrPsiElementManager(private val psiElement: RsOuterAttr) {
 
