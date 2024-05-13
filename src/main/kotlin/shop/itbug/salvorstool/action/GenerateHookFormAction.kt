@@ -6,13 +6,11 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.ui.components.JBTabbedPane
-import com.intellij.ui.dsl.builder.panel
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import shop.itbug.salvorstool.tool.myManager
 import shop.itbug.salvorstool.tool.tryGetRsStructPsiElement
 import shop.itbug.salvorstool.widget.TypeJavaScriptEditor
 import javax.swing.JComponent
-import javax.swing.JTabbedPane
 
 class GenerateHookFormAction : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
@@ -21,6 +19,7 @@ class GenerateHookFormAction : AnAction() {
 
     override fun update(e: AnActionEvent) {
         e.presentation.isVisible = e.tryGetRsStructPsiElement() != null && e.project != null
+        e.presentation.text = "Generate React Hook Form"
         super.update(e)
     }
 

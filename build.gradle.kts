@@ -16,7 +16,7 @@ repositories {
 intellij {
     version.set("LATEST-EAP-SNAPSHOT")
     type.set("RR")
-    plugins.set(listOf("com.jetbrains.rust","JavaScriptBase"))
+    plugins.set(listOf("com.jetbrains.rust", "JavaScriptBase"))
 }
 
 val pushToken: String? = System.getenv("PUBLISH_TOKEN")
@@ -27,7 +27,7 @@ tasks {
         targetCompatibility = "17"
     }
 
-    val myChangeLog =  provider {
+    val myChangeLog = provider {
         changelog.renderItem(
             changelog
                 .getOrNull(project.version as String) ?: changelog.getUnreleased()
@@ -54,7 +54,7 @@ tasks {
     }
 
     publishPlugin {
-        if(pushToken != null) {
+        if (pushToken != null) {
             token.set(pushToken)
         }
     }

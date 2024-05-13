@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+
+## [1.6.0] - 2024-05-13
+
+- 注意:下面的功能需要在前端项目中添加两个前端框架(<a href='https://tailwindcss.com/docs/installation/'>tailwindcss</a>和<a href='https://daisyui.com/'>daisy ui</a>)
+- 添加生成react hook from的功能 (struct)
+- 添加一个自用的ts模板文件窗口
+- (如果要使用生成react hook from的功能,需要添加这两个模版文件才能使用,模板文件名:ts_input.tsx,ts_modal.tsx)
+- <a href='https://mdddj.github.io/SalvoRsToolDocument/changelog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.html#1-6-0'>更新日志</a>
+
 ## [1.5.2] - 2024-05-10
 
 - 修复struct属性为Option类型无法生成Typescript Interface字段的问题
