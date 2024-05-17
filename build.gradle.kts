@@ -7,16 +7,21 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "1.6.0"
+version = "1.6.1"
 
 repositories {
     mavenCentral()
 }
 
+val isRR = false
+val rustType = "RR"
+val iuType = "IU"
+val getType = if (isRR) rustType else iuType
+val jsPlugin = if (isRR) "JavaScriptBase" else "JavaScript"
 intellij {
-    version.set("LATEST-EAP-SNAPSHOT")
-    type.set("RR")
-    plugins.set(listOf("com.jetbrains.rust", "JavaScriptBase"))
+    version.set(if(isRR) "LATEST-EAP-SNAPSHOT" else "2024.1")
+    type.set(getType)
+    plugins.set(listOf("com.jetbrains.rust${if (isRR) "" else ":241.25989.180"}", jsPlugin))
 }
 
 val pushToken: String? = System.getenv("PUBLISH_TOKEN")

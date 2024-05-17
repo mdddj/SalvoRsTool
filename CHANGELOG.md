@@ -3,6 +3,11 @@
 ## Unreleased
 
 
+## [1.6.1] - 2024-05-17
+
+- 适配2024.1
+
+
 ## [1.6.0] - 2024-05-13
 
 - 注意:下面的功能需要在前端项目中添加两个前端框架(<a href='https://tailwindcss.com/docs/installation/'>tailwindcss</a>和<a href='https://daisyui.com/'>daisy ui</a>)
