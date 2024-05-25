@@ -1,23 +1,26 @@
 import org.jetbrains.changelog.Changelog
+import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "1.9.22"
+    id("org.jetbrains.kotlin.jvm") version "2.0.0"
     id("org.jetbrains.intellij") version "1.17.2"
     id("org.jetbrains.changelog") version "2.2.0"
 }
 
 group = "shop.itbug"
-version = "1.6.2"
+version = "1.7.0"
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
 
 intellij {
-    version.set("2024.1")
-    type.set("IU")
-    plugins.set(listOf("com.jetbrains.rust:241.25989.180", "JavaScript"))
+    version.set("LATEST-EAP-SNAPSHOT")
+    type.set("RR")
+    plugins.set(listOf("com.jetbrains.rust", "JavaScriptBase"))
 }
 
 val pushToken: String? = System.getenv("PUBLISH_TOKEN")
@@ -26,6 +29,12 @@ tasks {
     withType<JavaCompile> {
         sourceCompatibility = "17"
         targetCompatibility = "17"
+    }
+
+    withType<KotlinCompile> {
+        compilerOptions {
+            languageVersion.set(KotlinVersion.KOTLIN_2_0)
+        }
     }
 
     val myChangeLog = provider {
