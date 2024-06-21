@@ -24,7 +24,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        local("/Users/ldd/Applications/RustRover.app")
+        rustRover("2024.1.2")
 
         bundledPlugins("com.jetbrains.rust","JavaScriptBase")
         instrumentationTools()
