@@ -7,7 +7,6 @@
     <depends>JavaScriptBase</depends>
     <resource-bundle>messages.pluginBundle</resource-bundle>
     <extensions defaultExtensionNs="com.intellij">
-
         <intentionAction>
             <className>shop.itbug.salvorstool.intention.CopyAntdTableColumnAction</className>
             <language>Rust</language>
@@ -16,12 +15,11 @@
             <className>shop.itbug.salvorstool.intention.CopyTSInterfaceAction</className>
             <language>Rust</language>
         </intentionAction>
-
         <toolWindow factoryClass="shop.itbug.salvorstool.window.SalvoWindow" id="Salvo" anchor="bottom"
                     icon="/icons/logo.svg"/>
-
         <searchEverywhereContributor implementation="shop.itbug.salvorstool.searcheverywhere.SalvoSearchApi" />
-
+        <statusBarWidgetFactory implementation="shop.itbug.salvorstool.bar.BottomStatusBar" id="SalvoToolBar"/>
+        <webHelpProvider implementation="shop.itbug.salvorstool.help.MyWebHelpProvider" />
     </extensions>
     <actions>
         <action id="GenerateDtoAction" class="shop.itbug.salvorstool.action.GenerateDtoAction">
@@ -56,5 +54,15 @@
         <action id="GenerateHookFormAction" class="shop.itbug.salvorstool.action.GenerateHookFormAction">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
+
+
+
+<!--    底部操作    -->
+
+        <action id="JsonToSearOrm" class="shop.itbug.salvorstool.action.bar.JsonToSearOrm" text="Json To SeaOrm" icon="/icons/sea-orm.png"/>
+        <group id="SeaOrmStatusBarActions">
+            <reference id="JsonToSearOrm" />
+        </group>
+<!--        底部操作end-->
     </actions>
 </idea-plugin>

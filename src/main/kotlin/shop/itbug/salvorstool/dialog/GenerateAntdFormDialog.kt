@@ -18,7 +18,6 @@ class GenerateAntdFormDialog(project: Project, psiElement: RsStructItemImpl) : D
     init {
         super.init()
         title = "Generate Antd Form"
-
         tabview.add("预览", TypeJavaScriptEditor(project, AntdFactory.generateAntdForm(psiElement)))
     }
 

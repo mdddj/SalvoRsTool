@@ -13,6 +13,8 @@ object MyI18n: MyPluginBundle(){
 
     val saveTo: String get() = getMessage("save_to")
     val selectDir: String get() = getMessage("select_directory")
+    //数据验证失败
+    val fieldValidFailed: String get() = getMessage("valid_failed")
 }
 
 open class MyPluginBundle : AbstractBundle("messages.pluginBundle") {

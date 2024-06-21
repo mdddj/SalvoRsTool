@@ -4,24 +4,33 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id("org.jetbrains.kotlin.jvm") version "2.0.0"
-    id("org.jetbrains.intellij") version "1.17.2"
+    id("org.jetbrains.intellij.platform") version "2.0.0-beta7"
     id("org.jetbrains.changelog") version "2.2.0"
 }
 
 group = "shop.itbug"
-version = "1.7.0"
+version = "1.8.0"
 
 repositories {
-    mavenLocal()
     mavenCentral()
+
+    intellijPlatform {
+        defaultRepositories()
+        releases()
+        marketplace()
+    }
 }
 
 
-intellij {
-    version.set("LATEST-EAP-SNAPSHOT")
-    type.set("RR")
-    plugins.set(listOf("com.jetbrains.rust", "JavaScriptBase"))
+dependencies {
+    intellijPlatform {
+        local("/Users/ldd/Applications/RustRover.app")
+
+        bundledPlugins("com.jetbrains.rust","JavaScriptBase")
+        instrumentationTools()
+    }
 }
+
 
 val pushToken: String? = System.getenv("PUBLISH_TOKEN")
 
@@ -73,10 +82,26 @@ tasks {
         jvmArgs = listOf("-XX:+AllowEnhancedClassRedefinition")
     }
 
+    test {
+        useJUnitPlatform()
+    }
+
+    prepareSandbox {
+        doNotTrackState("---")
+    }
+
 }
 
 changelog {
     version = project.version as String
     path = file("CHANGELOG.md").canonicalPath
     groups.empty()
+}
+
+dependencies {
+    implementation ("com.alibaba.fastjson2:fastjson2:2.0.51")
+    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.0")
+    implementation("org.jetbrains.kotlin:kotlin-reflect:2.0.0")
+    implementation("com.google.guava:guava:31.1-jre")
+    testImplementation("junit:junit:4.13.2")
 }
