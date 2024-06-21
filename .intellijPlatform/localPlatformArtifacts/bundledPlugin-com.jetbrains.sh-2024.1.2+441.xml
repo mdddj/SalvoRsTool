@@ -1,0 +1,14 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.jetbrains.sh" revision="2024.1.2+441"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/Applications/RustRover.app/Contents/plugins/sh" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="org.intellij.plugins.markdown" rev="2024.1.2+441"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.terminal" rev="2024.1.2+441"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="2024.1.2+441"/>
+  </dependencies>
+</ivy-module>
