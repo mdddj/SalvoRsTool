@@ -25,8 +25,8 @@ repositories {
 dependencies {
     intellijPlatform {
         rustRover("2024.1.2")
-
         bundledPlugins("com.jetbrains.rust","JavaScriptBase")
+        zipSigner()
         instrumentationTools()
     }
 }
