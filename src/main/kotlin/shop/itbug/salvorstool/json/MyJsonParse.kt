@@ -133,6 +133,7 @@ abstract class SeaOrmTableFactory(tableName: String) {
         val sb = StringBuilder()
         sb.appendLine("async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {")
         sb.appendLine(generate(columns))
+        sb.append(".to_owned()")
         sb.appendLine("}")
         return sb.toString()
     }
