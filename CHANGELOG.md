@@ -3,6 +3,12 @@
 ## Unreleased
 
 
+## [1.9.0] -2024-07-04
+
+- 更新插件名字和图标
+- 新增sea-orm-cli可视化面板 <a href='https://mdddj.github.io/SalvoRsToolDocument/sea-orm-command-tool.html'>文档</a>
+- <a href='https://mdddj.github.io/SalvoRsToolDocument/changelog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.html#1-9-0'>更新日志</a>
+
 ## [1.8.0] - 2024-06-21
 
 - 添加json生成sea orm migration代码功能,<a href='https://mdddj.github.io/SalvoRsToolDocument/sea-orm-json-gen-migration-code.html'>查看文档</a>
