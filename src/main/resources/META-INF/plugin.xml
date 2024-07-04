@@ -1,6 +1,6 @@
 <idea-plugin url="https://mdddj.github.io/SalvoRsToolDocument">
     <id>shop.itbug.SalvoRsTool</id>
-    <name>SalvoRsTool</name>
+    <name>RustX</name>
     <vendor email="hlxsmail@gmail.com" url="https://itbug.shop">梁典典</vendor>
     <depends>com.intellij.modules.platform</depends>
     <depends>com.jetbrains.rust</depends>
@@ -17,9 +17,10 @@
         </intentionAction>
         <toolWindow factoryClass="shop.itbug.salvorstool.window.SalvoWindow" id="Salvo" anchor="bottom"
                     icon="/icons/logo.svg"/>
-        <searchEverywhereContributor implementation="shop.itbug.salvorstool.searcheverywhere.SalvoSearchApi" />
+        <searchEverywhereContributor implementation="shop.itbug.salvorstool.searcheverywhere.SalvoSearchApi"/>
         <statusBarWidgetFactory implementation="shop.itbug.salvorstool.bar.BottomStatusBar" id="SalvoToolBar"/>
-        <webHelpProvider implementation="shop.itbug.salvorstool.help.MyWebHelpProvider" />
+        <webHelpProvider implementation="shop.itbug.salvorstool.help.MyWebHelpProvider"/>
+        <notificationGroup displayType="BALLOON" id="SeaOrmCliNotification" />
     </extensions>
     <actions>
         <action id="GenerateDtoAction" class="shop.itbug.salvorstool.action.GenerateDtoAction">
@@ -28,7 +29,7 @@
         <action id="GenerateServiceAction" class="shop.itbug.salvorstool.action.GenerateServiceAction">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
-        <action id="GenerateRouterAction" class="shop.itbug.salvorstool.action.GenerateRouterAction" >
+        <action id="GenerateRouterAction" class="shop.itbug.salvorstool.action.GenerateRouterAction">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
         <action id="GenerateAntdFormAction" class="shop.itbug.salvorstool.action.GenerateAntdFormAction"
@@ -39,15 +40,16 @@
 
         <action id="SalvoApiRefreshAction" class="shop.itbug.salvorstool.action.api.SalvoApiRefreshAction"/>
         <group id="SalvoApiActionList">
-            <reference id="SalvoApiRefreshAction" />
+            <reference id="SalvoApiRefreshAction"/>
         </group>
 
-        <action id="AntdRequestCopyAction" class="shop.itbug.salvorstool.action.rightmenu.AntdRequestCopyAction" popup="true" />
+        <action id="AntdRequestCopyAction" class="shop.itbug.salvorstool.action.rightmenu.AntdRequestCopyAction"
+                popup="true"/>
         <action id="CopyUrlAction" class="shop.itbug.salvorstool.action.rightmenu.CopyUrlAction" popup="true"/>
         <group id="SalvoApiRightMenuActionGroup" popup="true">
-            <separator key="copy" />
-            <reference id="AntdRequestCopyAction" />
-            <reference id="CopyUrlAction" />
+            <separator key="copy"/>
+            <reference id="AntdRequestCopyAction"/>
+            <reference id="CopyUrlAction"/>
         </group>
 
 
@@ -56,13 +58,38 @@
         </action>
 
 
-
-<!--    底部操作    -->
-
-        <action id="JsonToSearOrm" class="shop.itbug.salvorstool.action.bar.JsonToSearOrm" text="Json To SeaOrm" icon="/icons/sea-orm.png"/>
+        <action id="JsonToSearOrm" class="shop.itbug.salvorstool.action.bar.JsonToSearOrm" text="Json To SeaOrm"
+                icon="/icons/sea-orm.png"/>
         <group id="SeaOrmStatusBarActions">
-            <reference id="JsonToSearOrm" />
+            <reference id="JsonToSearOrm"/>
         </group>
-<!--        底部操作end-->
+        <!--        底部操作end-->
+        <group id="SeamOrmCommandAction"
+               text="Sea Orm Commands" popup="true" class="shop.itbug.salvorstool.action.seaorm.SeamOrmCommandActionGroup">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="WeighingNewGroup" />
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmInitAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmInitAction" text="Init"/>
+            <separator text="Generate"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmCreateTableFileAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmCreateTableFileAction" text="Create New"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunGenerateEntityAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunGenerateEntityAction" text="Entity"/>
+            <separator text="Migrate"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunUpAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunUpAction" text="Run Up"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunDownAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunDownAction" text="Run Down"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunCheckStatusAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunCheckStatusAction" text="Check Status"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunFreshAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunFreshAction" text="Fresh"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunRefreshAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunRefreshAction" text="Refresh"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunResetAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunResetAction" text="Reset"/>
+        </group>
+
+
+
     </actions>
 </idea-plugin>

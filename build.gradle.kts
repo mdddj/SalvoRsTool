@@ -4,12 +4,12 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id("org.jetbrains.kotlin.jvm") version "2.0.0"
-    id("org.jetbrains.intellij.platform") version "2.0.0-beta7"
+    id("org.jetbrains.intellij.platform") version "2.0.0-beta8"
     id("org.jetbrains.changelog") version "2.2.0"
 }
 
 group = "shop.itbug"
-version = "1.8.0"
+version = "1.9.0"
 
 repositories {
     mavenCentral()
@@ -24,7 +24,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        rustRover("2024.1.2")
+        rustRover("2024.1.3")
         bundledPlugins("com.jetbrains.rust","JavaScriptBase")
         zipSigner()
         instrumentationTools()

@@ -106,7 +106,8 @@ abstract class SeaOrmTableFactory(tableName: String) {
     private fun getColumns(columns: List<Pair<String, KtRustType?>>): String {
         val sb = StringBuilder()
         columns.forEach {
-            sb.appendLine("\t" + getColumnBy(it))
+            val isLast = columns.last() == it
+            sb.appendLine("\t" + getColumnBy(it) + if (isLast) ".to_owned()" else "")
         }
         return sb.toString()
     }
