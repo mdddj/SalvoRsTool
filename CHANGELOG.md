@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## [2.0.0] -2024-07-19
+
+- Completely rewritten `salvo api` scanning implementation
+- Added right-click menu operation function to jump to `salvo router handle`
+- Group `salvo` Code generate function operations
+- [changelog](https://mdddj.github.io/SalvoRsToolDocument/changelog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.html)
 
 ## [1.9.0] -2024-07-04
 
