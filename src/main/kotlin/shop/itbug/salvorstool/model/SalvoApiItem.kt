@@ -1,11 +1,7 @@
 package shop.itbug.salvorstool.model
 
-import com.intellij.openapi.application.ApplicationManager
-import com.intellij.openapi.fileEditor.FileEditorManager
-import com.intellij.openapi.project.Project
-import com.intellij.pom.Navigatable
-import com.intellij.psi.search.searches.ReferencesSearch
 import org.rust.lang.core.psi.RsMethodCall
+import org.rust.lang.core.psi.impl.RsPathImpl
 import shop.itbug.salvorstool.tool.*
 import java.util.*
 
@@ -15,8 +11,12 @@ enum class SalvoApiItemMethod {
     Post,
     Update,
     Delete,
-    Put
+    Put,
+    Patch,
+    Unknown
 }
+
+data class SalvoApiItemFunction(val method: SalvoApiItemMethod,val element: RsMethodCall)
 
 data class SalvoApiItem(val api: String,val method: SalvoApiItemMethod,val rsMethodPsiElement: RsMethodCall){
     override fun toString(): String {
@@ -89,14 +89,16 @@ data class SalvoApiItem(val api: String,val method: SalvoApiItemMethod,val rsMet
     /**
      * 跳到代码位置
      */
-    fun navTo(project: Project) {
-        val navigationElement = rsMethodPsiElement.navigationElement
-        ApplicationManager.getApplication().invokeLater {
-            if (navigationElement != null && navigationElement is Navigatable && (navigationElement as Navigatable).canNavigate()) {
-                (navigationElement as Navigatable).navigate(true)
-            }else{
-                FileEditorManager.getInstance(project).openFile(rsMethodPsiElement.containingFile.virtualFile)
-            }
-        }
+    fun navTo() {
+        rsMethodPsiElement.tryNavTo()
+    }
+
+    /**
+     * 跳转到service实现
+     */
+    fun navToRouterImpl(){
+         rsMethodPsiElement.findFirstChild<RsPathImpl>()?.let { rxPath ->
+             rxPath.reference?.resolve()?.tryNavTo()
+         }
     }
 }

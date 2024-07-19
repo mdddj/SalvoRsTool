@@ -11,10 +11,7 @@ import com.intellij.ui.dsl.builder.panel
 import org.rust.lang.core.psi.RsNamedFieldDecl
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import shop.itbug.salvorstool.i18n.MyI18n
-import shop.itbug.salvorstool.tool.MyRsPsiFactory
-import shop.itbug.salvorstool.tool.Tools
-import shop.itbug.salvorstool.tool.myManager
-import shop.itbug.salvorstool.tool.underlineToCamel
+import shop.itbug.salvorstool.tool.*
 import shop.itbug.salvorstool.widget.RsEditor
 import java.awt.Dimension
 import java.util.*
@@ -57,7 +54,7 @@ fun GenerateDtoDialogResultEnum.getOuterAttr(): String {
 ///过滤字段
 fun GenerateDtoDialogResultEnum.getFields(list:  List<RsNamedFieldDecl>) :  List<RsNamedFieldDecl> {
     return when (this) {
-        GenerateDtoDialogResultEnum.AddRequest -> list.filter { !it.myManager.isPrimaryKey }
+        GenerateDtoDialogResultEnum.AddRequest -> list.filter { !it.namedFieldManager.isPrimaryKey }
         GenerateDtoDialogResultEnum.UpdateRequest -> list
         GenerateDtoDialogResultEnum.Response -> list
     }
@@ -66,7 +63,7 @@ fun GenerateDtoDialogResultEnum.getFields(list:  List<RsNamedFieldDecl>) :  List
 fun GenerateDtoDialogResultEnum.preview(field: RsNamedFieldDecl) : String? {
     return when (this) {
         GenerateDtoDialogResultEnum.UpdateRequest -> {
-            if(field.myManager.isPrimaryKey){
+            if(field.namedFieldManager.isPrimaryKey){
                 return "    #[salvo(extract(source(from = \"param\")))]"
             }
             return null
@@ -99,13 +96,13 @@ class GenerateDtoDialog(private val project: Project, private val  psiElement: R
 
     private val model = GenerateDtoDialogParam(
         addRequestText = MyRsPsiFactory.generateDto(GenerateDtoDialogResultEnum.AddRequest, psiElement),
-        addRequestName = GenerateDtoDialogResultEnum.AddRequest.getStructName(psiElement.myManager.getTableName ?: ""),
+        addRequestName = GenerateDtoDialogResultEnum.AddRequest.getStructName(psiElement.structItemManager.getTableName ?: ""),
         updateRequestText = MyRsPsiFactory.generateDto(GenerateDtoDialogResultEnum.UpdateRequest,psiElement),
-        updateRequestName = GenerateDtoDialogResultEnum.UpdateRequest.getStructName(psiElement.myManager.getTableName ?: ""),
+        updateRequestName = GenerateDtoDialogResultEnum.UpdateRequest.getStructName(psiElement.structItemManager.getTableName ?: ""),
         responseText = MyRsPsiFactory.generateDto(GenerateDtoDialogResultEnum.Response,psiElement),
-        responseName = GenerateDtoDialogResultEnum.Response.getStructName(psiElement.myManager.getTableName ?: ""),
+        responseName = GenerateDtoDialogResultEnum.Response.getStructName(psiElement.structItemManager.getTableName ?: ""),
         saveTo = Tools.getDtoFolder(project)?.path ?: "",
-        fileName = (psiElement.myManager.getTableName?:"root")
+        fileName = (psiElement.structItemManager.getTableName?:"root")
     )
 
     private val tabView = JBTabbedPane()

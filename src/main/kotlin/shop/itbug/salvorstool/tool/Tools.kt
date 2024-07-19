@@ -78,7 +78,7 @@ object Tools {
     }
 
     fun getServiceImportPackages(psiElement: RsStructItemImpl) : String {
-        val tabName = psiElement.myManager.getTableName ?: throw MyRsPsiFactoryError("获取表名失败")
+        val tabName = psiElement.structItemManager.getTableName ?: throw MyRsPsiFactoryError("获取表名失败")
         return """
             use crate::{
                 app_writer::AppResult,

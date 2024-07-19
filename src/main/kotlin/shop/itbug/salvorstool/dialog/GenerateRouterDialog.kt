@@ -13,6 +13,7 @@ import shop.itbug.salvorstool.i18n.MyI18n
 import shop.itbug.salvorstool.tool.MyRsPsiFactory
 import shop.itbug.salvorstool.tool.Tools
 import shop.itbug.salvorstool.tool.myManager
+import shop.itbug.salvorstool.tool.structItemManager
 import shop.itbug.salvorstool.widget.RsEditor
 import java.awt.Dimension
 import javax.swing.JComponent
@@ -30,7 +31,7 @@ class GenerateRouterDialog(private val project: Project, psiElement: RsStructIte
     private val model = GenerateRouterDialogModel(
         text = MyRsPsiFactory.generateRouterFile(psiElement),
         saveTo = Tools.getRouterFolder(project)?.path ?: "",
-        fileName = (psiElement.myManager.getTableName ?: "root")
+        fileName = (psiElement.structItemManager.getTableName ?: "root")
     )
 
     init {

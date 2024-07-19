@@ -14,6 +14,7 @@ import shop.itbug.salvorstool.i18n.MyI18n
 import shop.itbug.salvorstool.tool.MyRsPsiFactory
 import shop.itbug.salvorstool.tool.Tools
 import shop.itbug.salvorstool.tool.myManager
+import shop.itbug.salvorstool.tool.structItemManager
 import shop.itbug.salvorstool.widget.RsEditor
 import java.awt.Dimension
 import javax.swing.JComponent
@@ -57,7 +58,7 @@ class GenerateServiceDialog(private val project: Project, private val psiElement
         deleteText = MyRsPsiFactory.generateServiceByDelete(psiElement),
         findAllText = MyRsPsiFactory.generateServiceByAll(psiElement),
         saveTo = Tools.getServiceFolder(project)?.path ?: "",
-        fileName = (psiElement.myManager.getTableName?:"root")
+        fileName = (psiElement.structItemManager.getTableName?:"root")
     )
 
     init {

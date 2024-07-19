@@ -3,10 +3,19 @@ package shop.itbug.salvorstool.tool
 import com.google.common.base.CaseFormat
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
+import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.diagnostic.Logger
+import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.fileTypes.FileTypeManager
 import com.intellij.openapi.ide.CopyPasteManager
+import com.intellij.pom.Navigatable
 import com.intellij.psi.PsiElement
+import com.intellij.psi.PsiFile
+import com.intellij.psi.PsiReference
+import com.intellij.psi.impl.source.tree.LeafPsiElement
+import com.intellij.psi.search.LocalSearchScope
+import com.intellij.psi.search.searches.ReferencesSearch
+import com.intellij.psi.util.PsiTreeUtil
 import org.rust.lang.core.psi.RsNamedFieldDecl
 import org.rust.lang.core.psi.RsOuterAttr
 import org.rust.lang.core.psi.impl.RsStructItemImpl
@@ -17,11 +26,9 @@ import javax.swing.JPanel
 import javax.swing.JScrollPane
 
 val rsFileType = FileTypeManager.getInstance().getFileTypeByExtension("rs")
-val PsiElement.myManager get() = MyRsPsiElementManager(this)
-val RsStructItemImpl.myManager get() = MyRsStructManager(this)
-val RsNamedFieldDecl.myManager get() = MyFieldPsiElementManager(this)
-val RsOuterAttr.myManager get() = MyRsOuterAttrPsiElementManager(this)
-fun <T : Any> T.logger() = Logger.getInstance(this::class.java)
+val RsStructItemImpl.structItemManager get() = MyRsStructManager(this)
+val RsNamedFieldDecl.namedFieldManager get() = MyFieldPsiElementManager(this)
+val RsOuterAttr.outerAttrManager get() = MyRsOuterAttrPsiElementManager(this)
 val JScrollPane.removeBorder get() = this.apply { this.border = BorderFactory.createEmptyBorder(0, 0, 0, 0) }
 val JPanel.padding get() = this.apply { this.border = BorderFactory.createEmptyBorder(12, 12, 12, 12) }
 val JPanel.vertical get() = this.apply { this.border = BorderFactory.createEmptyBorder(12, 0, 12, 0) }
@@ -53,14 +60,69 @@ fun firstCharToLowercase(input: String): String {
     }
 }
 
+///尝试获取Rs struct 模型
 fun AnActionEvent.tryGetRsStructPsiElement(): RsStructItemImpl? {
     val psiElement = this.getData(CommonDataKeys.PSI_ELEMENT)
-    if (psiElement != null && psiElement.myManager.isStruct) {
-        return psiElement as? RsStructItemImpl
+    if(psiElement is RsStructItemImpl){
+        return psiElement
     }
-    return null
+    val firstParent = PsiTreeUtil.findFirstParent(psiElement){it is RsStructItemImpl}
+    return firstParent as? RsStructItemImpl
 }
 
 fun String.copy() {
     CopyPasteManager.getInstance().setContents(StringSelection(this))
+}
+
+inline fun <reified T: PsiElement> PsiElement.filterByType(): List<T> {
+    return PsiTreeUtil.findChildrenOfAnyType(this, T::class.java).toList()
+}
+
+inline fun <reified T: PsiElement> PsiElement.findByTypeAndText(text: String): T? {
+    return filterByType<T>().find { it.text == text }
+}
+
+/**
+ * 递归查找符合[T]类型的第一个元素
+ */
+inline fun <reified T: PsiElement> PsiElement.findFirstChild(): T? {
+    try {
+        return PsiTreeUtil.findChildOfType(this, T::class.java)
+    } catch (e: Exception) {
+        return null
+    }
+}
+
+fun PsiElement.findLastLeafChild(): PsiElement? {
+    return filterByType<LeafPsiElement>().lastOrNull()
+}
+
+
+/**
+ * 查找第一个匹配的[T]父元素
+ */
+inline fun <reified T: PsiElement> PsiElement.findFirstParentChild(): PsiElement? {
+    return PsiTreeUtil.findFirstParent(this){
+        return@findFirstParent it is T
+    }
+}
+
+/**
+ * 查找[element]在文件中的引用列表
+ */
+fun PsiFile.getUseAge(element: PsiElement) : List<PsiReference> {
+    return ReferencesSearch.search(element, LocalSearchScope(this)).findAll().toList()
+}
+
+/**
+ * 尝试跳转到代码为止
+ */
+fun PsiElement.tryNavTo() {
+    ApplicationManager.getApplication().invokeLater {
+        if (navigationElement != null && navigationElement is Navigatable && (navigationElement as Navigatable).canNavigate()) {
+            (navigationElement as Navigatable).navigate(true)
+        }else{
+            FileEditorManager.getInstance(project).openFile(this.containingFile.virtualFile)
+        }
+    }
 }

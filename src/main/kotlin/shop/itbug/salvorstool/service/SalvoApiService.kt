@@ -19,15 +19,15 @@ import shop.itbug.salvorstool.messageing.ApiScanMessaging
 import shop.itbug.salvorstool.model.SalvoApiItem
 import shop.itbug.salvorstool.tool.myManager
 import shop.itbug.salvorstool.tool.rsFileType
+import shop.itbug.salvorstool.tool.rsLetDeclImplManager
 
 @Service(Service.Level.PROJECT)
 class SalvoApiService(val project: Project) {
 
-
     private var projectApiList = mutableListOf<SalvoApiItem>()
 
     init {
-       project.messageBus.connect().subscribe(DumbService.DUMB_MODE, object : DumbService.DumbModeListener {
+        project.messageBus.connect().subscribe(DumbService.DUMB_MODE, object : DumbService.DumbModeListener {
             override fun exitDumbMode() {
                 startScan()
                 super.exitDumbMode()
@@ -35,8 +35,7 @@ class SalvoApiService(val project: Project) {
         })
     }
 
-
-    fun getApiList() : List<SalvoApiItem> {
+    fun getApiList(): List<SalvoApiItem> {
         return projectApiList
     }
 
@@ -46,27 +45,30 @@ class SalvoApiService(val project: Project) {
 
     @OptIn(DelicateCoroutinesApi::class)
     private fun startScan() {
+
         ApplicationManager.getApplication().invokeLater {
-            GlobalScope.launch(Dispatchers.Default) {
-                var files = emptyList<VirtualFile>()
-                readAction {
-                    files = FileTypeIndex.getFiles(rsFileType, SalvoSearchGlobal(project)).toList()
-                }
-                val tasks = files.map { file ->
-                    GlobalScope.async {
-                        findRouterRsFunction(file)
+            val hasSalvoDeps = RustProjectService.getInstance(project).hasSalvoDependencies()
+            if (hasSalvoDeps) {
+                GlobalScope.launch(Dispatchers.Default) {
+                    var files = emptyList<VirtualFile>()
+                    readAction {
+                        files = FileTypeIndex.getFiles(rsFileType, SalvoSearchGlobal(project)).toList()
                     }
-                }
-                val result = tasks.awaitAll().flatten()
-                val apis = mutableListOf<SalvoApiItem>()
-                result.forEach { r ->
-                    ApplicationManager.getApplication().runReadAction {
-                        val api = r.myManager.allLet.map { let -> let.myManager.apiList }
-                        apis.addAll(api.flatten())
+                    val tasks = files.map { file ->
+                        GlobalScope.async {
+                            findRouterRsFunction(file)
+                        }
                     }
+                    val result = tasks.awaitAll().flatten()
+                    val apis = mutableListOf<SalvoApiItem>()
+                    result.forEach { r: RsFunctionImpl ->
+                        ApplicationManager.getApplication().runReadAction {
+                            r.myManager.allLet.map { let -> apis.addAll(let.rsLetDeclImplManager.allApi) }
+                        }
+                    }
+                    projectApiList = apis
+                    project.messageBus.syncPublisher(ApiScanMessaging.TOPIC).apiScanEed(apis)
                 }
-                projectApiList = apis
-                project.messageBus.syncPublisher(ApiScanMessaging.TOPIC).apiScanEed(apis)
             }
         }
 
@@ -81,6 +83,7 @@ class SalvoApiService(val project: Project) {
             return@readAction find
         }
     }
+
     companion object {
 
         fun getInstance(project: Project): SalvoApiService {

@@ -27,10 +27,6 @@ enum class JavascriptType {
     Number, String, Bool, Unknown
 }
 
-/// psi操作管理
-class MyRsPsiElementManager(context: PsiElement) {
-    val isStruct = context is RsStructItemImpl
-}
 
 /// struct操作管理
 class MyRsStructManager(private val psiElement: RsStructItemImpl) {
@@ -47,18 +43,18 @@ class MyRsStructManager(private val psiElement: RsStructItemImpl) {
     ///获取表名
     val getTableName: String?
         get() {
-            val outerAttr = psiElement.outerAttrList.find { it.myManager.getSeaOrmTabName != null }
+            val outerAttr = psiElement.outerAttrList.find { it.outerAttrManager.getSeaOrmTabName != null }
                 ?: return null
-            val tabName = outerAttr.myManager.getSeaOrmTabName
+            val tabName = outerAttr.outerAttrManager.getSeaOrmTabName
             return tabName
         }
 
     ///主键字段
-    val primaryField = fieldList.find { it.myManager.isPrimaryKey }
+    val primaryField = fieldList.find { it.namedFieldManager.isPrimaryKey }
 
     ///js 模型列表
     val jsModelList: List<MyFieldPsiElementManager.JsModel> =
-        fieldList.mapNotNull { it.myManager.getJsModel }
+        fieldList.mapNotNull { it.namedFieldManager.getJsModel }
 
     ///获取ts模型
     val getTSInterface: String get() {
@@ -193,7 +189,7 @@ class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
 
     ///查找meta,比较精确的查找
     private fun hasMetaItem(name: String, filter: (item: RsMetaItem) -> Boolean): Boolean {
-        val find = psiElement.outerAttrList.find { it.myManager.isMeta(name) } ?: return false
+        val find = psiElement.outerAttrList.find { it.outerAttrManager.isMeta(name) } ?: return false
         val args = find.metaItem.metaItemArgs
         args?.metaItemList?.forEach { meta ->
             run {

@@ -19,7 +19,7 @@ object AntdFactory {
     ///生成form
     fun generateAntdForm(psiElement: RsStructItemImpl): String {
         val sb = StringBuilder()
-        val manager = psiElement.myManager
+        val manager = psiElement.structItemManager
         val jsModels = manager.jsModelList
 
         //1.添加参数
@@ -49,7 +49,7 @@ object AntdFactory {
     }
 
     ///生成form item
-    fun generateFormItem(model: MyFieldPsiElementManager.JsModel): String {
+    private fun generateFormItem(model: MyFieldPsiElementManager.JsModel): String {
         val type = when (model.type) {
             JavascriptType.Number -> "ProFormDigit"
             JavascriptType.String -> "ProFormText"

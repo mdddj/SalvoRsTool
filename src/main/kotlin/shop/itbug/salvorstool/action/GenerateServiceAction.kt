@@ -16,7 +16,7 @@ class GenerateServiceAction : AnAction() {
     }
 
     override fun update(e: AnActionEvent) {
-        e.presentation.isVisible = e.project != null && e.tryGetRsStructPsiElement() != null && e.tryGetRsStructPsiElement()?.myManager?.getTableName != null
+        e.presentation.isVisible = e.project != null && e.tryGetRsStructPsiElement() != null
         e.presentation.text = MyI18n.getMessage("g_service")
         super.update(e)
     }

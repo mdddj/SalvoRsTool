@@ -5,11 +5,10 @@ import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
+import com.intellij.ui.components.JBLabel
 import com.intellij.ui.components.JBTabbedPane
 import org.rust.lang.core.psi.impl.RsStructItemImpl
-import shop.itbug.salvorstool.tool.myManager
 import shop.itbug.salvorstool.tool.tryGetRsStructPsiElement
-import shop.itbug.salvorstool.widget.TypeJavaScriptEditor
 import javax.swing.JComponent
 
 class GenerateHookFormAction : AnAction() {
@@ -28,12 +27,11 @@ class GenerateHookFormAction : AnAction() {
     }
 
     private inner class Dialog(project: Project,psi: RsStructItemImpl) : DialogWrapper(project) {
-        private val manager = psi.myManager
         private val tab = JBTabbedPane()
 
         init {
+            tab.add(JBLabel("Removed!"))
             super.init()
-            tab.add("Component", TypeJavaScriptEditor(project,manager.getHookForm))
         }
 
         override fun createCenterPanel(): JComponent {
