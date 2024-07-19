@@ -1,66 +1,52 @@
 package shop.itbug.salvorstool.tool
 
-import com.intellij.psi.PsiElement
 import com.intellij.psi.util.PsiTreeUtil
 import org.rust.lang.core.psi.RsMethodCall
-import org.rust.lang.core.psi.impl.RsDotExprImpl
-import org.rust.lang.core.psi.impl.RsLetDeclImpl
+import org.rust.lang.core.psi.impl.RsCallExprImpl
+import org.rust.lang.core.psi.impl.RsLitExprImpl
+import org.rust.lang.core.psi.impl.RsMethodCallExprImpl
 import org.rust.lang.core.psi.impl.RsPathExprImpl
-import shop.itbug.salvorstool.model.SalvoApiItem
-import shop.itbug.salvorstool.model.SalvoApiItemMethod
-import java.util.*
+import shop.itbug.salvorstool.model.SalvoApiItemFunction
 
-val RsMethodCall.methodManager: RsMethodCallManager get() = RsMethodCallManager(this)
+val RsMethodCall.methodCallManager: RsMethodCallManager get() = RsMethodCallManager(this)
 
-/// method call
+/**
+ *
+ * push(
+ *             Router::with_path("<id>")
+ *                 .put(put_update_post)
+ *                 .delete(delete_post)
+ *                 .get(get_post_by_id),
+ *         )
+ */
+
+
 class RsMethodCallManager(val psiElement: RsMethodCall) {
 
+    ///返回 push
     private val myIdText: String get() = psiElement.identifier.text
 
-    //是否有push函数
-    private val hasPush: Boolean get() = dtoChild != null
+    ///是否 .push
+    val isPushMethodCall: Boolean get() = myIdText == "push"
 
-    //找到dot
-    private val dtoChild: RsDotExprImpl?
-        get() {
-            val va = psiElement.valueArgumentList
-            return PsiTreeUtil.findChildOfType(va, RsDotExprImpl::class.java)
+    /// 返回<id>
+    val withPathString : String get() {
+       val eles = PsiTreeUtil.findChildrenOfType(psiElement.valueArgumentList,RsCallExprImpl::class.java).filter { it.firstChild is RsPathExprImpl && it.firstChild.text == "Router::with_path" }
+        if(eles.isNotEmpty()){
+            val first = eles.first()
+            val lit = first.valueArgumentList.exprList.firstOrNull() as? RsLitExprImpl
+            return lit?.stringLiteral?.text?.replace("\"","") ?: "<unknown>"
         }
-
-    // rsPath
-     val rsPathChild: RsPathExprImpl?
-        get() {
-            val va = psiElement.valueArgumentList
-            return PsiTreeUtil.findChildOfType(va, RsPathExprImpl::class.java)
-        }
-
-    // method
-    val myApiMethod: SalvoApiItemMethod?
-        get() {
-            return SalvoApiItemMethod.entries.find { it.name.lowercase(Locale.getDefault()) == myIdText.lowercase(Locale.getDefault()) }
-        }
-
-
-    // 生成item
-    fun getApiItem(): SalvoApiItem? {
-        val m = myApiMethod ?: return null
-        val dots = getParentList(psiElement).reversed()
-        val finalUrl = dots.map { it.myManager.startApi }.joinToString("/")
-        return SalvoApiItem(finalUrl, m,psiElement)
+        return ""
     }
-}
 
-private fun getParentList(element: RsMethodCall): List<RsDotExprImpl> {
-    val parentList = mutableListOf<RsDotExprImpl>()
-    var currentElement: PsiElement? = element.parent
-    while (currentElement != null) {
-        if (currentElement is RsDotExprImpl && currentElement.myManager.startApi != null && currentElement.myManager.isRouterWith && parentList.find { it.myManager.startApi == (currentElement as RsDotExprImpl).myManager.startApi } == null) {
-            parentList.add(currentElement)
+    /// 获取全部的get,post....
+    val allMethods : List<SalvoApiItemFunction> get()  {
+        val expr: RsMethodCallExprImpl? = psiElement.valueArgumentList.exprList.firstOrNull() as? RsMethodCallExprImpl
+        if(expr != null){
+            return expr.methodCallExprManager().getAllApiMethods
         }
-        currentElement = currentElement.parent
-        if (currentElement is RsLetDeclImpl) {
-            break
-        }
+        return emptyList()
     }
-    return parentList
+
 }

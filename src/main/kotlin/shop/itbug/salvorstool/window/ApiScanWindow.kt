@@ -85,7 +85,7 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
             if (!it.valueIsAdjusting) {
                 val selectedIndex = list.selectedIndex
                 if (selectedIndex != -1) {
-                    list.selectedValue.navTo(myProject)
+                    list.selectedValue.navTo()
                 }
             }
         }

@@ -1,10 +1,12 @@
 import org.jetbrains.changelog.Changelog
+import org.jetbrains.intellij.platform.gradle.TestFrameworkType
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
+
 plugins {
     id("org.jetbrains.kotlin.jvm") version "2.0.0"
-    id("org.jetbrains.intellij.platform") version "2.0.0-beta8"
+    id("org.jetbrains.intellij.platform") version "2.0.0-beta9"
     id("org.jetbrains.changelog") version "2.2.0"
 }
 
@@ -24,10 +26,15 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        rustRover("2024.1.3")
-        bundledPlugins("com.jetbrains.rust","JavaScriptBase")
+//        local("/Users/ldd/Applications/RustRover.app")
+        rustRover("2024.1.5")
+        bundledPlugins("JavaScriptBase","com.jetbrains.rust","org.toml.lang")
         zipSigner()
         instrumentationTools()
+
+        testFramework(TestFrameworkType.Platform)
+
+        implementation("org.osgi:org.osgi.test.junit4:1.3.0")
     }
 }
 
@@ -35,6 +42,7 @@ dependencies {
 val pushToken: String? = System.getenv("PUBLISH_TOKEN")
 
 tasks {
+
     withType<JavaCompile> {
         sourceCompatibility = "17"
         targetCompatibility = "17"
@@ -82,14 +90,6 @@ tasks {
         jvmArgs = listOf("-XX:+AllowEnhancedClassRedefinition")
     }
 
-    test {
-        useJUnitPlatform()
-    }
-
-    prepareSandbox {
-        doNotTrackState("---")
-    }
-
 }
 
 changelog {
@@ -103,5 +103,4 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.0")
     implementation("org.jetbrains.kotlin:kotlin-reflect:2.0.0")
     implementation("com.google.guava:guava:31.1-jre")
-    testImplementation("junit:junit:4.13.2")
 }

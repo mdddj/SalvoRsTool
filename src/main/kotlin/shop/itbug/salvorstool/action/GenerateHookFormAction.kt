@@ -28,12 +28,10 @@ class GenerateHookFormAction : AnAction() {
     }
 
     private inner class Dialog(project: Project,psi: RsStructItemImpl) : DialogWrapper(project) {
-        private val manager = psi.myManager
         private val tab = JBTabbedPane()
 
         init {
             super.init()
-            tab.add("Component", TypeJavaScriptEditor(project,manager.getHookForm))
         }
 
         override fun createCenterPanel(): JComponent {

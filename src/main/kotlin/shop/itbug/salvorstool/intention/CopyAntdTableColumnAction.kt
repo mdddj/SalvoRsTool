@@ -10,11 +10,14 @@ import com.intellij.psi.PsiFile
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import shop.itbug.salvorstool.tool.copy
 import shop.itbug.salvorstool.tool.myManager
+import shop.itbug.salvorstool.tool.structItemManager
 
+
+///
 class CopyAntdTableColumnAction : PsiElementBaseIntentionAction(), IntentionAction {
 
     override fun getFamilyName(): String {
-        return "SalvoRsTool: Copy Antd Table Column"
+        return "RustX: Copy Antd Table Column"
     }
 
     override fun getText(): String {
@@ -27,13 +30,13 @@ class CopyAntdTableColumnAction : PsiElementBaseIntentionAction(), IntentionActi
 
     override fun invoke(project: Project, editor: Editor?, element: PsiElement) {
         val rs = element.parent as? RsStructItemImpl ?: return
-        rs.myManager.getAntdTableColumnDefine.copy()
+        rs.structItemManager.getAntdTableColumnDefine.copy()
     }
 
     override fun generatePreview(project: Project, editor: Editor, file: PsiFile): IntentionPreviewInfo {
         val rsPsi = getElement(editor, file)?.parent as? RsStructItemImpl
         rsPsi?.let {
-            return IntentionPreviewInfo.Html("""<pre lang='json'>${rsPsi.myManager.getAntdTableColumnDefine}</pre>""".trimIndent())
+            return IntentionPreviewInfo.Html("""<pre lang='json'>${rsPsi.structItemManager.getAntdTableColumnDefine}</pre>""".trimIndent())
         }
         return IntentionPreviewInfo.EMPTY
     }
