@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "2.0.0"
+version = "2.0.1"
 
 repositories {
     mavenCentral()
@@ -26,15 +26,14 @@ repositories {
 
 dependencies {
     intellijPlatform {
+
 //        local("/Users/ldd/Applications/RustRover.app")
         rustRover("2024.1.5")
         bundledPlugins("JavaScriptBase","com.jetbrains.rust","org.toml.lang")
         zipSigner()
         instrumentationTools()
-
         testFramework(TestFrameworkType.Platform)
-
-        implementation("org.osgi:org.osgi.test.junit4:1.3.0")
+        testImplementation("org.osgi:org.osgi.test.junit4:1.3.0")
     }
 }
 
@@ -68,7 +67,7 @@ tasks {
 
 
     patchPluginXml {
-        sinceBuild.set("232")
+        sinceBuild.set("241.17890")
         untilBuild.set("242.*")
         changeNotes.set(myChangeLog)
         pluginDescription.set(descText)
@@ -96,11 +95,4 @@ changelog {
     version = project.version as String
     path = file("CHANGELOG.md").canonicalPath
     groups.empty()
-}
-
-dependencies {
-    implementation ("com.alibaba.fastjson2:fastjson2:2.0.51")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.0")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:2.0.0")
-    implementation("com.google.guava:guava:31.1-jre")
 }

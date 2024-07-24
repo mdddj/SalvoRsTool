@@ -1,7 +1,7 @@
 package shop.itbug.salvorstool.json
 
-import com.alibaba.fastjson2.JSONObject
 import com.google.common.base.CaseFormat
+import com.google.gson.JsonParser
 import java.math.BigDecimal
 import kotlin.reflect.KType
 import kotlin.reflect.full.createType
@@ -41,7 +41,7 @@ enum class KtRustType(private val ktType: KType, private val rustType: String) {
 }
 
 
-abstract class BaseJsonParse(jsonString: String) {
+abstract class BaseJsonParse(val jsonString: String) {
 
     companion object {
         fun createByJsonString(jsonString: String): BaseJsonParse {
@@ -49,7 +49,6 @@ abstract class BaseJsonParse(jsonString: String) {
         }
     }
 
-    private val jsonObject: JSONObject = JSONObject.parseObject(jsonString)
 
 
     /**
@@ -62,7 +61,9 @@ abstract class BaseJsonParse(jsonString: String) {
 
 
     fun getPairList(): List<Pair<String, KtRustType?>> {
-        return jsonObject.toMap().map { Pair(it.key, KtRustType.fromKtType(it.value::class.java.kotlin.createType())) }
+        val json = JsonParser.parseString(jsonString)
+        val jsonObjs = json.asJsonObject
+        return jsonObjs.asMap().map { Pair(it.key, KtRustType.fromKtType(it.value::class.java.kotlin.createType())) }
     }
 
 }

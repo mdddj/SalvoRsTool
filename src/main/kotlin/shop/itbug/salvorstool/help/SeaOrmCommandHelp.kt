@@ -10,7 +10,7 @@ import com.intellij.openapi.util.ThrowableComputable
 import shop.itbug.salvorstool.tool.NotificationUtil
 import java.io.File
 
-class SeaOrmCommandHelp(val dirPath: String, val project: Project) {
+class SeaOrmCommandHelp(private val dirPath: String, val project: Project) {
 
     private val COMMAND_CLI = "sea-orm-cli"
 

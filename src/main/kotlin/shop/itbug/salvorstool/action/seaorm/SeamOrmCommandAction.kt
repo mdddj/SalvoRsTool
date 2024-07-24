@@ -1,7 +1,9 @@
 package shop.itbug.salvorstool.action.seaorm
 
 import com.intellij.openapi.actionSystem.*
+import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.project.Project
+import com.intellij.openapi.project.guessProjectDir
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.ui.dsl.builder.bindText
 import com.intellij.ui.dsl.builder.panel
@@ -10,13 +12,16 @@ import shop.itbug.salvorstool.help.SeaOrmCommandHelp
 import shop.itbug.salvorstool.i18n.MyI18n
 import shop.itbug.salvorstool.icons.MyIcon
 import javax.swing.JComponent
+import javax.swing.SwingUtilities
 
 
-class SeamOrmCommandActionGroup: DefaultActionGroup() {
+class SeamOrmCommandActionGroup : DefaultActionGroup() {
 
     override fun update(e: AnActionEvent) {
+        val projectPath = e.project?.guessProjectDir()?.path
         val vf = e.getData(PlatformDataKeys.VIRTUAL_FILE)
-        e.presentation.isEnabledAndVisible = vf != null && vf.isDirectory && e.project != null && vf.findChild("Cargo.toml") != null
+        e.presentation.isEnabledAndVisible =
+            projectPath != null && vf != null && vf.isDirectory && e.project != null && vf.findChild("Cargo.toml") != null
         e.presentation.icon = MyIcon.pluginIcon
         super.update(e)
     }
@@ -32,8 +37,7 @@ abstract class SeamOrmCommandBaseAction : AnAction() {
     }
 
     fun AnActionEvent.getProj(): Project = this.project!!
-    private fun AnActionEvent.getVf() = this.getData(CommonDataKeys.VIRTUAL_FILE)!!
-    fun AnActionEvent.getSeaOrmHelper() = SeaOrmCommandHelp(getVf().path, getProj())
+    fun AnActionEvent.getSeaOrmHelper() = SeaOrmCommandHelp(getProj().guessProjectDir()?.path!!, getProj())
 }
 
 ///初始化
@@ -45,9 +49,12 @@ class SeaOrmInitAction : SeamOrmCommandBaseAction() {
 
 ///创建table
 class SeaOrmCreateTableFileAction : SeamOrmCommandBaseAction() {
+
     override fun actionPerformed(e: AnActionEvent) {
         Dialog(e.getProj()) {
-            e.getSeaOrmHelper().migrateGenerate(it.filename)
+            ApplicationManager.getApplication().invokeLater {
+                e.getSeaOrmHelper().migrateGenerate(it.filename)
+            }
         }.show()
     }
 
@@ -64,7 +71,7 @@ class SeaOrmCreateTableFileAction : SeamOrmCommandBaseAction() {
         override fun createCenterPanel(): JComponent {
             return panel {
                 row(MyI18n.getMessage("file_name")) {
-                    textField().bindText(configModel::filename)
+                    textField().bindText(configModel::filename).focused()
                 }
             }
         }
