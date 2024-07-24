@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [2.0.1] -2024-07-24
+
+- fix Startup error problem
+- fix sea-orm-cli execution failure bug
+
 ## [2.0.0] -2024-07-19
 
 - Completely rewritten `salvo api` scanning implementation
