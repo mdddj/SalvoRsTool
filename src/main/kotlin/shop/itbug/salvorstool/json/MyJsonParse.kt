@@ -2,9 +2,23 @@ package shop.itbug.salvorstool.json
 
 import com.google.common.base.CaseFormat
 import com.google.gson.JsonParser
+import com.google.gson.JsonPrimitive
 import java.math.BigDecimal
 import kotlin.reflect.KType
 import kotlin.reflect.full.createType
+
+private fun isFloat(jsonPrimitive: JsonPrimitive): Boolean {
+    if (jsonPrimitive.isNumber) {
+        val stringValue = jsonPrimitive.asString
+        try {
+            stringValue.toFloat()
+            return stringValue.contains(".")
+        } catch (e: NumberFormatException) {
+            return false
+        }
+    }
+    return false
+}
 
 enum class KtRustType(private val ktType: KType, private val rustType: String) {
     //数字类型
@@ -34,21 +48,31 @@ enum class KtRustType(private val ktType: KType, private val rustType: String) {
     }
 
     companion object {
-        fun fromKtType(type: KType): KtRustType? {
-            return KtRustType.entries.find { it.ktType == type }
+        fun fromGsonType(type: JsonPrimitive): KtRustType? {
+            if (isFloat(type)) {
+                return KtFloat
+            } else if (type.isNumber) {
+                return KtNumber
+            } else if (type.isString) {
+                return KtString
+            } else if (type.isBoolean) {
+                return KtBool
+            }
+            return null
         }
     }
+
+
 }
 
 
-abstract class BaseJsonParse(val jsonString: String) {
+abstract class BaseJsonParse(private val jsonString: String) {
 
     companion object {
         fun createByJsonString(jsonString: String): BaseJsonParse {
             return object : BaseJsonParse(jsonString) {}
         }
     }
-
 
 
     /**
@@ -63,7 +87,7 @@ abstract class BaseJsonParse(val jsonString: String) {
     fun getPairList(): List<Pair<String, KtRustType?>> {
         val json = JsonParser.parseString(jsonString)
         val jsonObjs = json.asJsonObject
-        return jsonObjs.asMap().map { Pair(it.key, KtRustType.fromKtType(it.value::class.java.kotlin.createType())) }
+        return jsonObjs.asMap().map { Pair(it.key, KtRustType.fromGsonType(it.value.asJsonPrimitive)) }
     }
 
 }
