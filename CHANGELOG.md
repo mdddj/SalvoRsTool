@@ -2,7 +2,12 @@
 
 ## Unreleased
 
-## [2.0.1] -2024-07-24
+## [2.0.3] -2024-08-03
+
+- Fix the bug where the JSON to Sea-ORM type is null.
+- Fix the issue with reading the Cargo.toml file causing an error.
+
+### [2.0.1] -2024-07-24
 
 - fix Startup error problem
 - fix sea-orm-cli execution failure bug
