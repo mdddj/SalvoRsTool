@@ -14,9 +14,5 @@
     <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_pl.properties" />
     <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_pt.properties" />
     <file url="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle_ru.properties" />
-    <custom-resource-bundle>
-      <file value="file://$PROJECT_DIR$/src/main/resources/messages/pluginBundle.properties" />
-      <base-name>pluginBundle</base-name>
-    </custom-resource-bundle>
   </component>
 </project>

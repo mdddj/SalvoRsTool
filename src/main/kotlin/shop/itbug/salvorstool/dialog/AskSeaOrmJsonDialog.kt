@@ -115,6 +115,7 @@ class AskSeaOrmJsonDialog(private val p: Project) : DialogWrapper(p, true) {
                     .comment(MyI18n.getMessage("sea_orm_json_tips"))
             }
         }
+        myPanel.registerValidators(disposable)
         return myPanel
     }
 
@@ -136,7 +137,7 @@ class AskSeaOrmJsonDialog(private val p: Project) : DialogWrapper(p, true) {
         }
     }
 
-    fun hasNestedArray(json: String): Boolean {
+    private fun hasNestedArray(json: String): Boolean {
         try {
             val jsonElement: JsonElement = JsonParser.parseString(json)
             return checkForNestedArray(jsonElement)
@@ -146,20 +147,20 @@ class AskSeaOrmJsonDialog(private val p: Project) : DialogWrapper(p, true) {
     }
 
     private fun checkForNestedArray(element: JsonElement): Boolean {
-        if (element.isJsonArray()) {
-            val array: JsonArray = element.getAsJsonArray()
+        if (element.isJsonArray) {
+            val array: JsonArray = element.asJsonArray
             for (arrayElement in array) {
-                if (arrayElement.isJsonArray() || arrayElement.isJsonObject()) {
+                if (arrayElement.isJsonArray || arrayElement.isJsonObject) {
                     if (checkForNestedArray(arrayElement)) {
                         return true
                     }
                 }
             }
-        } else if (element.isJsonObject()) {
-            val obj: JsonObject = element.getAsJsonObject()
+        } else if (element.isJsonObject) {
+            val obj: JsonObject = element.asJsonObject
             for (key in obj.keySet()) {
                 val objElement: JsonElement = obj.get(key)
-                if (objElement.isJsonArray() || objElement.isJsonObject()) {
+                if (objElement.isJsonArray || objElement.isJsonObject) {
                     if (checkForNestedArray(objElement)) {
                         return true
                     }

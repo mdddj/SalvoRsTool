@@ -46,29 +46,27 @@ class SalvoApiService(val project: Project) {
     @OptIn(DelicateCoroutinesApi::class)
     private fun startScan() {
 
-        ApplicationManager.getApplication().invokeLater {
-            val hasSalvoDeps = RustProjectService.getInstance(project).hasSalvoDependencies()
-            if (hasSalvoDeps) {
-                GlobalScope.launch(Dispatchers.Default) {
-                    var files = emptyList<VirtualFile>()
-                    readAction {
-                        files = FileTypeIndex.getFiles(rsFileType, SalvoSearchGlobal(project)).toList()
-                    }
-                    val tasks = files.map { file ->
-                        GlobalScope.async {
-                            findRouterRsFunction(file)
-                        }
-                    }
-                    val result = tasks.awaitAll().flatten()
-                    val apis = mutableListOf<SalvoApiItem>()
-                    result.forEach { r: RsFunctionImpl ->
-                        ApplicationManager.getApplication().runReadAction {
-                            r.myManager.allLet.map { let -> apis.addAll(let.rsLetDeclImplManager.allApi) }
-                        }
-                    }
-                    projectApiList = apis
-                    project.messageBus.syncPublisher(ApiScanMessaging.TOPIC).apiScanEed(apis)
+        val hasSalvoDeps = RustProjectService.getInstance(project).hasSalvoDependencies()
+        if (hasSalvoDeps) {
+            GlobalScope.launch(Dispatchers.Default) {
+                var files = emptyList<VirtualFile>()
+                readAction {
+                    files = FileTypeIndex.getFiles(rsFileType, SalvoSearchGlobal(project)).toList()
                 }
+                val tasks = files.map { file ->
+                    GlobalScope.async {
+                        findRouterRsFunction(file)
+                    }
+                }
+                val result = tasks.awaitAll().flatten()
+                val apis = mutableListOf<SalvoApiItem>()
+                result.forEach { r: RsFunctionImpl ->
+                    ApplicationManager.getApplication().runReadAction {
+                        r.myManager.allLet.map { let -> apis.addAll(let.rsLetDeclImplManager.allApi) }
+                    }
+                }
+                projectApiList = apis
+                project.messageBus.syncPublisher(ApiScanMessaging.TOPIC).apiScanEed(apis)
             }
         }
 

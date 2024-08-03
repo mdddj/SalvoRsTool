@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.completion.ml.ranking" revision="2024.1.4+569"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.8/transforms/79e460c30c5a8d820d3fc78aed41cf7d/transformed/RustRover-2024.1.4/plugins/completionMlRanking" type="directory" conf="default"/>
+  </publications>
+  <dependencies/>
+</ivy-module>
