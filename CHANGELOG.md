@@ -1,7 +1,7 @@
 # Changelog
 
 
-## [2.0.3] -2024-08-06
+## [2.0.4] -2024-08-06
 
 - Fix the bug where the JSON to Sea-ORM type is null.
 - Fix the issue with reading the Cargo.toml file causing an error.

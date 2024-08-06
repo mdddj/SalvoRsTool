@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="385ba4eb-8ca7-4728-9d8d-815c227cc527" name="Changes" comment="release 2.0.1">
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/AskSeaOrmJsonDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/AskSeaOrmJsonDialog.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/json/MyJsonParse.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/json/MyJsonParse.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/service/SalvoApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/service/SalvoApiService.kt" afterDir="false" />
+    <list default="true" id="385ba4eb-8ca7-4728-9d8d-815c227cc527" name="Changes" comment="release 2.0.3">
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +34,17 @@
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="intellij platform" type="c8890929:TasksNode$1" />
               </path>
             </expand>
             <select />
@@ -66,7 +76,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="2.0.0" />
+        <entry key="$PROJECT_DIR$" value="2.0.3" />
       </map>
     </option>
     <option name="RECENT_COMMON_BRANCH" value="main" />
@@ -187,10 +197,10 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "2.0.1",
+    "git-widget-placeholder": "2.0.3.1",
     "kotlin-language-version-configured": "true",
     "last.edited.regexp": "/api/post/<id>/<param>",
-    "last_opened_file_path": "/Users/hlx/github/SalvoRsTool/src/main/resources/icons",
+    "last_opened_file_path": "/Users/hlx/github/SalvoRsTool",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.stylelint": "true",
     "node.js.detected.package.tslint": "true",
@@ -203,7 +213,7 @@
     "project.structure.last.edited": "项目",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.41099477",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "preferences.fileTypes",
     "show.migrate.to.gradle.popup": "false",
     "ts.external.directory.path": "/Users/ldd/Applications/IntelliJ IDEA Ultimate 2024.1.1.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
     "vue.rearranger.settings.migration": "true"
@@ -211,6 +221,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/main/resources/icons" />
       <recent name="$PROJECT_DIR$/src/main/kotlin/icons" />
       <recent name="$PROJECT_DIR$/src/main/resources/META-INF" />
@@ -245,7 +256,7 @@
       <command value="gradle patchChangelog" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Run Plugin">
+  <component name="RunManager" selected="Gradle.SalvoRsTool [verifyPlugin]">
     <configuration name="SalvoApiTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -263,30 +274,6 @@
           </list>
         </option>
         <option name="vmOptions" value="--ea -Xmx2048m" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="SalvoApiTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;SalvoApiTest.test&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
       </ExternalSystemSettings>
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
@@ -360,21 +347,43 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="SalvoRsTool [verifyPlugin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="--stacktrace --parallel" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="verifyPlugin" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <method v="2" />
+    </configuration>
     <list>
       <item itemvalue="Gradle.Run Plugin" />
+      <item itemvalue="Gradle.SalvoRsTool [verifyPlugin]" />
       <item itemvalue="Gradle.SalvoRsTool [buildPlugin]" />
       <item itemvalue="Gradle.SalvoApiTest" />
-      <item itemvalue="Gradle.SalvoApiTest.test" />
       <item itemvalue="Gradle.SalvoRsTool [printBundledPlugins]" />
       <item itemvalue="Gradle.SalvoRsTool [classes]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SalvoRsTool [classes]" />
+        <item itemvalue="Gradle.SalvoRsTool [verifyPlugin]" />
         <item itemvalue="Gradle.SalvoRsTool [buildPlugin]" />
+        <item itemvalue="Gradle.SalvoRsTool [classes]" />
         <item itemvalue="Gradle.SalvoRsTool [printBundledPlugins]" />
         <item itemvalue="Gradle.SalvoApiTest" />
-        <item itemvalue="Gradle.SalvoApiTest.test" />
       </list>
     </recent_temporary>
   </component>
@@ -530,7 +539,11 @@
       <workItem from="1721353331946" duration="13601000" />
       <workItem from="1721375341949" duration="1738000" />
       <workItem from="1721813483357" duration="1837000" />
-      <workItem from="1722669910864" duration="2136000" />
+      <workItem from="1722669910864" duration="2477000" />
+      <workItem from="1722673280463" duration="395000" />
+      <workItem from="1722673679157" duration="5791000" />
+      <workItem from="1722912144424" duration="1729000" />
+      <workItem from="1722916165094" duration="2526000" />
     </task>
     <task id="LOCAL-00001" summary="release 1.1.0">
       <option name="closed" value="true" />
@@ -844,7 +857,39 @@
       <option name="project" value="LOCAL" />
       <updated>1721815235848</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="release 2.0.3">
+      <option name="closed" value="true" />
+      <created>1722672264897</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1722672264897</updated>
+    </task>
+    <task id="LOCAL-00041" summary="release 2.0.3">
+      <option name="closed" value="true" />
+      <created>1722918102204</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1722918102204</updated>
+    </task>
+    <task id="LOCAL-00042" summary="release 2.0.3">
+      <option name="closed" value="true" />
+      <created>1722918209109</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1722918209109</updated>
+    </task>
+    <task id="LOCAL-00043" summary="release 2.0.3">
+      <option name="closed" value="true" />
+      <created>1722918373215</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1722918373215</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -868,7 +913,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="修复版本号" />
     <MESSAGE value="优化antd column 和interface 生成逻辑" />
     <MESSAGE value="添加数据库表名的判断" />
     <MESSAGE value="release1.3.5" />
@@ -893,7 +937,8 @@
     <MESSAGE value="修复sea-orm-cli执行不成功的bug" />
     <MESSAGE value="release" />
     <MESSAGE value="release 2.0.1" />
-    <option name="LAST_COMMIT_MESSAGE" value="release 2.0.1" />
+    <MESSAGE value="release 2.0.3" />
+    <option name="LAST_COMMIT_MESSAGE" value="release 2.0.3" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
