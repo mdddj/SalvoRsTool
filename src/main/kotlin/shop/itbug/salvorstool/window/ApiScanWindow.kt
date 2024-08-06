@@ -72,7 +72,7 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
 
     private fun listenChange() {
         myProject.messageBus.connect().subscribe(ApiScanMessaging.TOPIC, object : ApiScanMessaging {
-            override fun apiScanEed(apiList: List<SalvoApiItem>) {
+            override fun apiScanEnd(apiList: List<SalvoApiItem>) {
                 allApis = apiList
                 list.model = ItemModel(apiList)
             }

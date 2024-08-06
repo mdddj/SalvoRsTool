@@ -1,5 +1,6 @@
 import org.jetbrains.changelog.Changelog
 import org.jetbrains.intellij.platform.gradle.TestFrameworkType
+import org.jetbrains.intellij.platform.gradle.tasks.VerifyPluginTask
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
@@ -26,14 +27,20 @@ repositories {
 
 dependencies {
     intellijPlatform {
-
-//        local("/Users/ldd/Applications/RustRover.app")
         rustRover("2024.1.5")
         bundledPlugins("JavaScriptBase","com.jetbrains.rust","org.toml.lang")
         zipSigner()
         instrumentationTools()
-        testFramework(TestFrameworkType.Platform)
-        testImplementation("org.osgi:org.osgi.test.junit4:1.3.0")
+    }
+}
+
+intellijPlatform {
+    pluginVerification {
+        failureLevel = VerifyPluginTask.FailureLevel.ALL
+        cliPath.set(file("cli.jar"))
+        ides {
+            recommended()
+        }
     }
 }
 
@@ -86,7 +93,12 @@ tasks {
     }
 
     runIde {
+        autoReload = true
         jvmArgs = listOf("-XX:+AllowEnhancedClassRedefinition")
+    }
+
+    verifyPlugin {
+        failureLevel = VerifyPluginTask.FailureLevel.ALL
     }
 
 }

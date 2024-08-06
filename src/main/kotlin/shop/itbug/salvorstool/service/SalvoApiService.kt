@@ -1,10 +1,8 @@
 package shop.itbug.salvorstool.service
 
-import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.readAction
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.module.Module
-import com.intellij.openapi.project.DumbService
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.roots.ProjectFileIndex
 import com.intellij.openapi.roots.ProjectRootManager
@@ -26,15 +24,6 @@ class SalvoApiService(val project: Project) {
 
     private var projectApiList = mutableListOf<SalvoApiItem>()
 
-    init {
-        project.messageBus.connect().subscribe(DumbService.DUMB_MODE, object : DumbService.DumbModeListener {
-            override fun exitDumbMode() {
-                startScan()
-                super.exitDumbMode()
-            }
-        })
-    }
-
     fun getApiList(): List<SalvoApiItem> {
         return projectApiList
     }
@@ -44,32 +33,22 @@ class SalvoApiService(val project: Project) {
     }
 
     @OptIn(DelicateCoroutinesApi::class)
-    private fun startScan() {
-
+    fun startScan() {
         val hasSalvoDeps = RustProjectService.getInstance(project).hasSalvoDependencies()
         if (hasSalvoDeps) {
             GlobalScope.launch(Dispatchers.Default) {
-                var files = emptyList<VirtualFile>()
-                readAction {
-                    files = FileTypeIndex.getFiles(rsFileType, SalvoSearchGlobal(project)).toList()
-                }
-                val tasks = files.map { file ->
-                    GlobalScope.async {
-                        findRouterRsFunction(file)
-                    }
-                }
+                val files = readAction { FileTypeIndex.getFiles(rsFileType, SalvoSearchGlobal(project)).toList() }
+                val tasks = files.map { file -> async { findRouterRsFunction(file) } }
                 val result = tasks.awaitAll().flatten()
                 val apis = mutableListOf<SalvoApiItem>()
                 result.forEach { r: RsFunctionImpl ->
-                    ApplicationManager.getApplication().runReadAction {
-                        r.myManager.allLet.map { let -> apis.addAll(let.rsLetDeclImplManager.allApi) }
-                    }
+                    readAction { r.myManager.allLet.map { i -> apis.addAll(i.rsLetDeclImplManager.allApi) } }
                 }
                 projectApiList = apis
-                project.messageBus.syncPublisher(ApiScanMessaging.TOPIC).apiScanEed(apis)
+
+                project.messageBus.syncPublisher(ApiScanMessaging.TOPIC).apiScanEnd(apis)
             }
         }
-
     }
 
     private suspend fun findRouterRsFunction(file: VirtualFile): List<RsFunctionImpl> {
