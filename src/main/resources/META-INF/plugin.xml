@@ -22,6 +22,7 @@
         <statusBarWidgetFactory implementation="shop.itbug.salvorstool.bar.BottomStatusBar" id="SalvoToolBar"/>
         <webHelpProvider implementation="shop.itbug.salvorstool.help.MyWebHelpProvider"/>
         <notificationGroup displayType="BALLOON" id="SeaOrmCliNotification"/>
+        <postStartupActivity implementation="shop.itbug.salvorstool.service.ProjectStartActivity" />
     </extensions>
     <actions>
 
