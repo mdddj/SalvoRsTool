@@ -1,5 +1,4 @@
 import org.jetbrains.changelog.Changelog
-import org.jetbrains.intellij.platform.gradle.TestFrameworkType
 import org.jetbrains.intellij.platform.gradle.tasks.VerifyPluginTask
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -12,7 +11,7 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "2.0.3"
+version = "2.0.4"
 
 repositories {
     mavenCentral()
