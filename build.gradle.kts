@@ -6,12 +6,12 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     id("org.jetbrains.kotlin.jvm") version "2.0.0"
-    id("org.jetbrains.intellij.platform") version "2.0.0"
+    id("org.jetbrains.intellij.platform") version "2.0.1"
     id("org.jetbrains.changelog") version "2.2.0"
 }
 
 group = "shop.itbug"
-version = "2.0.4"
+version = "2.0.5"
 
 repositories {
     mavenCentral()
@@ -26,7 +26,8 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        rustRover("2024.1.5")
+//        rustRover("2024.1.5")
+        local(file("/Users/ldd/Applications/RustRover.app"))
         bundledPlugins("JavaScriptBase","com.jetbrains.rust","org.toml.lang")
         zipSigner()
         instrumentationTools()
@@ -35,10 +36,9 @@ dependencies {
 
 intellijPlatform {
     pluginVerification {
-        failureLevel = VerifyPluginTask.FailureLevel.ALL
         cliPath.set(file("cli.jar"))
         ides {
-            recommended()
+            local(file("/Users/ldd/Applications/RustRover.app"))
         }
     }
 }

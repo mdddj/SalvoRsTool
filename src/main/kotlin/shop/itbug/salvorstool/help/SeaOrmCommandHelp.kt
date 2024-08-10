@@ -7,6 +7,7 @@ import com.intellij.execution.util.ExecUtil
 import com.intellij.openapi.progress.ProgressManager
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.util.ThrowableComputable
+import shop.itbug.salvorstool.i18n.MyI18n
 import shop.itbug.salvorstool.tool.NotificationUtil
 import java.io.File
 
@@ -82,7 +83,7 @@ class SeaOrmCommandHelp(private val dirPath: String, val project: Project) {
             if (result.exitCode != 0) {
                 NotificationUtil.getInstance(project).seaOrmNotifyError(result.stderr)
             } else {
-                NotificationUtil.getInstance(project).seaOrmNotifyInfo(result.stdout.trim())
+                NotificationUtil.getInstance(project).seaOrmNotifyInfo(MyI18n.getMessage("run_sraorm_command_success"))
             }
             return result
         } catch (e: Exception) {

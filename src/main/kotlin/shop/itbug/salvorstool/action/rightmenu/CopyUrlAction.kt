@@ -17,8 +17,9 @@ class CopyUrlAction : AnAction() {
 
     override fun update(e: AnActionEvent) {
         with(e.presentation) {
-            isEnabled = e.getData(JListSelectItemDataKey) != null
-            text = "${MyI18n.getMessage("copy")} URL"
+            val item = e.getData(JListSelectItemDataKey)
+            isEnabled = item != null
+            text = "${MyI18n.getMessage("copy")} URL (${item?.api})"
             icon = AllIcons.Actions.Copy
         }
         super.update(e)

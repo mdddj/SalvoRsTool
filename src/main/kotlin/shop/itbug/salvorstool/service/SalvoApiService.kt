@@ -1,5 +1,6 @@
 package shop.itbug.salvorstool.service
 
+import com.intellij.openapi.application.EDT
 import com.intellij.openapi.application.readAction
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.module.Module
@@ -34,9 +35,9 @@ class SalvoApiService(val project: Project) {
 
     @OptIn(DelicateCoroutinesApi::class)
     fun startScan() {
-        val hasSalvoDeps = RustProjectService.getInstance(project).hasSalvoDependencies()
-        if (hasSalvoDeps) {
-            GlobalScope.launch(Dispatchers.Default) {
+        GlobalScope.launch(Dispatchers.EDT) {
+             val hasSalvoDeps = RustProjectService.getInstance(project).hasSalvoDependencies()
+            if(hasSalvoDeps) {
                 val files = readAction { FileTypeIndex.getFiles(rsFileType, SalvoSearchGlobal(project)).toList() }
                 val tasks = files.map { file -> async { findRouterRsFunction(file) } }
                 val result = tasks.awaitAll().flatten()
@@ -45,7 +46,6 @@ class SalvoApiService(val project: Project) {
                     readAction { r.myManager.allLet.map { i -> apis.addAll(i.rsLetDeclImplManager.allApi) } }
                 }
                 projectApiList = apis
-
                 project.messageBus.syncPublisher(ApiScanMessaging.TOPIC).apiScanEnd(apis)
             }
         }
