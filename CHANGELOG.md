@@ -2,7 +2,13 @@
 
 ## Unreleased
 
-## [2.0.4] -2024-08-06
+## [2.0.5] -2024-08-10
+
+- Adjust seaorm execution result notification
+- Fix the issue where checking salvo dependencies may report an error
+- Optimize right-click copy salvo API interface
+
+### [2.0.4] -2024-08-06
 
 - Fix the bug where the JSON to Sea-ORM type is null.
 - Fix the issue with reading the Cargo.toml file causing an error.

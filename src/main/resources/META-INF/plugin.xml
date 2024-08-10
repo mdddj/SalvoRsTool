@@ -25,7 +25,6 @@
         <postStartupActivity implementation="shop.itbug.salvorstool.service.ProjectStartActivity" />
     </extensions>
     <actions>
-
         <!--salvo相关生成器-->
         <action id="GenerateDtoAction" class="shop.itbug.salvorstool.action.GenerateDtoAction">
         </action>
@@ -110,4 +109,7 @@
 
 
     </actions>
+
+
+
 </idea-plugin>

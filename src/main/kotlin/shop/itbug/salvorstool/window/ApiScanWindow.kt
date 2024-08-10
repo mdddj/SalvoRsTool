@@ -10,6 +10,9 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.popup.JBPopupFactory
 import com.intellij.openapi.ui.popup.ListPopup
 import com.intellij.openapi.wm.ToolWindow
+import com.intellij.openapi.wm.ToolWindowManager
+import com.intellij.openapi.wm.ex.ToolWindowManagerListener
+import com.intellij.platform.ide.impl.statistic.ToolWindowStateListener
 import com.intellij.ui.ColoredListCellRenderer
 import com.intellij.ui.ColoredText
 import com.intellij.ui.SearchTextField
@@ -31,8 +34,9 @@ import javax.swing.event.ListSelectionEvent
 import javax.swing.event.ListSelectionListener
 
 
+
 class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : BorderLayoutPanel(),
-    ListSelectionListener {
+    ListSelectionListener,ToolWindowManagerListener {
 
     private val list = JBList<SalvoApiItem>().apply {
         this.border = BorderFactory.createEmptyBorder(0, 0, 0, 0)
@@ -40,8 +44,11 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
         this.addListSelectionListener(this@ApiScanWindow)
         this.addMouseListener(RightMenuAction())
         this.setDataProvider {
-            if (it == JListSelectItemDataKey.name){
-                return@setDataProvider this.selectedValue
+            if (it == JListSelectItemDataKey.name) {
+                val index = this.getClientProperty(RightSelectKey) as? Int
+                if (index != null) {
+                    return@setDataProvider model.getElementAt(index)
+                }
             }
             return@setDataProvider null
         }
@@ -54,6 +61,7 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
 
     companion object {
          val JListSelectItemDataKey = DataKey.create<SalvoApiItem?>("listSelectItemDataKey")
+        const val RightSelectKey = "RightSelectKey"
     }
 
     init {
@@ -66,8 +74,21 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
             this.border = BorderFactory.createEmptyBorder(0, 0, 0, 0)
         })
         list.cellRenderer = SalvoApiItemRender()
-        listenChange()
+        SwingUtilities.invokeLater {
+            listenChange()
+        }
+
+
     }
+
+    override fun stateChanged(
+        toolWindowManager: ToolWindowManager,
+        changeType: ToolWindowManagerListener.ToolWindowManagerEventType
+    ) {
+        println(changeType)
+        super.stateChanged(toolWindowManager, changeType)
+    }
+
 
 
     private fun listenChange() {
@@ -137,32 +158,30 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
     }
 
     //右键菜单操作
-    inner class RightMenuAction : MouseAdapter(){
+    private inner class RightMenuAction : MouseAdapter() {
         override fun mouseClicked(e: MouseEvent?) {
             e?.let {
-                if(SwingUtilities.isRightMouseButton(e)) {
+                if (SwingUtilities.isRightMouseButton(e)) {
                     val selectIndex = list.locationToIndex(e.point)
-                    list.selectedIndex = selectIndex
-                    createPopup().show(RelativePoint(list,e.point))
+                    list.putClientProperty(RightSelectKey, selectIndex)
+                    createPopup().show(RelativePoint(list, e.point))
                 }
             }
         }
 
         private fun createPopup(): ListPopup {
             val ctx = DataManager.getInstance().getDataContext(list)
-            return JBPopupFactory.getInstance().createActionGroupPopup("操作",getActionGroup(),ctx,false,{},10)
+            return JBPopupFactory.getInstance().createActionGroupPopup("操作", getActionGroup(), ctx, false, {
+                list.putClientProperty(RightSelectKey, null)
+            }, 10)
         }
 
         private fun getActionGroup(): DefaultActionGroup {
-           return ActionManager.getInstance().getAction("SalvoApiRightMenuActionGroup") as DefaultActionGroup
+            return ActionManager.getInstance().getAction("SalvoApiRightMenuActionGroup") as DefaultActionGroup
         }
     }
 
 }
-
-
-
-
 
 
 class SalvoApiItemRender : ColoredListCellRenderer<SalvoApiItem>() {

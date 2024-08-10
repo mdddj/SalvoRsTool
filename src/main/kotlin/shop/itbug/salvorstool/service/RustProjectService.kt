@@ -2,6 +2,7 @@ package shop.itbug.salvorstool.service
 
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.ReadAction
+import com.intellij.openapi.application.readAction
 import com.intellij.openapi.application.runReadAction
 import com.intellij.openapi.components.Service
 import com.intellij.openapi.project.Project
@@ -21,10 +22,10 @@ class RustProjectService (val project: Project){
     /**
      * 是否使用了salvo的依赖
      */
-    fun hasSalvoDependencies() : Boolean {
+    suspend fun hasSalvoDependencies() : Boolean {
         val tomlFilePath = project.basePath + File.separator + "Cargo.toml"
         val tomlFile: VirtualFile = LocalFileSystem.getInstance().findFileByPath(tomlFilePath) ?: return false
-        val file = runReadAction { PsiManager.getInstance(project).findFile(tomlFile) } as? TomlFile ?: return false
+        val file = readAction { PsiManager.getInstance(project).findFile(tomlFile) } as? TomlFile ?: return false
         val keyValues = file.filterByType<TomlKeyValue>()
         return keyValues.any { it.key.text == "salvo" }
     }
