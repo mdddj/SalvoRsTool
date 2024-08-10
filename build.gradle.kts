@@ -26,8 +26,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-//        rustRover("2024.1.5")
-        local(file("/Users/ldd/Applications/RustRover.app"))
+        rustRover("2024.1.5")
         bundledPlugins("JavaScriptBase","com.jetbrains.rust","org.toml.lang")
         zipSigner()
         instrumentationTools()
