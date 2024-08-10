@@ -10,9 +10,6 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.popup.JBPopupFactory
 import com.intellij.openapi.ui.popup.ListPopup
 import com.intellij.openapi.wm.ToolWindow
-import com.intellij.openapi.wm.ToolWindowManager
-import com.intellij.openapi.wm.ex.ToolWindowManagerListener
-import com.intellij.platform.ide.impl.statistic.ToolWindowStateListener
 import com.intellij.ui.ColoredListCellRenderer
 import com.intellij.ui.ColoredText
 import com.intellij.ui.SearchTextField
@@ -36,7 +33,7 @@ import javax.swing.event.ListSelectionListener
 
 
 class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : BorderLayoutPanel(),
-    ListSelectionListener,ToolWindowManagerListener {
+    ListSelectionListener {
 
     private val list = JBList<SalvoApiItem>().apply {
         this.border = BorderFactory.createEmptyBorder(0, 0, 0, 0)
@@ -80,15 +77,6 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
 
 
     }
-
-    override fun stateChanged(
-        toolWindowManager: ToolWindowManager,
-        changeType: ToolWindowManagerListener.ToolWindowManagerEventType
-    ) {
-        println(changeType)
-        super.stateChanged(toolWindowManager, changeType)
-    }
-
 
 
     private fun listenChange() {
