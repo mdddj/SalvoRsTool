@@ -2,9 +2,9 @@
 
 ## Unreleased
 
-## [2.0.6] -2024-08-16
+## [2.0.7] -2024-08-16
 
-- Upgrade compatibility for 2024.2 (IU,CLion)
+- Upgrade compatibility for 2024.2 (IU)
 
 ### [2.0.5] -2024-08-10
 
