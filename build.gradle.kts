@@ -11,7 +11,7 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "2.0.6"
+version = "2.0.7"
 
 repositories {
     mavenCentral()
@@ -43,8 +43,7 @@ intellijPlatform {
     pluginVerification {
         cliPath.set(file("cli.jar"))
         ides {
-//            local(file("/Users/ldd/Applications/RustRover.app"))
-            local(file("/Users/ldd/Applications/IntelliJ IDEA Ultimate.app"))
+            recommended()
         }
     }
 }
@@ -79,7 +78,7 @@ tasks {
 
 
     patchPluginXml {
-        sinceBuild.set("241.18034.*")
+        sinceBuild.set("241.19000")
         untilBuild.set("242.*")
         changeNotes.set(myChangeLog)
         pluginDescription.set(descText)
