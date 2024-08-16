@@ -4,7 +4,7 @@
     <vendor email="hlxsmail@gmail.com" url="https://itbug.shop">梁典典</vendor>
     <depends>com.intellij.modules.platform</depends>
     <depends>com.jetbrains.rust</depends>
-    <depends>JavaScriptBase</depends>
+    <depends>JavaScript</depends>
     <depends>org.toml.lang</depends>
     <resource-bundle>messages.pluginBundle</resource-bundle>
     <extensions defaultExtensionNs="com.intellij">

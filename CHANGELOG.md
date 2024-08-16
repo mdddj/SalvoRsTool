@@ -2,7 +2,11 @@
 
 ## Unreleased
 
-## [2.0.5] -2024-08-10
+## [2.0.6] -2024-08-16
+
+- Upgrade compatibility for 2024.2 (IU,CLion)
+
+### [2.0.5] -2024-08-10
 
 - Adjust seaorm execution result notification
 - Fix the issue where checking salvo dependencies may report an error
