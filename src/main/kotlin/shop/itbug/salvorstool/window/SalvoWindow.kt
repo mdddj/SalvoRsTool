@@ -15,10 +15,14 @@ class SalvoWindow : ToolWindowFactory {
         val tempWindow = TempFilesWindow(project)
         val tempWindowContent = contentFactory.createContent(tempWindow,"Temp",false)
         toolWindow.contentManager.addContent(tempWindowContent)
-
     }
+
 }
 
 fun ToolWindow.isSalvoWindow(): Boolean {
-    return this.id == "Salvo"
+    return isSalvoWindow(this.id)
+}
+
+fun isSalvoWindow(id: String?): Boolean {
+    return id == "Salvo"
 }
