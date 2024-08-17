@@ -1,0 +1,12 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="JavaScriptDebugger" revision="241.17890.39+683"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.9/transforms/1c9c930c38e0d7578c97cfcfbe5c0601/transformed/RustRover-2024.1.5-aarch64/plugins/javascript-debugger" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.jetbrains.plugins.webDeployment" rev="241.17890.39+555"/>
+  </dependencies>
+</ivy-module>

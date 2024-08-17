@@ -1,0 +1,18 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.javaee.web" revision="242.20224.300+974"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.9/transforms/af4af8baa1fabfc0fd0e16311951407b/transformed/ideaIU-2024.2-aarch64/plugins/javaee-web-impl" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.java" rev="242.20224.300+540"/>
+    <dependency org="bundledPlugin" name="com.intellij.java-i18n" rev="242.20224.300+985"/>
+    <dependency org="bundledPlugin" name="com.intellij.properties" rev="242.20224.300+421"/>
+    <dependency org="bundledPlugin" name="com.intellij.css" rev="242.20224.300+732"/>
+    <dependency org="bundledPlugin" name="com.intellij.javaee" rev="242.20224.300+708"/>
+    <dependency org="bundledPlugin" name="Coverage" rev="242.20224.300+577"/>
+    <dependency org="bundledPlugin" name="org.intellij.intelliLang" rev="242.20224.300+503"/>
+  </dependencies>
+</ivy-module>

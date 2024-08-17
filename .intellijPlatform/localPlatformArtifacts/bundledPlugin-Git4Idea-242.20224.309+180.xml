@@ -1,0 +1,14 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="Git4Idea" revision="242.20224.309+180"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/Applications/RustRover.app/Contents/plugins/vcs-git" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.jetbrains.performancePlugin" rev="242.20224.309+815"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.terminal" rev="242.20224.309+197"/>
+    <dependency org="bundledModule" name="intellij.platform.collaborationTools" rev="242.20224.309+441"/>
+  </dependencies>
+</ivy-module>

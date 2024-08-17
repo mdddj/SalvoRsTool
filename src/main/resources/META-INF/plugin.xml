@@ -7,6 +7,9 @@
     <depends>JavaScript</depends>
     <depends>org.toml.lang</depends>
     <resource-bundle>messages.pluginBundle</resource-bundle>
+    <projectListeners>
+        <listener class="shop.itbug.salvorstool.window.ApiScanListen" topic="com.intellij.openapi.wm.ex.ToolWindowManagerListener"/>
+    </projectListeners>
     <extensions defaultExtensionNs="com.intellij">
         <intentionAction>
             <className>shop.itbug.salvorstool.intention.CopyAntdTableColumnAction</className>
@@ -22,7 +25,7 @@
         <statusBarWidgetFactory implementation="shop.itbug.salvorstool.bar.BottomStatusBar" id="SalvoToolBar"/>
         <webHelpProvider implementation="shop.itbug.salvorstool.help.MyWebHelpProvider"/>
         <notificationGroup displayType="BALLOON" id="SeaOrmCliNotification"/>
-        <postStartupActivity implementation="shop.itbug.salvorstool.service.ProjectStartActivity" />
+        <postStartupActivity implementation="shop.itbug.salvorstool.service.ProjectStartActivity"/>
     </extensions>
     <actions>
         <!--salvo相关生成器-->
@@ -40,14 +43,21 @@
                 text="Generate Antd From"/>
 
 
+        <!--        antd form 生成器-->
+        <action id="AntdProFormGenerateAction"
+                class="shop.itbug.salvorstool.action.antdpro.AntdProFormGenerateAction" text="Antd Form Generate"
+                description="Antd form generate tool"/>
+
         <group id="salvo_generate_group" text="RustX Code Generate" popup="true">
             <separator text="Salvo"/>
             <reference ref="GenerateDtoAction"/>
             <reference ref="GenerateServiceAction"/>
             <reference ref="GenerateRouterAction"/>
             <separator text="Typescript"/>
-            <reference ref="GenerateAntdFormAction"/>
             <reference ref="GenerateHookFormAction"/>
+            <separator text="Antd" />
+            <reference ref="AntdProFormGenerateAction" />
+            <reference ref="GenerateAntdFormAction"/>
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </group>
 
@@ -58,7 +68,8 @@
             <reference id="SalvoApiRefreshAction"/>
         </group>
 
-        <action id="AntdRequestCopyAction" class="shop.itbug.salvorstool.action.rightmenu.AntdRequestCopyAction" popup="true"/>
+        <action id="AntdRequestCopyAction" class="shop.itbug.salvorstool.action.rightmenu.AntdRequestCopyAction"
+                popup="true"/>
         <action id="CopyUrlAction" class="shop.itbug.salvorstool.action.rightmenu.CopyUrlAction" popup="true"/>
 
         <!--   导航到api router 函数     -->
@@ -109,7 +120,6 @@
 
 
     </actions>
-
 
 
 </idea-plugin>
