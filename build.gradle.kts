@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "2.0.8"
+version = "2.1.0"
 
 repositories { 
     mavenCentral()
@@ -27,12 +27,14 @@ repositories {
 //rustRover("2024.1.5")
 //bundledPlugins("JavaScriptBase","com.jetbrains.rust","org.toml.lang")
 // IDEA
+//intellijIdeaUltimate("2024.2")
+//plugins("com.jetbrains.rust:242.20224.309")
+//bundledPlugins("org.toml.lang","JavaScript")
 
 dependencies {
     intellijPlatform {
-        intellijIdeaUltimate("2024.2")
-        plugins("com.jetbrains.rust:242.20224.309")
-        bundledPlugins("org.toml.lang","JavaScript")
+        rustRover("2024.1.5")
+        bundledPlugins("JavaScriptBase","com.jetbrains.rust","org.toml.lang")
         zipSigner()
         instrumentationTools()
     }
@@ -77,7 +79,7 @@ tasks {
 
 
     patchPluginXml {
-        sinceBuild.set("242.20000")
+        sinceBuild.set("241.17890")
         untilBuild.set("242.*")
         changeNotes.set(myChangeLog)
         pluginDescription.set(descText)
