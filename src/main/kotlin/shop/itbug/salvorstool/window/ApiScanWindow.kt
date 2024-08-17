@@ -12,7 +12,6 @@ import com.intellij.openapi.ui.popup.ListPopup
 import com.intellij.openapi.wm.ToolWindow
 import com.intellij.openapi.wm.ToolWindowManager
 import com.intellij.openapi.wm.ex.ToolWindowManagerListener
-import com.intellij.platform.ide.impl.statistic.ToolWindowStateListener
 import com.intellij.ui.ColoredListCellRenderer
 import com.intellij.ui.ColoredText
 import com.intellij.ui.SearchTextField
@@ -210,16 +209,18 @@ class SalvoApiItemRender : ColoredListCellRenderer<SalvoApiItem>() {
 }
 
 
+/**
+ * 监听salvo窗口的显示,然后刷新api列表
+ */
 class ApiScanListen(val project: Project) : ToolWindowManagerListener {
 
     override fun stateChanged(
         toolWindowManager: ToolWindowManager,
-        toolWindow: ToolWindow,
         changeType: ToolWindowManagerListener.ToolWindowManagerEventType
     ) {
-        if(changeType == ToolWindowManagerListener.ToolWindowManagerEventType.ActivateToolWindow && toolWindow.isSalvoWindow()){
+        if(changeType == ToolWindowManagerListener.ToolWindowManagerEventType.ActivateToolWindow && isSalvoWindow(toolWindowManager.activeToolWindowId)){
             SalvoApiService.getInstance(project).startScan()
         }
-        super.stateChanged(toolWindowManager, toolWindow, changeType)
+        super.stateChanged(toolWindowManager, changeType)
     }
 }
