@@ -3,7 +3,6 @@ import org.jetbrains.intellij.platform.gradle.tasks.VerifyPluginTask
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
-
 plugins {
     id("org.jetbrains.kotlin.jvm") version "2.0.0"
     id("org.jetbrains.intellij.platform") version "2.0.1"
@@ -11,9 +10,9 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "2.0.7"
+version = "2.0.8"
 
-repositories {
+repositories { 
     mavenCentral()
 
     intellijPlatform {
@@ -78,7 +77,7 @@ tasks {
 
 
     patchPluginXml {
-        sinceBuild.set("241.19000")
+        sinceBuild.set("242.20000")
         untilBuild.set("242.*")
         changeNotes.set(myChangeLog)
         pluginDescription.set(descText)

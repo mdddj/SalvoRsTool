@@ -1,9 +1,11 @@
 # Changelog
 
 
-## [2.0.7] -2024-08-16
+## [2.0.7] -2024-08-17
 
 - Upgrade compatibility for 2024.2 (IU)
+- Fixed the problem of salvo api blank list in some scenarios
+- add antd pro form code generater tool action
 
 ### [2.0.5] -2024-08-10
 

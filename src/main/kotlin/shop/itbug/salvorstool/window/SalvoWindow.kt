@@ -18,3 +18,7 @@ class SalvoWindow : ToolWindowFactory {
 
     }
 }
+
+fun ToolWindow.isSalvoWindow(): Boolean {
+    return this.id == "Salvo"
+}

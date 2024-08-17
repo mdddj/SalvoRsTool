@@ -10,6 +10,9 @@ import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.popup.JBPopupFactory
 import com.intellij.openapi.ui.popup.ListPopup
 import com.intellij.openapi.wm.ToolWindow
+import com.intellij.openapi.wm.ToolWindowManager
+import com.intellij.openapi.wm.ex.ToolWindowManagerListener
+import com.intellij.platform.ide.impl.statistic.ToolWindowStateListener
 import com.intellij.ui.ColoredListCellRenderer
 import com.intellij.ui.ColoredText
 import com.intellij.ui.SearchTextField
@@ -110,6 +113,7 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
     }
 
 
+    ///
     private inner class MySearchTextField : SearchTextField(false), DocumentListener {
 
         init {
@@ -205,3 +209,17 @@ class SalvoApiItemRender : ColoredListCellRenderer<SalvoApiItem>() {
 
 }
 
+
+class ApiScanListen(val project: Project) : ToolWindowManagerListener {
+
+    override fun stateChanged(
+        toolWindowManager: ToolWindowManager,
+        toolWindow: ToolWindow,
+        changeType: ToolWindowManagerListener.ToolWindowManagerEventType
+    ) {
+        if(changeType == ToolWindowManagerListener.ToolWindowManagerEventType.ActivateToolWindow && toolWindow.isSalvoWindow()){
+            SalvoApiService.getInstance(project).startScan()
+        }
+        super.stateChanged(toolWindowManager, toolWindow, changeType)
+    }
+}

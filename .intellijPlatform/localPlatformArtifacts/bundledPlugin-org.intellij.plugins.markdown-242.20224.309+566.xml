@@ -1,0 +1,15 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="org.intellij.plugins.markdown" revision="242.20224.309+566"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/Applications/RustRover.app/Contents/plugins/markdown" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="org.intellij.intelliLang" rev="242.20224.309+382"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.yaml" rev="242.20224.309+738"/>
+    <dependency org="bundledPlugin" name="org.toml.lang" rev="242.20224.309+239"/>
+    <dependency org="bundledPlugin" name="com.intellij.platform.images" rev="242.20224.309+131"/>
+  </dependencies>
+</ivy-module>
