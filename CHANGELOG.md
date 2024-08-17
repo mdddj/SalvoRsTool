@@ -1,7 +1,7 @@
 # Changelog
 
 
-## [2.0.7] -2024-08-17
+## [2.1.0] -2024-08-17
 
 - Upgrade compatibility for 2024.2 (IU)
 - Fixed the problem of salvo api blank list in some scenarios
