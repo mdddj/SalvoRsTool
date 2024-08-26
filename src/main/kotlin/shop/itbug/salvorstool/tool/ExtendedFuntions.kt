@@ -8,6 +8,8 @@ import com.intellij.openapi.diagnostic.Logger
 import com.intellij.openapi.fileEditor.FileEditorManager
 import com.intellij.openapi.fileTypes.FileTypeManager
 import com.intellij.openapi.ide.CopyPasteManager
+import com.intellij.openapi.project.Project
+import com.intellij.openapi.vfs.LocalFileSystem
 import com.intellij.pom.Navigatable
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
@@ -118,11 +120,18 @@ fun PsiFile.getUseAge(element: PsiElement) : List<PsiReference> {
  * 尝试跳转到代码为止
  */
 fun PsiElement.tryNavTo() {
-    ApplicationManager.getApplication().invokeLater {
-        if (navigationElement != null && navigationElement is Navigatable && (navigationElement as Navigatable).canNavigate()) {
-            (navigationElement as Navigatable).navigate(true)
-        }else{
-            FileEditorManager.getInstance(project).openFile(this.containingFile.virtualFile)
-        }
+    if (navigationElement != null && navigationElement is Navigatable && (navigationElement as Navigatable).canNavigate()) {
+        (navigationElement as Navigatable).navigate(true)
+    }else{
+        FileEditorManager.getInstance(project).openFile(this.containingFile.virtualFile)
     }
+}
+
+
+/**
+ * 验证[path]是否存在,可以是目录或者文件
+ */
+fun Project.fileIsExits(path: String) : Boolean {
+    val vf = LocalFileSystem.getInstance().findFileByPath(path)
+    return vf != null
 }

@@ -86,12 +86,19 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
             override fun apiScanEnd(apiList: List<SalvoApiItem>) {
                 allApis = apiList
                 list.model = ItemModel(apiList)
+
+                if(searchTextField.text.isNotBlank()){
+                    startFilterApi(searchTextField.text)
+                }
             }
         })
     }
 
-
+    /**
+     * 列表选中时间回调
+     */
     override fun valueChanged(e: ListSelectionEvent?) {
+        println("value is adjusting :${e?.valueIsAdjusting}  ${list.selectedIndex}")
         e?.let {
             if (!it.valueIsAdjusting) {
                 val selectedIndex = list.selectedIndex
@@ -102,6 +109,11 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
         }
     }
 
+
+    /**
+     * api筛选
+     * @param[search] 要筛选的字符串
+     */
     fun startFilterApi(search: String) {
         val filterList = if (search.isEmpty()) {
             allApis
