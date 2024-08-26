@@ -6,6 +6,7 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 import shop.itbug.salvorstool.dialog.GenerateServiceDialog
 import shop.itbug.salvorstool.i18n.MyI18n
 import shop.itbug.salvorstool.tool.myManager
+import shop.itbug.salvorstool.tool.structItemManager
 import shop.itbug.salvorstool.tool.tryGetRsStructPsiElement
 
 class GenerateServiceAction : AnAction() {
@@ -16,7 +17,8 @@ class GenerateServiceAction : AnAction() {
     }
 
     override fun update(e: AnActionEvent) {
-        e.presentation.isVisible = e.project != null && e.tryGetRsStructPsiElement() != null
+        val struct = e.tryGetRsStructPsiElement()
+        e.presentation.isVisible = e.project != null && struct != null && struct.structItemManager.getTableName != null
         e.presentation.text = MyI18n.getMessage("g_service")
         super.update(e)
     }

@@ -26,6 +26,7 @@ repositories {
 //RR:
 //rustRover("2024.1.5")
 //bundledPlugins("JavaScriptBase","com.jetbrains.rust","org.toml.lang")
+
 // IDEA
 //intellijIdeaUltimate("2024.2")
 //plugins("com.jetbrains.rust:242.20224.309")
@@ -33,7 +34,8 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        rustRover("2024.1.5")
+//        rustRover("2024.1.5")
+        local("/Users/ldd/Applications/RustRover.app")
         bundledPlugins("JavaScriptBase","com.jetbrains.rust","org.toml.lang")
         zipSigner()
         instrumentationTools()

@@ -1,4 +1,4 @@
-salvo.rs快速开发工具
+JB RustRover Rust dev tool
 
-文档: [https://mdddj.github.io/SalvoRsToolDocument](https://mdddj.github.io/SalvoRsToolDocument)
+document: [https://mdddj.github.io/SalvoRsToolDocument](https://mdddj.github.io/SalvoRsToolDocument)
 

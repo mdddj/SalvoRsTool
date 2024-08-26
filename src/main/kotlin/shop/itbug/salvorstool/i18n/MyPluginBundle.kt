@@ -15,6 +15,10 @@ object MyI18n: MyPluginBundle(){
     val selectDir: String get() = getMessage("select_directory")
     //数据验证失败
     val fieldValidFailed: String get() = getMessage("valid_failed")
+    //文件已存在
+    val fileIsExist: String get() = getMessage("file_is_exits")
+    //目录不存在
+    val folderIsNotFound: String get() = getMessage("folder_is_not_found")
 }
 
 open class MyPluginBundle : AbstractBundle("messages.pluginBundle") {
