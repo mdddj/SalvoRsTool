@@ -4,13 +4,57 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="385ba4eb-8ca7-4728-9d8d-815c227cc527" name="Changes" comment="适配IU">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/antdpro/AntdProFormGenerateAction.kt" afterDir="false" />
+    <list default="true" id="385ba4eb-8ca7-4728-9d8d-815c227cc527" name="Changes" comment="bugfix">
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.css-243.16718.64+441.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.js-243.16718.64+441.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.python-243.16718.64+441.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-243.16718.64+441.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-243.16718.64+441.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-243.16718.64+441.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-243.16718.64+441.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-243.16718.64+441.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-243.16718.64+441.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.clion-243.16718.64+441.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-243.16718.64+441.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-243.16718.64+180.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-HtmlTools-243.16718.64+840.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-2024.3+92.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-243.16718.64+92.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-243.16718.64+510.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-243.16718.64+642.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-243.16718.64+532.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-243.16718.64+688.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-243.16718.64+863.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-243.16718.64+269.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.ml.inline.completion-243.16718.64+961.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-243.16718.64+241.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-243.16718.64+211.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-243.16718.64+131.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-243.16718.64+815.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-243.16718.64+130.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-2024.3+931.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-243.16718.64+772.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.prettierJS-243.16718.64+987.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.webpack-243.16718.64+982.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-243.16718.64+382.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-243.16718.64+566.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.postcss-243.16718.64+532.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.completion.full.line-243.16718.64+122.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.less-243.16718.64+984.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.sass-243.16718.64+291.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-243.16718.64+197.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.vue-243.16718.64+184.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-243.16718.64+738.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-2024.3+239.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-243.16718.64+239.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-243.16718.64+529.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-RR-243.16718.64+441.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/self-update.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.intellijPlatform/self-update.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/base/BaseRsStructCodeGenerateAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/base/BaseRsStructCodeGenerateAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateEntityDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateEntityDialog.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/ApiScanWindow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/ApiScanWindow.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/SalvoWindow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/SalvoWindow.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +125,7 @@
     </option>
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="2.0.6" />
+        <entry key="$PROJECT_DIR$" value="2.1.0" />
       </map>
     </option>
     <option name="RECENT_COMMON_BRANCH" value="main" />
@@ -91,17 +135,9 @@
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {}
 }</component>
-  <component name="GitHubPullRequestState">{
-  &quot;prStates&quot;: [
-    {
-      &quot;id&quot;: {
-        &quot;id&quot;: &quot;PR_kwDOLsOWzM5t7dtI&quot;,
-        &quot;number&quot;: 11
-      },
-      &quot;lastSeen&quot;: 1714295501551
-    }
-  ]
-}</component>
+  <component name="GitHubPullRequestState"><![CDATA[{
+  "prStates": []
+}]]></component>
   <component name="GitToolBoxStore">
     <option name="recentBranches">
       <RecentBranches>
@@ -163,6 +199,9 @@
   <component name="MacroExpansionManager">
     <option name="directoryName" value="by0qlutm" />
   </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 0
 }</component>
@@ -184,12 +223,14 @@
     "Gradle.SalvoApiTest.executor": "Run",
     "Gradle.SalvoApiTest.test.executor": "Run",
     "Gradle.SalvoRsTool [buildPlugin].executor": "Run",
+    "Gradle.SalvoRsTool [buildSearchableOptions].executor": "Run",
     "Gradle.SalvoRsTool [classes].executor": "Run",
     "Gradle.SalvoRsTool [clean].executor": "Run",
     "Gradle.SalvoRsTool [getChangelog].executor": "Run",
     "Gradle.SalvoRsTool [initializeChangelog].executor": "Run",
     "Gradle.SalvoRsTool [patchChangelog].executor": "Run",
     "Gradle.SalvoRsTool [printBundledPlugins].executor": "Run",
+    "Gradle.SalvoRsTool [printProductsReleases].executor": "Run",
     "Gradle.SalvoRsTool [publishPlugin].executor": "Run",
     "Gradle.SalvoRsTool [runIde].executor": "Run",
     "Gradle.SalvoRsTool [setupDependencies].executor": "Run",
@@ -205,7 +246,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "2.0.7",
+    "git-widget-placeholder": "2.1.1",
     "kotlin-language-version-configured": "true",
     "last.edited.regexp": "/api/post/<id>/<param>",
     "last_opened_file_path": "/Users/hlx/github/SalvoRsTool",
@@ -218,7 +259,7 @@
     "nodejs_package_manager_path": "npm",
     "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
     "org.rust.first.attach.projects": "true",
-    "project.structure.last.edited": "SDK",
+    "project.structure.last.edited": "模块",
     "project.structure.proportion": "0.17",
     "project.structure.side.proportion": "0.41099477",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -264,7 +305,7 @@
       <command value="gradle patchChangelog" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Run Plugin">
+  <component name="RunManager" selected="Gradle.SalvoRsTool [verifyPlugin]">
     <configuration name="SalvoRsTool [buildPlugin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -287,7 +328,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SalvoRsTool [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SalvoRsTool [buildSearchableOptions]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -298,7 +339,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value="buildSearchableOptions" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -309,7 +350,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SalvoRsTool [printBundledPlugins]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SalvoRsTool [classes]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -320,7 +361,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="printBundledPlugins" />
+            <option value="classes" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -331,7 +372,7 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SalvoRsTool [publishPlugin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SalvoRsTool [printProductsReleases]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -342,7 +383,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="publishPlugin" />
+            <option value="printProductsReleases" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -377,27 +418,27 @@
     </configuration>
     <list>
       <item itemvalue="Gradle.Run Plugin" />
-      <item itemvalue="Gradle.SalvoRsTool [printBundledPlugins]" />
-      <item itemvalue="Gradle.SalvoRsTool [publishPlugin]" />
-      <item itemvalue="Gradle.SalvoRsTool [clean]" />
+      <item itemvalue="Gradle.SalvoRsTool [printProductsReleases]" />
+      <item itemvalue="Gradle.SalvoRsTool [buildSearchableOptions]" />
+      <item itemvalue="Gradle.SalvoRsTool [classes]" />
       <item itemvalue="Gradle.SalvoRsTool [verifyPlugin]" />
       <item itemvalue="Gradle.SalvoRsTool [buildPlugin]" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.SalvoRsTool [verifyPlugin]" />
+        <item itemvalue="Gradle.SalvoRsTool [classes]" />
+        <item itemvalue="Gradle.SalvoRsTool [printProductsReleases]" />
         <item itemvalue="Gradle.SalvoRsTool [buildPlugin]" />
-        <item itemvalue="Gradle.SalvoRsTool [printBundledPlugins]" />
-        <item itemvalue="Gradle.SalvoRsTool [publishPlugin]" />
-        <item itemvalue="Gradle.SalvoRsTool [clean]" />
+        <item itemvalue="Gradle.SalvoRsTool [buildSearchableOptions]" />
       </list>
     </recent_temporary>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.15" />
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.15" />
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
       </set>
     </attachedChunks>
   </component>
@@ -565,23 +606,18 @@
       <workItem from="1723775790959" duration="1205000" />
       <workItem from="1723778001995" duration="932000" />
       <workItem from="1723780410462" duration="1026000" />
-      <workItem from="1723859316113" duration="4345000" />
-    </task>
-    <task id="LOCAL-00001" summary="release 1.1.0">
-      <option name="closed" value="true" />
-      <created>1713159360417</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1713159360417</updated>
-    </task>
-    <task id="LOCAL-00002" summary="release1.1.1">
-      <option name="closed" value="true" />
-      <created>1713509832539</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1713509832539</updated>
+      <workItem from="1723859316113" duration="4611000" />
+      <workItem from="1723864395795" duration="1959000" />
+      <workItem from="1724377704672" duration="7536000" />
+      <workItem from="1724652498201" duration="1379000" />
+      <workItem from="1724656879327" duration="642000" />
+      <workItem from="1724658890846" duration="1148000" />
+      <workItem from="1724749978042" duration="103000" />
+      <workItem from="1724982940535" duration="242000" />
+      <workItem from="1725074585636" duration="1181000" />
+      <workItem from="1725347212304" duration="12000" />
+      <workItem from="1728452611810" duration="1827000" />
+      <workItem from="1728454448445" duration="4720000" />
     </task>
     <task id="LOCAL-00003" summary="添加依赖">
       <option name="closed" value="true" />
@@ -951,7 +987,31 @@
       <option name="project" value="LOCAL" />
       <updated>1723778764671</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1723865192010</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1723865192010</updated>
+    </task>
+    <task id="LOCAL-00050" summary="bug fix">
+      <option name="closed" value="true" />
+      <created>1723866278275</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1723866278278</updated>
+    </task>
+    <task id="LOCAL-00051" summary="bugfix">
+      <option name="closed" value="true" />
+      <created>1724653046306</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1724653046307</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -975,8 +1035,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="release1.3.5" />
-    <MESSAGE value="添加编辑器字体" />
     <MESSAGE value="添加文档" />
     <MESSAGE value="release1.5.0" />
     <MESSAGE value="release1.5.1" />
@@ -1000,7 +1058,9 @@
     <MESSAGE value="release 2.0.3" />
     <MESSAGE value="release 2.0.5" />
     <MESSAGE value="适配IU" />
-    <option name="LAST_COMMIT_MESSAGE" value="适配IU" />
+    <MESSAGE value="bug fix" />
+    <MESSAGE value="bugfix" />
+    <option name="LAST_COMMIT_MESSAGE" value="bugfix" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

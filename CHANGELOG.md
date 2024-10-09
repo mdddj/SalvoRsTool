@@ -2,6 +2,11 @@
 
 ## Unreleased
 
+## [2.1.1] -2024-10-09
+
+- Adaptation 2024.3.eap
+
+
 ## [2.1.0] -2024-08-17
 
 - Upgrade compatibility for 2024.2 (IU)
