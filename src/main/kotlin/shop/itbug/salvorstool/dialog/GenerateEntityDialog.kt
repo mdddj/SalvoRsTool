@@ -93,14 +93,9 @@ class GenerateEntityDialog(val project: Project, val runCommand: (Config, String
                     .comment("Database schema (default: DATABASE_SCHEMA specified in ENV)")
             }
             row("Output dir") {
-                textFieldWithBrowseButton(
-                    "Select Folder", project,
-                    FileChooserDescriptorFactory.createSingleFolderDescriptor()
-                ) { it.path }
-                    .align(Align.FILL)
-                    .bindText(
-                        config::outputDir
-                    )
+                textFieldWithBrowseButton(FileChooserDescriptorFactory.createSingleFolderDescriptor(),project){
+                    it.path
+                }.align(Align.FILL).bindText(config::outputDir)
             }
             row("Include hidden tables") {
                 checkBox("Generate entity files from hidden tables (tables with names starting with an underscore are hidden and ignored by default)").bindSelected(

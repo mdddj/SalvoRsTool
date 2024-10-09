@@ -4,7 +4,9 @@ import com.intellij.icons.AllIcons
 import com.intellij.ide.DataManager
 import com.intellij.openapi.actionSystem.ActionManager
 import com.intellij.openapi.actionSystem.DataKey
+import com.intellij.openapi.actionSystem.DataSink
 import com.intellij.openapi.actionSystem.DefaultActionGroup
+import com.intellij.openapi.actionSystem.UiDataProvider
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.popup.JBPopupFactory
@@ -33,24 +35,14 @@ import javax.swing.event.ListSelectionEvent
 import javax.swing.event.ListSelectionListener
 
 
-
 class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : BorderLayoutPanel(),
-    ListSelectionListener {
+    ListSelectionListener, UiDataProvider {
 
     private val list = JBList<SalvoApiItem>().apply {
         this.border = BorderFactory.createEmptyBorder(0, 0, 0, 0)
         this.selectionMode = ListSelectionModel.SINGLE_SELECTION
         this.addListSelectionListener(this@ApiScanWindow)
         this.addMouseListener(RightMenuAction())
-        this.setDataProvider {
-            if (it == JListSelectItemDataKey.name) {
-                val index = this.getClientProperty(RightSelectKey) as? Int
-                if (index != null) {
-                    return@setDataProvider model.getElementAt(index)
-                }
-            }
-            return@setDataProvider null
-        }
     }
 
     private var allApis = SalvoApiService.getInstance(myProject).getApiList()
@@ -59,12 +51,13 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
     private val toolbar = ActionManager.getInstance().createActionToolbar("Salvorstool Window", actions, true)
 
     companion object {
-         val JListSelectItemDataKey = DataKey.create<SalvoApiItem?>("listSelectItemDataKey")
+        val JListSelectItemDataKey = DataKey.create<SalvoApiItem>("listSelectItemDataKey")
         const val RightSelectKey = "RightSelectKey"
     }
 
     init {
         toolbar.targetComponent = toolWindow.component
+
         addToTop(BorderLayoutPanel().apply {
             addToCenter(searchTextField)
             addToRight(toolbar.component)
@@ -87,7 +80,7 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
                 allApis = apiList
                 list.model = ItemModel(apiList)
 
-                if(searchTextField.text.isNotBlank()){
+                if (searchTextField.text.isNotBlank()) {
                     startFilterApi(searchTextField.text)
                 }
             }
@@ -98,11 +91,9 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
      * 列表选中时间回调
      */
     override fun valueChanged(e: ListSelectionEvent?) {
-        println("value is adjusting :${e?.valueIsAdjusting}  ${list.selectedIndex}")
         e?.let {
             if (!it.valueIsAdjusting) {
-                val selectedIndex = list.selectedIndex
-                if (selectedIndex != -1) {
+                if (list.selectedIndex != -1) {
                     list.selectedValue.navTo()
                 }
             }
@@ -121,6 +112,11 @@ class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : Bo
             allApis.filter { it.api.contains(search) }
         }
         list.model = ItemModel(filterList)
+    }
+
+    override fun uiDataSnapshot(sink: DataSink) {
+        val listSelectItem = list.selectedValue
+        sink.set<SalvoApiItem>(JListSelectItemDataKey,listSelectItem)
     }
 
 
@@ -230,7 +226,10 @@ class ApiScanListen(val project: Project) : ToolWindowManagerListener {
         toolWindowManager: ToolWindowManager,
         changeType: ToolWindowManagerListener.ToolWindowManagerEventType
     ) {
-        if(changeType == ToolWindowManagerListener.ToolWindowManagerEventType.ActivateToolWindow && isSalvoWindow(toolWindowManager.activeToolWindowId)){
+        if (changeType == ToolWindowManagerListener.ToolWindowManagerEventType.ActivateToolWindow && isSalvoWindow(
+                toolWindowManager.activeToolWindowId
+            )
+        ) {
             SalvoApiService.getInstance(project).startScan()
         }
         super.stateChanged(toolWindowManager, changeType)

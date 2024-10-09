@@ -1,16 +1,18 @@
 import org.jetbrains.changelog.Changelog
+import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
+import org.jetbrains.intellij.platform.gradle.models.ProductRelease
 import org.jetbrains.intellij.platform.gradle.tasks.VerifyPluginTask
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "2.0.0"
-    id("org.jetbrains.intellij.platform") version "2.0.1"
+    id("org.jetbrains.kotlin.jvm") version "2.0.20"
+    id("org.jetbrains.intellij.platform") version "2.1.0"
     id("org.jetbrains.changelog") version "2.2.0"
 }
 
 group = "shop.itbug"
-version = "2.1.0"
+version = "2.1.1"
 
 repositories { 
     mavenCentral()
@@ -26,20 +28,28 @@ repositories {
 //RR:
 //rustRover("2024.1.5")
 //bundledPlugins("JavaScriptBase","com.jetbrains.rust","org.toml.lang")
+///        sinceBuild.set("241.17890")
+//        untilBuild.set("242.*")
 
 // IDEA
 //intellijIdeaUltimate("2024.2")
 //plugins("com.jetbrains.rust:242.20224.309")
 //bundledPlugins("org.toml.lang","JavaScript")
 
+
+// rr 2024.2
+
+
+
 dependencies {
     intellijPlatform {
-//        rustRover("2024.1.5")
-        local("/Users/ldd/Applications/RustRover.app")
-        bundledPlugins("JavaScriptBase","com.jetbrains.rust","org.toml.lang")
+//        local("/Users/ldd/Applications/RustRover.app")
+        rustRover("243.16718.64") //rr eap
+        bundledPlugins("JavaScript","com.jetbrains.rust","org.toml.lang")
         zipSigner()
         instrumentationTools()
     }
+
 }
 
 intellijPlatform {
@@ -50,6 +60,7 @@ intellijPlatform {
         }
     }
 }
+
 
 
 val pushToken: String? = System.getenv("PUBLISH_TOKEN")
@@ -81,17 +92,19 @@ tasks {
 
 
     patchPluginXml {
-        sinceBuild.set("241.17890")
-        untilBuild.set("242.*")
+//        sinceBuild.set("241.17890")
+//        untilBuild.set("242.*")
+        sinceBuild.set("243")
+        untilBuild.set("243.*")
         changeNotes.set(myChangeLog)
         pluginDescription.set(descText)
     }
 
-    signPlugin {
-        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
-        privateKey.set(System.getenv("PRIVATE_KEY"))
-        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
-    }
+//    signPlugin {
+//        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
+//        privateKey.set(System.getenv("PRIVATE_KEY"))
+//        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
+//    }
 
     publishPlugin {
         if (pushToken != null) {
@@ -108,6 +121,10 @@ tasks {
         failureLevel = VerifyPluginTask.FailureLevel.ALL
     }
 
+    printProductsReleases {
+        channels = listOf(ProductRelease.Channel.EAP)
+        types = listOf(IntelliJPlatformType.RustRover)
+    }
 }
 
 changelog {

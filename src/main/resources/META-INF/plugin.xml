@@ -4,12 +4,15 @@
     <vendor email="hlxsmail@gmail.com" url="https://itbug.shop">梁典典</vendor>
     <depends>com.intellij.modules.platform</depends>
     <depends>com.jetbrains.rust</depends>
-    <depends>JavaScriptBase</depends>
+    <depends>JavaScript</depends>
     <depends>org.toml.lang</depends>
     <resource-bundle>messages.pluginBundle</resource-bundle>
     <projectListeners>
         <listener class="shop.itbug.salvorstool.window.ApiScanListen" topic="com.intellij.openapi.wm.ex.ToolWindowManagerListener"/>
     </projectListeners>
+    <extensions defaultExtensionNs="org.jetbrains.kotlin">
+        <supportsKotlinPluginMode supportsK2="true" />
+    </extensions>
     <extensions defaultExtensionNs="com.intellij">
         <intentionAction>
             <className>shop.itbug.salvorstool.intention.CopyAntdTableColumnAction</className>

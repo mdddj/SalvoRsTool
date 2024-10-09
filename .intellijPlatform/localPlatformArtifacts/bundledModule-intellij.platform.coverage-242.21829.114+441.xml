@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.platform.coverage" revision="242.21829.114+441"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/Applications/RustRover.app/Contents/lib/modules/intellij.platform.coverage.jar" type="jar" conf="default"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

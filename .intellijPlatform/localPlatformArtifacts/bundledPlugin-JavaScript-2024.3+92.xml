@@ -1,0 +1,24 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="JavaScript" revision="2024.3+92"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/Applications/RustRover.app/Contents/plugins/javascript-plugin" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="243.16718.64+241"/>
+    <dependency org="bundledPlugin" name="com.intellij.completion.ml.ranking" rev="243.16718.64+532"/>
+    <dependency org="bundledPlugin" name="com.jetbrains.performancePlugin" rev="243.16718.64+815"/>
+    <dependency org="bundledPlugin" name="org.intellij.intelliLang" rev="243.16718.64+382"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="243.16718.64+688"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.terminal" rev="243.16718.64+197"/>
+    <dependency org="bundledPlugin" name="tanvd.grazi" rev="243.16718.64+529"/>
+    <dependency org="bundledPlugin" name="org.intellij.plugins.markdown" rev="243.16718.64+566"/>
+    <dependency org="bundledPlugin" name="Git4Idea" rev="243.16718.64+180"/>
+    <dependency org="bundledPlugin" name="com.intellij.css" rev="243.16718.64+863"/>
+    <dependency org="bundledPlugin" name="com.intellij.diagram" rev="243.16718.64+269"/>
+    <dependency org="bundledPlugin" name="com.jetbrains.sh" rev="243.16718.64+772"/>
+    <dependency org="bundledPlugin" name="JavaScriptDebugger" rev="243.16718.64+510"/>
+  </dependencies>
+</ivy-module>
