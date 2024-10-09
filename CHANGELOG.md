@@ -1,12 +1,12 @@
 # Changelog
 
+## Unreleased
 
-## [2.1.1] -2024-10-09
+## 2.1.1 -2024-10-09
 
 - Adaptation 2024.3.eap
 
-
-## [2.1.0] -2024-08-17
+## 2.1.0 -2024-08-17
 
 - Upgrade compatibility for 2024.2 (IU)
 - Fixed the problem of salvo api blank list in some scenarios
@@ -55,7 +55,6 @@
 
 - 适配2024.1
 
-
 ### [1.6.0] - 2024-05-13
 
 - 注意:下面的功能需要在前端项目中添加两个前端框架(<a href='https://tailwindcss.com/docs/installation/'>tailwindcss</a>和<a href='https://daisyui.com/'>daisy ui</a>)
@@ -81,7 +80,6 @@
 - 添加salvo tool window
 - 调整生成dto弹窗样式
 
-
 ### [1.3.5] - 2024-04-25
 
 - 添加antd table column 和interface 预览
@@ -96,4 +94,3 @@
 
 - Add antd from form generation function
 - 添加生成antd pro from表单功能
-
