@@ -6,7 +6,7 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "2.0.20"
+    id("org.jetbrains.kotlin.jvm") version "2.0.21"
     id("org.jetbrains.intellij.platform") version "2.1.0"
     id("org.jetbrains.changelog") version "2.2.0"
 }
@@ -14,13 +14,14 @@ plugins {
 group = "shop.itbug"
 version = "2.1.1"
 
-repositories { 
+repositories {
     mavenCentral()
 
     intellijPlatform {
         defaultRepositories()
         releases()
         marketplace()
+        jetbrainsRuntime()
     }
 }
 
@@ -40,41 +41,35 @@ repositories {
 // rr 2024.2
 
 
-
 dependencies {
     intellijPlatform {
-//        local("/Users/ldd/Applications/RustRover.app")
-        rustRover("243.16718.64") //rr eap
-        bundledPlugins("JavaScript","com.jetbrains.rust","org.toml.lang")
+//        rustRover("243.21565.136")
+        local("/Users/ldd/Applications/RustRover.app")
+        bundledPlugins("JavaScript", "com.jetbrains.rust", "org.toml.lang", "com.intellij.modules.json")
         zipSigner()
         instrumentationTools()
+        pluginVerifier()
+        jetbrainsRuntime()
     }
-
 }
 
 intellijPlatform {
     pluginVerification {
-        cliPath.set(file("cli.jar"))
         ides {
-            recommended()
+            local("/Users/ldd/Applications/RustRover.app")
         }
     }
 }
-
 
 
 val pushToken: String? = System.getenv("PUBLISH_TOKEN")
 
 tasks {
 
-    withType<JavaCompile> {
-        sourceCompatibility = "17"
-        targetCompatibility = "17"
-    }
 
     withType<KotlinCompile> {
         compilerOptions {
-            languageVersion.set(KotlinVersion.KOTLIN_2_0)
+            languageVersion.set(KotlinVersion.KOTLIN_2_1)
         }
     }
 
@@ -100,11 +95,11 @@ tasks {
         pluginDescription.set(descText)
     }
 
-//    signPlugin {
-//        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
-//        privateKey.set(System.getenv("PRIVATE_KEY"))
-//        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
-//    }
+    signPlugin {
+        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
+        privateKey.set(System.getenv("PRIVATE_KEY"))
+        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
+    }
 
     publishPlugin {
         if (pushToken != null) {
@@ -125,6 +120,8 @@ tasks {
         channels = listOf(ProductRelease.Channel.EAP)
         types = listOf(IntelliJPlatformType.RustRover)
     }
+
+
 }
 
 changelog {

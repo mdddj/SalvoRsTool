@@ -13,6 +13,8 @@ import com.intellij.psi.PsiManager
 import org.rust.lang.RsLanguage
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import java.io.File
+import javax.swing.BorderFactory
+import javax.swing.border.Border
 
 object Tools {
 
@@ -112,4 +114,6 @@ object Tools {
             }
         }
     }
+
+    fun emptyBorder(): Border = BorderFactory.createEmptyBorder(0, 0, 0, 0)
 }

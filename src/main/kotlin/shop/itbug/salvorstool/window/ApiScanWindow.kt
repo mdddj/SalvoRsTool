@@ -1,189 +1,93 @@
 package shop.itbug.salvorstool.window
 
 import com.intellij.icons.AllIcons
-import com.intellij.ide.DataManager
+import com.intellij.openapi.Disposable
 import com.intellij.openapi.actionSystem.ActionManager
-import com.intellij.openapi.actionSystem.DataKey
 import com.intellij.openapi.actionSystem.DataSink
 import com.intellij.openapi.actionSystem.DefaultActionGroup
 import com.intellij.openapi.actionSystem.UiDataProvider
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.project.Project
-import com.intellij.openapi.ui.popup.JBPopupFactory
-import com.intellij.openapi.ui.popup.ListPopup
-import com.intellij.openapi.wm.ToolWindow
-import com.intellij.openapi.wm.ToolWindowManager
-import com.intellij.openapi.wm.ex.ToolWindowManagerListener
-import com.intellij.ui.ColoredListCellRenderer
-import com.intellij.ui.ColoredText
-import com.intellij.ui.SearchTextField
-import com.intellij.ui.SimpleTextAttributes
-import com.intellij.ui.awt.RelativePoint
+import com.intellij.ui.*
 import com.intellij.ui.components.JBList
-import com.intellij.util.ui.components.BorderLayoutPanel
-import shop.itbug.salvorstool.i18n.MyI18n
+import com.intellij.ui.speedSearch.SpeedSearchUtil
+import com.intellij.util.ui.ListUiUtil
 import shop.itbug.salvorstool.messageing.ApiScanMessaging
 import shop.itbug.salvorstool.model.SalvoApiItem
 import shop.itbug.salvorstool.service.SalvoApiService
-import java.awt.event.MouseAdapter
-import java.awt.event.MouseEvent
+import shop.itbug.salvorstool.tool.MyDataKey
 import java.util.*
 import javax.swing.*
-import javax.swing.event.DocumentEvent
-import javax.swing.event.DocumentListener
-import javax.swing.event.ListSelectionEvent
-import javax.swing.event.ListSelectionListener
 
 
-class ApiScanWindow(private val myProject: Project, toolWindow: ToolWindow) : BorderLayoutPanel(),
-    ListSelectionListener, UiDataProvider {
+object SalvoApiWindowFactory {
 
-    private val list = JBList<SalvoApiItem>().apply {
-        this.border = BorderFactory.createEmptyBorder(0, 0, 0, 0)
-        this.selectionMode = ListSelectionModel.SINGLE_SELECTION
-        this.addListSelectionListener(this@ApiScanWindow)
-        this.addMouseListener(RightMenuAction())
+    fun installActions(salvoApiWindow: ApiScanWindow): JPanel {
+        val actions = ActionManager.getInstance().getAction("SalvoApiActionList") as DefaultActionGroup
+        return ToolbarDecorator.createDecorator(salvoApiWindow)
+            .addExtraAction(actions)
+            .createPanel()
     }
+
+    fun create(project: Project): ApiScanWindow = ApiScanWindow(project)
+}
+
+
+/**
+ * salvo api窗口
+ */
+class ApiScanWindow(myProject: Project) : JBList<SalvoApiItem>(), UiDataProvider, Disposable, ApiScanMessaging {
+
+    private val busConnect = myProject.messageBus.connect()
+
+
+    private val rightMenuAction =
+        ActionManager.getInstance().getAction("SalvoApiRightMenuActionGroup") as DefaultActionGroup
 
     private var allApis = SalvoApiService.getInstance(myProject).getApiList()
-    private var searchTextField = MySearchTextField()
-    private val actions = ActionManager.getInstance().getAction("SalvoApiActionList") as DefaultActionGroup
-    private val toolbar = ActionManager.getInstance().createActionToolbar("Salvorstool Window", actions, true)
 
-    companion object {
-        val JListSelectItemDataKey = DataKey.create<SalvoApiItem>("listSelectItemDataKey")
-        const val RightSelectKey = "RightSelectKey"
-    }
 
     init {
-        toolbar.targetComponent = toolWindow.component
-
-        addToTop(BorderLayoutPanel().apply {
-            addToCenter(searchTextField)
-            addToRight(toolbar.component)
-        })
-        addToCenter(JScrollPane(list).apply {
-            this.border = BorderFactory.createEmptyBorder(0, 0, 0, 0)
-        })
-        list.cellRenderer = SalvoApiItemRender()
-        SwingUtilities.invokeLater {
-            listenChange()
-        }
-
-
+        this.border = BorderFactory.createEmptyBorder(0, 0, 0, 0)
+        this.selectionMode = ListSelectionModel.SINGLE_SELECTION
+        setExpandableItemsEnabled(false)
+        ScrollingUtil.installActions(this)
+        ListUiUtil.Selection.installSelectionOnRightClick(this)
+        ListUiUtil.Selection.installSelectionOnFocus(this)
+        cellRenderer = SalvoApiItemRender()
+        PopupHandler.installPopupMenu(this, rightMenuAction, "Right Menu")
+        TreeUIHelper.getInstance().installListSpeedSearch(this) { o -> o.api }
+        busConnect.subscribe(ApiScanMessaging.TOPIC, this)
     }
 
-
-    private fun listenChange() {
-        myProject.messageBus.connect().subscribe(ApiScanMessaging.TOPIC, object : ApiScanMessaging {
-            override fun apiScanEnd(apiList: List<SalvoApiItem>) {
-                allApis = apiList
-                list.model = ItemModel(apiList)
-
-                if (searchTextField.text.isNotBlank()) {
-                    startFilterApi(searchTextField.text)
-                }
-            }
-        })
-    }
-
-    /**
-     * 列表选中时间回调
-     */
-    override fun valueChanged(e: ListSelectionEvent?) {
-        e?.let {
-            if (!it.valueIsAdjusting) {
-                if (list.selectedIndex != -1) {
-                    list.selectedValue.navTo()
-                }
-            }
-        }
-    }
-
-
-    /**
-     * api筛选
-     * @param[search] 要筛选的字符串
-     */
-    fun startFilterApi(search: String) {
-        val filterList = if (search.isEmpty()) {
-            allApis
-        } else {
-            allApis.filter { it.api.contains(search) }
-        }
-        list.model = ItemModel(filterList)
-    }
 
     override fun uiDataSnapshot(sink: DataSink) {
-        val listSelectItem = list.selectedValue
-        sink.set<SalvoApiItem>(JListSelectItemDataKey,listSelectItem)
+        sink.set<SalvoApiItem>(MyDataKey.JListSelectItemDataKey, selectedValue)
     }
 
-
-    ///
-    private inner class MySearchTextField : SearchTextField(false), DocumentListener {
-
-        init {
-            addDocumentListener(this)
-            textEditor.emptyText.text = MyI18n.getMessage("filter_salvo_api_list")
-        }
-
-        override fun insertUpdate(e: DocumentEvent?) {
-            handle(e)
-        }
-
-        override fun removeUpdate(e: DocumentEvent?) {
-            handle(e)
-        }
-
-        override fun changedUpdate(e: DocumentEvent?) {
-            handle(e)
-        }
-
-        private fun handle(e: DocumentEvent?) {
-            e?.document?.let {
-                val text = it.getText(0, it.length)
-                startFilterApi(text)
-            }
-        }
-
+    override fun dispose() {
+        println("salvo windows dispose")
+        busConnect.disconnect()
     }
+
+    override fun apiScanEnd(apiList: List<SalvoApiItem>) {
+        println("api scan ended")
+        allApis = apiList
+        model = ItemModel(apiList)
+    }
+
 
     //设置模型
-    inner class ItemModel(val list: List<SalvoApiItem>) : DefaultListModel<SalvoApiItem>() {
+    inner class ItemModel(list: List<SalvoApiItem>) : DefaultListModel<SalvoApiItem>() {
         init {
             addAll(list)
-        }
-    }
-
-    //右键菜单操作
-    private inner class RightMenuAction : MouseAdapter() {
-        override fun mouseClicked(e: MouseEvent?) {
-            e?.let {
-                if (SwingUtilities.isRightMouseButton(e)) {
-                    val selectIndex = list.locationToIndex(e.point)
-                    list.putClientProperty(RightSelectKey, selectIndex)
-                    createPopup().show(RelativePoint(list, e.point))
-                }
-            }
-        }
-
-        private fun createPopup(): ListPopup {
-            val ctx = DataManager.getInstance().getDataContext(list)
-            return JBPopupFactory.getInstance().createActionGroupPopup("操作", getActionGroup(), ctx, false, {
-                list.putClientProperty(RightSelectKey, null)
-            }, 10)
-        }
-
-        private fun getActionGroup(): DefaultActionGroup {
-            return ActionManager.getInstance().getAction("SalvoApiRightMenuActionGroup") as DefaultActionGroup
         }
     }
 
 }
 
 
-class SalvoApiItemRender : ColoredListCellRenderer<SalvoApiItem>() {
+class SalvoApiItemRender() : ColoredListCellRenderer<SalvoApiItem>() {
     override fun customizeCellRenderer(
         list: JList<out SalvoApiItem>,
         value: SalvoApiItem?,
@@ -191,6 +95,7 @@ class SalvoApiItemRender : ColoredListCellRenderer<SalvoApiItem>() {
         selected: Boolean,
         hasFocus: Boolean
     ) {
+
         value?.let {
             icon = AllIcons.Nodes.Method
             append(it.api)
@@ -212,26 +117,7 @@ class SalvoApiItemRender : ColoredListCellRenderer<SalvoApiItem>() {
                     .build()
             )
         }
+        SpeedSearchUtil.applySpeedSearchHighlighting(list, this, false, selected)
     }
 
-}
-
-
-/**
- * 监听salvo窗口的显示,然后刷新api列表
- */
-class ApiScanListen(val project: Project) : ToolWindowManagerListener {
-
-    override fun stateChanged(
-        toolWindowManager: ToolWindowManager,
-        changeType: ToolWindowManagerListener.ToolWindowManagerEventType
-    ) {
-        if (changeType == ToolWindowManagerListener.ToolWindowManagerEventType.ActivateToolWindow && isSalvoWindow(
-                toolWindowManager.activeToolWindowId
-            )
-        ) {
-            SalvoApiService.getInstance(project).startScan()
-        }
-        super.stateChanged(toolWindowManager, changeType)
-    }
 }

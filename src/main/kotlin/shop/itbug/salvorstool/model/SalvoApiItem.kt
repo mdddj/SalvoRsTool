@@ -1,5 +1,6 @@
 package shop.itbug.salvorstool.model
 
+import com.intellij.openapi.util.text.HtmlChunk
 import org.rust.lang.core.psi.RsMethodCall
 import org.rust.lang.core.psi.impl.RsPathImpl
 import shop.itbug.salvorstool.tool.*
@@ -22,6 +23,9 @@ data class SalvoApiItem(val api: String,val method: SalvoApiItemMethod,val rsMet
     override fun toString(): String {
         return "\n${api} - $method"
     }
+
+
+    fun apiHtmlString(): String = HtmlChunk.span().addText(api).toString()
 
     /**
      * 生成antd request
@@ -83,6 +87,14 @@ data class SalvoApiItem(val api: String,val method: SalvoApiItemMethod,val rsMet
             return sb.toString().removeSuffix(",")
         }
         return ""
+    }
+
+
+    /**
+     * 获取节点的路径
+     */
+     fun getElementFilePath(): String {
+        return rsMethodPsiElement.containingFile.virtualFile.path
     }
 
 

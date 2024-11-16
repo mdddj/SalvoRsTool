@@ -5,7 +5,7 @@ import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import shop.itbug.salvorstool.i18n.MyI18n
-import shop.itbug.salvorstool.window.ApiScanWindow.Companion.JListSelectItemDataKey
+import shop.itbug.salvorstool.tool.MyDataKey.JListSelectItemDataKey
 
 ///跳转到router的实现
 class SalvoApiNavigatorToRouteImplAction: AnAction() {

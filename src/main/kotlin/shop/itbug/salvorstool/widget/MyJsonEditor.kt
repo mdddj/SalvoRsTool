@@ -1,7 +1,6 @@
 package shop.itbug.salvorstool.widget
 
 import com.intellij.json.JsonLanguage
-import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.editor.colors.EditorColorsManager
 import com.intellij.openapi.editor.colors.EditorFontType
 import com.intellij.openapi.editor.ex.EditorEx
