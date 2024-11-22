@@ -9,6 +9,7 @@ import com.intellij.ui.dsl.builder.Align
 import com.intellij.ui.dsl.builder.Panel
 import com.intellij.ui.dsl.builder.bindText
 import com.intellij.ui.dsl.builder.panel
+import com.intellij.util.ui.FormBuilder
 import com.intellij.util.ui.components.BorderLayoutPanel
 import org.rust.lang.core.psi.RsNamedFieldDecl
 import org.rust.lang.core.psi.impl.RsStructItemImpl
@@ -164,10 +165,12 @@ class GenerateDtoDialog(private val project: Project, private val psiElement: Rs
         SwingUtilities.invokeLater {
             myPanel.registerValidators(disposable)
         }
-        return BorderLayoutPanel().apply {
-            addToCenter(tabView)
-            addToBottom(myPanel)
-        }
+
+        return FormBuilder.createFormBuilder()
+            .addComponentFillVertically(tabView, 0)
+            .addSeparator()
+            .addComponent(myPanel, 12)
+            .panel
     }
 
 
@@ -181,9 +184,9 @@ class GenerateDtoDialog(private val project: Project, private val psiElement: Rs
     }
 
     override fun doValidate(): ValidationInfo? {
-        if (!project.fileIsExits(model.saveTo)) {
+        if (!fileIsExits(model.saveTo)) {
             return ValidationInfo(MyI18n.folderIsNotFound)
-        } else if (project.fileIsExits(model.saveTo.removeSuffix(File.separator) + File.separator + model.fileName + ".rs")) {
+        } else if (fileIsExits(model.saveTo.removeSuffix(File.separator) + File.separator + model.fileName + ".rs")) {
             return ValidationInfo(MyI18n.fileIsExist)
         }
         return super.doValidate()

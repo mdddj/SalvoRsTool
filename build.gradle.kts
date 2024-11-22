@@ -12,7 +12,7 @@ plugins {
 }
 
 group = "shop.itbug"
-version = "2.1.1"
+version = "2.1.2"
 
 repositories {
     mavenCentral()
@@ -41,11 +41,22 @@ repositories {
 // rr 2024.2
 
 
+
+var isRust = false
+
 dependencies {
     intellijPlatform {
-//        rustRover("243.21565.136")
-        local("/Users/ldd/Applications/RustRover.app")
-        bundledPlugins("JavaScript", "com.jetbrains.rust", "org.toml.lang", "com.intellij.modules.json")
+
+        if(isRust){
+            local("/Users/ldd/Applications/RustRover.app")
+            bundledPlugins("JavaScript", "com.jetbrains.rust", "org.toml.lang", "com.intellij.modules.json")
+        }else{
+            local("/Applications/IntelliJ IDEA Ultimate.app")
+            plugins("com.jetbrains.rust:243.21565.245")
+            bundledPlugins("org.toml.lang","JavaScript","com.intellij.modules.json")
+        }
+
+
         zipSigner()
         instrumentationTools()
         pluginVerifier()
@@ -65,7 +76,6 @@ intellijPlatform {
 val pushToken: String? = System.getenv("PUBLISH_TOKEN")
 
 tasks {
-
 
     withType<KotlinCompile> {
         compilerOptions {
@@ -87,8 +97,6 @@ tasks {
 
 
     patchPluginXml {
-//        sinceBuild.set("241.17890")
-//        untilBuild.set("242.*")
         sinceBuild.set("243")
         untilBuild.set("243.*")
         changeNotes.set(myChangeLog)
@@ -122,6 +130,9 @@ tasks {
     }
 
 
+    buildSearchableOptions {
+        enabled = false
+    }
 }
 
 changelog {

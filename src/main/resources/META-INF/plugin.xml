@@ -6,7 +6,6 @@
     <depends>com.jetbrains.rust</depends>
     <depends>JavaScript</depends>
     <depends>org.toml.lang</depends>
-    <depends>com.intellij.modules.rustrover</depends>
     <depends>com.intellij.modules.json</depends>
     <resource-bundle>messages.pluginBundle</resource-bundle>
     <extensions defaultExtensionNs="org.jetbrains.kotlin">
@@ -66,9 +65,7 @@
 
         <!--salvo Windows操作条-->
         <action id="SalvoApiRefreshAction" class="shop.itbug.salvorstool.action.api.SalvoApiRefreshAction"/>
-        <group id="SalvoApiActionList">
-            <reference id="SalvoApiRefreshAction"/>
-        </group>
+
 
         <action id="AntdRequestCopyAction" class="shop.itbug.salvorstool.action.rightmenu.AntdRequestCopyAction"
                 popup="true"/>
@@ -91,6 +88,15 @@
             <reference id="SalvoApiGoToDefineAction"/>
         </group>
 
+        <group id="SalvoApiActionList" popup="false">
+            <reference id="SalvoApiRefreshAction"/>
+            <separator key="copy"/>
+            <reference id="AntdRequestCopyAction"/>
+            <reference id="CopyUrlAction"/>
+            <separator key="nav_to_psi"/>
+            <reference id="SalvoApiNavigatorToRouteImplAction"/>
+            <reference id="SalvoApiGoToDefineAction"/>
+        </group>
 
         <action id="JsonToSearOrm" class="shop.itbug.salvorstool.action.bar.JsonToSearOrm" text="Json To SeaOrm"
                 icon="/icons/sea-orm.png"/>

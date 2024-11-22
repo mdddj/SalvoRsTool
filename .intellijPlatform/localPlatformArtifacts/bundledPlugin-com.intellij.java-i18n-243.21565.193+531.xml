@@ -1,0 +1,12 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.java-i18n" revision="243.21565.193+531"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/java-i18n" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.properties" rev="243.21565.193+385"/>
+  </dependencies>
+</ivy-module>

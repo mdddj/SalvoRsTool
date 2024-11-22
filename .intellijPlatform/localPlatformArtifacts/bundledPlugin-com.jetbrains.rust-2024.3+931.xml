@@ -7,20 +7,20 @@
     <artifact name="/Users/ldd/Applications/RustRover.app/Contents/plugins/intellij-rust" type="directory" conf="default"/>
   </publications>
   <dependencies>
-    <dependency org="bundledPlugin" name="org.toml.lang" rev="243.21565.136+239"/>
-    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="243.21565.136+241"/>
-    <dependency org="bundledPlugin" name="com.intellij.nativeDebug" rev="243.21565.136+211"/>
-    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="243.21565.136+688"/>
-    <dependency org="bundledPlugin" name="tanvd.grazi" rev="243.21565.136+529"/>
-    <dependency org="bundledPlugin" name="JavaScript" rev="243.21565.136+92"/>
-    <dependency org="bundledPlugin" name="com.intellij.completion.ml.ranking" rev="243.21565.136+532"/>
-    <dependency org="bundledPlugin" name="com.intellij.ml.inline.completion" rev="243.21565.136+961"/>
-    <dependency org="bundledPlugin" name="org.jetbrains.plugins.terminal" rev="243.21565.136+197"/>
-    <dependency org="bundledPlugin" name="org.jetbrains.completion.full.line" rev="243.21565.136+122"/>
-    <dependency org="bundledModule" name="intellij.platform.vcs.impl" rev="243.21565.136+441"/>
-    <dependency org="bundledModule" name="intellij.profiler.asyncOne" rev="243.21565.136+441"/>
-    <dependency org="bundledModule" name="intellij.profiler.common" rev="243.21565.136+441"/>
-    <dependency org="bundledModule" name="intellij.profiler.clion" rev="243.21565.136+441"/>
-    <dependency org="bundledModule" name="intellij.platform.coverage" rev="243.21565.136+441"/>
+    <dependency org="bundledPlugin" name="org.toml.lang" rev="243.21565.245+239"/>
+    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="243.21565.245+241"/>
+    <dependency org="bundledPlugin" name="com.intellij.nativeDebug" rev="243.21565.245+211"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="243.21565.245+688"/>
+    <dependency org="bundledPlugin" name="tanvd.grazi" rev="243.21565.245+529"/>
+    <dependency org="bundledPlugin" name="JavaScript" rev="243.21565.245+92"/>
+    <dependency org="bundledPlugin" name="com.intellij.completion.ml.ranking" rev="243.21565.245+532"/>
+    <dependency org="bundledPlugin" name="com.intellij.ml.inline.completion" rev="243.21565.245+961"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.terminal" rev="243.21565.245+197"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.completion.full.line" rev="243.21565.245+122"/>
+    <dependency org="bundledModule" name="intellij.platform.vcs.impl" rev="243.21565.245+441"/>
+    <dependency org="bundledModule" name="intellij.profiler.asyncOne" rev="243.21565.245+441"/>
+    <dependency org="bundledModule" name="intellij.profiler.common" rev="243.21565.245+441"/>
+    <dependency org="bundledModule" name="intellij.profiler.clion" rev="243.21565.245+441"/>
+    <dependency org="bundledModule" name="intellij.platform.coverage" rev="243.21565.245+441"/>
   </dependencies>
 </ivy-module>

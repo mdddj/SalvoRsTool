@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.platform.dap" revision="243.21565.193+520"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Applications/IntelliJ IDEA Ultimate.app/Contents/lib/modules/intellij.platform.dap.jar" type="jar" conf="default"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

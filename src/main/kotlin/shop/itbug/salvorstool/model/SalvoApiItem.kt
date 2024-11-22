@@ -1,8 +1,11 @@
 package shop.itbug.salvorstool.model
 
-import com.intellij.openapi.util.text.HtmlChunk
+import com.intellij.psi.search.GlobalSearchScope
+import org.rust.lang.core.psi.RsFunction
 import org.rust.lang.core.psi.RsMethodCall
+import org.rust.lang.core.psi.ext.RsNamedElement
 import org.rust.lang.core.psi.impl.RsPathImpl
+import org.rust.lang.core.stubs.index.RsNamedElementIndex
 import shop.itbug.salvorstool.tool.*
 import java.util.*
 
@@ -17,15 +20,19 @@ enum class SalvoApiItemMethod {
     Unknown
 }
 
-data class SalvoApiItemFunction(val method: SalvoApiItemMethod,val element: RsMethodCall)
+data class SalvoApiItemFunction(val method: SalvoApiItemMethod, val element: RsMethodCall)
 
-data class SalvoApiItem(val api: String,val method: SalvoApiItemMethod,val rsMethodPsiElement: RsMethodCall){
+data class SalvoApiItem(
+    val api: String,
+    val method: SalvoApiItemMethod,
+    val rsMethodPsiElement: RsMethodCall,
+    val routerFileName: String,
+    val serviceFileName: String,
+) {
     override fun toString(): String {
         return "\n${api} - $method"
     }
 
-
-    fun apiHtmlString(): String = HtmlChunk.span().addText(api).toString()
 
     /**
      * 生成antd request
@@ -44,7 +51,7 @@ data class SalvoApiItem(val api: String,val method: SalvoApiItemMethod,val rsMet
      * 函数名称
      */
     private fun generateRequestName(): String {
-        val name = removeIdWithSlash(api).replace("/","_").underlineToCamel.capitalizeFirstLetter()
+        val name = removeIdWithSlash(api).replace("/", "_").underlineToCamel.capitalizeFirstLetter()
         return firstCharToLowercase(name)
     }
 
@@ -77,9 +84,9 @@ data class SalvoApiItem(val api: String,val method: SalvoApiItemMethod,val rsMet
     /**
      * 生成参数列表
      */
-    private fun generateFunctionParams() : String {
+    private fun generateFunctionParams(): String {
         val params = extractBracketContents(api)
-        if(params.isNotEmpty()){
+        if (params.isNotEmpty()) {
             val sb = StringBuilder()
             params.forEach {
                 sb.append("${it}: string,")
@@ -93,7 +100,7 @@ data class SalvoApiItem(val api: String,val method: SalvoApiItemMethod,val rsMet
     /**
      * 获取节点的路径
      */
-     fun getElementFilePath(): String {
+    fun getElementFilePath(): String {
         return rsMethodPsiElement.containingFile.virtualFile.path
     }
 
@@ -108,9 +115,31 @@ data class SalvoApiItem(val api: String,val method: SalvoApiItemMethod,val rsMet
     /**
      * 跳转到service实现
      */
-    fun navToRouterImpl(){
-         rsMethodPsiElement.findFirstChild<RsPathImpl>()?.let { rxPath ->
-             rxPath.reference?.resolve()?.tryNavTo()
-         }
+    fun navToRouterImpl() {
+        getServiceRefs()?.tryNavTo()
+    }
+
+
+    /**
+     * 查找services函数的实现
+     */
+    private fun getServiceRefs() = findServiceRef(rsMethodPsiElement)
+
+
+    companion object {
+
+        /**
+         * 查找指向service
+         */
+        fun findServiceRef(rsMethod: RsMethodCall): RsNamedElement? {
+            val rsServiceFun = rsMethod.findFirstChild<RsPathImpl>() ?: return null
+            val project = rsServiceFun.project
+            val psis = RsNamedElementIndex.Helper.findElementsByName(
+                project,
+                rsServiceFun.text,
+                GlobalSearchScope.projectScope(project)
+            )
+            return psis.firstOrNull()
+        }
     }
 }

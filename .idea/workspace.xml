@@ -5,44 +5,44 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="385ba4eb-8ca7-4728-9d8d-815c227cc527" name="Changes" comment="bugfix">
-      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-10598878498875339612.salive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-11653310592135966755.salive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-12605108422821889779.salive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-14276812265090582366.salive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-16670453986695866916.salive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-1702086510644628227.salive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-17191947592809681842.salive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-17868595510702275078.salive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-4130731515672897352.salive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-5739623766534926165.salive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-8352721024973601697.salive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-9085716929888320465.salive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-9314313218078541822.salive" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/rightmenu/SalvoApiGoToDefineAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/DataKey.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-9772845077469408307.salive" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/SalvoApiActionHelper.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/icons/antd.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-2024.3+92.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-2024.3+92.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-2024.3+931.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-2024.3+931.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-2024.3+239.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-2024.3+239.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.intellijPlatform/self-update.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.intellijPlatform/self-update.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-10598878498875339612.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-11653310592135966755.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-12605108422821889779.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-14276812265090582366.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-16670453986695866916.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-1702086510644628227.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-17191947592809681842.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-17868595510702275078.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-4130731515672897352.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-5739623766534926165.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-8352721024973601697.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-9085716929888320465.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-9314313218078541822.salive" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cli.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/rightmenu/AntdRequestCopyAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/rightmenu/AntdRequestCopyAction.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/rightmenu/CopyUrlAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/rightmenu/CopyUrlAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/rightmenu/SalvoApiGoToDefineAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/rightmenu/SalvoApiGoToDefineAction.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/rightmenu/SalvoApiNavigatorToRouteImplAction.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/rightmenu/SalvoApiNavigatorToRouteImplAction.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateDtoDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateDtoDialog.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateRouterDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateRouterDialog.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateServiceDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateServiceDialog.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dsl/PanelDsl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dsl/PanelDsl.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/icons/MyIcon.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/icons/MyIcon.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/messageing/ApiScanMessaging.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/messageing/ApiScanMessaging.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/model/SalvoApiItem.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/model/SalvoApiItem.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/searcheverywhere/SalvoSearchApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/searcheverywhere/SalvoSearchApi.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/service/ProjectStartActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/service/ProjectStartActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/service/RustProjectService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/service/RustProjectService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/service/SalvoApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/service/SalvoApiService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/Tools.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/Tools.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/widget/MyJsonEditor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/widget/MyJsonEditor.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/ExtendedFuntions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/ExtendedFuntions.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/RsLetDeclManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/RsLetDeclManager.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/ApiScanWindow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/ApiScanWindow.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/SalvoWindow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/SalvoWindow.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +98,6 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Object" />
         <option value="Class" />
         <option value="JUnit5 Test Class" />
         <option value="InspectionDescription" />
@@ -106,6 +105,7 @@
         <option value="TypeScript JSX File" />
         <option value="Action" />
         <option value="Kotlin Class" />
+        <option value="Kotlin Object" />
       </list>
     </option>
   </component>
@@ -216,60 +216,60 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.Build SalvoRsTool.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Run Plugin.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.SalvoApiTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoApiTest.test.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [buildPlugin].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [buildSearchableOptions].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [classes].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [getChangelog].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [initializeChangelog].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [patchChangelog].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [patchPluginXml].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [printBundledPlugins].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [printProductsReleases].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [publishPlugin].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [runIde].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [setupDependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [signPlugin].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [testIdePerformance].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [verifyPlugin].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.下载 IntelliJ 平台源….executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.下载源代码.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.构建 SalvoRsTool.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.MyJsonParseKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.MyRsPsiElementManagerKt.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;2.1.1&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last.edited.regexp&quot;: &quot;/api/post/&lt;id&gt;/&lt;param&gt;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hlx/github/SalvoRsTool&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
-    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.41099477&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/ldd/Applications/IntelliJ IDEA Ultimate 2024.1.1.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Gradle.Build SalvoRsTool.executor": "Run",
+    "Gradle.Run Plugin.executor": "Debug",
+    "Gradle.SalvoApiTest.executor": "Run",
+    "Gradle.SalvoApiTest.test.executor": "Run",
+    "Gradle.SalvoRsTool [buildPlugin].executor": "Run",
+    "Gradle.SalvoRsTool [buildSearchableOptions].executor": "Run",
+    "Gradle.SalvoRsTool [classes].executor": "Run",
+    "Gradle.SalvoRsTool [clean].executor": "Run",
+    "Gradle.SalvoRsTool [getChangelog].executor": "Run",
+    "Gradle.SalvoRsTool [initializeChangelog].executor": "Run",
+    "Gradle.SalvoRsTool [patchChangelog].executor": "Run",
+    "Gradle.SalvoRsTool [patchPluginXml].executor": "Run",
+    "Gradle.SalvoRsTool [printBundledPlugins].executor": "Run",
+    "Gradle.SalvoRsTool [printProductsReleases].executor": "Run",
+    "Gradle.SalvoRsTool [publishPlugin].executor": "Run",
+    "Gradle.SalvoRsTool [runIde].executor": "Run",
+    "Gradle.SalvoRsTool [setupDependencies].executor": "Run",
+    "Gradle.SalvoRsTool [signPlugin].executor": "Run",
+    "Gradle.SalvoRsTool [testIdePerformance].executor": "Run",
+    "Gradle.SalvoRsTool [verifyPlugin].executor": "Run",
+    "Gradle.下载 IntelliJ 平台源….executor": "Run",
+    "Gradle.下载源代码.executor": "Run",
+    "Gradle.构建 SalvoRsTool.executor": "Run",
+    "Kotlin.MyJsonParseKt.executor": "Run",
+    "Kotlin.MyRsPsiElementManagerKt.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "2.1.1",
+    "kotlin-language-version-configured": "true",
+    "last.edited.regexp": "/api/post/<id>/<param>",
+    "last_opened_file_path": "/Users/hlx/github/SalvoRsTool",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "org.rust.first.attach.projects": "true",
+    "project.structure.last.edited": "模块",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.41099477",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "/Users/ldd/Applications/IntelliJ IDEA Ultimate 2024.1.1.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -428,10 +428,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SalvoRsTool [buildPlugin]" />
         <item itemvalue="Gradle.SalvoRsTool [patchPluginXml]" />
         <item itemvalue="Gradle.SalvoRsTool [printProductsReleases]" />
         <item itemvalue="Gradle.SalvoRsTool [verifyPlugin]" />
-        <item itemvalue="Gradle.SalvoRsTool [buildPlugin]" />
         <item itemvalue="Gradle.SalvoRsTool [printBundledPlugins]" />
       </list>
     </recent_temporary>
@@ -627,7 +627,14 @@
       <workItem from="1731295768638" duration="1490000" />
       <workItem from="1731304458211" duration="485000" />
       <workItem from="1731720599656" duration="6499000" />
-      <workItem from="1731727601212" duration="5470000" />
+      <workItem from="1731727601212" duration="7012000" />
+      <workItem from="1731839184587" duration="1296000" />
+      <workItem from="1731892597622" duration="1416000" />
+      <workItem from="1732003255622" duration="3068000" />
+      <workItem from="1732006465071" duration="3991000" />
+      <workItem from="1732065846367" duration="2034000" />
+      <workItem from="1732239346867" duration="3658000" />
+      <workItem from="1732244369951" duration="2011000" />
     </task>
     <task id="LOCAL-00003" summary="添加依赖">
       <option name="closed" value="true" />
