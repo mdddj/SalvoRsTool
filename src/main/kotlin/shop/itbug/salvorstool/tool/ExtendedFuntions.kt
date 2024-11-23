@@ -50,6 +50,10 @@ fun underlineToCamel(underlineString: String): String {
     return CaseFormat.LOWER_UNDERSCORE.to(CaseFormat.LOWER_CAMEL, underlineString)
 }
 
+
+///将字符串变为标准的rust struct name
+val String.structName get() = firstCharToLowercase(this).underlineToCamel.capitalizeFirstLetter()
+
 ///首字母变小写
 fun firstCharToLowercase(input: String): String {
     if (input.isEmpty() || input.length == 1) return input

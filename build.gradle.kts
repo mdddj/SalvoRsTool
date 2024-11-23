@@ -53,7 +53,7 @@ dependencies {
         }else{
             local("/Applications/IntelliJ IDEA Ultimate.app")
             plugins("com.jetbrains.rust:243.21565.245")
-            bundledPlugins("org.toml.lang","JavaScript","com.intellij.modules.json")
+            bundledPlugins("org.toml.lang","JavaScript","com.intellij.modules.json","com.intellij.database")
         }
 
 
