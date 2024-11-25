@@ -5,21 +5,33 @@ import shop.itbug.salvorstool.tool.structName
 
 class SimpleSqlTableGenerate(val table: BasicModTable) : SqlTableGenerate(table)
 
-
 abstract class SqlTableGenerate(private val table: BasicModTable) : SqlGenerate {
+
+    /**
+     * 获取所有列
+     */
     override fun getColumns(): Array<SqlColumnModel> {
-        return table.columns.map { SqlColumnModel(it.name, it.storedType.description, it.isNotNull) }.toTypedArray()
+        return table.columns.map { SqlColumnModel(it.name, it.storedType.description, it.isNotNull,it.comment) }.toTypedArray()
     }
 
+    /**
+     * 获取表名
+     */
     override fun getTableName(): String {
         return table.name
     }
 
 
+    /**
+     * 生成rust struct
+     */
     override fun generateRustStruct(): String {
         val sb = StringBuilder()
         sb.appendLine("pub struct ${table.name.structName} {")
         getColumns().forEach { column ->
+            column.comment?.let { comment ->
+                sb.appendLine("\t///${comment}")
+            }
             sb.appendLine("\t${column.generateRustPropertiesString()}")
         }
         sb.appendLine("}")
@@ -45,11 +57,13 @@ data class SqlColumnModel(
     val type: String,
     ///是否可空
     val isNullable: Boolean,
+    ///备注
+    val comment: String? = null
 ) {
     ///构建rust属性
     fun generateRustPropertiesString(): String {
-        if(rustType == SqlRustType.Unknown){
-            println("Unknown :  $type")
+        if(rustType==SqlRustType.Unknown){
+            println("未知的类型:$type")
         }
         return "pub ${getFinalName()}: ${rustType.getRustTypeString(isNullable)},"
     }
@@ -60,8 +74,6 @@ data class SqlColumnModel(
         return if(rustKeywords.contains(name)) "r#$name" else name
     }
 }
-
-
 
 
 val rustKeywords = arrayOf(

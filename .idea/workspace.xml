@@ -5,22 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="385ba4eb-8ca7-4728-9d8d-815c227cc527" name="Changes" comment="bugfix">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/database/GenerateDatabaseAction.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/database/SqlGenerate.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/database/SqlGenerateFactory.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/database/SqlRustType.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/SqlGenerateRustStructDialog.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-13203636241244494537.salive" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.intellijPlatform/self-update.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.intellijPlatform/self-update.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-14164755985997099105.salive" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-14455384244096550549.salive" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-17769449406399476316.salive" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-9772845077469408307.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.kotlin/sessions/kotlin-compiler-10381189263187118240.salive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DESCRIPTION.md" beforeDir="false" afterPath="$PROJECT_DIR$/DESCRIPTION.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/ExtendedFuntions.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/ExtendedFuntions.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/widget/RsEditor.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/widget/RsEditor.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/database/SqlGenerate.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/database/SqlGenerate.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/database/SqlRustType.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/action/database/SqlRustType.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateAntdFormDialog.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateAntdFormDialog.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +37,23 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="intellij platform" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -392,8 +401,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.SalvoRsTool [printBundledPlugins]" />
         <item itemvalue="Gradle.SalvoRsTool [buildPlugin]" />
+        <item itemvalue="Gradle.SalvoRsTool [printBundledPlugins]" />
         <item itemvalue="Gradle.SalvoRsTool [patchPluginXml]" />
         <item itemvalue="Gradle.SalvoRsTool [printProductsReleases]" />
         <item itemvalue="Gradle.SalvoRsTool [verifyPlugin]" />
@@ -602,7 +611,8 @@
       <workItem from="1732246589883" duration="8151000" />
       <workItem from="1732259027651" duration="5135000" />
       <workItem from="1732282908300" duration="2613000" />
-      <workItem from="1732323796022" duration="670000" />
+      <workItem from="1732323796022" duration="1418000" />
+      <workItem from="1732502474534" duration="944000" />
     </task>
     <task id="LOCAL-00003" summary="添加依赖">
       <option name="closed" value="true" />

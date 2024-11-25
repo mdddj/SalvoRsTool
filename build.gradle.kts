@@ -42,7 +42,7 @@ repositories {
 
 
 
-var isRust = false
+var isRust = true
 
 dependencies {
     intellijPlatform {
@@ -50,6 +50,7 @@ dependencies {
         if(isRust){
             local("/Users/ldd/Applications/RustRover.app")
             bundledPlugins("JavaScript", "com.jetbrains.rust", "org.toml.lang", "com.intellij.modules.json")
+            plugins("com.intellij.database:243.15521.0")
         }else{
             local("/Applications/IntelliJ IDEA Ultimate.app")
             plugins("com.jetbrains.rust:243.21565.245")

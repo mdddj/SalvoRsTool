@@ -9,7 +9,7 @@ enum class SqlRustType(val typeText: String) {
     Bigint("bigint"),
     Varchar255("varchar(255)"),
     Varchar20("varchar(20)"),
-    Datetime("datetime"),
+    Datetime("datetime(6)"),
     Longtext("longtext"),
     Bit1("bit(1)"),
     Unknown("unknown");
