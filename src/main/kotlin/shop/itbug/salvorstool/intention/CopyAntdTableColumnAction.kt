@@ -3,13 +3,14 @@ package shop.itbug.salvorstool.intention
 import com.intellij.codeInsight.intention.IntentionAction
 import com.intellij.codeInsight.intention.PsiElementBaseIntentionAction
 import com.intellij.codeInsight.intention.preview.IntentionPreviewInfo
+import com.intellij.json.JsonLanguage
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
 import org.rust.lang.core.psi.impl.RsStructItemImpl
+import shop.itbug.salvorstool.tool.Tools
 import shop.itbug.salvorstool.tool.copy
-import shop.itbug.salvorstool.tool.myManager
 import shop.itbug.salvorstool.tool.structItemManager
 
 
@@ -36,7 +37,9 @@ class CopyAntdTableColumnAction : PsiElementBaseIntentionAction(), IntentionActi
     override fun generatePreview(project: Project, editor: Editor, file: PsiFile): IntentionPreviewInfo {
         val rsPsi = getElement(editor, file)?.parent as? RsStructItemImpl
         rsPsi?.let {
-            return IntentionPreviewInfo.Html("""<pre lang='json'>${rsPsi.structItemManager.getAntdTableColumnDefine}</pre>""".trimIndent())
+            val jsonText = rsPsi.structItemManager.getAntdTableColumnDefine
+            val html = Tools.highlightCodeToHtml(jsonText,project, JsonLanguage.INSTANCE)
+            return IntentionPreviewInfo.Html(html)
         }
         return IntentionPreviewInfo.EMPTY
     }

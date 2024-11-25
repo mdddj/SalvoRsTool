@@ -8,11 +8,12 @@ import com.intellij.openapi.project.Project
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
 import org.rust.lang.core.psi.impl.RsStructItemImpl
+import shop.itbug.salvorstool.tool.Tools
 import shop.itbug.salvorstool.tool.copy
 import shop.itbug.salvorstool.tool.structItemManager
 
 ///
-class CopyTSInterfaceAction: PsiElementBaseIntentionAction(),IntentionAction {
+class CopyTSInterfaceAction : PsiElementBaseIntentionAction(), IntentionAction {
     override fun getFamilyName(): String {
         return "RustX: Copy TS interface"
     }
@@ -32,9 +33,11 @@ class CopyTSInterfaceAction: PsiElementBaseIntentionAction(),IntentionAction {
 
     override fun generatePreview(project: Project, editor: Editor, file: PsiFile): IntentionPreviewInfo {
         var preview = IntentionPreviewInfo.Html("")
-        val psiElement =  getElement(editor,file)?.parent as? RsStructItemImpl
+        val psiElement = getElement(editor, file)?.parent as? RsStructItemImpl
         psiElement?.let {
-            preview = IntentionPreviewInfo.Html("<pre lang='typescript'>${it.structItemManager.getTSInterface}</pre>")
+            val interfaceString = it.structItemManager.getTSInterface
+            val html = Tools.highlightCodeToHtml(interfaceString,project, Tools.jsxLanguage)
+            preview = IntentionPreviewInfo.Html(html)
         }
         return preview
     }
