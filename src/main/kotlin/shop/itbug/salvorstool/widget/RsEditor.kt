@@ -11,6 +11,7 @@ import com.intellij.psi.PsiFile
 import com.intellij.psi.codeStyle.CodeStyleManager
 import com.intellij.ui.LanguageTextField
 import shop.itbug.salvorstool.tool.Tools
+import java.awt.Dimension
 import java.awt.Font
 
 class RsEditor(projectP: Project, initText: String) : LanguageTextField(Tools.rustLanguage, projectP, initText, false) {
@@ -24,6 +25,10 @@ class RsEditor(projectP: Project, initText: String) : LanguageTextField(Tools.ru
         }
     }
 
+    init {
+        autoscrolls = true
+    }
+
     override fun createEditor(): EditorEx {
         return myCreateEditor(super.createEditor())
     }
@@ -31,6 +36,7 @@ class RsEditor(projectP: Project, initText: String) : LanguageTextField(Tools.ru
     override fun getFont(): Font {
         return EditorColorsManager.getInstance().globalScheme.getFont(EditorFontType.PLAIN)
     }
+
 
     override fun getBorder() = Tools.emptyBorder()
 
@@ -41,6 +47,10 @@ class RsEditor(projectP: Project, initText: String) : LanguageTextField(Tools.ru
             PsiDocumentManager.getInstance(project).commitDocument(document)
         }
     }
+    override fun getPreferredSize(): Dimension {
+        return Dimension(600, 500)
+    }
+
 
 
 }
@@ -52,5 +62,9 @@ fun myCreateEditor(ex: EditorEx): EditorEx {
     settings.isFoldingOutlineShown = true
     settings.isAllowSingleLogicalLineFolding = true
     settings.isRightMarginShown = true
+    settings.isAnimatedScrolling = true
+    ex.setVerticalScrollbarVisible(true)
+    ex.setHorizontalScrollbarVisible(true)
+    ex.setBorder(Tools.emptyBorder())
     return ex
 }

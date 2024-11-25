@@ -46,12 +46,9 @@ class GenerateRouterDialog(private val project: Project, psiElement: RsStructIte
                 fileName = model::fileName
             ))
         }
-        val scrollPane = JBScrollPane(editor)
-        scrollPane.border = Tools.emptyBorder()
-        scrollPane.preferredSize = Dimension(700, 500)
         settingPanel.registerValidators(disposable)
         return FormBuilder.createFormBuilder()
-            .addComponentFillVertically(scrollPane,0)
+            .addComponentFillVertically(editor,0)
             .addComponent(settingPanel)
             .panel
     }

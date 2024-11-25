@@ -55,8 +55,8 @@
             <reference ref="GenerateDtoAction"/>
             <reference ref="GenerateServiceAction"/>
             <reference ref="GenerateRouterAction"/>
-            <separator text="Typescript"/>
-            <reference ref="GenerateHookFormAction"/>
+<!--            <separator text="Typescript"/>-->
+<!--            <reference ref="GenerateHookFormAction"/>-->
             <separator text="Antd" />
             <reference ref="AntdProFormGenerateAction" />
             <reference ref="GenerateAntdFormAction"/>

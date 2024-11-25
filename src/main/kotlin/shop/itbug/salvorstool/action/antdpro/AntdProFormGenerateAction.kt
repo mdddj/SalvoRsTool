@@ -5,6 +5,7 @@ import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.ui.dsl.builder.bind
 import com.intellij.ui.dsl.builder.panel
 import com.intellij.util.Alarm
+import com.intellij.util.ui.FormBuilder
 import com.intellij.util.ui.components.BorderLayoutPanel
 import shop.itbug.salvorstool.action.base.BaseRsStructCodeGenerateAction
 import shop.itbug.salvorstool.tool.JavascriptType
@@ -72,24 +73,13 @@ private class Dialog(val model: BaseRsStructCodeGenerateAction.Model) : DialogWr
                     }
                 }
             }.bind(config::type)
-            row {
-                scrollCell(jsEditor)
-            }
         }
-        return BorderLayoutPanel().apply {
-
-            addToCenter(myPanel)
-        }
+        val panel = FormBuilder.createFormBuilder()
+            .addComponentFillVertically(jsEditor,0)
+            .addComponent(myPanel,12)
+            .panel
+        return panel
     }
-
-    override fun getPreferredSize(): Dimension {
-        return Dimension(500, 700)
-    }
-
-    override fun getSize(): Dimension {
-        return preferredSize
-    }
-
 
     fun generateText(): String {
         val sb = StringBuilder()

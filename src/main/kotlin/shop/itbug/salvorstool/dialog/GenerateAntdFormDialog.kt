@@ -24,12 +24,9 @@ class GenerateAntdFormDialog(project: Project, psiElement: RsStructItemImpl) : D
         title = "Generate Antd Form"
         tabview.add(
             "Preview",
-            JBScrollPane(TypeJavaScriptEditor(project, AntdFactory.generateAntdForm(psiElement))).also { pane ->
-                pane.border =
-                    Tools.emptyBorder()
-                pane.preferredSize = Dimension(500,400)
-            })
+            TypeJavaScriptEditor(project, AntdFactory.generateAntdForm(psiElement)))
         tabview.border = Tools.emptyBorder()
+        tabview.autoscrolls = true
     }
 
     override fun createCenterPanel(): JComponent {

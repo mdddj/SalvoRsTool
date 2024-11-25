@@ -64,10 +64,10 @@ class GenerateServiceDialog(private val project: Project, private val psiElement
     init {
         super.init()
         title = "Generate Service"
-        tabView.add("Add Service", JBScrollPane(RsEditor(project, model.addText)))
-        tabView.add("Update Service", JBScrollPane(RsEditor(project, model.updateText)))
-        tabView.add("Delete Service", JBScrollPane(RsEditor(project, model.deleteText)))
-        tabView.add("Find Service", JBScrollPane(RsEditor(project, model.findAllText)))
+        tabView.add("Add Service", RsEditor(project, model.addText))
+        tabView.add("Update Service", RsEditor(project, model.updateText))
+        tabView.add("Delete Service", RsEditor(project, model.deleteText))
+        tabView.add("Find Service", RsEditor(project, model.findAllText))
         tabView.border = Tools.emptyBorder()
     }
 
@@ -80,10 +80,8 @@ class GenerateServiceDialog(private val project: Project, private val psiElement
                 )
             )
         }
-        val scrollPane = JBScrollPane(tabView)
-        scrollPane.preferredSize = Dimension(700, 500)
         return FormBuilder.createFormBuilder()
-            .addComponentFillVertically(scrollPane, 0)
+            .addComponentFillVertically(tabView, 0)
             .addComponent(settingPanel, 12)
             .panel
     }
