@@ -1,0 +1,13 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="org.jetbrains.plugins.sass" revision="243.21565.136+291"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/Applications/RustRover.app/Contents/plugins/sass" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.css" rev="243.21565.136+863"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="243.21565.136+688"/>
+  </dependencies>
+</ivy-module>

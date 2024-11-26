@@ -1,0 +1,17 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="intellij.grid.impl" revision="243.21565.193+167"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/grid-impl" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="intellij.charts" rev="243.21565.193+675"/>
+    <dependency org="bundledPlugin" name="intellij.grid.core.impl" rev="243.21565.193+171"/>
+    <dependency org="bundledPlugin" name="com.intellij.platform.images" rev="243.21565.193+972"/>
+    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="243.21565.193+154"/>
+    <dependency org="bundledModule" name="intellij.platform.navbar.frontend" rev="243.21565.193+520"/>
+    <dependency org="bundledModule" name="intellij.libraries.microba" rev="243.21565.193+520"/>
+  </dependencies>
+</ivy-module>

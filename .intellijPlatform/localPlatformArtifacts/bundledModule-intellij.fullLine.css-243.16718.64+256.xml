@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.fullLine.css" revision="243.16718.64+256"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.10.2/transforms/3983d665020591e8a77753251fbaa3a9/transformed/RustRover-243.16718.64-aarch64/plugins/fullLine/lib/modules/intellij.fullLine.css.jar" type="jar" conf="default"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

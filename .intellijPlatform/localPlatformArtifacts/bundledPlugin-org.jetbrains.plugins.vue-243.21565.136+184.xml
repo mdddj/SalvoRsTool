@@ -1,0 +1,19 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="org.jetbrains.plugins.vue" revision="243.21565.136+184"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/Applications/RustRover.app/Contents/plugins/vuejs" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="JavaScriptDebugger" rev="243.21565.136+510"/>
+    <dependency org="bundledPlugin" name="org.intellij.plugins.markdown" rev="243.21565.136+566"/>
+    <dependency org="bundledPlugin" name="JavaScript" rev="243.21565.136+92"/>
+    <dependency org="bundledPlugin" name="com.intellij.css" rev="243.21565.136+863"/>
+    <dependency org="bundledPlugin" name="intellij.webpack" rev="243.21565.136+982"/>
+    <dependency org="bundledPlugin" name="org.intellij.plugins.postcss" rev="243.21565.136+532"/>
+    <dependency org="bundledPlugin" name="intellij.prettierJS" rev="243.21565.136+987"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="243.21565.136+688"/>
+  </dependencies>
+</ivy-module>

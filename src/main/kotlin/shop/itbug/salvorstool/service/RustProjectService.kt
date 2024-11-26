@@ -26,7 +26,7 @@ class RustProjectService (val project: Project){
         val tomlFilePath = project.basePath + File.separator + "Cargo.toml"
         val tomlFile: VirtualFile = LocalFileSystem.getInstance().findFileByPath(tomlFilePath) ?: return false
         val file = readAction { PsiManager.getInstance(project).findFile(tomlFile) } as? TomlFile ?: return false
-        val keyValues = file.filterByType<TomlKeyValue>()
+        val keyValues = readAction { file.filterByType<TomlKeyValue>() }
         return keyValues.any { it.key.text == "salvo" }
     }
 

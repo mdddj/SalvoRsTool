@@ -7,7 +7,7 @@
     <artifact name="/Users/ldd/Applications/RustRover.app/Contents/plugins/toml" type="directory" conf="default"/>
   </publications>
   <dependencies>
-    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="243.16718.64+241"/>
-    <dependency org="bundledPlugin" name="tanvd.grazi" rev="243.16718.64+529"/>
+    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="243.21565.245+241"/>
+    <dependency org="bundledPlugin" name="tanvd.grazi" rev="243.21565.245+529"/>
   </dependencies>
 </ivy-module>

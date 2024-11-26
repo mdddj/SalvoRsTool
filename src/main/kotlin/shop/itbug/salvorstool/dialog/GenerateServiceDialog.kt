@@ -1,19 +1,17 @@
 package shop.itbug.salvorstool.dialog
 
-import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory
 import com.intellij.openapi.project.Project
-import com.intellij.openapi.project.guessProjectDir
+import com.intellij.openapi.ui.DialogPanel
 import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.ui.components.JBScrollPane
 import com.intellij.ui.components.JBTabbedPane
-import com.intellij.ui.dsl.builder.Align
-import com.intellij.ui.dsl.builder.bindText
 import com.intellij.ui.dsl.builder.panel
+import com.intellij.util.ui.FormBuilder
 import org.rust.lang.core.psi.impl.RsStructItemImpl
-import shop.itbug.salvorstool.i18n.MyI18n
+import shop.itbug.salvorstool.dsl.SaveToBindModel
+import shop.itbug.salvorstool.dsl.saveTo
 import shop.itbug.salvorstool.tool.MyRsPsiFactory
 import shop.itbug.salvorstool.tool.Tools
-import shop.itbug.salvorstool.tool.myManager
 import shop.itbug.salvorstool.tool.structItemManager
 import shop.itbug.salvorstool.widget.RsEditor
 import java.awt.Dimension
@@ -30,7 +28,7 @@ data class GenerateServiceDialogModel(
 )
 
 ///执行写入
-fun GenerateServiceDialogModel.save(project: Project,psiElement: RsStructItemImpl) {
+fun GenerateServiceDialogModel.save(project: Project, psiElement: RsStructItemImpl) {
     val sb = StringBuilder()
     val imports = Tools.getDtoImportPackagesText
     sb.append(imports)
@@ -42,15 +40,17 @@ fun GenerateServiceDialogModel.save(project: Project,psiElement: RsStructItemImp
     sb.appendLine(updateText)
     sb.appendLine(deleteText)
     sb.appendLine(findAllText)
-    val newPsiFile = Tools.createRsPsiFile(fileName,sb.toString(),project)
+    val newPsiFile = Tools.createRsPsiFile(fileName, sb.toString(), project)
     Tools.saveTo(project, newPsiFile, saveTo)
 }
 
 ///生成service弹窗
-class GenerateServiceDialog(private val project: Project, private val psiElement: RsStructItemImpl) : DialogWrapper(project, true) {
+class GenerateServiceDialog(private val project: Project, private val psiElement: RsStructItemImpl) :
+    DialogWrapper(project, true) {
 
 
     private val tabView = JBTabbedPane()
+    private lateinit var settingPanel: DialogPanel
 
     private val model = GenerateServiceDialogModel(
         addText = MyRsPsiFactory.generateServiceWithAdd(psiElement),
@@ -58,46 +58,38 @@ class GenerateServiceDialog(private val project: Project, private val psiElement
         deleteText = MyRsPsiFactory.generateServiceByDelete(psiElement),
         findAllText = MyRsPsiFactory.generateServiceByAll(psiElement),
         saveTo = Tools.getServiceFolder(project)?.path ?: "",
-        fileName = (psiElement.structItemManager.getTableName?:"root")
+        fileName = (psiElement.structItemManager.getTableName ?: "root")
     )
 
     init {
         super.init()
         title = "Generate Service"
-        tabView.add("Add Service", JBScrollPane(RsEditor(project,model.addText)))
-        tabView.add("Update Service", JBScrollPane(RsEditor(project,model.updateText)))
-        tabView.add("Delete Service", JBScrollPane(RsEditor(project,model.deleteText)))
-        tabView.add("Find Service", JBScrollPane(RsEditor(project,model.findAllText)))
-
+        tabView.add("Add Service", RsEditor(project, model.addText))
+        tabView.add("Update Service", RsEditor(project, model.updateText))
+        tabView.add("Delete Service", RsEditor(project, model.deleteText))
+        tabView.add("Find Service", RsEditor(project, model.findAllText))
+        tabView.border = Tools.emptyBorder()
     }
 
     override fun createCenterPanel(): JComponent {
-        return panel {
-            group("Preview") {
-                row {
-                    scrollCell(tabView)
-                }
-            }
-            group(MyI18n.saveTo) {
-                row(MyI18n.selectDir) {
-                    textFieldWithBrowseButton(
-                        project = project,
-                        fileChooserDescriptor = FileChooserDescriptorFactory.createSingleFolderDescriptor().withRoots(
-                            project.guessProjectDir()
-                        )
-                    ).align(Align.FILL)
-                        .bindText(model::saveTo)
-                }
-                row (MyI18n.getMessage("file_name")){
-                    textField().bindText(model::fileName)
-                }
-            }
+        settingPanel = panel {
+            saveTo(
+                project, SaveToBindModel(
+                    folder = model::saveTo,
+                    fileName = model::fileName
+                )
+            )
         }
+        return FormBuilder.createFormBuilder()
+            .addComponentFillVertically(tabView, 0)
+            .addComponent(settingPanel, 12)
+            .panel
     }
 
 
     override fun doOKAction() {
-        model.save(project,psiElement)
+        settingPanel.apply()
+        model.save(project, psiElement)
         super.doOKAction()
     }
 

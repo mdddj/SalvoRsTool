@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="intellij.grid.core.impl" revision="243.21565.193+171"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/grid-core-impl" type="directory" conf="default"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

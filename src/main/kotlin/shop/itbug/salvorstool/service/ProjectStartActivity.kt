@@ -6,11 +6,6 @@ import com.intellij.openapi.startup.ProjectActivity
 
 class ProjectStartActivity: ProjectActivity {
     override suspend fun execute(project: Project) {
-        project.messageBus.connect().subscribe(DumbService.DUMB_MODE, object : DumbService.DumbModeListener {
-            override fun exitDumbMode() {
-                super.exitDumbMode()
-                SalvoApiService.getInstance(project).startScan()
-            }
-        })
+        SalvoApiService.getInstance(project).startScan()
     }
 }

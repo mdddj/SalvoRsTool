@@ -5,7 +5,7 @@ import shop.itbug.salvorstool.model.SalvoApiItem
 
 interface ApiScanMessaging {
 
-    fun apiScanEnd(apiList: List<SalvoApiItem>)
+    fun apiScanEnd(apiList: List<SalvoApiItem>,refresh: Boolean)
 
     companion object {
 

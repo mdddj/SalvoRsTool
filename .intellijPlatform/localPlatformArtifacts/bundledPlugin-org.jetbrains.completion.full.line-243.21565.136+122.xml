@@ -1,0 +1,20 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="org.jetbrains.completion.full.line" revision="243.21565.136+122"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/Applications/RustRover.app/Contents/plugins/fullLine" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.ml.inline.completion" rev="243.21565.136+961"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.less" rev="243.21565.136+984"/>
+    <dependency org="bundledPlugin" name="org.intellij.plugins.postcss" rev="243.21565.136+532"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.sass" rev="243.21565.136+291"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.vue" rev="243.21565.136+184"/>
+    <dependency org="bundledModule" name="intellij.platform.inline.completion" rev="243.21565.136+441"/>
+    <dependency org="bundledModule" name="intellij.fullLine.css" rev="243.21565.136+441"/>
+    <dependency org="bundledModule" name="intellij.fullLine.js" rev="243.21565.136+441"/>
+    <dependency org="bundledModule" name="intellij.fullLine.python" rev="243.21565.136+441"/>
+  </dependencies>
+</ivy-module>

@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="intellij.charts" revision="243.21565.193+675"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/charts" type="directory" conf="default"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

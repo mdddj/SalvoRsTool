@@ -6,10 +6,9 @@
     <depends>com.jetbrains.rust</depends>
     <depends>JavaScript</depends>
     <depends>org.toml.lang</depends>
+    <depends>com.intellij.database</depends>
+    <depends>com.intellij.modules.json</depends>
     <resource-bundle>messages.pluginBundle</resource-bundle>
-    <projectListeners>
-        <listener class="shop.itbug.salvorstool.window.ApiScanListen" topic="com.intellij.openapi.wm.ex.ToolWindowManagerListener"/>
-    </projectListeners>
     <extensions defaultExtensionNs="org.jetbrains.kotlin">
         <supportsKotlinPluginMode supportsK2="true" />
     </extensions>
@@ -56,8 +55,8 @@
             <reference ref="GenerateDtoAction"/>
             <reference ref="GenerateServiceAction"/>
             <reference ref="GenerateRouterAction"/>
-            <separator text="Typescript"/>
-            <reference ref="GenerateHookFormAction"/>
+<!--            <separator text="Typescript"/>-->
+<!--            <reference ref="GenerateHookFormAction"/>-->
             <separator text="Antd" />
             <reference ref="AntdProFormGenerateAction" />
             <reference ref="GenerateAntdFormAction"/>
@@ -67,27 +66,38 @@
 
         <!--salvo Windows操作条-->
         <action id="SalvoApiRefreshAction" class="shop.itbug.salvorstool.action.api.SalvoApiRefreshAction"/>
-        <group id="SalvoApiActionList">
-            <reference id="SalvoApiRefreshAction"/>
-        </group>
+
 
         <action id="AntdRequestCopyAction" class="shop.itbug.salvorstool.action.rightmenu.AntdRequestCopyAction"
                 popup="true"/>
         <action id="CopyUrlAction" class="shop.itbug.salvorstool.action.rightmenu.CopyUrlAction" popup="true"/>
 
         <!--   导航到api router 函数     -->
-        <action id="shop.itbug.salvorstool.action.rightmenu.SalvoApiNavigatorToRouteImplAction"
+        <action id="SalvoApiNavigatorToRouteImplAction"
                 class="shop.itbug.salvorstool.action.rightmenu.SalvoApiNavigatorToRouteImplAction"
-                text="Navigator To Router Handle"/>
+        />
+        <action id="SalvoApiGoToDefineAction"
+                class="shop.itbug.salvorstool.action.rightmenu.SalvoApiGoToDefineAction"
+        />
 
         <group id="SalvoApiRightMenuActionGroup" popup="true">
             <separator key="copy"/>
             <reference id="AntdRequestCopyAction"/>
             <reference id="CopyUrlAction"/>
             <separator key="nav_to_psi"/>
-            <reference id="shop.itbug.salvorstool.action.rightmenu.SalvoApiNavigatorToRouteImplAction"/>
+            <reference id="SalvoApiNavigatorToRouteImplAction"/>
+            <reference id="SalvoApiGoToDefineAction"/>
         </group>
 
+        <group id="SalvoApiActionList" popup="false">
+            <reference id="SalvoApiRefreshAction"/>
+            <separator key="copy"/>
+            <reference id="AntdRequestCopyAction"/>
+            <reference id="CopyUrlAction"/>
+            <separator key="nav_to_psi"/>
+            <reference id="SalvoApiNavigatorToRouteImplAction"/>
+            <reference id="SalvoApiGoToDefineAction"/>
+        </group>
 
         <action id="JsonToSearOrm" class="shop.itbug.salvorstool.action.bar.JsonToSearOrm" text="Json To SeaOrm"
                 icon="/icons/sea-orm.png"/>
@@ -122,6 +132,10 @@
         </group>
 
 
+        <action id="RustX.GenerateDatabaseAction" class="shop.itbug.salvorstool.action.database.GenerateDatabaseAction"
+        >
+            <add-to-group group-id="DatabaseView.AddActionGroupPopup"  />
+        </action>
     </actions>
 
 

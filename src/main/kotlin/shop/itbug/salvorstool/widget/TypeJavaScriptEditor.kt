@@ -8,6 +8,7 @@ import com.intellij.openapi.editor.ex.EditorEx
 import com.intellij.openapi.project.Project
 import com.intellij.ui.LanguageTextField
 import shop.itbug.salvorstool.tool.Tools
+import java.awt.Dimension
 import java.awt.Font
 import javax.swing.BorderFactory
 import javax.swing.border.Border
@@ -25,7 +26,11 @@ class TypeJavaScriptEditor(projectP: Project, initText: String) : LanguageTextFi
         return font
     }
 
-    override fun getBorder(): Border {
-        return BorderFactory.createEmptyBorder(0, 0, 0, 0)
+    override fun getBorder() = Tools.emptyBorder()
+
+
+    override fun getPreferredSize(): Dimension {
+        return Dimension(600, 500)
     }
+
 }

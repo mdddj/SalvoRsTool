@@ -1,0 +1,24 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.database" revision="243.21565.193+542"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/DatabaseTools" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="JavaScript" rev="243.21565.193+469"/>
+    <dependency org="bundledPlugin" name="intellij.grid.core.impl" rev="243.21565.193+171"/>
+    <dependency org="bundledPlugin" name="org.intellij.intelliLang" rev="243.21565.193+93"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="243.21565.193+31"/>
+    <dependency org="bundledPlugin" name="com.intellij.completion.ml.ranking" rev="243.21565.193+483"/>
+    <dependency org="bundledPlugin" name="intellij.grid.impl" rev="243.21565.193+167"/>
+    <dependency org="bundledPlugin" name="com.intellij.platform.images" rev="243.21565.193+972"/>
+    <dependency org="bundledPlugin" name="com.intellij.diagram" rev="243.21565.193+966"/>
+    <dependency org="bundledPlugin" name="Docker" rev="243.21565.193+204"/>
+    <dependency org="bundledPlugin" name="tanvd.grazi" rev="243.21565.193+822"/>
+    <dependency org="bundledModule" name="intellij.platform.vcs.impl" rev="243.21565.193+520"/>
+    <dependency org="bundledModule" name="intellij.profiler.common" rev="243.21565.193+520"/>
+    <dependency org="bundledModule" name="intellij.platform.coverage" rev="243.21565.193+520"/>
+  </dependencies>
+</ivy-module>

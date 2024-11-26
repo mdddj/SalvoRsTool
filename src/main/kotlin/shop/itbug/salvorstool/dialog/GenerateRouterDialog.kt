@@ -1,18 +1,16 @@
 package shop.itbug.salvorstool.dialog
 
-import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory
 import com.intellij.openapi.project.Project
-import com.intellij.openapi.project.guessProjectDir
+import com.intellij.openapi.ui.DialogPanel
 import com.intellij.openapi.ui.DialogWrapper
-import com.intellij.ui.components.JBTabbedPane
-import com.intellij.ui.dsl.builder.Align
-import com.intellij.ui.dsl.builder.bindText
+import com.intellij.ui.components.JBScrollPane
 import com.intellij.ui.dsl.builder.panel
+import com.intellij.util.ui.FormBuilder
 import org.rust.lang.core.psi.impl.RsStructItemImpl
-import shop.itbug.salvorstool.i18n.MyI18n
+import shop.itbug.salvorstool.dsl.SaveToBindModel
+import shop.itbug.salvorstool.dsl.saveTo
 import shop.itbug.salvorstool.tool.MyRsPsiFactory
 import shop.itbug.salvorstool.tool.Tools
-import shop.itbug.salvorstool.tool.myManager
 import shop.itbug.salvorstool.tool.structItemManager
 import shop.itbug.salvorstool.widget.RsEditor
 import java.awt.Dimension
@@ -27,42 +25,36 @@ private fun GenerateRouterDialogModel.save(project: Project) {
 
 class GenerateRouterDialog(private val project: Project, psiElement: RsStructItemImpl) : DialogWrapper(project) {
 
-    private val tabView = JBTabbedPane()
     private val model = GenerateRouterDialogModel(
         text = MyRsPsiFactory.generateRouterFile(psiElement),
         saveTo = Tools.getRouterFolder(project)?.path ?: "",
         fileName = (psiElement.structItemManager.getTableName ?: "root")
     )
+    private val editor = RsEditor(project, model.text)
+    private lateinit var settingPanel : DialogPanel
 
     init {
         super.init()
         title = "Generate Router Dialog"
-        tabView.add("Preview", RsEditor(project, model.text))
+        editor.border = Tools.emptyBorder()
     }
 
     override fun createCenterPanel(): JComponent {
-        return panel {
-            row {
-                scrollCell(tabView)
-            }
-            group(MyI18n.saveTo) {
-                row(MyI18n.selectDir) {
-                    textFieldWithBrowseButton(
-                        project = project,
-                        fileChooserDescriptor = FileChooserDescriptorFactory.createSingleFolderDescriptor().withRoots(
-                            project.guessProjectDir()
-                        )
-                    ).align(Align.FILL)
-                        .bindText(model::saveTo)
-                }
-                row(MyI18n.getMessage("file_name")) {
-                    textField().bindText(model::fileName)
-                }
-            }
+       settingPanel = panel {
+            saveTo(project, SaveToBindModel(
+                folder = model::saveTo,
+                fileName = model::fileName
+            ))
         }
+        settingPanel.registerValidators(disposable)
+        return FormBuilder.createFormBuilder()
+            .addComponentFillVertically(editor,0)
+            .addComponent(settingPanel)
+            .panel
     }
 
     override fun doOKAction() {
+        settingPanel.apply()
         model.save(project)
         super.doOKAction()
     }

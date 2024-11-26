@@ -3,7 +3,6 @@ package shop.itbug.salvorstool.dsl
 import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.guessProjectDir
-import com.intellij.openapi.ui.DialogWrapper
 import com.intellij.ui.dsl.builder.Align
 import com.intellij.ui.dsl.builder.Panel
 import com.intellij.ui.dsl.builder.bindText
@@ -29,7 +28,7 @@ fun Panel.saveTo(project: Project,bind: SaveToBindModel) : Panel {
             ).align(Align.FILL)
                 .bindText(bind.folder).validationOnInput {
                     val fullPath =  it.text
-                    if(!project.fileIsExits(fullPath)) {
+                    if(!fileIsExits(fullPath)) {
                         return@validationOnInput ValidationInfoBuilder(it.textField).error(MyI18n.folderIsNotFound)
                     }
                     return@validationOnInput null
@@ -42,7 +41,7 @@ fun Panel.saveTo(project: Project,bind: SaveToBindModel) : Panel {
                     folderPath += File.separator
                 }
                 val fullPath =  folderPath + it.text + ".rs"
-                if(project.fileIsExits(fullPath)){
+                if(fileIsExits(fullPath)){
                     return@validationOnInput ValidationInfoBuilder(it).error(MyI18n.fileIsExist)
                 }
                 return@validationOnInput null

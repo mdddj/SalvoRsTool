@@ -35,10 +35,11 @@ class RsLetDeclManager(val psi: RsLetDeclImpl) {
         }
 
     /// 获取root ele 节点
-    private val rootMethodExpr: RsMethodCallExprImpl? get() {
-        val root = PsiTreeUtil.findChildOfType(psi, RsMethodCallExprImpl::class.java)
-        return PsiTreeUtil.findChildOfType(root, RsMethodCallExprImpl::class.java) ?: root
-    }
+    private val rootMethodExpr: RsMethodCallExprImpl?
+        get() {
+            val root = PsiTreeUtil.findChildOfType(psi, RsMethodCallExprImpl::class.java)
+            return PsiTreeUtil.findChildOfType(root, RsMethodCallExprImpl::class.java) ?: root
+        }
 
 
     ///获取所有的api列表
@@ -51,7 +52,7 @@ class RsLetDeclManager(val psi: RsLetDeclImpl) {
             val rootMethods = rootManager.getAllApiMethods
             //添加root path
             rootMethods.forEach {
-                result.add(SalvoApiItem(rootApi,it.method,it.element))
+                result.add(SalvoApiItem(rootApi, it.method, it.element, it.element.containingFile.name, "${SalvoApiItem.findServiceRef(it.element)?:""}"))
             }
 
             // 添加子URL
@@ -59,8 +60,16 @@ class RsLetDeclManager(val psi: RsLetDeclImpl) {
                 val manager = it.methodCallManager
                 val methods = manager.allMethods
                 methods.forEach { methodFun ->
-                    val api = rootApi + "/"+ manager.withPathString
-                    result.add(SalvoApiItem(api,methodFun.method,methodFun.element))
+                    val api = rootApi + "/" + manager.withPathString
+                    result.add(
+                        SalvoApiItem(
+                            api,
+                            methodFun.method,
+                            methodFun.element,
+                            methodFun.element.containingFile.name,
+                            "${SalvoApiItem.findServiceRef(methodFun.element)?:""}"
+                        )
+                    )
                 }
             }
             return result.toList()
@@ -68,13 +77,12 @@ class RsLetDeclManager(val psi: RsLetDeclImpl) {
 
 
     ///全部带有push的节点
-    val allPushMethodCall: List<RsMethodCallImpl> get() {
-        val allPushPsiElement =  PsiTreeUtil.findChildrenOfType(psi, RsMethodCallImpl::class.java).filter { it.methodCallManager.isPushMethodCall }
-        return allPushPsiElement
-    }
-
-
-
+    val allPushMethodCall: List<RsMethodCallImpl>
+        get() {
+            val allPushPsiElement = PsiTreeUtil.findChildrenOfType(psi, RsMethodCallImpl::class.java)
+                .filter { it.methodCallManager.isPushMethodCall }
+            return allPushPsiElement
+        }
 
 
 }

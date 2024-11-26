@@ -1,0 +1,16 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="Git4Idea" revision="243.21565.193+739"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Applications/IntelliJ IDEA Ultimate.app/Contents/plugins/vcs-git" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.jetbrains.performancePlugin" rev="243.21565.193+458"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.terminal" rev="243.21565.193+526"/>
+    <dependency org="bundledModule" name="intellij.platform.collaborationTools" rev="243.21565.193+520"/>
+    <dependency org="bundledModule" name="intellij.platform.ide.newUiOnboarding" rev="243.21565.193+520"/>
+    <dependency org="bundledModule" name="intellij.platform.coverage" rev="243.21565.193+520"/>
+  </dependencies>
+</ivy-module>

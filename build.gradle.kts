@@ -6,21 +6,22 @@ import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "2.0.20"
+    id("org.jetbrains.kotlin.jvm") version "2.0.21"
     id("org.jetbrains.intellij.platform") version "2.1.0"
     id("org.jetbrains.changelog") version "2.2.0"
 }
 
 group = "shop.itbug"
-version = "2.1.1"
+version = "2.1.2"
 
-repositories { 
+repositories {
     mavenCentral()
 
     intellijPlatform {
         defaultRepositories()
         releases()
         marketplace()
+        jetbrainsRuntime()
     }
 }
 
@@ -41,40 +42,45 @@ repositories {
 
 
 
+var isRust = true
+
 dependencies {
     intellijPlatform {
-//        local("/Users/ldd/Applications/RustRover.app")
-        rustRover("243.16718.64") //rr eap
-        bundledPlugins("JavaScript","com.jetbrains.rust","org.toml.lang")
+
+        if(isRust){
+            local("/Users/ldd/Applications/RustRover.app")
+            bundledPlugins("JavaScript", "com.jetbrains.rust", "org.toml.lang", "com.intellij.modules.json")
+            plugins("com.intellij.database:243.15521.0")
+        }else{
+            local("/Applications/IntelliJ IDEA Ultimate.app")
+            plugins("com.jetbrains.rust:243.21565.245")
+            bundledPlugins("org.toml.lang","JavaScript","com.intellij.modules.json","com.intellij.database")
+        }
+
+
         zipSigner()
         instrumentationTools()
+        pluginVerifier()
+        jetbrainsRuntime()
     }
-
 }
 
 intellijPlatform {
     pluginVerification {
-        cliPath.set(file("cli.jar"))
         ides {
-            recommended()
+            local("/Users/ldd/Applications/RustRover.app")
         }
     }
 }
-
 
 
 val pushToken: String? = System.getenv("PUBLISH_TOKEN")
 
 tasks {
 
-    withType<JavaCompile> {
-        sourceCompatibility = "17"
-        targetCompatibility = "17"
-    }
-
     withType<KotlinCompile> {
         compilerOptions {
-            languageVersion.set(KotlinVersion.KOTLIN_2_0)
+            languageVersion.set(KotlinVersion.KOTLIN_2_1)
         }
     }
 
@@ -92,19 +98,17 @@ tasks {
 
 
     patchPluginXml {
-//        sinceBuild.set("241.17890")
-//        untilBuild.set("242.*")
         sinceBuild.set("243")
         untilBuild.set("243.*")
         changeNotes.set(myChangeLog)
         pluginDescription.set(descText)
     }
 
-//    signPlugin {
-//        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
-//        privateKey.set(System.getenv("PRIVATE_KEY"))
-//        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
-//    }
+    signPlugin {
+        certificateChain.set(System.getenv("CERTIFICATE_CHAIN"))
+        privateKey.set(System.getenv("PRIVATE_KEY"))
+        password.set(System.getenv("PRIVATE_KEY_PASSWORD"))
+    }
 
     publishPlugin {
         if (pushToken != null) {
@@ -124,6 +128,11 @@ tasks {
     printProductsReleases {
         channels = listOf(ProductRelease.Channel.EAP)
         types = listOf(IntelliJPlatformType.RustRover)
+    }
+
+
+    buildSearchableOptions {
+        enabled = false
     }
 }
 
