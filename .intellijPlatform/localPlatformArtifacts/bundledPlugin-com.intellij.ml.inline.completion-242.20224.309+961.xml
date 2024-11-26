@@ -1,0 +1,15 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.ml.inline.completion" revision="242.20224.309+961"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/Applications/RustRover.app/Contents/plugins/ml-inline-completion" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.css" rev="242.20224.309+863"/>
+    <dependency org="bundledPlugin" name="HtmlTools" rev="242.20224.309+840"/>
+    <dependency org="bundledModule" name="intellij.fullLine.css" rev="242.20224.309+441"/>
+    <dependency org="bundledModule" name="intellij.fullLine.python" rev="242.20224.309+441"/>
+  </dependencies>
+</ivy-module>

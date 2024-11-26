@@ -1,0 +1,15 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="org.intellij.plugins.markdown" revision="241.17890.39+717"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.9/transforms/1c9c930c38e0d7578c97cfcfbe5c0601/transformed/RustRover-2024.1.5-aarch64/plugins/markdown" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="org.intellij.intelliLang" rev="241.17890.39+619"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.yaml" rev="241.17890.39+565"/>
+    <dependency org="bundledPlugin" name="org.toml.lang" rev="241.17890.39+66"/>
+    <dependency org="bundledPlugin" name="com.intellij.platform.images" rev="241.17890.39+250"/>
+  </dependencies>
+</ivy-module>

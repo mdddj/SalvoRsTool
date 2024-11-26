@@ -4,14 +4,11 @@ import com.intellij.openapi.help.WebHelpProvider
 
 class MyWebHelpProvider : WebHelpProvider() {
 
-    init {
-        println("my web help provider initialized!")
-    }
 
     override fun getHelpPageUrl(helpTopicId: String): String? {
-        println("help id $helpTopicId")
        return when (helpTopicId) {
-           GENERATE_SEA_ORM_HELP -> "https://itbug.shop/sea-orm-help"
+           GENERATE_SEA_ORM_HELP -> "https://mdddj.github.io/SalvoRsToolDocument/sea-orm-json-gen-migration-code.html"
+           SEA_ORM_COMMAND  -> "https://www.sea-ql.org/SeaORM/docs/generate-entity/sea-orm-cli/"
            else -> {
                null
            }
@@ -25,5 +22,6 @@ class MyWebHelpProvider : WebHelpProvider() {
 
     companion object {
         const val GENERATE_SEA_ORM_HELP  = "sea:generate_sea_orm_helper"
+        const val SEA_ORM_COMMAND = "sea:sea_orm_command_run"
     }
 }

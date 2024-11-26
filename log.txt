@@ -1,0 +1,1221 @@
+/Users/hlx/github/SalvoRsTool git:[2.1.1]
+./gradlew run verifyPlugin --info
+Initialized native services in: /Users/ldd/.gradle/native
+Initialized jansi services in: /Users/ldd/.gradle/native
+Received JVM installation metadata from '/Users/ldd/Library/Java/JavaVirtualMachines/jbrsdk_jcef-17.0.11/Contents/Home': {JAVA_HOME=/Users/ldd/Library/Java/JavaVirtualMachines/jbrsdk_jcef-17.0.11/Contents/Home, JAVA_VERSION=17.0.11, JAVA_VENDOR=JetBrains s.r.o., RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=17.0.11+1-b1312.2, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=17.0.11+1-b1312.2, VM_VENDOR=JetBrains s.r.o., OS_ARCH=aarch64}
+Removing 1 daemon stop events from registry
+Starting a Gradle Daemon (subsequent builds will be faster)
+Starting process 'Gradle build daemon'. Working directory: /Users/ldd/.gradle/daemon/8.9 Command: /Users/ldd/Library/Java/JavaVirtualMachines/jbrsdk_jcef-17.0.11/Contents/Home/bin/java --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.invoke=ALL-UNNAMED --add-opens=java.prefs/java.util.prefs=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-exports=jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED -XX:MaxMetaspaceSize=384m -XX:+HeapDumpOnOutOfMemoryError -Xms256m -Xmx512m -Dfile.encoding=UTF-8 -Duser.country=CN -Duser.language=zh -Duser.variant -cp /Users/ldd/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/gradle-daemon-main-8.9.jar -javaagent:/Users/ldd/.gradle/wrapper/dists/gradle-8.9-bin/90cnw93cvbtalezasaz0blq0a/gradle-8.9/lib/agents/gradle-instrumentation-agent-8.9.jar org.gradle.launcher.daemon.bootstrap.GradleDaemon 8.9
+Successfully started process 'Gradle build daemon'
+An attempt to start the daemon took 0.908 secs.
+The client will now receive all logging from the daemon (pid: 90395). The daemon log file: /Users/ldd/.gradle/daemon/8.9/daemon-90395.out.log
+Starting build in new daemon [memory: 512 MiB]
+Using 8 worker leases.
+Received JVM installation metadata from '/Users/ldd/Library/Java/JavaVirtualMachines/jbrsdk_jcef-17.0.11/Contents/Home': {JAVA_HOME=/Users/ldd/Library/Java/JavaVirtualMachines/jbrsdk_jcef-17.0.11/Contents/Home, JAVA_VERSION=17.0.11, JAVA_VENDOR=JetBrains s.r.o., RUNTIME_NAME=OpenJDK Runtime Environment, RUNTIME_VERSION=17.0.11+1-b1312.2, VM_NAME=OpenJDK 64-Bit Server VM, VM_VERSION=17.0.11+1-b1312.2, VM_VENDOR=JetBrains s.r.o., OS_ARCH=aarch64}
+Calculating task graph as no cached configuration is available for tasks: run verifyPlugin
+Watching the file system is configured to be enabled if available
+Now considering [/Users/hlx/github/SalvoRsTool] as hierarchies to watch
+File system watching is active
+Starting Build
+Settings evaluated using settings file '/Users/hlx/github/SalvoRsTool/settings.gradle.kts'.
+Using local directory build cache for the root build (location = /Users/ldd/.gradle/caches/build-cache-1, removeUnusedEntriesAfter = 7 days).
+Projects loaded. Root project using build file '/Users/hlx/github/SalvoRsTool/build.gradle.kts'.
+Included projects: [root project 'SalvoRsTool']
+
+> Configure project :
+Evaluating root project 'SalvoRsTool' using build file '/Users/hlx/github/SalvoRsTool/build.gradle.kts'.
+Invalidating in-memory cache of /Users/ldd/.gradle/caches/journal-1/file-access.bin
+Transforming intellij-platform-gradle-plugin-2.0.1.jar (org.jetbrains.intellij.platform:intellij-platform-gradle-plugin:2.0.1) with InstrumentationAnalysisTransform
+Transforming plugin-repository-rest-client-2.0.39.jar (org.jetbrains.intellij:plugin-repository-rest-client:2.0.39) with InstrumentationAnalysisTransform
+Transforming converter-jaxb-2.9.0.jar (com.squareup.retrofit2:converter-jaxb:2.9.0) with InstrumentationAnalysisTransform
+Transforming converter-jackson-2.9.0.jar (com.squareup.retrofit2:converter-jackson:2.9.0) with InstrumentationAnalysisTransform
+Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with InstrumentationAnalysisTransform
+Transforming okhttp-4.4.1.jar (com.squareup.okhttp3:okhttp:4.4.1) with InstrumentationAnalysisTransform
+Transforming xmlutil-serialization-jvm-0.86.3.jar (io.github.pdvrieze.xmlutil:serialization-jvm:0.86.3) with InstrumentationAnalysisTransform
+Transforming xmlutil-jvm-0.86.3.jar (io.github.pdvrieze.xmlutil:core-jvm:0.86.3) with InstrumentationAnalysisTransform
+Transforming kotlinx-serialization-core-jvm-1.6.3.jar (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.6.3) with InstrumentationAnalysisTransform
+Transforming kotlinx-serialization-json-jvm-1.6.3.jar (org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.6.3) with InstrumentationAnalysisTransform
+Transforming okio-jvm-2.4.3.jar (com.squareup.okio:okio:2.4.3) with InstrumentationAnalysisTransform
+Transforming kotlin-stdlib-jdk8-1.9.21.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.21) with InstrumentationAnalysisTransform
+Transforming kotlin-stdlib-jdk7-1.9.21.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.21) with InstrumentationAnalysisTransform
+Transforming kotlin-stdlib-1.9.23.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.23) with InstrumentationAnalysisTransform
+Transforming structure-intellij-3.284.jar (org.jetbrains.intellij.plugins:structure-intellij:3.284) with InstrumentationAnalysisTransform
+Transforming structure-base-3.284.jar (org.jetbrains.intellij.plugins:structure-base:3.284) with InstrumentationAnalysisTransform
+Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with InstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-model-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-model:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-api-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-api:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-2.0.0-gradle85.jar (org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0) with InstrumentationAnalysisTransform
+Transforming gradle-changelog-plugin-2.2.0.jar (org.jetbrains.intellij.plugins:gradle-changelog-plugin:2.2.0) with InstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-idea-proto-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-idea-proto:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-idea-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-idea:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-klib-commonizer-api-2.0.0.jar (org.jetbrains.kotlin:kotlin-klib-commonizer-api:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-build-statistics-2.0.0.jar (org.jetbrains.kotlin:kotlin-build-statistics:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-build-tools-api-2.0.0.jar (org.jetbrains.kotlin:kotlin-build-tools-api:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-compiler-runner-2.0.0.jar (org.jetbrains.kotlin:kotlin-compiler-runner:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-native-utils-2.0.0.jar (org.jetbrains.kotlin:kotlin-native-utils:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-util-klib-2.0.0.jar (org.jetbrains.kotlin:kotlin-util-klib:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-compiler-embeddable-2.0.0.jar (org.jetbrains.kotlin:kotlin-compiler-embeddable:2.0.0) with InstrumentationAnalysisTransform
+Transforming undertow-core-2.3.15.Final.jar (io.undertow:undertow-core:2.3.15.Final) with InstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-annotations-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-annotations:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-tooling-core-2.0.0.jar (org.jetbrains.kotlin:kotlin-tooling-core:2.0.0) with InstrumentationAnalysisTransform
+Transforming gson-2.8.9.jar (com.google.code.gson:gson:2.8.9) with InstrumentationAnalysisTransform
+Transforming kotlin-daemon-client-2.0.0.jar (org.jetbrains.kotlin:kotlin-daemon-client:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlinx-coroutines-core-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.0) with InstrumentationAnalysisTransform
+Transforming kotlin-util-io-2.0.0.jar (org.jetbrains.kotlin:kotlin-util-io:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-daemon-embeddable-2.0.0.jar (org.jetbrains.kotlin:kotlin-daemon-embeddable:2.0.0) with InstrumentationAnalysisTransform
+Transforming trove4j-1.0.20200330.jar (org.jetbrains.intellij.deps:trove4j:1.0.20200330) with InstrumentationAnalysisTransform
+Transforming xnio-nio-3.8.16.Final.jar (org.jboss.xnio:xnio-nio:3.8.16.Final) with InstrumentationAnalysisTransform
+Transforming xnio-api-3.8.16.Final.jar (org.jboss.xnio:xnio-api:3.8.16.Final) with InstrumentationAnalysisTransform
+Transforming wildfly-client-config-1.0.1.Final.jar (org.wildfly.client:wildfly-client-config:1.0.1.Final) with InstrumentationAnalysisTransform
+Transforming jboss-threads-3.5.0.Final.jar (org.jboss.threads:jboss-threads:3.5.0.Final) with InstrumentationAnalysisTransform
+Transforming jboss-logging-3.4.3.Final.jar (org.jboss.logging:jboss-logging:3.4.3.Final) with InstrumentationAnalysisTransform
+Transforming jackson-databind-2.14.2.jar (com.fasterxml.jackson.core:jackson-databind:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-annotations-2.14.2.jar (com.fasterxml.jackson.core:jackson-annotations:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-core-2.14.2.jar (com.fasterxml.jackson.core:jackson-core:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-module-kotlin-2.14.2.jar (com.fasterxml.jackson.module:jackson-module-kotlin:2.14.2) with InstrumentationAnalysisTransform
+Transforming commons-compress-1.26.2.jar (org.apache.commons:commons-compress:1.26.2) with InstrumentationAnalysisTransform
+Transforming xz-1.9.jar (org.tukaani:xz:1.9) with InstrumentationAnalysisTransform
+Transforming evo-inflector-1.3.jar (org.atteo:evo-inflector:1.3) with InstrumentationAnalysisTransform
+Transforming slf4j-api-2.0.7.jar (org.slf4j:slf4j-api:2.0.7) with InstrumentationAnalysisTransform
+Transforming commons-io-2.16.1.jar (commons-io:commons-io:2.16.1) with InstrumentationAnalysisTransform
+Transforming jsoup-1.16.1.jar (org.jsoup:jsoup:1.16.1) with InstrumentationAnalysisTransform
+Transforming jaxb-runtime-2.3.1.jar (org.glassfish.jaxb:jaxb-runtime:2.3.1) with InstrumentationAnalysisTransform
+Transforming jaxb-api-2.3.1.jar (javax.xml.bind:jaxb-api:2.3.1) with InstrumentationAnalysisTransform
+Transforming jdom2-2.0.6.1.jar (org.jdom:jdom2:2.0.6.1) with InstrumentationAnalysisTransform
+Transforming blockmap-1.0.5.jar (org.jetbrains.intellij:blockmap:1.0.5) with InstrumentationAnalysisTransform
+Transforming jaxb-impl-2.3.2.jar (com.sun.xml.bind:jaxb-impl:2.3.2) with InstrumentationAnalysisTransform
+Transforming jaxb-core-2.3.0.jar (com.sun.xml.bind:jaxb-core:2.3.0) with InstrumentationAnalysisTransform
+Transforming markdown-jvm-0.5.0.jar (org.jetbrains:markdown-jvm:0.5.0) with InstrumentationAnalysisTransform
+Transforming wildfly-common-1.5.4.Final.jar (org.wildfly.common:wildfly-common:1.5.4.Final) with InstrumentationAnalysisTransform
+Transforming commons-codec-1.17.0.jar (commons-codec:commons-codec:1.17.0) with InstrumentationAnalysisTransform
+Transforming commons-lang3-3.14.0.jar (org.apache.commons:commons-lang3:3.14.0) with InstrumentationAnalysisTransform
+Transforming javax.activation-api-1.2.0.jar (javax.activation:javax.activation-api:1.2.0) with InstrumentationAnalysisTransform
+Transforming txw2-2.3.1.jar (org.glassfish.jaxb:txw2:2.3.1) with InstrumentationAnalysisTransform
+Transforming istack-commons-runtime-3.0.7.jar (com.sun.istack:istack-commons-runtime:3.0.7) with InstrumentationAnalysisTransform
+Transforming stax-ex-1.8.jar (org.jvnet.staxex:stax-ex:1.8) with InstrumentationAnalysisTransform
+Transforming FastInfoset-1.2.15.jar (com.sun.xml.fastinfoset:FastInfoset:1.2.15) with InstrumentationAnalysisTransform
+Transforming intellij-platform-gradle-plugin-2.0.1.jar (org.jetbrains.intellij.platform:intellij-platform-gradle-plugin:2.0.1) with InstrumentationAnalysisTransform
+Transforming intellij-platform-gradle-plugin-2.0.1.jar (org.jetbrains.intellij.platform:intellij-platform-gradle-plugin:2.0.1) with MergeInstrumentationAnalysisTransform
+Transforming plugin-repository-rest-client-2.0.39.jar (org.jetbrains.intellij:plugin-repository-rest-client:2.0.39) with InstrumentationAnalysisTransform
+Transforming plugin-repository-rest-client-2.0.39.jar (org.jetbrains.intellij:plugin-repository-rest-client:2.0.39) with MergeInstrumentationAnalysisTransform
+Transforming converter-jaxb-2.9.0.jar (com.squareup.retrofit2:converter-jaxb:2.9.0) with InstrumentationAnalysisTransform
+Transforming converter-jaxb-2.9.0.jar (com.squareup.retrofit2:converter-jaxb:2.9.0) with MergeInstrumentationAnalysisTransform
+Transforming converter-jackson-2.9.0.jar (com.squareup.retrofit2:converter-jackson:2.9.0) with InstrumentationAnalysisTransform
+Transforming converter-jackson-2.9.0.jar (com.squareup.retrofit2:converter-jackson:2.9.0) with MergeInstrumentationAnalysisTransform
+Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with InstrumentationAnalysisTransform
+Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with MergeInstrumentationAnalysisTransform
+Transforming okhttp-4.4.1.jar (com.squareup.okhttp3:okhttp:4.4.1) with InstrumentationAnalysisTransform
+Transforming plugin-repository-rest-client-2.0.39.jar (org.jetbrains.intellij:plugin-repository-rest-client:2.0.39) with ExternalDependencyInstrumentingArtifactTransform
+Transforming okhttp-4.4.1.jar (com.squareup.okhttp3:okhttp:4.4.1) with MergeInstrumentationAnalysisTransform
+Transforming converter-jaxb-2.9.0.jar (com.squareup.retrofit2:converter-jaxb:2.9.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming converter-jackson-2.9.0.jar (com.squareup.retrofit2:converter-jackson:2.9.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming intellij-platform-gradle-plugin-2.0.1.jar (org.jetbrains.intellij.platform:intellij-platform-gradle-plugin:2.0.1) with ExternalDependencyInstrumentingArtifactTransform
+Transforming retrofit-2.11.0.jar (com.squareup.retrofit2:retrofit:2.11.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming xmlutil-serialization-jvm-0.86.3.jar (io.github.pdvrieze.xmlutil:serialization-jvm:0.86.3) with InstrumentationAnalysisTransform
+Transforming xmlutil-serialization-jvm-0.86.3.jar (io.github.pdvrieze.xmlutil:serialization-jvm:0.86.3) with MergeInstrumentationAnalysisTransform
+Transforming xmlutil-jvm-0.86.3.jar (io.github.pdvrieze.xmlutil:core-jvm:0.86.3) with InstrumentationAnalysisTransform
+Transforming xmlutil-jvm-0.86.3.jar (io.github.pdvrieze.xmlutil:core-jvm:0.86.3) with MergeInstrumentationAnalysisTransform
+Transforming kotlinx-serialization-core-jvm-1.6.3.jar (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.6.3) with InstrumentationAnalysisTransform
+Transforming kotlinx-serialization-core-jvm-1.6.3.jar (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.6.3) with MergeInstrumentationAnalysisTransform
+Transforming kotlinx-serialization-json-jvm-1.6.3.jar (org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.6.3) with InstrumentationAnalysisTransform
+Transforming kotlinx-serialization-json-jvm-1.6.3.jar (org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.6.3) with MergeInstrumentationAnalysisTransform
+Transforming okio-jvm-2.4.3.jar (com.squareup.okio:okio:2.4.3) with InstrumentationAnalysisTransform
+Transforming okio-jvm-2.4.3.jar (com.squareup.okio:okio:2.4.3) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-stdlib-jdk8-1.9.21.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.21) with InstrumentationAnalysisTransform
+Transforming kotlin-stdlib-jdk8-1.9.21.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.21) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-stdlib-jdk7-1.9.21.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.21) with InstrumentationAnalysisTransform
+Transforming kotlin-stdlib-jdk7-1.9.21.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.21) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-stdlib-1.9.23.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.23) with InstrumentationAnalysisTransform
+Transforming kotlin-stdlib-1.9.23.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.23) with MergeInstrumentationAnalysisTransform
+Transforming structure-intellij-3.284.jar (org.jetbrains.intellij.plugins:structure-intellij:3.284) with InstrumentationAnalysisTransform
+Transforming structure-intellij-3.284.jar (org.jetbrains.intellij.plugins:structure-intellij:3.284) with MergeInstrumentationAnalysisTransform
+Transforming structure-base-3.284.jar (org.jetbrains.intellij.plugins:structure-base:3.284) with InstrumentationAnalysisTransform
+Transforming structure-base-3.284.jar (org.jetbrains.intellij.plugins:structure-base:3.284) with MergeInstrumentationAnalysisTransform
+Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with InstrumentationAnalysisTransform
+Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-model-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-model:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-model-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-model:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-api-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-api:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-api-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-api:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-2.0.0-gradle85.jar (org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-2.0.0-gradle85.jar (org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming gradle-changelog-plugin-2.2.0.jar (org.jetbrains.intellij.plugins:gradle-changelog-plugin:2.2.0) with InstrumentationAnalysisTransform
+Transforming gradle-changelog-plugin-2.2.0.jar (org.jetbrains.intellij.plugins:gradle-changelog-plugin:2.2.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-idea-proto-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-idea-proto:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-idea-proto-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-idea-proto:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-idea-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-idea:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-idea-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-idea:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-klib-commonizer-api-2.0.0.jar (org.jetbrains.kotlin:kotlin-klib-commonizer-api:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-klib-commonizer-api-2.0.0.jar (org.jetbrains.kotlin:kotlin-klib-commonizer-api:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-build-statistics-2.0.0.jar (org.jetbrains.kotlin:kotlin-build-statistics:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-build-statistics-2.0.0.jar (org.jetbrains.kotlin:kotlin-build-statistics:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-build-tools-api-2.0.0.jar (org.jetbrains.kotlin:kotlin-build-tools-api:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-build-tools-api-2.0.0.jar (org.jetbrains.kotlin:kotlin-build-tools-api:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-compiler-runner-2.0.0.jar (org.jetbrains.kotlin:kotlin-compiler-runner:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-compiler-runner-2.0.0.jar (org.jetbrains.kotlin:kotlin-compiler-runner:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-native-utils-2.0.0.jar (org.jetbrains.kotlin:kotlin-native-utils:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-native-utils-2.0.0.jar (org.jetbrains.kotlin:kotlin-native-utils:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-util-klib-2.0.0.jar (org.jetbrains.kotlin:kotlin-util-klib:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-util-klib-2.0.0.jar (org.jetbrains.kotlin:kotlin-util-klib:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-compiler-embeddable-2.0.0.jar (org.jetbrains.kotlin:kotlin-compiler-embeddable:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-compiler-embeddable-2.0.0.jar (org.jetbrains.kotlin:kotlin-compiler-embeddable:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming undertow-core-2.3.15.Final.jar (io.undertow:undertow-core:2.3.15.Final) with InstrumentationAnalysisTransform
+Transforming undertow-core-2.3.15.Final.jar (io.undertow:undertow-core:2.3.15.Final) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-annotations-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-annotations:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-gradle-plugin-annotations-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-annotations:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-tooling-core-2.0.0.jar (org.jetbrains.kotlin:kotlin-tooling-core:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-tooling-core-2.0.0.jar (org.jetbrains.kotlin:kotlin-tooling-core:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming gson-2.8.9.jar (com.google.code.gson:gson:2.8.9) with InstrumentationAnalysisTransform
+Transforming gson-2.8.9.jar (com.google.code.gson:gson:2.8.9) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-daemon-client-2.0.0.jar (org.jetbrains.kotlin:kotlin-daemon-client:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-daemon-client-2.0.0.jar (org.jetbrains.kotlin:kotlin-daemon-client:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlinx-coroutines-core-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.0) with InstrumentationAnalysisTransform
+Transforming kotlinx-coroutines-core-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-util-io-2.0.0.jar (org.jetbrains.kotlin:kotlin-util-io:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-util-io-2.0.0.jar (org.jetbrains.kotlin:kotlin-util-io:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming kotlin-daemon-embeddable-2.0.0.jar (org.jetbrains.kotlin:kotlin-daemon-embeddable:2.0.0) with InstrumentationAnalysisTransform
+Transforming kotlin-daemon-embeddable-2.0.0.jar (org.jetbrains.kotlin:kotlin-daemon-embeddable:2.0.0) with MergeInstrumentationAnalysisTransform
+Transforming trove4j-1.0.20200330.jar (org.jetbrains.intellij.deps:trove4j:1.0.20200330) with InstrumentationAnalysisTransform
+Transforming trove4j-1.0.20200330.jar (org.jetbrains.intellij.deps:trove4j:1.0.20200330) with MergeInstrumentationAnalysisTransform
+Transforming xnio-nio-3.8.16.Final.jar (org.jboss.xnio:xnio-nio:3.8.16.Final) with InstrumentationAnalysisTransform
+Transforming xnio-nio-3.8.16.Final.jar (org.jboss.xnio:xnio-nio:3.8.16.Final) with MergeInstrumentationAnalysisTransform
+Transforming xnio-api-3.8.16.Final.jar (org.jboss.xnio:xnio-api:3.8.16.Final) with InstrumentationAnalysisTransform
+Transforming xnio-api-3.8.16.Final.jar (org.jboss.xnio:xnio-api:3.8.16.Final) with MergeInstrumentationAnalysisTransform
+Transforming wildfly-client-config-1.0.1.Final.jar (org.wildfly.client:wildfly-client-config:1.0.1.Final) with InstrumentationAnalysisTransform
+Transforming wildfly-client-config-1.0.1.Final.jar (org.wildfly.client:wildfly-client-config:1.0.1.Final) with MergeInstrumentationAnalysisTransform
+Transforming jboss-threads-3.5.0.Final.jar (org.jboss.threads:jboss-threads:3.5.0.Final) with InstrumentationAnalysisTransform
+Transforming jboss-threads-3.5.0.Final.jar (org.jboss.threads:jboss-threads:3.5.0.Final) with MergeInstrumentationAnalysisTransform
+Transforming jboss-logging-3.4.3.Final.jar (org.jboss.logging:jboss-logging:3.4.3.Final) with InstrumentationAnalysisTransform
+Transforming jboss-logging-3.4.3.Final.jar (org.jboss.logging:jboss-logging:3.4.3.Final) with MergeInstrumentationAnalysisTransform
+Transforming jackson-databind-2.14.2.jar (com.fasterxml.jackson.core:jackson-databind:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-databind-2.14.2.jar (com.fasterxml.jackson.core:jackson-databind:2.14.2) with MergeInstrumentationAnalysisTransform
+Transforming jackson-annotations-2.14.2.jar (com.fasterxml.jackson.core:jackson-annotations:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-annotations-2.14.2.jar (com.fasterxml.jackson.core:jackson-annotations:2.14.2) with MergeInstrumentationAnalysisTransform
+Transforming jackson-core-2.14.2.jar (com.fasterxml.jackson.core:jackson-core:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-core-2.14.2.jar (com.fasterxml.jackson.core:jackson-core:2.14.2) with MergeInstrumentationAnalysisTransform
+Transforming jackson-module-kotlin-2.14.2.jar (com.fasterxml.jackson.module:jackson-module-kotlin:2.14.2) with InstrumentationAnalysisTransform
+Transforming jackson-module-kotlin-2.14.2.jar (com.fasterxml.jackson.module:jackson-module-kotlin:2.14.2) with MergeInstrumentationAnalysisTransform
+Transforming commons-compress-1.26.2.jar (org.apache.commons:commons-compress:1.26.2) with InstrumentationAnalysisTransform
+Transforming commons-compress-1.26.2.jar (org.apache.commons:commons-compress:1.26.2) with MergeInstrumentationAnalysisTransform
+Transforming xz-1.9.jar (org.tukaani:xz:1.9) with InstrumentationAnalysisTransform
+Transforming xz-1.9.jar (org.tukaani:xz:1.9) with MergeInstrumentationAnalysisTransform
+Transforming evo-inflector-1.3.jar (org.atteo:evo-inflector:1.3) with InstrumentationAnalysisTransform
+Transforming evo-inflector-1.3.jar (org.atteo:evo-inflector:1.3) with MergeInstrumentationAnalysisTransform
+Transforming slf4j-api-2.0.7.jar (org.slf4j:slf4j-api:2.0.7) with InstrumentationAnalysisTransform
+Transforming slf4j-api-2.0.7.jar (org.slf4j:slf4j-api:2.0.7) with MergeInstrumentationAnalysisTransform
+Transforming commons-io-2.16.1.jar (commons-io:commons-io:2.16.1) with InstrumentationAnalysisTransform
+Transforming commons-io-2.16.1.jar (commons-io:commons-io:2.16.1) with MergeInstrumentationAnalysisTransform
+Transforming jsoup-1.16.1.jar (org.jsoup:jsoup:1.16.1) with InstrumentationAnalysisTransform
+Transforming jsoup-1.16.1.jar (org.jsoup:jsoup:1.16.1) with MergeInstrumentationAnalysisTransform
+Transforming jaxb-runtime-2.3.1.jar (org.glassfish.jaxb:jaxb-runtime:2.3.1) with InstrumentationAnalysisTransform
+Transforming jaxb-runtime-2.3.1.jar (org.glassfish.jaxb:jaxb-runtime:2.3.1) with MergeInstrumentationAnalysisTransform
+Transforming jaxb-api-2.3.1.jar (javax.xml.bind:jaxb-api:2.3.1) with InstrumentationAnalysisTransform
+Transforming jaxb-api-2.3.1.jar (javax.xml.bind:jaxb-api:2.3.1) with MergeInstrumentationAnalysisTransform
+Transforming jdom2-2.0.6.1.jar (org.jdom:jdom2:2.0.6.1) with InstrumentationAnalysisTransform
+Transforming jdom2-2.0.6.1.jar (org.jdom:jdom2:2.0.6.1) with MergeInstrumentationAnalysisTransform
+Transforming blockmap-1.0.5.jar (org.jetbrains.intellij:blockmap:1.0.5) with InstrumentationAnalysisTransform
+Transforming blockmap-1.0.5.jar (org.jetbrains.intellij:blockmap:1.0.5) with MergeInstrumentationAnalysisTransform
+Transforming jaxb-impl-2.3.2.jar (com.sun.xml.bind:jaxb-impl:2.3.2) with InstrumentationAnalysisTransform
+Transforming jaxb-impl-2.3.2.jar (com.sun.xml.bind:jaxb-impl:2.3.2) with MergeInstrumentationAnalysisTransform
+Transforming jaxb-core-2.3.0.jar (com.sun.xml.bind:jaxb-core:2.3.0) with InstrumentationAnalysisTransform
+Transforming jaxb-core-2.3.0.jar (com.sun.xml.bind:jaxb-core:2.3.0) with MergeInstrumentationAnalysisTransform
+Transforming markdown-jvm-0.5.0.jar (org.jetbrains:markdown-jvm:0.5.0) with InstrumentationAnalysisTransform
+Transforming markdown-jvm-0.5.0.jar (org.jetbrains:markdown-jvm:0.5.0) with MergeInstrumentationAnalysisTransform
+Transforming wildfly-common-1.5.4.Final.jar (org.wildfly.common:wildfly-common:1.5.4.Final) with InstrumentationAnalysisTransform
+Transforming wildfly-common-1.5.4.Final.jar (org.wildfly.common:wildfly-common:1.5.4.Final) with MergeInstrumentationAnalysisTransform
+Transforming commons-codec-1.17.0.jar (commons-codec:commons-codec:1.17.0) with InstrumentationAnalysisTransform
+Transforming commons-codec-1.17.0.jar (commons-codec:commons-codec:1.17.0) with MergeInstrumentationAnalysisTransform
+Transforming commons-lang3-3.14.0.jar (org.apache.commons:commons-lang3:3.14.0) with InstrumentationAnalysisTransform
+Transforming commons-lang3-3.14.0.jar (org.apache.commons:commons-lang3:3.14.0) with MergeInstrumentationAnalysisTransform
+Transforming javax.activation-api-1.2.0.jar (javax.activation:javax.activation-api:1.2.0) with InstrumentationAnalysisTransform
+Transforming javax.activation-api-1.2.0.jar (javax.activation:javax.activation-api:1.2.0) with MergeInstrumentationAnalysisTransform
+Transforming txw2-2.3.1.jar (org.glassfish.jaxb:txw2:2.3.1) with InstrumentationAnalysisTransform
+Transforming okhttp-4.4.1.jar (com.squareup.okhttp3:okhttp:4.4.1) with ExternalDependencyInstrumentingArtifactTransform
+Transforming txw2-2.3.1.jar (org.glassfish.jaxb:txw2:2.3.1) with MergeInstrumentationAnalysisTransform
+Transforming istack-commons-runtime-3.0.7.jar (com.sun.istack:istack-commons-runtime:3.0.7) with InstrumentationAnalysisTransform
+Transforming istack-commons-runtime-3.0.7.jar (com.sun.istack:istack-commons-runtime:3.0.7) with MergeInstrumentationAnalysisTransform
+Transforming stax-ex-1.8.jar (org.jvnet.staxex:stax-ex:1.8) with InstrumentationAnalysisTransform
+Transforming stax-ex-1.8.jar (org.jvnet.staxex:stax-ex:1.8) with MergeInstrumentationAnalysisTransform
+Transforming FastInfoset-1.2.15.jar (com.sun.xml.fastinfoset:FastInfoset:1.2.15) with InstrumentationAnalysisTransform
+Transforming FastInfoset-1.2.15.jar (com.sun.xml.fastinfoset:FastInfoset:1.2.15) with MergeInstrumentationAnalysisTransform
+Transforming xmlutil-serialization-jvm-0.86.3.jar (io.github.pdvrieze.xmlutil:serialization-jvm:0.86.3) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlinx-serialization-core-jvm-1.6.3.jar (org.jetbrains.kotlinx:kotlinx-serialization-core-jvm:1.6.3) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-stdlib-jdk7-1.9.21.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk7:1.9.21) with ExternalDependencyInstrumentingArtifactTransform
+Transforming okio-jvm-2.4.3.jar (com.squareup.okio:okio:2.4.3) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlinx-serialization-json-jvm-1.6.3.jar (org.jetbrains.kotlinx:kotlinx-serialization-json-jvm:1.6.3) with ExternalDependencyInstrumentingArtifactTransform
+Transforming xmlutil-jvm-0.86.3.jar (io.github.pdvrieze.xmlutil:core-jvm:0.86.3) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-stdlib-jdk8-1.9.21.jar (org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.9.21) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-stdlib-1.9.23.jar (org.jetbrains.kotlin:kotlin-stdlib:1.9.23) with ExternalDependencyInstrumentingArtifactTransform
+Transforming structure-intellij-3.284.jar (org.jetbrains.intellij.plugins:structure-intellij:3.284) with ExternalDependencyInstrumentingArtifactTransform
+Transforming structure-base-3.284.jar (org.jetbrains.intellij.plugins:structure-base:3.284) with ExternalDependencyInstrumentingArtifactTransform
+Transforming annotations-13.0.jar (org.jetbrains:annotations:13.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-gradle-plugin-api-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-api:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-gradle-plugin-model-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-model:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-gradle-plugin-idea-proto-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-idea-proto:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming gradle-changelog-plugin-2.2.0.jar (org.jetbrains.intellij.plugins:gradle-changelog-plugin:2.2.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-gradle-plugin-idea-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-idea:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-klib-commonizer-api-2.0.0.jar (org.jetbrains.kotlin:kotlin-klib-commonizer-api:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-gradle-plugin-2.0.0-gradle85.jar (org.jetbrains.kotlin:kotlin-gradle-plugin:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-build-tools-api-2.0.0.jar (org.jetbrains.kotlin:kotlin-build-tools-api:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-build-statistics-2.0.0.jar (org.jetbrains.kotlin:kotlin-build-statistics:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-compiler-runner-2.0.0.jar (org.jetbrains.kotlin:kotlin-compiler-runner:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-compiler-embeddable-2.0.0.jar (org.jetbrains.kotlin:kotlin-compiler-embeddable:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming undertow-core-2.3.15.Final.jar (io.undertow:undertow-core:2.3.15.Final) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-native-utils-2.0.0.jar (org.jetbrains.kotlin:kotlin-native-utils:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-gradle-plugin-annotations-2.0.0.jar (org.jetbrains.kotlin:kotlin-gradle-plugin-annotations:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-util-klib-2.0.0.jar (org.jetbrains.kotlin:kotlin-util-klib:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-tooling-core-2.0.0.jar (org.jetbrains.kotlin:kotlin-tooling-core:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming gson-2.8.9.jar (com.google.code.gson:gson:2.8.9) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-daemon-client-2.0.0.jar (org.jetbrains.kotlin:kotlin-daemon-client:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlinx-coroutines-core-jvm-1.5.0.jar (org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-daemon-embeddable-2.0.0.jar (org.jetbrains.kotlin:kotlin-daemon-embeddable:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming trove4j-1.0.20200330.jar (org.jetbrains.intellij.deps:trove4j:1.0.20200330) with ExternalDependencyInstrumentingArtifactTransform
+Transforming kotlin-util-io-2.0.0.jar (org.jetbrains.kotlin:kotlin-util-io:2.0.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming xnio-nio-3.8.16.Final.jar (org.jboss.xnio:xnio-nio:3.8.16.Final) with ExternalDependencyInstrumentingArtifactTransform
+Transforming xnio-api-3.8.16.Final.jar (org.jboss.xnio:xnio-api:3.8.16.Final) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jboss-logging-3.4.3.Final.jar (org.jboss.logging:jboss-logging:3.4.3.Final) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jackson-annotations-2.14.2.jar (com.fasterxml.jackson.core:jackson-annotations:2.14.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jackson-core-2.14.2.jar (com.fasterxml.jackson.core:jackson-core:2.14.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jackson-module-kotlin-2.14.2.jar (com.fasterxml.jackson.module:jackson-module-kotlin:2.14.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming commons-compress-1.26.2.jar (org.apache.commons:commons-compress:1.26.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming wildfly-client-config-1.0.1.Final.jar (org.wildfly.client:wildfly-client-config:1.0.1.Final) with ExternalDependencyInstrumentingArtifactTransform
+Transforming xz-1.9.jar (org.tukaani:xz:1.9) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jboss-threads-3.5.0.Final.jar (org.jboss.threads:jboss-threads:3.5.0.Final) with ExternalDependencyInstrumentingArtifactTransform
+Transforming slf4j-api-2.0.7.jar (org.slf4j:slf4j-api:2.0.7) with ExternalDependencyInstrumentingArtifactTransform
+Transforming evo-inflector-1.3.jar (org.atteo:evo-inflector:1.3) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jackson-databind-2.14.2.jar (com.fasterxml.jackson.core:jackson-databind:2.14.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming commons-io-2.16.1.jar (commons-io:commons-io:2.16.1) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jsoup-1.16.1.jar (org.jsoup:jsoup:1.16.1) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jaxb-runtime-2.3.1.jar (org.glassfish.jaxb:jaxb-runtime:2.3.1) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jaxb-api-2.3.1.jar (javax.xml.bind:jaxb-api:2.3.1) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jdom2-2.0.6.1.jar (org.jdom:jdom2:2.0.6.1) with ExternalDependencyInstrumentingArtifactTransform
+Transforming blockmap-1.0.5.jar (org.jetbrains.intellij:blockmap:1.0.5) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jaxb-impl-2.3.2.jar (com.sun.xml.bind:jaxb-impl:2.3.2) with ExternalDependencyInstrumentingArtifactTransform
+Transforming jaxb-core-2.3.0.jar (com.sun.xml.bind:jaxb-core:2.3.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming wildfly-common-1.5.4.Final.jar (org.wildfly.common:wildfly-common:1.5.4.Final) with ExternalDependencyInstrumentingArtifactTransform
+Transforming markdown-jvm-0.5.0.jar (org.jetbrains:markdown-jvm:0.5.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming commons-codec-1.17.0.jar (commons-codec:commons-codec:1.17.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming commons-lang3-3.14.0.jar (org.apache.commons:commons-lang3:3.14.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming txw2-2.3.1.jar (org.glassfish.jaxb:txw2:2.3.1) with ExternalDependencyInstrumentingArtifactTransform
+Transforming javax.activation-api-1.2.0.jar (javax.activation:javax.activation-api:1.2.0) with ExternalDependencyInstrumentingArtifactTransform
+Transforming stax-ex-1.8.jar (org.jvnet.staxex:stax-ex:1.8) with ExternalDependencyInstrumentingArtifactTransform
+Transforming istack-commons-runtime-3.0.7.jar (com.sun.istack:istack-commons-runtime:3.0.7) with ExternalDependencyInstrumentingArtifactTransform
+Transforming FastInfoset-1.2.15.jar (com.sun.xml.fastinfoset:FastInfoset:1.2.15) with ExternalDependencyInstrumentingArtifactTransform
+Using Kotlin Gradle Plugin gradle85 variant
+kotlin scripting plugin: created the scripting discovery configuration: kotlinScriptDef
+kotlin scripting plugin: created the scripting discovery configuration: testKotlinScriptDef
+[org.jetbrains.intellij.platform] Configuring plugin: org.jetbrains.intellij.platform
+[org.jetbrains.intellij.platform] Configuring plugin: org.jetbrains.intellij.platform.base
+[org.jetbrains.intellij.platform] Configuring task: initializeIntellijPlatformPlugin
+[org.jetbrains.intellij.platform] Configuring task: printBundledPlugins
+[org.jetbrains.intellij.platform] Configuring task: printProductsReleases
+[org.jetbrains.intellij.platform] Configuring task: setupDependencies
+[org.jetbrains.intellij.platform] Configuring plugin: org.jetbrains.intellij.platform.module
+[org.jetbrains.intellij.platform] Configuring task: generateManifest
+[org.jetbrains.intellij.platform] Configuring task: jar
+[org.jetbrains.intellij.platform] Configuring task: instrumentCode
+[org.jetbrains.intellij.platform] Configuring task: instrumentTestCode
+[org.jetbrains.intellij.platform] Configuring task: instrumentedJar
+[org.jetbrains.intellij.platform] Configuring task: composedJar
+[org.jetbrains.intellij.platform] Configuring task: prepareSandbox
+[org.jetbrains.intellij.platform] Configuring task: prepareTestSandbox
+[org.jetbrains.intellij.platform] Configuring task: prepareTestIdePerformanceSandbox
+[org.jetbrains.intellij.platform] Configuring task: prepareTest
+[org.jetbrains.intellij.platform] Configuring task: test
+[org.jetbrains.intellij.platform] Configuring task: verifyPluginProjectConfiguration
+[org.jetbrains.intellij.platform] Configuring plugin configuration verification task
+[org.jetbrains.intellij.platform] Configuring task: patchPluginXml
+[org.jetbrains.intellij.platform] Configuring task: processResources
+[org.jetbrains.intellij.platform] Configuring task: buildSearchableOptions
+[org.jetbrains.intellij.platform] Configuring task: prepareJarSearchableOptions
+[org.jetbrains.intellij.platform] Configuring task: jarSearchableOptions
+[org.jetbrains.intellij.platform] Configuring task: buildPlugin
+[org.jetbrains.intellij.platform] Configuring task: testIdePerformance
+[org.jetbrains.intellij.platform] Configuring task: runIde
+[org.jetbrains.intellij.platform] Configuring task: verifyPlugin
+[org.jetbrains.intellij.platform] Configuring task: verifyPluginSignature
+[org.jetbrains.intellij.platform] Configuring task: verifyPluginStructure
+[org.jetbrains.intellij.platform] Configuring task: signPlugin
+[org.jetbrains.intellij.platform] Configuring task: publishPlugin
+Invalidating in-memory cache of /Users/ldd/.gradle/caches/journal-1/file-access.bin
+All projects evaluated.
+Abbreviated task name 'run' matched 'runIde'
+Task name matched 'verifyPlugin'
+Selected primary task 'run' from project :
+Unable to locate local Maven repository.
+Starting process 'command '/Users/ldd/Applications/RustRover.app/Contents/jbr/Contents/Home/bin/java''. Working directory: /Users/hlx/github/SalvoRsTool Command: /Users/ldd/Applications/RustRover.app/Contents/jbr/Contents/Home/bin/java -XshowSettings:properties -version
+Successfully started process 'command '/Users/ldd/Applications/RustRover.app/Contents/jbr/Contents/Home/bin/java''
+Selected primary task 'verifyPlugin' from project :
+[org.jetbrains.intellij.platform] Reading JetBrains IDEs releases from: https://www.jetbrains.com/updates/updates.xml
+[org.jetbrains.intellij.platform] Reading Android Studio releases from: https://jb.gg/android-studio-releases-list.xml
+[org.jetbrains.intellij.platform] Filtering releases with since='242.20224', until='242.99999', types='RR', channels='RELEASE,EAP,RC'
+[org.jetbrains.intellij.platform] Resolved values: RR-242.20224.421
+Starting process 'command '/Users/ldd/Applications/RustRover.app/Contents/jbr/Contents/Home/bin/java''. Working directory: /Users/hlx/github/SalvoRsTool Command: /Users/ldd/Applications/RustRover.app/Contents/jbr/Contents/Home/bin/java -XshowSettings:properties -version
+Successfully started process 'command '/Users/ldd/Applications/RustRover.app/Contents/jbr/Contents/Home/bin/java''
+Tasks to be executed: [task ':initializeIntellijPlatformPlugin', task ':patchPluginXml', task ':generateManifest', task ':checkKotlinGradlePluginConfigurationErrors', task ':compileKotlin', task ':verifyPluginProjectConfiguration', task ':compileJava', task ':processResources', task ':classes', task ':instrumentCode', task ':jar', task ':instrumentedJar', task ':composedJar', task ':prepareSandbox', task ':runIde', task ':buildSearchableOptions', task ':prepareJarSearchableOptions', task ':jarSearchableOptions', task ':buildPlugin', task ':verifyPlugin']
+Tasks that were excluded: []
+Invalidating in-memory cache of /Users/ldd/.gradle/caches/journal-1/file-access.bin
+Using local directory build cache for the root build (location = /Users/ldd/.gradle/caches/build-cache-1, removeUnusedEntriesAfter = 7 days).
+Ignoring listeners of task graph ready event, as this build (:) has already executed work.
+Resolve mutations for :initializeIntellijPlatformPlugin (Thread[Execution worker,5,main]) started.
+Resolve mutations for :checkKotlinGradlePluginConfigurationErrors (Thread[included builds,5,main]) started.
+destroyer locations for task group 0 (Thread[Execution worker Thread 7,5,main]) started.
+:checkKotlinGradlePluginConfigurationErrors (Thread[included builds,5,main]) started.
+:initializeIntellijPlatformPlugin (Thread[Execution worker,5,main]) started.
+
+> Task :checkKotlinGradlePluginConfigurationErrors SKIPPED
+Skipping task ':checkKotlinGradlePluginConfigurationErrors' as task onlyIf 'errorDiagnostics are present' is false.
+Resolve mutations for :compileKotlin (Thread[included builds,5,main]) started.
+:compileKotlin (Thread[included builds,5,main]) started.
+
+> Task :initializeIntellijPlatformPlugin
+Caching disabled for task ':initializeIntellijPlatformPlugin' because:
+  Task is untracked because: Should always run
+Task ':initializeIntellijPlatformPlugin' is not up-to-date because:
+  Task is untracked because: Should always run
+
+> Task :compileKotlin
+Transforming javascript-base (bundledPlugin:JavaScriptBase:2024.2+694) with CollectorTransformer
+Transforming intellij-rust (bundledPlugin:com.jetbrains.rust:2024.2+931) with CollectorTransformer
+Transforming grazie (bundledPlugin:tanvd.grazi:242.20224.309+529) with CollectorTransformer
+Transforming vcs-git (bundledPlugin:Git4Idea:242.20224.309+180) with CollectorTransformer
+Transforming terminal (bundledPlugin:org.jetbrains.plugins.terminal:242.20224.309+197) with CollectorTransformer
+Transforming sh (bundledPlugin:com.jetbrains.sh:242.20224.309+772) with CollectorTransformer
+Transforming markdown (bundledPlugin:org.intellij.plugins.markdown:242.20224.309+566) with CollectorTransformer
+Transforming toml (bundledPlugin:org.toml.lang:2024.2+239) with CollectorTransformer
+Transforming Contents (localIde:RR:242.20224.421+441) with CollectorTransformer
+Transforming fullLine (bundledPlugin:org.jetbrains.completion.full.line:242.20224.309+122) with CollectorTransformer
+Transforming completionMlRanking (bundledPlugin:com.intellij.completion.ml.ranking:242.20224.309+532) with CollectorTransformer
+Transforming performanceTesting (bundledPlugin:com.jetbrains.performancePlugin:242.20224.309+815) with CollectorTransformer
+Transforming platform-langInjection (bundledPlugin:org.intellij.intelliLang:242.20224.309+382) with CollectorTransformer
+Transforming ml-inline-completion (bundledPlugin:com.intellij.ml.inline.completion:242.20224.309+961) with CollectorTransformer
+Transforming css-impl (bundledPlugin:com.intellij.css:242.20224.309+863) with CollectorTransformer
+Transforming copyright (bundledPlugin:com.intellij.copyright:242.20224.309+688) with CollectorTransformer
+Transforming uml (bundledPlugin:com.intellij.diagram:242.20224.309+269) with CollectorTransformer
+Transforming javascript-debugger (bundledPlugin:JavaScriptDebugger:242.20224.309+510) with CollectorTransformer
+Transforming nativeDebug-plugin (bundledPlugin:com.intellij.nativeDebug:242.20224.309+211) with CollectorTransformer
+Transforming xpath (bundledPlugin:XPathView:242.20224.309+642) with CollectorTransformer
+Transforming yaml (bundledPlugin:org.jetbrains.plugins.yaml:242.20224.309+738) with CollectorTransformer
+Transforming html-tools (bundledPlugin:HtmlTools:242.20224.309+840) with CollectorTransformer
+Transforming platform-images (bundledPlugin:com.intellij.platform.images:242.20224.309+131) with CollectorTransformer
+Transforming webDeployment (bundledPlugin:com.jetbrains.plugins.webDeployment:242.20224.309+130) with CollectorTransformer
+Transforming javascript-base.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming semver-jvm-1.4.2.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming JavaEWAH-1.2.3.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jackson-dataformat-toml-2.14.2.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming commons-codec-1.16.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming full-line-inline-filter-rust-0.0.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming org.eclipse.jgit-6.9.0.202403050737-r.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming antlr4-runtime-4.13.0.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij-rust-242.20224.421.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming completion-ranking-rust-0.4.1.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming grazie.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming vcs-git.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming git4idea-rt.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming terminal.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming sh.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming markdown.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming toml.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming platform-loader.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming util-8.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming util.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming app-client.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming util_rt.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming product.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming opentelemetry.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming app.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming product-client.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lib-client.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming stats.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jps-model.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming external-system-rt.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming rd.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming bouncy-castle.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming protobuf.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming forms_rt.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming lib.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming externalProcess-rt.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming groovy.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming annotations.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming jsch-agent.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming nio-fs.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming trove.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.execution.process.elevation.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.execution.process.mediator.client.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.execution.process.mediator.common.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.execution.process.mediator.daemon.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.ide.startup.importSettings.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.libraries.grpc.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.libraries.grpc.netty.shaded.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.libraries.ktor.client.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.libraries.microba.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.clouds.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.collaborationTools.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.coverage.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.coverage.agent.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.dap.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.execution.dashboard.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.execution.serviceView.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.images.backend.svg.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.images.copyright.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.kernel.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.kernel.backend.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.lvcs.impl.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.ml.embeddings.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.navbar.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.navbar.backend.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.navbar.frontend.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.navbar.monolith.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.settings.local.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.smRunner.vcs.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.vcs.dvcs.impl.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.vcs.impl.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.platform.vcs.log.impl.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.profiler.asyncOne.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.profiler.clion.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.profiler.common.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.profiler.ultimate.ideaAsyncProfiler.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.rustrover.customization.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.smart.update.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming fullLine.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.fullLine.ruby.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.fullLine.go.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.fullLine.php.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.fullLine.css.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.fullLine.python.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.fullLine.java.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.fullLine.cppCore.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.fullLine.kotlin.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.fullLine.js.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.fullLine.csharp.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming completionMlRanking.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming performanceTesting.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming platform-langInjection.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming java-langInjection-jps.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming ml-inline-completion.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming css-impl.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming copyright.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming uml-support.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming ChromeConnector.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming nashorn-debugger-9-rt.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming nashorn-debugger-rt.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming javascript-debugger.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming FirefoxConnector.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming intellij.javascript.debugger.nashorn.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming nativeDebug-plugin.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming xpath.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming yaml-editing.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming yaml.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming html-tools.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming platform-images.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Transforming webDeployment.jar with BuildToolsApiClasspathEntrySnapshotTransform
+Build cache key for task ':compileKotlin' is 43d36ab722cd96c12bf36b3b30f3c893
+Task ':compileKotlin' is not up-to-date because:
+  Input property 'sources' file /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateDtoDialog.kt has changed.
+file or directory '/Users/hlx/github/SalvoRsTool/src/main/java', not found
+file or directory '/Users/hlx/github/SalvoRsTool/src/main/java', not found
+file or directory '/Users/hlx/github/SalvoRsTool/src/main/java', not found
+file or directory '/Users/hlx/github/SalvoRsTool/src/main/java', not found
+Kotlin source files: /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/intention/CopyTSInterfaceAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/intention/CopyAntdTableColumnAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/widget/MyJsonEditor.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/widget/RsEditor.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/widget/TypeJavaScriptEditor.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/cache/SeaOrmCache.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/searcheverywhere/SalvoSearchApi.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateDtoDialog.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/dialog/AskSeaOrmJsonDialog.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateServiceDialog.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateAntdFormDialog.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateRouterDialog.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateEntityDialog.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/rightmenu/AntdRequestCopyAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/rightmenu/CopyUrlAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/rightmenu/SalvoApiNavigatorToRouteImplAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/antdpro/AntdProFormGenerateAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/GenerateHookFormAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/GenerateDtoAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/GenerateServiceAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/GenerateAntdFormAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/GenerateRouterAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/api/SalvoApiRefreshAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/seaorm/SeamOrmCommandAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/bar/SeaOrmStatusBarFactory.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/bar/JsonToSearOrm.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/action/base/BaseRsStructCodeGenerateAction.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/messageing/ApiScanMessaging.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/json/MyJsonParse.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/window/SalvoWindow.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/window/TempFilesWindow.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/window/ApiScanWindow.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/icons/MyIcon.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/model/GenerateDtoConfig.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/model/SalvoApiItem.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/bar/BottomStatusBar.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/service/ProjectStartActivity.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/service/SalvoApiService.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/service/RustProjectService.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/i18n/MyPluginBundle.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/dsl/PanelDsl.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/help/SeaOrmCommandHelp.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/help/WebHelpProvider.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/tool/NotificationUtil.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/tool/ExtendedFuntions.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/tool/RustOuterAttrManager.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/tool/RsMethodCallExprImplManager.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/tool/RsDotExprManager.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/tool/AntdFactory.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/tool/FilesUtil.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/tool/RsFunctionManager.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/tool/RsMethodCallManager.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/tool/MyRsPsiFactory.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/tool/RsLetDeclManager.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/tool/MyRsPsiElementManager.kt, /Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/tool/Tools.kt
+Java source files:
+Script source files:
+Script file extensions:
+Using Kotlin/JVM incremental compilation
+[KOTLIN] Kotlin compilation 'jdkHome' argument: /Users/ldd/Library/Java/JavaVirtualMachines/jbrsdk_jcef-17.0.11/Contents/Home
+i: starting the daemon as: /Users/ldd/Library/Java/JavaVirtualMachines/jbrsdk_jcef-17.0.11/Contents/Home/bin/java -cp /Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.0/1de310de3446414381282ffc46c3ed3919a4d1da/kotlin-compiler-embeddable-2.0.0.jar:/Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.0.0/b48df2c4aede9586cc931ead433bc02d6fd7879e/kotlin-stdlib-2.0.0.jar:/Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/2.0.0/fdc27dd047d592fa41d2dfa21e7621287a361612/kotlin-script-runtime-2.0.0.jar:/Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.6.10/1cbe9c92c12a94eea200d23c2bbaedaf3daf5132/kotlin-reflect-1.6.10.jar:/Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/2.0.0/b39c612768614c4428c96ee9c65477181fffe9d/kotlin-daemon-embeddable-2.0.0.jar:/Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar:/Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar -Djava.awt.headless=true -Djava.rmi.server.hostname=127.0.0.1 -Xmx1g -XX:MaxMetaspaceSize=384m -XX:ReservedCodeCacheSize=320m -Dkotlin.environment.keepalive -ea -XX:+UseCodeCacheFlushing -XX:+UseParallelGC --add-exports java.base/sun.nio.ch=ALL-UNNAMED org.jetbrains.kotlin.daemon.KotlinCompileDaemon --daemon-runFilesPath /Users/ldd/Library/Application Support/kotlin/daemon --daemon-autoshutdownIdleSeconds=7200 --daemon-compilerClasspath /Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-compiler-embeddable/2.0.0/1de310de3446414381282ffc46c3ed3919a4d1da/kotlin-compiler-embeddable-2.0.0.jar:/Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/2.0.0/b48df2c4aede9586cc931ead433bc02d6fd7879e/kotlin-stdlib-2.0.0.jar:/Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-script-runtime/2.0.0/fdc27dd047d592fa41d2dfa21e7621287a361612/kotlin-script-runtime-2.0.0.jar:/Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-reflect/1.6.10/1cbe9c92c12a94eea200d23c2bbaedaf3daf5132/kotlin-reflect-1.6.10.jar:/Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-daemon-embeddable/2.0.0/b39c612768614c4428c96ee9c65477181fffe9d/kotlin-daemon-embeddable-2.0.0.jar:/Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains.intellij.deps/trove4j/1.0.20200330/3afb14d5f9ceb459d724e907a21145e8ff394f02/trove4j-1.0.20200330.jar:/Users/ldd/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar
+i: #1 retrying connecting to the daemon
+Options for KOTLIN DAEMON: IncrementalCompilationOptions(super=CompilationOptions(compilerMode=INCREMENTAL_COMPILER, targetPlatform=JVM, reportCategories=[0, 3], reportSeverity=2, requestedCompilationResults=[0], kotlinScriptExtensions=[]), areFileChangesKnown=true, modifiedFiles=[/Users/hlx/github/SalvoRsTool/src/main/kotlin/shop/itbug/salvorstool/dialog/GenerateDtoDialog.kt], deletedFiles=[], classpathChanges=NoChanges, workingDir=/Users/hlx/github/SalvoRsTool/build/kotlin/compileKotlin/cacheable, multiModuleICSettings=MultiModuleICSettings(buildHistoryFile=/Users/hlx/github/SalvoRsTool/build/kotlin/compileKotlin/local-state/build-history.bin, useModuleDetection=false), usePreciseJavaTracking=true, icFeatures=IncrementalCompilationFeatures(withAbiSnapshot=false, preciseCompilationResultsBackup=true, keepIncrementalCompilationCachesInMemory=true, enableUnsafeIncrementalCompilationForMultiplatform=false), outputFiles=[/Users/hlx/github/SalvoRsTool/build/classes/kotlin/main, /Users/hlx/github/SalvoRsTool/build/kotlin/compileKotlin/cacheable, /Users/hlx/github/SalvoRsTool/build/kotlin/compileKotlin/local-state])
+Finished executing kotlin compiler using DAEMON strategy
+Stored cache entry for task ':compileKotlin' with cache key 43d36ab722cd96c12bf36b3b30f3c893
+
+> Task :initializeIntellijPlatformPlugin
+[org.jetbrains.intellij.platform] Cannot parse the provided input as org.jetbrains.intellij.platform.gradle.models.MavenMetadata.
+Please file an issue attaching the content and exception message to: https://github.com/jetbrains/intellij-platform-gradle-plugin/issues/new
+
+## Model:
+```
+org.jetbrains.intellij.platform.gradle.models.MavenMetadata
+```
+
+## Content:
+```
+
+```
+
+## Exception:
+```
+nl.adaptivity.xmlutil.XmlException: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: 文件提前结束。
+        at nl.adaptivity.xmlutil.StAXReader.next(StAXReader.kt:160)
+        at nl.adaptivity.xmlutil.XmlReaderUtil__XmlReaderKt.skipPreamble(XmlReader.kt:388)
+        at nl.adaptivity.xmlutil.XmlReaderUtil.skipPreamble(Unknown Source)
+        at nl.adaptivity.xmlutil.serialization.XML.decodeFromReader(XML.kt:415)
+        at nl.adaptivity.xmlutil.serialization.XML.decodeFromReader$default(XML.kt:407)
+        at nl.adaptivity.xmlutil.serialization.XML.decodeFromString(XML.kt:354)
+        at nl.adaptivity.xmlutil.serialization.XML$Companion.decodeFromString(XML.kt:812)
+        at org.jetbrains.intellij.platform.gradle.models.CoordinatesKt.resolveLatestVersion(Coordinates.kt:40)
+        at org.jetbrains.intellij.platform.gradle.providers.LatestPluginVersionValueSource.obtain(LatestPluginVersionValueSource.kt:19)
+        at org.jetbrains.intellij.platform.gradle.providers.LatestPluginVersionValueSource.obtain(LatestPluginVersionValueSource.kt:14)
+        at org.gradle.api.internal.provider.DefaultValueSourceProviderFactory$LazilyObtainedValue.lambda$new$0(DefaultValueSourceProviderFactory.java:294)
+        at org.gradle.internal.model.CalculatedValueContainerFactory$SupplierBackedCalculator.calculateValue(CalculatedValueContainerFactory.java:78)
+        at org.gradle.internal.model.CalculatedValueContainer$CalculationState.lambda$attachValue$0(CalculatedValueContainer.java:228)
+        at org.gradle.internal.Try.ofFailable(Try.java:50)
+        at org.gradle.internal.model.CalculatedValueContainer$CalculationState.attachValue(CalculatedValueContainer.java:223)
+        at org.gradle.internal.model.CalculatedValueContainer.finalizeIfNotAlready(CalculatedValueContainer.java:194)
+        at org.gradle.internal.model.CalculatedValueContainer.finalizeIfNotAlready(CalculatedValueContainer.java:185)
+        at org.gradle.api.internal.provider.DefaultValueSourceProviderFactory$LazilyObtainedValue.obtain(DefaultValueSourceProviderFactory.java:309)
+        at org.gradle.api.internal.provider.DefaultValueSourceProviderFactory$ValueSourceProvider.calculateOwnValue(DefaultValueSourceProviderFactory.java:261)
+        at org.gradle.api.internal.provider.AbstractMinimalProvider.calculateValue(AbstractMinimalProvider.java:115)
+        at org.gradle.api.internal.provider.TransformBackedProvider.calculateOwnValue(TransformBackedProvider.java:81)
+        at org.gradle.api.internal.provider.AbstractMinimalProvider.calculateValue(AbstractMinimalProvider.java:115)
+        at org.gradle.api.internal.provider.DefaultProperty.calculateValueFrom(DefaultProperty.java:157)
+        at org.gradle.api.internal.provider.DefaultProperty.calculateValueFrom(DefaultProperty.java:33)
+        at org.gradle.api.internal.provider.AbstractProperty.doCalculateValue(AbstractProperty.java:170)
+        at org.gradle.api.internal.provider.AbstractProperty.calculateOwnValue(AbstractProperty.java:163)
+        at org.gradle.api.internal.provider.AbstractMinimalProvider.calculateOwnPresentValue(AbstractMinimalProvider.java:80)
+        at org.gradle.api.internal.provider.AbstractMinimalProvider.get(AbstractMinimalProvider.java:100)
+        at org.jetbrains.intellij.platform.gradle.tasks.InitializeIntelliJPlatformPluginTask.checkPluginVersion(InitializeIntelliJPlatformPluginTask.kt:123)
+        at org.jetbrains.intellij.platform.gradle.tasks.InitializeIntelliJPlatformPluginTask.initialize(InitializeIntelliJPlatformPluginTask.kt:101)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+        at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
+        at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:58)
+        at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
+        at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
+        at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:244)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+        at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:229)
+        at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:212)
+        at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:195)
+        at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:162)
+        at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:105)
+        at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
+        at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:59)
+        at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:56)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+        at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:56)
+        at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
+        at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:42)
+        at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:75)
+        at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+        at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:50)
+        at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:28)
+        at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
+        at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
+        at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:61)
+        at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:26)
+        at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:69)
+        at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:46)
+        at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
+        at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
+        at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:189)
+        at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:75)
+        at org.gradle.internal.Either$Right.fold(Either.java:175)
+        at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:62)
+        at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:73)
+        at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:48)
+        at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:46)
+        at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:35)
+        at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:75)
+        at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:53)
+        at java.base/java.util.Optional.orElseGet(Optional.java:364)
+        at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:53)
+        at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:35)
+        at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+        at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+        at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:49)
+        at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:27)
+        at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:71)
+        at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:39)
+        at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
+        at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
+        at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:105)
+        at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:54)
+        at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:64)
+        at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
+        at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
+        at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:56)
+        at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
+        at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+        at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+        at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+        at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
+        at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
+        at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
+        at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
+        at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
+        at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
+        at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
+        at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
+        at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
+        at java.base/java.util.Optional.orElseGet(Optional.java:364)
+        at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
+        at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
+        at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
+        at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
+        at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
+        at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
+        at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
+        at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
+        at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+        at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+        at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+        at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+        at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+        at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+        at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+        at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+        at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+        at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+        at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+        at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+        at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+        at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+        at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+        at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+        at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+        at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+        at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+        at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+        at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: 文件提前结束。
+        at java.xml/com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:652)
+        at nl.adaptivity.xmlutil.StAXReader.next(StAXReader.kt:158)
+        ... 155 more
+```
+[org.jetbrains.intellij.platform] Failed to query the value of task ':initializeIntellijPlatformPlugin' property 'latestPluginVersion'.
+org.gradle.api.internal.provider.AbstractProperty$PropertyQueryException: Failed to query the value of task ':initializeIntellijPlatformPlugin' property 'latestPluginVersion'.
+        at org.gradle.api.internal.provider.AbstractProperty.doCalculateValue(AbstractProperty.java:173)
+        at org.gradle.api.internal.provider.AbstractProperty.calculateOwnValue(AbstractProperty.java:163)
+        at org.gradle.api.internal.provider.AbstractMinimalProvider.calculateOwnPresentValue(AbstractMinimalProvider.java:80)
+        at org.gradle.api.internal.provider.AbstractMinimalProvider.get(AbstractMinimalProvider.java:100)
+        at org.jetbrains.intellij.platform.gradle.tasks.InitializeIntelliJPlatformPluginTask.checkPluginVersion(InitializeIntelliJPlatformPluginTask.kt:123)
+        at org.jetbrains.intellij.platform.gradle.tasks.InitializeIntelliJPlatformPluginTask.initialize(InitializeIntelliJPlatformPluginTask.kt:101)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+        at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+        at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+        at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+        at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:125)
+        at org.gradle.api.internal.project.taskfactory.StandardTaskAction.doExecute(StandardTaskAction.java:58)
+        at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:51)
+        at org.gradle.api.internal.project.taskfactory.StandardTaskAction.execute(StandardTaskAction.java:29)
+        at org.gradle.api.internal.tasks.execution.TaskExecution$3.run(TaskExecution.java:244)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:29)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$1.execute(DefaultBuildOperationRunner.java:26)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.run(DefaultBuildOperationRunner.java:47)
+        at org.gradle.api.internal.tasks.execution.TaskExecution.executeAction(TaskExecution.java:229)
+        at org.gradle.api.internal.tasks.execution.TaskExecution.executeActions(TaskExecution.java:212)
+        at org.gradle.api.internal.tasks.execution.TaskExecution.executeWithPreviousOutputFiles(TaskExecution.java:195)
+        at org.gradle.api.internal.tasks.execution.TaskExecution.execute(TaskExecution.java:162)
+        at org.gradle.internal.execution.steps.ExecuteStep.executeInternal(ExecuteStep.java:105)
+        at org.gradle.internal.execution.steps.ExecuteStep.access$000(ExecuteStep.java:44)
+        at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:59)
+        at org.gradle.internal.execution.steps.ExecuteStep$1.call(ExecuteStep.java:56)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+        at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:56)
+        at org.gradle.internal.execution.steps.ExecuteStep.execute(ExecuteStep.java:44)
+        at org.gradle.internal.execution.steps.CancelExecutionStep.execute(CancelExecutionStep.java:42)
+        at org.gradle.internal.execution.steps.TimeoutStep.executeWithoutTimeout(TimeoutStep.java:75)
+        at org.gradle.internal.execution.steps.TimeoutStep.execute(TimeoutStep.java:55)
+        at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:50)
+        at org.gradle.internal.execution.steps.PreCreateOutputParentsStep.execute(PreCreateOutputParentsStep.java:28)
+        at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:67)
+        at org.gradle.internal.execution.steps.RemovePreviousOutputsStep.execute(RemovePreviousOutputsStep.java:37)
+        at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:61)
+        at org.gradle.internal.execution.steps.BroadcastChangingOutputsStep.execute(BroadcastChangingOutputsStep.java:26)
+        at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:69)
+        at org.gradle.internal.execution.steps.CaptureOutputsAfterExecutionStep.execute(CaptureOutputsAfterExecutionStep.java:46)
+        at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:40)
+        at org.gradle.internal.execution.steps.ResolveInputChangesStep.execute(ResolveInputChangesStep.java:29)
+        at org.gradle.internal.execution.steps.BuildCacheStep.executeWithoutCache(BuildCacheStep.java:189)
+        at org.gradle.internal.execution.steps.BuildCacheStep.lambda$execute$1(BuildCacheStep.java:75)
+        at org.gradle.internal.Either$Right.fold(Either.java:175)
+        at org.gradle.internal.execution.caching.CachingState.fold(CachingState.java:62)
+        at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:73)
+        at org.gradle.internal.execution.steps.BuildCacheStep.execute(BuildCacheStep.java:48)
+        at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:46)
+        at org.gradle.internal.execution.steps.StoreExecutionStateStep.execute(StoreExecutionStateStep.java:35)
+        at org.gradle.internal.execution.steps.SkipUpToDateStep.executeBecause(SkipUpToDateStep.java:75)
+        at org.gradle.internal.execution.steps.SkipUpToDateStep.lambda$execute$2(SkipUpToDateStep.java:53)
+        at java.base/java.util.Optional.orElseGet(Optional.java:364)
+        at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:53)
+        at org.gradle.internal.execution.steps.SkipUpToDateStep.execute(SkipUpToDateStep.java:35)
+        at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:37)
+        at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsFinishedStep.execute(MarkSnapshottingInputsFinishedStep.java:27)
+        at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:49)
+        at org.gradle.internal.execution.steps.ResolveIncrementalCachingStateStep.executeDelegate(ResolveIncrementalCachingStateStep.java:27)
+        at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:71)
+        at org.gradle.internal.execution.steps.AbstractResolveCachingStateStep.execute(AbstractResolveCachingStateStep.java:39)
+        at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:65)
+        at org.gradle.internal.execution.steps.ResolveChangesStep.execute(ResolveChangesStep.java:36)
+        at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:105)
+        at org.gradle.internal.execution.steps.ValidateStep.execute(ValidateStep.java:54)
+        at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:64)
+        at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
+        at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
+        at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:56)
+        at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
+        at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+        at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+        at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+        at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
+        at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
+        at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
+        at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
+        at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
+        at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
+        at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
+        at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
+        at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
+        at java.base/java.util.Optional.orElseGet(Optional.java:364)
+        at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
+        at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
+        at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
+        at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
+        at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
+        at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
+        at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
+        at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
+        at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+        at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+        at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+        at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+        at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+        at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+        at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+        at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+        at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+        at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+        at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+        at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+        at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+        at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+        at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+        at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+        at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+        at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+        at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+        at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+        at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+        at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.io.UncheckedIOException: nl.adaptivity.xmlutil.XmlException: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: 文件提前结束。
+        at org.gradle.internal.Try$Failure.get(Try.java:249)
+        at org.gradle.api.internal.provider.DefaultValueSourceProviderFactory$ValueSourceProvider.calculateOwnValue(DefaultValueSourceProviderFactory.java:261)
+        at org.gradle.api.internal.provider.AbstractMinimalProvider.calculateValue(AbstractMinimalProvider.java:115)
+        at org.gradle.api.internal.provider.TransformBackedProvider.calculateOwnValue(TransformBackedProvider.java:81)
+        at org.gradle.api.internal.provider.AbstractMinimalProvider.calculateValue(AbstractMinimalProvider.java:115)
+        at org.gradle.api.internal.provider.DefaultProperty.calculateValueFrom(DefaultProperty.java:157)
+        at org.gradle.api.internal.provider.DefaultProperty.calculateValueFrom(DefaultProperty.java:33)
+        at org.gradle.api.internal.provider.AbstractProperty.doCalculateValue(AbstractProperty.java:170)
+        ... 131 more
+Caused by: nl.adaptivity.xmlutil.XmlException: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: 文件提前结束。
+        at nl.adaptivity.xmlutil.StAXReader.next(StAXReader.kt:160)
+        at nl.adaptivity.xmlutil.XmlReaderUtil__XmlReaderKt.skipPreamble(XmlReader.kt:388)
+        at nl.adaptivity.xmlutil.XmlReaderUtil.skipPreamble(Unknown Source)
+        at nl.adaptivity.xmlutil.serialization.XML.decodeFromReader(XML.kt:415)
+        at nl.adaptivity.xmlutil.serialization.XML.decodeFromReader$default(XML.kt:407)
+        at nl.adaptivity.xmlutil.serialization.XML.decodeFromString(XML.kt:354)
+        at nl.adaptivity.xmlutil.serialization.XML$Companion.decodeFromString(XML.kt:812)
+        at org.jetbrains.intellij.platform.gradle.models.CoordinatesKt.resolveLatestVersion(Coordinates.kt:40)
+        at org.jetbrains.intellij.platform.gradle.providers.LatestPluginVersionValueSource.obtain(LatestPluginVersionValueSource.kt:19)
+        at org.jetbrains.intellij.platform.gradle.providers.LatestPluginVersionValueSource.obtain(LatestPluginVersionValueSource.kt:14)
+        at org.gradle.api.internal.provider.DefaultValueSourceProviderFactory$LazilyObtainedValue.lambda$new$0(DefaultValueSourceProviderFactory.java:294)
+        at org.gradle.internal.model.CalculatedValueContainerFactory$SupplierBackedCalculator.calculateValue(CalculatedValueContainerFactory.java:78)
+        at org.gradle.internal.model.CalculatedValueContainer$CalculationState.lambda$attachValue$0(CalculatedValueContainer.java:228)
+        at org.gradle.internal.Try.ofFailable(Try.java:50)
+        at org.gradle.internal.model.CalculatedValueContainer$CalculationState.attachValue(CalculatedValueContainer.java:223)
+        at org.gradle.internal.model.CalculatedValueContainer.finalizeIfNotAlready(CalculatedValueContainer.java:194)
+        at org.gradle.internal.model.CalculatedValueContainer.finalizeIfNotAlready(CalculatedValueContainer.java:185)
+        at org.gradle.api.internal.provider.DefaultValueSourceProviderFactory$LazilyObtainedValue.obtain(DefaultValueSourceProviderFactory.java:309)
+        ... 138 more
+Caused by: javax.xml.stream.XMLStreamException: ParseError at [row,col]:[1,1]
+Message: 文件提前结束。
+        at java.xml@17.0.11/com.sun.org.apache.xerces.internal.impl.XMLStreamReaderImpl.next(XMLStreamReaderImpl.java:652)
+        at nl.adaptivity.xmlutil.StAXReader.next(StAXReader.kt:158)
+        ... 155 more
+Resolve mutations for :generateManifest (Thread[Execution worker,5,main]) started.
+Resolve mutations for :patchPluginXml (Thread[included builds,5,main]) started.
+:generateManifest (Thread[Execution worker,5,main]) started.
+:patchPluginXml (Thread[included builds,5,main]) started.
+
+> Task :generateManifest UP-TO-DATE
+Build cache key for task ':generateManifest' is 5de462870c89bc81d50720a6d1273cea
+Skipping task ':generateManifest' as it is up-to-date.
+
+> Task :patchPluginXml UP-TO-DATE
+Build cache key for task ':patchPluginXml' is 238dccf5bf2e09939b2dcb745bf4f109
+Skipping task ':patchPluginXml' as it is up-to-date.
+Resolve mutations for :verifyPluginProjectConfiguration (Thread[included builds,5,main]) started.
+Resolve mutations for :processResources (Thread[Execution worker,5,main]) started.
+:verifyPluginProjectConfiguration (Thread[included builds,5,main]) started.
+:processResources (Thread[Execution worker,5,main]) started.
+
+> Task :verifyPluginProjectConfiguration UP-TO-DATE
+Build cache key for task ':verifyPluginProjectConfiguration' is 5a51ea43baa44fa9489dc90523a9feff
+Skipping task ':verifyPluginProjectConfiguration' as it is up-to-date.
+Resolve mutations for :compileJava (Thread[included builds,5,main]) started.
+:compileJava (Thread[included builds,5,main]) started.
+
+> Task :compileJava NO-SOURCE
+Skipping task ':compileJava' as it has no source files and no previous output files.
+
+> Task :processResources UP-TO-DATE
+Caching disabled for task ':processResources' because:
+  Not worth caching
+Skipping task ':processResources' as it is up-to-date.
+Resolve mutations for :classes (Thread[Execution worker,5,main]) started.
+:classes (Thread[Execution worker,5,main]) started.
+
+> Task :classes UP-TO-DATE
+Skipping task ':classes' as it has no actions.
+Resolve mutations for :instrumentCode (Thread[Execution worker,5,main]) started.
+:instrumentCode (Thread[Execution worker,5,main]) started.
+
+> Task :instrumentCode
+file or directory '/Users/hlx/github/SalvoRsTool/src/main/java', not found
+Build cache key for task ':instrumentCode' is 5ccfb76424e1b085cbc51a04abf3a50b
+Task ':instrumentCode' is not up-to-date because:
+  Input property 'classesDirs' file /Users/hlx/github/SalvoRsTool/build/classes/kotlin/main/shop/itbug/salvorstool/dialog/GenerateDtoDialog$1$1$1.class has changed.
+  Input property 'classesDirs' file /Users/hlx/github/SalvoRsTool/build/classes/kotlin/main/shop/itbug/salvorstool/dialog/GenerateDtoDialog$2$1$1.class has changed.
+  Input property 'classesDirs' file /Users/hlx/github/SalvoRsTool/build/classes/kotlin/main/shop/itbug/salvorstool/dialog/GenerateDtoDialog$3$1$1.class has changed.
+[org.jetbrains.intellij.platform] Compiling forms and instrumenting code with nullability preconditions
+[ant:instrumentIdeaExtensions] Added @NotNull assertions to 0 files
+Stored cache entry for task ':instrumentCode' with cache key 5ccfb76424e1b085cbc51a04abf3a50b
+Resolve mutations for :jar (Thread[Execution worker,5,main]) started.
+:jar (Thread[Execution worker,5,main]) started.
+
+> Task :jar
+Caching disabled for task ':jar' because:
+  Not worth caching
+Task ':jar' is not up-to-date because:
+  Input property 'rootSpec$1' file /Users/hlx/github/SalvoRsTool/build/classes/kotlin/main/shop/itbug/salvorstool/dialog/GenerateDtoDialog$1$1$1.class has changed.
+  Input property 'rootSpec$1' file /Users/hlx/github/SalvoRsTool/build/classes/kotlin/main/shop/itbug/salvorstool/dialog/GenerateDtoDialog$2$1$1.class has changed.
+  Input property 'rootSpec$1' file /Users/hlx/github/SalvoRsTool/build/classes/kotlin/main/shop/itbug/salvorstool/dialog/GenerateDtoDialog$3$1$1.class has changed.
+file or directory '/Users/hlx/github/SalvoRsTool/build/classes/java/main', not found
+Resolve mutations for :instrumentedJar (Thread[Execution worker,5,main]) started.
+:instrumentedJar (Thread[Execution worker,5,main]) started.
+
+> Task :instrumentedJar
+Build cache key for task ':instrumentedJar' is 95522361145d67e55aee9889c1cd5a6a
+Task ':instrumentedJar' is not up-to-date because:
+  Input property 'rootSpec$1' file /Users/hlx/github/SalvoRsTool/build/libs/SalvoRsTool-2.1.0-base.jar has changed.
+  Input property 'rootSpec$1' file /Users/hlx/github/SalvoRsTool/build/instrumented/instrumentCode/shop/itbug/salvorstool/dialog/GenerateDtoDialog$1$1$1.class has changed.
+  Input property 'rootSpec$1' file /Users/hlx/github/SalvoRsTool/build/instrumented/instrumentCode/shop/itbug/salvorstool/dialog/GenerateDtoDialog$2$1$1.class has changed.
+Stored cache entry for task ':instrumentedJar' with cache key 95522361145d67e55aee9889c1cd5a6a
+Resolve mutations for :composedJar (Thread[Execution worker,5,main]) started.
+:composedJar (Thread[Execution worker,5,main]) started.
+
+> Task :composedJar
+Build cache key for task ':composedJar' is d9f3f17818a2c15daa763f7a5b2f83c5
+Task ':composedJar' is not up-to-date because:
+  Input property 'rootSpec$1' file /Users/hlx/github/SalvoRsTool/build/libs/SalvoRsTool-2.1.0-instrumented.jar has changed.
+Stored cache entry for task ':composedJar' with cache key d9f3f17818a2c15daa763f7a5b2f83c5
+Resolve mutations for :prepareSandbox (Thread[Execution worker,5,main]) started.
+:prepareSandbox (Thread[Execution worker,5,main]) started.
+
+> Task :prepareSandbox
+Caching disabled for task ':prepareSandbox' because:
+  Not worth caching
+Task ':prepareSandbox' is not up-to-date because:
+  Input property 'pluginJar' file /Users/hlx/github/SalvoRsTool/build/libs/SalvoRsTool-2.1.0.jar has changed.
+  Input property 'rootSpec$1$1' file /Users/hlx/github/SalvoRsTool/build/libs/SalvoRsTool-2.1.0.jar has changed.
+[org.jetbrains.intellij.platform] Preparing sandbox
+[org.jetbrains.intellij.platform] sandboxConfigDirectory = /Users/hlx/github/SalvoRsTool/build/idea-sandbox/RR-2024.2/config
+[org.jetbrains.intellij.platform] sandboxPluginsDirectory = /Users/hlx/github/SalvoRsTool/build/idea-sandbox/RR-2024.2/plugins
+[org.jetbrains.intellij.platform] sandboxLogDirectory = /Users/hlx/github/SalvoRsTool/build/idea-sandbox/RR-2024.2/log
+[org.jetbrains.intellij.platform] sandboxSystemDirectory = /Users/hlx/github/SalvoRsTool/build/idea-sandbox/RR-2024.2/system
+Resolve mutations for :runIde (Thread[Execution worker,5,main]) started.
+Resolve mutations for :buildSearchableOptions (Thread[included builds,5,main]) started.
+:runIde (Thread[Execution worker,5,main]) started.
+:buildSearchableOptions (Thread[included builds,5,main]) started.
+
+> Task :buildSearchableOptions UP-TO-DATE
+Build cache key for task ':buildSearchableOptions' is 0e8e9f5a76be2367bd36208a4c5fea95
+Skipping task ':buildSearchableOptions' as it is up-to-date.
+Resolve mutations for :prepareJarSearchableOptions (Thread[included builds,5,main]) started.
+:prepareJarSearchableOptions (Thread[included builds,5,main]) started.
+
+> Task :prepareJarSearchableOptions
+Build cache key for task ':prepareJarSearchableOptions' is 67f47ec8a2e8f132789dcc6d023d61cf
+Task ':prepareJarSearchableOptions' is not up-to-date because:
+  Input property 'composedJarFile' file /Users/hlx/github/SalvoRsTool/build/libs/SalvoRsTool-2.1.0.jar has changed.
+  Input property 'libContainer' file /Users/hlx/github/SalvoRsTool/build/idea-sandbox/RR-2024.2/plugins/SalvoRsTool/lib/SalvoRsTool-2.1.0.jar has changed.
+Stored cache entry for task ':prepareJarSearchableOptions' with cache key 67f47ec8a2e8f132789dcc6d023d61cf
+Resolve mutations for :jarSearchableOptions (Thread[included builds,5,main]) started.
+:jarSearchableOptions (Thread[included builds,5,main]) started.
+
+> Task :jarSearchableOptions UP-TO-DATE
+Build cache key for task ':jarSearchableOptions' is e74fb8b088ff07c331f71cc64d286b60
+Skipping task ':jarSearchableOptions' as it is up-to-date.
+Resolve mutations for :buildPlugin (Thread[included builds,5,main]) started.
+:buildPlugin (Thread[included builds,5,main]) started.
+
+> Task :buildPlugin
+Caching disabled for task ':buildPlugin' because:
+  Zip based tasks do not benefit from caching
+Task ':buildPlugin' is not up-to-date because:
+  Input property 'rootSpec$1' file /Users/hlx/github/SalvoRsTool/build/idea-sandbox/RR-2024.2/plugins/SalvoRsTool/lib/SalvoRsTool-2.1.0.jar has changed.
+Resolve mutations for :verifyPlugin (Thread[included builds,5,main]) started.
+:verifyPlugin (Thread[included builds,5,main]) started.
+
+> Task :runIde
+Caching disabled for task ':runIde' because:
+  Task is untracked because: Should always run
+Task ':runIde' is not up-to-date because:
+  Task is untracked because: Should always run
+Starting process 'command '/Users/ldd/Applications/RustRover.app/Contents/jbr/Contents/Home/bin/java''. Working directory: /Users/ldd/Applications/RustRover.app/Contents Command: /Users/ldd/Applications/RustRover.app/Contents/jbr/Contents/Home/bin/java -Daether.connector.resumeDownloads=false -Dapple.awt.application.appearance=system -Dapple.awt.fileDialogForDirectories=true -Dapple.laf.useScreenMenuBar=true -Dide.no.platform.update=false -Didea.auto.reload.plugins=true -Didea.classpath.index.enabled=false -Didea.config.path=/Users/hlx/github/SalvoRsTool/build/idea-sandbox/RR-2024.2/config -Didea.is.internal=true -Didea.log.path=/Users/hlx/github/SalvoRsTool/build/idea-sandbox/RR-2024.2/log -Didea.paths.selector=RustRover2024.2 -Didea.platform.prefix=RustRover -Didea.plugin.in.sandbox.mode=true -Didea.plugins.path=/Users/hlx/github/SalvoRsTool/build/idea-sandbox/RR-2024.2/plugins -Didea.required.plugins.id=shop.itbug.SalvoRsTool -Didea.smooth.progress=false -Didea.system.path=/Users/hlx/github/SalvoRsTool/build/idea-sandbox/RR-2024.2/system -Didea.vendor.name=JetBrains -Dintellij.platform.runtime.repository.path=/Users/ldd/Applications/RustRover.app/Contents/modules/module-descriptors.jar -Djava.system.class.loader=com.intellij.util.lang.PathClassLoader -Djbr.catch.SIGABRT=true -Djdk.attach.allowAttachSelf=true -Djdk.http.auth.tunneling.disabledSchemes="" -Djdk.module.illegalAccess.silent=true -Djna.boot.library.path=/Users/ldd/Applications/RustRover.app/Contents/lib/jna/aarch64 -Djna.noclasspath=true -Djna.nosys=true -Dllm.ai.assistant.toolwindow.activation.on.start=false -Dplugin.path=/Users/hlx/github/SalvoRsTool/build/idea-sandbox/RR-2024.2/plugins/SalvoRsTool -Dpty4j.preferred.native.folder=/Users/ldd/Applications/RustRover.app/Contents/lib/pty4j -Dsplash=true -Dsun.io.useCanonCaches=false -Dsun.java2d.metal=true -DtransferSettings.vscode.onlyCargoToml=true -XX:+AllowEnhancedClassRedefinition -XX:+HeapDumpOnOutOfMemoryError -XX:-OmitStackTraceInFastThrow -XX:+IgnoreUnrecognizedVMOptions -XX:MaxJavaStackTraceDepth=10000 -XX:CICompilerCount=2 -XX:ReservedCodeCacheSize=512m -XX:+UnlockDiagnosticVMOptions -XX:TieredOldPercentage=100000 --add-opens=java.base/java.io=ALL-UNNAMED --add-opens=java.base/java.lang=ALL-UNNAMED --add-opens=java.base/java.lang.ref=ALL-UNNAMED --add-opens=java.base/java.lang.reflect=ALL-UNNAMED --add-opens=java.base/java.net=ALL-UNNAMED --add-opens=java.base/java.nio=ALL-UNNAMED --add-opens=java.base/java.nio.charset=ALL-UNNAMED --add-opens=java.base/java.text=ALL-UNNAMED --add-opens=java.base/java.time=ALL-UNNAMED --add-opens=java.base/java.util=ALL-UNNAMED --add-opens=java.base/java.util.concurrent=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.atomic=ALL-UNNAMED --add-opens=java.base/java.util.concurrent.locks=ALL-UNNAMED --add-opens=java.base/jdk.internal.vm=ALL-UNNAMED --add-opens=java.base/sun.net.dns=ALL-UNNAMED --add-opens=java.base/sun.nio.ch=ALL-UNNAMED --add-opens=java.base/sun.nio.fs=ALL-UNNAMED --add-opens=java.base/sun.security.ssl=ALL-UNNAMED --add-opens=java.base/sun.security.util=ALL-UNNAMED --add-opens=java.desktop/com.apple.eawt=ALL-UNNAMED --add-opens=java.desktop/com.apple.eawt.event=ALL-UNNAMED --add-opens=java.desktop/com.apple.laf=ALL-UNNAMED --add-opens=java.desktop/com.sun.java.swing=ALL-UNNAMED --add-opens=java.desktop/java.awt=ALL-UNNAMED --add-opens=java.desktop/java.awt.dnd.peer=ALL-UNNAMED --add-opens=java.desktop/java.awt.event=ALL-UNNAMED --add-opens=java.desktop/java.awt.font=ALL-UNNAMED --add-opens=java.desktop/java.awt.image=ALL-UNNAMED --add-opens=java.desktop/java.awt.peer=ALL-UNNAMED --add-opens=java.desktop/javax.swing=ALL-UNNAMED --add-opens=java.desktop/javax.swing.plaf.basic=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text=ALL-UNNAMED --add-opens=java.desktop/javax.swing.text.html=ALL-UNNAMED --add-opens=java.desktop/sun.awt=ALL-UNNAMED --add-opens=java.desktop/sun.awt.datatransfer=ALL-UNNAMED --add-opens=java.desktop/sun.awt.image=ALL-UNNAMED --add-opens=java.desktop/sun.font=ALL-UNNAMED --add-opens=java.desktop/sun.java2d=ALL-UNNAMED --add-opens=java.desktop/sun.lwawt=ALL-UNNAMED --add-opens=java.desktop/sun.lwawt.macosx=ALL-UNNAMED --add-opens=java.desktop/sun.swing=ALL-UNNAMED --add-opens=java.management/sun.management=ALL-UNNAMED --add-opens=jdk.attach/sun.tools.attach=ALL-UNNAMED --add-opens=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED --add-opens=jdk.internal.jvmstat/sun.jvmstat.monitor=ALL-UNNAMED --add-opens=jdk.jdi/com.sun.tools.jdi=ALL-UNNAMED -Xms128m -Xmx2048m -Dfile.encoding=UTF-8 -Duser.country=CN -Duser.language=zh -Duser.variant -ea -cp /Users/ldd/Applications/RustRover.app/Contents/lib/platform-loader.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/util-8.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/util.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/app-client.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/util_rt.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/product.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/opentelemetry.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/app.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/product-client.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/lib-client.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/stats.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/jps-model.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/external-system-rt.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/rd.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/bouncy-castle.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/protobuf.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/forms_rt.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/lib.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/externalProcess-rt.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/groovy.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/annotations.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/jsch-agent.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/nio-fs.jar:/Users/ldd/Applications/RustRover.app/Contents/lib/trove.jar:/Users/ldd/Applications/RustRover.app/Contents/jbr/Contents/Home/lib/tools com.intellij.idea.Main
+Successfully started process 'command '/Users/ldd/Applications/RustRover.app/Contents/jbr/Contents/Home/bin/java''
+2024-08-26 15:58:47,547 [   2220]   WARN - #c.i.o.a.Application - No URL bundle (CFBundleURLTypes) is defined in the main bundle.
+To be able to open external links, specify protocols in the app layout section of the build file.
+Example: args.urlSchemes = ["your-protocol"] will handle following links: your-protocol://open?file=file&line=line
+2024-08-26 15:58:48,228 [   2901]   WARN - c.i.o.u.r.overrides - Conflicting registry key definition for key clion.wsl.sleep.timeout: it was defined by plugin com.intellij.nativeDebug but redefined by plugin com.jetbrains.rust. Consider adding overrides="true" for one of the plugins, see the documentation for com.intellij.openapi.util.registry.RegistryKeyBean.overrides for more details.
+2024-08-26 15:58:52,959 [   7632]   WARN - #c.i.s.ComponentManagerImpl - `preload=NOT_HEADLESS` must be used only for core services (service=com.jetbrains.rdserver.toolWindow.BackendServerToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-08-26 15:58:52,959 [   7632]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendUserManager, plugin=com.jetbrains.codeWithMe)
+2024-08-26 15:58:52,960 [   7633]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.ports.CwmPortForwardingToolWindowManager, plugin=com.jetbrains.codeWithMe)
+2024-08-26 15:58:52,960 [   7633]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.users.BackendCWMUserFocusHost, plugin=com.jetbrains.codeWithMe)
+2024-08-26 15:58:52,960 [   7633]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeManagerService, plugin=com.jetbrains.codeWithMe)
+2024-08-26 15:58:52,960 [   7633]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendProjectViewSync, plugin=com.jetbrains.codeWithMe)
+2024-08-26 15:58:52,960 [   7633]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeEditorsHost, plugin=com.jetbrains.codeWithMe)
+2024-08-26 15:58:52,960 [   7633]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.BackendFollowMeDebuggerHost, plugin=com.jetbrains.codeWithMe)
+2024-08-26 15:58:52,960 [   7633]   WARN - #c.i.s.ComponentManagerImpl - `preload=TRUE` must be used only for core services (service=com.intellij.cwm.plugin.following.FollowMeLookupSynchronizer, plugin=com.jetbrains.codeWithMe)
+2024-08-26 15:58:55,147 [   9820]   WARN - #c.i.u.t.AbstractTreeNodeVisitor - unexpected component class com.intellij.ide.util.treeView.CachedTreePresentationNode
+2024-08-26 15:58:55,154 [   9827]   WARN - #c.i.u.t.AbstractTreeNodeVisitor - unexpected component class com.intellij.ide.util.treeView.CachedTreePresentationNode
+2024-08-26 15:58:55,155 [   9828]   WARN - #c.i.u.t.AbstractTreeNodeVisitor - unexpected component class com.intellij.ide.util.treeView.CachedTreePresentationNode
+2024-08-26 15:58:55,156 [   9829]   WARN - #c.i.u.t.AbstractTreeNodeVisitor - unexpected component class com.intellij.ide.util.treeView.CachedTreePresentationNode
+2024-08-26 15:58:55,158 [   9831]   WARN - #c.i.u.t.AbstractTreeNodeVisitor - unexpected component class com.intellij.ide.util.treeView.CachedTreePresentationNode
+2024-08-26 15:58:55,182 [   9855]   WARN - #c.i.u.t.AbstractTreeNodeVisitor - unexpected component class com.intellij.ide.util.treeView.CachedTreePresentationNode
+2024-08-26 15:58:56,203 [  10876]   WARN - #git4idea.repo.GitCommitTemplateTracker - Empty or blank commit template detected for repository /Users/hlx/github/d_blog/admin-antd by path /Users/ldd/.stCommitMsg
+2024-08-26 15:58:56,246 [  10919]   WARN - #git4idea.annotate.GitAnnotationProvider - [d_blog] not a git repository (or any of the parent directories): .git
+com.intellij.openapi.vcs.VcsException: [d_blog] not a git repository (or any of the parent directories): .git
+        at git4idea.commands.GitCommandResult.throwOnError(GitCommandResult.java:172)
+        at git4idea.commands.GitCommandResult.getOutputOrThrow(GitCommandResult.java:156)
+        at git4idea.history.GitHistoryUtils.getCurrentRevision(GitHistoryUtils.java:194)
+        at git4idea.annotate.GitAnnotationProvider.getLastRevision(GitAnnotationProvider.java:521)
+        at git4idea.annotate.GitAnnotationProvider.getPathAndRevision(GitAnnotationProvider.java:503)
+        at git4idea.annotate.GitAnnotationProvider.populateCache(GitAnnotationProvider.java:474)
+        at com.intellij.openapi.vcs.annotate.AnnotationsPreloader$schedulePreloading$1.doRun(AnnotationsPreloader.kt:57)
+        at com.intellij.openapi.progress.util.BackgroundTaskUtil.lambda$runUnderDisposeAwareIndicator$15(BackgroundTaskUtil.java:371)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcess$2(CoreProgressManager.java:217)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$executeProcessUnderProgress$13(CoreProgressManager.java:660)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:735)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.computeUnderProgress(CoreProgressManager.java:691)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:659)
+        at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:79)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:202)
+        at com.intellij.openapi.progress.util.BackgroundTaskUtil.runUnderDisposeAwareIndicator(BackgroundTaskUtil.java:366)
+        at com.intellij.openapi.progress.util.BackgroundTaskUtil.runUnderDisposeAwareIndicator(BackgroundTaskUtil.java:349)
+        at com.intellij.util.ui.update.DisposableUpdate.run(DisposableUpdate.java:19)
+        at com.intellij.util.ui.update.MergingUpdateQueue.execute(MergingUpdateQueue.java:366)
+        at com.intellij.util.ui.update.MergingUpdateQueue.execute(MergingUpdateQueue.java:356)
+        at com.intellij.util.ui.update.MergingUpdateQueue.doFlush(MergingUpdateQueue.java:313)
+        at com.intellij.util.ui.update.MergingUpdateQueue.flush(MergingUpdateQueue.java:295)
+        at com.intellij.util.ui.update.MergingUpdateQueue.run(MergingUpdateQueue.java:262)
+        at com.intellij.util.Alarm$Request.lambda$runSafely$0(Alarm.java:371)
+        at com.intellij.util.concurrency.ChildContext$runAsCoroutine$1.invoke(propagation.kt:92)
+        at com.intellij.util.concurrency.ChildContext$runAsCoroutine$1.invoke(propagation.kt:92)
+        at com.intellij.util.concurrency.ChildContext.runAsCoroutine(propagation.kt:97)
+        at com.intellij.util.concurrency.ChildContext.runAsCoroutine(propagation.kt:92)
+        at com.intellij.util.Alarm$Request.lambda$runSafely$1(Alarm.java:369)
+        at com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:255)
+        at com.intellij.util.Alarm$Request.runSafely(Alarm.java:368)
+        at com.intellij.util.Alarm$Request.run(Alarm.java:356)
+        at com.intellij.util.concurrency.Propagation.contextAwareCallable$lambda$2(propagation.kt:383)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at com.intellij.util.concurrency.SchedulingWrapper$MyScheduledFutureTask.run(SchedulingWrapper.java:272)
+        at com.intellij.util.concurrency.BoundedTaskExecutor.doRun(BoundedTaskExecutor.java:249)
+        at com.intellij.util.concurrency.BoundedTaskExecutor.access$200(BoundedTaskExecutor.java:30)
+        at com.intellij.util.concurrency.BoundedTaskExecutor$1.executeFirstTaskAndHelpQueue(BoundedTaskExecutor.java:227)
+        at com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:218)
+        at com.intellij.util.concurrency.BoundedTaskExecutor$1.run(BoundedTaskExecutor.java:212)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:735)
+        at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:732)
+        at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+        at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:732)
+        at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-26 15:58:56,253 [  10926]   WARN - #git4idea.repo.GitCommitTemplateTracker - Empty or blank commit template detected for repository /Users/hlx/github/d_blog by path /Users/ldd/.stCommitMsg
+2024-08-26 15:58:56,318 [  10991]   WARN - #git4idea.stash.GitStashTracker - [d_blog] not a git repository (or any of the parent directories): .git
+com.intellij.openapi.vcs.VcsException: [d_blog] not a git repository (or any of the parent directories): .git
+        at git4idea.commands.GitCommandResult.throwOnError(GitCommandResult.java:172)
+        at git4idea.stash.GitStashUtils.loadStashStack(GitStashUtils.kt:375)
+        at git4idea.stash.GitStashTracker.scheduleRefresh$lambda$2(GitStashTracker.kt:69)
+        at com.intellij.util.ui.update.DisposableUpdate$1.doRun(DisposableUpdate.java:31)
+        at com.intellij.openapi.progress.util.BackgroundTaskUtil.lambda$runUnderDisposeAwareIndicator$15(BackgroundTaskUtil.java:371)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcess$2(CoreProgressManager.java:217)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$executeProcessUnderProgress$13(CoreProgressManager.java:660)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:735)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.computeUnderProgress(CoreProgressManager.java:691)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:659)
+        at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:79)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:202)
+        at com.intellij.openapi.progress.util.BackgroundTaskUtil.runUnderDisposeAwareIndicator(BackgroundTaskUtil.java:366)
+        at com.intellij.openapi.progress.util.BackgroundTaskUtil.runUnderDisposeAwareIndicator(BackgroundTaskUtil.java:349)
+        at com.intellij.util.ui.update.DisposableUpdate.run(DisposableUpdate.java:19)
+        at com.intellij.util.ui.update.MergingUpdateQueue.execute(MergingUpdateQueue.java:366)
+        at com.intellij.util.ui.update.MergingUpdateQueue.execute(MergingUpdateQueue.java:356)
+        at com.intellij.util.ui.update.MergingUpdateQueue.doFlush(MergingUpdateQueue.java:313)
+        at com.intellij.util.ui.update.MergingUpdateQueue.flush(MergingUpdateQueue.java:295)
+        at com.intellij.util.ui.update.MergingUpdateQueue.run(MergingUpdateQueue.java:262)
+        at com.intellij.util.Alarm$Request.lambda$runSafely$0(Alarm.java:371)
+        at com.intellij.util.concurrency.ChildContext$runAsCoroutine$1.invoke(propagation.kt:92)
+        at com.intellij.util.concurrency.ChildContext$runAsCoroutine$1.invoke(propagation.kt:92)
+        at com.intellij.util.concurrency.ChildContext.runAsCoroutine(propagation.kt:97)
+        at com.intellij.util.concurrency.ChildContext.runAsCoroutine(propagation.kt:92)
+        at com.intellij.util.Alarm$Request.lambda$runSafely$1(Alarm.java:369)
+        at com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:255)
+        at com.intellij.util.Alarm$Request.runSafely(Alarm.java:368)
+        at com.intellij.util.Alarm$Request.run(Alarm.java:356)
+        at com.intellij.util.concurrency.Propagation.contextAwareCallable$lambda$2(propagation.kt:383)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at com.intellij.util.concurrency.SchedulingWrapper$MyScheduledFutureTask.run(SchedulingWrapper.java:272)
+        at com.intellij.util.concurrency.BoundedTaskExecutor.doRun(BoundedTaskExecutor.java:249)
+        at com.intellij.util.concurrency.BoundedTaskExecutor.access$200(BoundedTaskExecutor.java:30)
+        at com.intellij.util.concurrency.BoundedTaskExecutor$1.executeFirstTaskAndHelpQueue(BoundedTaskExecutor.java:227)
+        at com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:218)
+        at com.intellij.util.concurrency.BoundedTaskExecutor$1.run(BoundedTaskExecutor.java:212)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:735)
+        at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:732)
+        at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+        at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:732)
+        at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-08-26 15:58:56,910 [  11583]   WARN - #git4idea.repo.GitUntrackedFilesHolder - [d_blog] not a git repository (or any of the parent directories): .git
+com.intellij.openapi.vcs.VcsException: [d_blog] not a git repository (or any of the parent directories): .git
+        at git4idea.commands.GitCommandResult.throwOnError(GitCommandResult.java:172)
+        at git4idea.commands.GitCommandResult.getOutputOrThrow(GitCommandResult.java:156)
+        at git4idea.index.GitIndexStatusUtilKt.getFileStatus(GitIndexStatusUtil.kt:83)
+        at git4idea.repo.GitUntrackedFilesHolder.refreshFiles(GitUntrackedFilesHolder.java:348)
+        at git4idea.repo.GitUntrackedFilesHolder.update(GitUntrackedFilesHolder.java:244)
+        at com.intellij.util.ui.update.DisposableUpdate$1.doRun(DisposableUpdate.java:31)
+        at com.intellij.openapi.progress.util.BackgroundTaskUtil.lambda$runUnderDisposeAwareIndicator$15(BackgroundTaskUtil.java:371)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$runProcess$2(CoreProgressManager.java:217)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.lambda$executeProcessUnderProgress$13(CoreProgressManager.java:660)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.registerIndicatorAndRun(CoreProgressManager.java:735)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.computeUnderProgress(CoreProgressManager.java:691)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.executeProcessUnderProgress(CoreProgressManager.java:659)
+        at com.intellij.openapi.progress.impl.ProgressManagerImpl.executeProcessUnderProgress(ProgressManagerImpl.java:79)
+        at com.intellij.openapi.progress.impl.CoreProgressManager.runProcess(CoreProgressManager.java:202)
+        at com.intellij.openapi.progress.util.BackgroundTaskUtil.runUnderDisposeAwareIndicator(BackgroundTaskUtil.java:366)
+        at com.intellij.openapi.progress.util.BackgroundTaskUtil.runUnderDisposeAwareIndicator(BackgroundTaskUtil.java:349)
+        at com.intellij.util.ui.update.DisposableUpdate.run(DisposableUpdate.java:19)
+        at com.intellij.util.ui.update.MergingUpdateQueue.execute(MergingUpdateQueue.java:366)
+        at com.intellij.util.ui.update.MergingUpdateQueue.execute(MergingUpdateQueue.java:356)
+        at com.intellij.util.ui.update.MergingUpdateQueue.doFlush(MergingUpdateQueue.java:313)
+        at com.intellij.util.ui.update.MergingUpdateQueue.flush(MergingUpdateQueue.java:295)
+        at com.intellij.util.ui.update.MergingUpdateQueue.run(MergingUpdateQueue.java:262)
+        at com.intellij.util.Alarm$Request.lambda$runSafely$0(Alarm.java:371)
+        at com.intellij.util.concurrency.ChildContext$runAsCoroutine$1.invoke(propagation.kt:92)
+        at com.intellij.util.concurrency.ChildContext$runAsCoroutine$1.invoke(propagation.kt:92)
+        at com.intellij.util.concurrency.ChildContext.runAsCoroutine(propagation.kt:97)
+        at com.intellij.util.concurrency.ChildContext.runAsCoroutine(propagation.kt:92)
+        at com.intellij.util.Alarm$Request.lambda$runSafely$1(Alarm.java:369)
+        at com.intellij.util.concurrency.QueueProcessor.runSafely(QueueProcessor.java:255)
+        at com.intellij.util.Alarm$Request.runSafely(Alarm.java:368)
+        at com.intellij.util.Alarm$Request.run(Alarm.java:356)
+        at com.intellij.util.concurrency.Propagation.contextAwareCallable$lambda$2(propagation.kt:383)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+        at com.intellij.util.concurrency.SchedulingWrapper$MyScheduledFutureTask.run(SchedulingWrapper.java:272)
+        at com.intellij.util.concurrency.BoundedTaskExecutor.doRun(BoundedTaskExecutor.java:249)
+        at com.intellij.util.concurrency.BoundedTaskExecutor.access$200(BoundedTaskExecutor.java:30)
+        at com.intellij.util.concurrency.BoundedTaskExecutor$1.executeFirstTaskAndHelpQueue(BoundedTaskExecutor.java:227)
+        at com.intellij.util.ConcurrencyUtil.runUnderThreadName(ConcurrencyUtil.java:218)
+        at com.intellij.util.concurrency.BoundedTaskExecutor$1.run(BoundedTaskExecutor.java:212)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+        at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:735)
+        at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1$1.run(Executors.java:732)
+        at java.base/java.security.AccessController.doPrivileged(AccessController.java:400)
+        at java.base/java.util.concurrent.Executors$PrivilegedThreadFactory$1.run(Executors.java:732)
+        at java.base/java.lang.Thread.run(Thread.java:1583)
+
+> Task :verifyPlugin
+Transforming RustRover-242.20224.421-aarch64.dmg (rustrover:RustRover:242.20224.421) with ExtractorTransformer
+Caching disabled for task ':verifyPlugin' because:
+  Task is untracked because: Should always run
+Task ':verifyPlugin' is not up-to-date because:
+  Task is untracked because: Should always run
+Starting process 'command '/Users/ldd/Library/Java/JavaVirtualMachines/jbrsdk_jcef-17.0.11/Contents/Home/bin/java''. Working directory: /Users/hlx/github/SalvoRsTool Command: /Users/ldd/Library/Java/JavaVirtualMachines/jbrsdk_jcef-17.0.11/Contents/Home/bin/java -Dfile.encoding=UTF-8 -Duser.country=CN -Duser.language=zh -Duser.variant -cp /Users/hlx/github/SalvoRsTool/cli.jar com.jetbrains.pluginverifier.PluginVerifierMain check-plugin -verification-reports-dir /Users/hlx/github/SalvoRsTool/build/reports/pluginVerifier -runtime-dir /Users/ldd/Applications/RustRover.app/Contents/jbr/Contents/Home -subsystems-to-check all -verification-reports-formats plain,html /Users/hlx/github/SalvoRsTool/build/distributions/SalvoRsTool-2.1.0.zip /Users/ldd/.gradle/caches/8.9/transforms/0af08a54e761b94983ca22a18a9bcd26/transformed/RustRover-242.20224.421-aarch64
+Successfully started process 'command '/Users/ldd/Library/Java/JavaVirtualMachines/jbrsdk_jcef-17.0.11/Contents/Home/bin/java''
+Starting the IntelliJ Plugin Verifier 1.373
+2024-08-26T15:59:04 [main] INFO  c.j.p.options.OptionsParser - The verification directory /Users/hlx/github/SalvoRsTool/build/reports/pluginVerifier is being deleted because it is not empty.
+Verification reports directory: /Users/hlx/github/SalvoRsTool/build/reports/pluginVerifier
+2024-08-26T15:59:11 [main] INFO  verification - Reading IDE /Users/ldd/.gradle/caches/8.9/transforms/0af08a54e761b94983ca22a18a9bcd26/transformed/RustRover-242.20224.421-aarch64
+2024-08-26T15:59:11 [main] INFO  c.j.p.options.OptionsParser - Reading IDE from /Users/ldd/.gradle/caches/8.9/transforms/0af08a54e761b94983ca22a18a9bcd26/transformed/RustRover-242.20224.421-aarch64
+2024-08-26T15:59:11 [main] INFO  c.j.p.options.OptionsParser - Using Java runtime from /Users/ldd/Applications/RustRover.app/Contents/jbr/Contents/Home
+2024-08-26T15:59:14 [main] INFO  verification - Reading plugin to check from /Users/hlx/github/SalvoRsTool/build/distributions/SalvoRsTool-2.1.0.zip
+2024-08-26T15:59:21 [main] INFO  verification - Task check-plugin parameters:
+Scheduled verifications (1):
+shop.itbug.SalvoRsTool:2.1.0 against RR-242.20224.421
+
+
+> Task :runIde
+2024-08-26 16:00:12,137 [  86810]   WARN - #c.i.o.a.ActionStub - ActionGroup should be registered using <group> tag: id="WelcomeScreen.CreateDirectoryProject" class="com.intellij.rustrover.projectWizard.RustRoverNewProjectStep"
+
+> Task :verifyPlugin
+2024-08-26T16:10:10 [main] INFO  verification - Finished 1 of 1 verifications (in 648.6 s): RR-242.20224.421 against shop.itbug.SalvoRsTool:2.1.0: Compatible
+Plugin shop.itbug.SalvoRsTool:2.1.0 against RR-242.20224.421: Compatible
+Dynamic Plugin Eligibility:
+    Plugin can probably be enabled or disabled without IDE restart
+
+2024-08-26T16:10:11 [main] INFO  verification - Total time spent downloading plugins and their dependencies: 0 ms
+2024-08-26T16:10:11 [main] INFO  verification - Total amount of plugins and dependencies downloaded: 0 B
+2024-08-26T16:10:11 [main] INFO  verification - Total amount of space used for plugins and dependencies: 695.61 MB
+2024-08-26T16:10:11 [main] INFO  verification - Verification reports for shop.itbug.SalvoRsTool:2.1.0 saved to /Users/hlx/github/SalvoRsTool/build/reports/pluginVerifier/RR-242.20224.421
+2024-08-26T16:10:11 [main] INFO  verification - Total time spent in plugin verification: 10 m 59 s 559 ms
+
+0 problems were found storing the configuration cache.
+
+See the complete report at file:///Users/hlx/github/SalvoRsTool/build/reports/configuration-cache/ba19zog47o5r58t5qlxvxz4vh/8p9jj1hy6i9uktd5u9gd6eytf/configuration-cache-report.html
+
+BUILD SUCCESSFUL in 14m 52s
+17 actionable tasks: 11 executed, 6 up-to-date
+Watched directory hierarchies: [/Users/hlx/github/SalvoRsTool]
+Configuration cache entry stored.

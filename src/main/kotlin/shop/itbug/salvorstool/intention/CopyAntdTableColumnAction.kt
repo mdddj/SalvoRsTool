@@ -3,18 +3,25 @@ package shop.itbug.salvorstool.intention
 import com.intellij.codeInsight.intention.IntentionAction
 import com.intellij.codeInsight.intention.PsiElementBaseIntentionAction
 import com.intellij.codeInsight.intention.preview.IntentionPreviewInfo
+import com.intellij.json.JsonLanguage
 import com.intellij.openapi.editor.Editor
 import com.intellij.openapi.project.Project
+import com.intellij.openapi.util.Iconable
 import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
 import org.rust.lang.core.psi.impl.RsStructItemImpl
+import shop.itbug.salvorstool.icons.MyIcon
+import shop.itbug.salvorstool.tool.Tools
 import shop.itbug.salvorstool.tool.copy
-import shop.itbug.salvorstool.tool.myManager
+import shop.itbug.salvorstool.tool.structItemManager
+import javax.swing.Icon
 
-class CopyAntdTableColumnAction : PsiElementBaseIntentionAction(), IntentionAction {
+
+///
+class CopyAntdTableColumnAction : PsiElementBaseIntentionAction(), IntentionAction, Iconable {
 
     override fun getFamilyName(): String {
-        return "SalvoRsTool: Copy Antd Table Column"
+        return "RustX: Copy Antd Table Column"
     }
 
     override fun getText(): String {
@@ -27,15 +34,21 @@ class CopyAntdTableColumnAction : PsiElementBaseIntentionAction(), IntentionActi
 
     override fun invoke(project: Project, editor: Editor?, element: PsiElement) {
         val rs = element.parent as? RsStructItemImpl ?: return
-        rs.myManager.getAntdTableColumnDefine.copy()
+        rs.structItemManager.getAntdTableColumnDefine.copy()
     }
 
     override fun generatePreview(project: Project, editor: Editor, file: PsiFile): IntentionPreviewInfo {
         val rsPsi = getElement(editor, file)?.parent as? RsStructItemImpl
         rsPsi?.let {
-            return IntentionPreviewInfo.Html("""<pre lang='json'>${rsPsi.myManager.getAntdTableColumnDefine}</pre>""".trimIndent())
+            val jsonText = rsPsi.structItemManager.getAntdTableColumnDefine
+            val html = Tools.highlightCodeToHtml(jsonText,project, JsonLanguage.INSTANCE)
+            return IntentionPreviewInfo.Html(html)
         }
         return IntentionPreviewInfo.EMPTY
+    }
+
+    override fun getIcon(p0: Int): Icon? {
+        return MyIcon.pluginIcon
     }
 
 }

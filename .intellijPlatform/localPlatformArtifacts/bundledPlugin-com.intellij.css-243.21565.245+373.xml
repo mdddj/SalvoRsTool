@@ -1,0 +1,13 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.css" revision="243.21565.245+373"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.10.2/transforms/f97d30e8a69bba1a1889050fbcb4fada/transformed/RustRover-2024.3-aarch64/plugins/css-impl" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.platform.images" rev="243.21565.245+841"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="243.21565.245+676"/>
+  </dependencies>
+</ivy-module>

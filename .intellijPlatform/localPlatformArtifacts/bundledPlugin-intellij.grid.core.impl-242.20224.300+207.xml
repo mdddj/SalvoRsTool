@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="intellij.grid.core.impl" revision="242.20224.300+207"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.9/transforms/af4af8baa1fabfc0fd0e16311951407b/transformed/ideaIU-2024.2-aarch64/plugins/grid-core-impl" type="directory" conf="default"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

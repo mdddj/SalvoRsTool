@@ -1,0 +1,24 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.jetbrains.rust" revision="243.16718.64+628"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.10.2/transforms/3983d665020591e8a77753251fbaa3a9/transformed/RustRover-243.16718.64-aarch64/plugins/intellij-rust" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="org.toml.lang" rev="243.16718.64+864"/>
+    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="243.16718.64+866"/>
+    <dependency org="bundledPlugin" name="com.intellij.nativeDebug" rev="243.16718.64+682"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="243.16718.64+327"/>
+    <dependency org="bundledPlugin" name="tanvd.grazi" rev="243.16718.64+638"/>
+    <dependency org="bundledPlugin" name="JavaScript" rev="243.16718.64+597"/>
+    <dependency org="bundledPlugin" name="com.intellij.completion.ml.ranking" rev="243.16718.64+437"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.terminal" rev="243.16718.64+2"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.completion.full.line" rev="243.16718.64+975"/>
+    <dependency org="bundledModule" name="intellij.platform.vcs.impl" rev="243.16718.64+256"/>
+    <dependency org="bundledModule" name="intellij.profiler.asyncOne" rev="243.16718.64+256"/>
+    <dependency org="bundledModule" name="intellij.profiler.common" rev="243.16718.64+256"/>
+    <dependency org="bundledModule" name="intellij.profiler.clion" rev="243.16718.64+256"/>
+  </dependencies>
+</ivy-module>

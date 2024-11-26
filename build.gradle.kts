@@ -1,15 +1,19 @@
 import org.jetbrains.changelog.Changelog
+import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
+import org.jetbrains.intellij.platform.gradle.models.ProductRelease
+import org.jetbrains.intellij.platform.gradle.tasks.VerifyPluginTask
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    id("org.jetbrains.kotlin.jvm") version "2.0.0"
-    id("org.jetbrains.intellij.platform") version "2.0.0-beta7"
+    id("org.jetbrains.kotlin.jvm") version "2.0.21"
+    id("org.jetbrains.intellij.platform") version "2.1.0"
     id("org.jetbrains.changelog") version "2.2.0"
 }
-
+var isRust = true
+val suf = if (isRust) "RR" else "IU"
 group = "shop.itbug"
-version = "1.8.0"
+version = "2.2.0.$suf"
 
 repositories {
     mavenCentral()
@@ -18,16 +22,32 @@ repositories {
         defaultRepositories()
         releases()
         marketplace()
+        jetbrainsRuntime()
     }
+}
+
+fun getChangelogVersion(): String {
+    val v = project.version as String
+    return v.removeSuffix(".$suf")
 }
 
 
 dependencies {
     intellijPlatform {
-        rustRover("2024.1.2")
-        bundledPlugins("com.jetbrains.rust","JavaScriptBase")
+
+        if (isRust) {
+            rustRover("2024.3")
+            bundledPlugins("JavaScript", "com.jetbrains.rust", "org.toml.lang", "com.intellij.modules.json")
+            plugins("com.intellij.database:243.15521.0")
+        } else {
+            local("/Applications/IntelliJ IDEA Ultimate.app")
+            plugins("com.jetbrains.rust:243.21565.245")
+            bundledPlugins("org.toml.lang", "JavaScript", "com.intellij.modules.json", "com.intellij.database")
+        }
         zipSigner()
         instrumentationTools()
+        pluginVerifier()
+        jetbrainsRuntime()
     }
 }
 
@@ -35,14 +55,10 @@ dependencies {
 val pushToken: String? = System.getenv("PUBLISH_TOKEN")
 
 tasks {
-    withType<JavaCompile> {
-        sourceCompatibility = "17"
-        targetCompatibility = "17"
-    }
 
     withType<KotlinCompile> {
         compilerOptions {
-            languageVersion.set(KotlinVersion.KOTLIN_2_0)
+            languageVersion.set(KotlinVersion.KOTLIN_2_1)
         }
     }
 
@@ -60,8 +76,8 @@ tasks {
 
 
     patchPluginXml {
-        sinceBuild.set("232")
-        untilBuild.set("242.*")
+        sinceBuild.set("243")
+        untilBuild.set("243.*")
         changeNotes.set(myChangeLog)
         pluginDescription.set(descText)
     }
@@ -79,29 +95,28 @@ tasks {
     }
 
     runIde {
+        autoReload = true
         jvmArgs = listOf("-XX:+AllowEnhancedClassRedefinition")
     }
 
-    test {
-        useJUnitPlatform()
+    verifyPlugin {
+        failureLevel = VerifyPluginTask.FailureLevel.ALL
     }
 
-    prepareSandbox {
-        doNotTrackState("---")
+    printProductsReleases {
+        channels = listOf(ProductRelease.Channel.RELEASE)
+        types = listOf(IntelliJPlatformType.RustRover)
     }
 
+
+    buildSearchableOptions {
+        enabled = false
+    }
 }
 
+println(getChangelogVersion())
 changelog {
-    version = project.version as String
+    version = getChangelogVersion()
     path = file("CHANGELOG.md").canonicalPath
     groups.empty()
-}
-
-dependencies {
-    implementation ("com.alibaba.fastjson2:fastjson2:2.0.51")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib:2.0.0")
-    implementation("org.jetbrains.kotlin:kotlin-reflect:2.0.0")
-    implementation("com.google.guava:guava:31.1-jre")
-    testImplementation("junit:junit:4.13.2")
 }

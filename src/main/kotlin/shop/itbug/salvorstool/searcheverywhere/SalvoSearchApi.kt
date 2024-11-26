@@ -21,7 +21,7 @@ class SalvoSearchApi : SearchEverywhereContributorFactory<SalvoApiItem> {
         return project != null
     }
 
-    private inner class MySearchEverywhereProvider(val project: Project) : SearchEverywhereContributor<SalvoApiItem> {
+    private inner class MySearchEverywhereProvider(project: Project) : SearchEverywhereContributor<SalvoApiItem> {
 
         var allApi: List<SalvoApiItem> = SalvoApiService.getInstance(project).getApiList()
 
@@ -51,7 +51,7 @@ class SalvoSearchApi : SearchEverywhereContributorFactory<SalvoApiItem> {
         }
 
         override fun processSelectedItem(selected: SalvoApiItem, modifiers: Int, searchText: String): Boolean {
-            selected.navTo(project)
+            selected.navTo()
             return true
         }
 

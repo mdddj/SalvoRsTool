@@ -1,0 +1,12 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.nativeDebug" revision="243.16718.64+211"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/Applications/RustRover.app/Contents/plugins/nativeDebug-plugin" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.platform.images" rev="243.16718.64+131"/>
+  </dependencies>
+</ivy-module>

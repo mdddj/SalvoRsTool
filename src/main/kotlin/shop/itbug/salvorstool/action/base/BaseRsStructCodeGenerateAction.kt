@@ -8,6 +8,7 @@ import org.rust.lang.core.psi.RsNamedFieldDecl
 import org.rust.lang.core.psi.RsStructItem
 import shop.itbug.salvorstool.tool.MyRsStructManager
 import shop.itbug.salvorstool.tool.myManager
+import shop.itbug.salvorstool.tool.structItemManager
 import shop.itbug.salvorstool.tool.tryGetRsStructPsiElement
 
 /**
@@ -29,7 +30,7 @@ abstract class BaseRsStructCodeGenerateAction : AnAction() {
     override fun actionPerformed(e: AnActionEvent) {
         val psiElement = e.tryGetRsStructPsiElement()!!
         val project = e.project!!
-        val manager: MyRsStructManager = psiElement.myManager
+        val manager: MyRsStructManager = psiElement.structItemManager
         val name: String? = manager.structName
         val props: List<RsNamedFieldDecl> = manager.fieldList
         val model = Model(project, e, psiElement, manager, name, props)
@@ -49,7 +50,7 @@ abstract class BaseRsStructCodeGenerateAction : AnAction() {
     }
 
     override fun getActionUpdateThread(): ActionUpdateThread {
-        return ActionUpdateThread.EDT
+        return ActionUpdateThread.BGT
     }
 
 

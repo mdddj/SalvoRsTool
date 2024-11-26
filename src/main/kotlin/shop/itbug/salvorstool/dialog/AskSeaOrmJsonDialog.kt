@@ -1,11 +1,6 @@
 package shop.itbug.salvorstool.dialog
 
-import com.alibaba.fastjson2.JSON
-import com.alibaba.fastjson2.JSONArray
-import com.alibaba.fastjson2.JSONObject
-import com.intellij.openapi.application.ApplicationManager
-import com.intellij.openapi.application.ModalityState
-import com.intellij.openapi.application.TransactionGuard
+import com.google.gson.*
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogPanel
 import com.intellij.openapi.ui.DialogWrapper
@@ -30,6 +25,7 @@ import java.awt.BorderLayout
 import java.awt.Dimension
 import javax.swing.*
 import javax.swing.border.Border
+
 
 private const val jsonEditorHeight = 400
 
@@ -119,19 +115,61 @@ class AskSeaOrmJsonDialog(private val p: Project) : DialogWrapper(p, true) {
                     .comment(MyI18n.getMessage("sea_orm_json_tips"))
             }
         }
+        myPanel.registerValidators(disposable)
         return myPanel
     }
 
     private fun inputIsJson(): Boolean {
         return run {
-            var isOk = JSON.isValidObject(jsonEditor.text)
+            val isOk = isValidJson(jsonEditor.text)
             if (!isOk) return@run false
-            val jsonObject = JSON.parseObject(jsonEditor.text)
-            val hasNest = jsonObject.values.any { it is JSONObject || it is JSONArray } //不能有嵌套的数据
-            isOk = hasNest.not()
-            return@run isOk
+            if(hasNestedArray(jsonEditor.text)) return@run false
+            return@run true
         }
     }
+
+    private fun isValidJson(json: String): Boolean {
+        try {
+            Gson().fromJson(json, Any::class.java)
+            return true
+        } catch (ex: JsonSyntaxException) {
+            return false
+        }
+    }
+
+    private fun hasNestedArray(json: String): Boolean {
+        try {
+            val jsonElement: JsonElement = JsonParser.parseString(json)
+            return checkForNestedArray(jsonElement)
+        } catch (ex: Exception) {
+            return false // 如果解析 JSON 失败，则返回 false
+        }
+    }
+
+    private fun checkForNestedArray(element: JsonElement): Boolean {
+        if (element.isJsonArray) {
+            val array: JsonArray = element.asJsonArray
+            for (arrayElement in array) {
+                if (arrayElement.isJsonArray || arrayElement.isJsonObject) {
+                    if (checkForNestedArray(arrayElement)) {
+                        return true
+                    }
+                }
+            }
+        } else if (element.isJsonObject) {
+            val obj: JsonObject = element.asJsonObject
+            for (key in obj.keySet()) {
+                val objElement: JsonElement = obj.get(key)
+                if (objElement.isJsonArray || objElement.isJsonObject) {
+                    if (checkForNestedArray(objElement)) {
+                        return true
+                    }
+                }
+            }
+        }
+        return false
+    }
+
 
     private fun validJson(): ValidationInfo? {
         return run {

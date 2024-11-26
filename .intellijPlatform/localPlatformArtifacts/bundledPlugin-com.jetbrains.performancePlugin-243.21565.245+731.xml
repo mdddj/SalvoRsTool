@@ -1,0 +1,13 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.jetbrains.performancePlugin" revision="243.21565.245+731"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.10.2/transforms/f97d30e8a69bba1a1889050fbcb4fada/transformed/RustRover-2024.3-aarch64/plugins/performanceTesting" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.platform.vcs.impl" rev="243.21565.245+59"/>
+    <dependency org="bundledModule" name="intellij.platform.vcs.log.impl" rev="243.21565.245+59"/>
+  </dependencies>
+</ivy-module>

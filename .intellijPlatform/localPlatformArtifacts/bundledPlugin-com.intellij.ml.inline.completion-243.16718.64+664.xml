@@ -1,0 +1,19 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.ml.inline.completion" revision="243.16718.64+664"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.10.2/transforms/3983d665020591e8a77753251fbaa3a9/transformed/RustRover-243.16718.64-aarch64/plugins/ml-inline-completion" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.css" rev="243.16718.64+336"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.less" rev="243.16718.64+609"/>
+    <dependency org="bundledPlugin" name="org.intellij.plugins.postcss" rev="243.16718.64+387"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.sass" rev="243.16718.64+916"/>
+    <dependency org="bundledPlugin" name="JavaScript" rev="243.16718.64+597"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.vue" rev="243.16718.64+967"/>
+    <dependency org="bundledPlugin" name="HtmlTools" rev="243.16718.64+135"/>
+    <dependency org="bundledModule" name="intellij.fullLine.python" rev="243.16718.64+256"/>
+  </dependencies>
+</ivy-module>

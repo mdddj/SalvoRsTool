@@ -12,6 +12,11 @@
 <br/>
 <h2>Features</h2>
 <ul>
+    <li>Sql
+        <ul>
+            <li>database table generate rust struct</li>
+        </ul>
+    </li>
     <li>Salvo
         <ul>
             <li>Generate DTO</li>
@@ -33,3 +38,9 @@
         </ul>
     </li>
 </ul>
+
+<h2>Example</h2>
+<div>
+    <h5>Sql generate struct</h5>
+    
+</div>

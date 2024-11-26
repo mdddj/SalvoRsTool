@@ -1,11 +1,17 @@
 <idea-plugin url="https://mdddj.github.io/SalvoRsToolDocument">
     <id>shop.itbug.SalvoRsTool</id>
-    <name>SalvoRsTool</name>
+    <name>RustX</name>
     <vendor email="hlxsmail@gmail.com" url="https://itbug.shop">梁典典</vendor>
     <depends>com.intellij.modules.platform</depends>
     <depends>com.jetbrains.rust</depends>
-    <depends>JavaScriptBase</depends>
+    <depends>JavaScript</depends>
+    <depends>org.toml.lang</depends>
+    <depends>com.intellij.database</depends>
+    <depends>com.intellij.modules.json</depends>
     <resource-bundle>messages.pluginBundle</resource-bundle>
+    <extensions defaultExtensionNs="org.jetbrains.kotlin">
+        <supportsKotlinPluginMode supportsK2="true" />
+    </extensions>
     <extensions defaultExtensionNs="com.intellij">
         <intentionAction>
             <className>shop.itbug.salvorstool.intention.CopyAntdTableColumnAction</className>
@@ -17,52 +23,120 @@
         </intentionAction>
         <toolWindow factoryClass="shop.itbug.salvorstool.window.SalvoWindow" id="Salvo" anchor="bottom"
                     icon="/icons/logo.svg"/>
-        <searchEverywhereContributor implementation="shop.itbug.salvorstool.searcheverywhere.SalvoSearchApi" />
+        <searchEverywhereContributor implementation="shop.itbug.salvorstool.searcheverywhere.SalvoSearchApi"/>
         <statusBarWidgetFactory implementation="shop.itbug.salvorstool.bar.BottomStatusBar" id="SalvoToolBar"/>
-        <webHelpProvider implementation="shop.itbug.salvorstool.help.MyWebHelpProvider" />
+        <webHelpProvider implementation="shop.itbug.salvorstool.help.MyWebHelpProvider"/>
+        <notificationGroup displayType="BALLOON" id="SeaOrmCliNotification"/>
+        <postStartupActivity implementation="shop.itbug.salvorstool.service.ProjectStartActivity"/>
     </extensions>
     <actions>
+        <!--salvo相关生成器-->
         <action id="GenerateDtoAction" class="shop.itbug.salvorstool.action.GenerateDtoAction">
-            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
         <action id="GenerateServiceAction" class="shop.itbug.salvorstool.action.GenerateServiceAction">
-            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </action>
-        <action id="GenerateRouterAction" class="shop.itbug.salvorstool.action.GenerateRouterAction" >
-            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+        <action id="GenerateRouterAction" class="shop.itbug.salvorstool.action.GenerateRouterAction">
         </action>
+
+
+        <!--ts相关生成器-->
+        <action id="GenerateHookFormAction" class="shop.itbug.salvorstool.action.GenerateHookFormAction"/>
         <action id="GenerateAntdFormAction" class="shop.itbug.salvorstool.action.GenerateAntdFormAction"
-                text="生成antd表单">
+                text="Generate Antd From"/>
+
+
+        <!--        antd form 生成器-->
+        <action id="AntdProFormGenerateAction"
+                class="shop.itbug.salvorstool.action.antdpro.AntdProFormGenerateAction" text="Antd Form Generate"
+                description="Antd form generate tool"/>
+
+        <group id="salvo_generate_group" text="RustX Code Generate" popup="true">
+            <separator text="Salvo"/>
+            <reference ref="GenerateDtoAction"/>
+            <reference ref="GenerateServiceAction"/>
+            <reference ref="GenerateRouterAction"/>
+<!--            <separator text="Typescript"/>-->
+<!--            <reference ref="GenerateHookFormAction"/>-->
+            <separator text="Antd" />
+            <reference ref="AntdProFormGenerateAction" />
+            <reference ref="GenerateAntdFormAction"/>
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
-        </action>
+        </group>
 
 
+        <!--salvo Windows操作条-->
         <action id="SalvoApiRefreshAction" class="shop.itbug.salvorstool.action.api.SalvoApiRefreshAction"/>
-        <group id="SalvoApiActionList">
-            <reference id="SalvoApiRefreshAction" />
-        </group>
 
-        <action id="AntdRequestCopyAction" class="shop.itbug.salvorstool.action.rightmenu.AntdRequestCopyAction" popup="true" />
+
+        <action id="AntdRequestCopyAction" class="shop.itbug.salvorstool.action.rightmenu.AntdRequestCopyAction"
+                popup="true"/>
         <action id="CopyUrlAction" class="shop.itbug.salvorstool.action.rightmenu.CopyUrlAction" popup="true"/>
+
+        <!--   导航到api router 函数     -->
+        <action id="SalvoApiNavigatorToRouteImplAction"
+                class="shop.itbug.salvorstool.action.rightmenu.SalvoApiNavigatorToRouteImplAction"
+        />
+        <action id="SalvoApiGoToDefineAction"
+                class="shop.itbug.salvorstool.action.rightmenu.SalvoApiGoToDefineAction"
+        />
+
         <group id="SalvoApiRightMenuActionGroup" popup="true">
-            <separator key="copy" />
-            <reference id="AntdRequestCopyAction" />
-            <reference id="CopyUrlAction" />
+            <separator key="copy"/>
+            <reference id="AntdRequestCopyAction"/>
+            <reference id="CopyUrlAction"/>
+            <separator key="nav_to_psi"/>
+            <reference id="SalvoApiNavigatorToRouteImplAction"/>
+            <reference id="SalvoApiGoToDefineAction"/>
         </group>
 
+        <group id="SalvoApiActionList" popup="false">
+            <reference id="SalvoApiRefreshAction"/>
+            <separator key="copy"/>
+            <reference id="AntdRequestCopyAction"/>
+            <reference id="CopyUrlAction"/>
+            <separator key="nav_to_psi"/>
+            <reference id="SalvoApiNavigatorToRouteImplAction"/>
+            <reference id="SalvoApiGoToDefineAction"/>
+        </group>
 
-        <action id="GenerateHookFormAction" class="shop.itbug.salvorstool.action.GenerateHookFormAction">
-            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
-        </action>
-
-
-
-<!--    底部操作    -->
-
-        <action id="JsonToSearOrm" class="shop.itbug.salvorstool.action.bar.JsonToSearOrm" text="Json To SeaOrm" icon="/icons/sea-orm.png"/>
+        <action id="JsonToSearOrm" class="shop.itbug.salvorstool.action.bar.JsonToSearOrm" text="Json To SeaOrm"
+                icon="/icons/sea-orm.png"/>
         <group id="SeaOrmStatusBarActions">
-            <reference id="JsonToSearOrm" />
+            <reference id="JsonToSearOrm"/>
         </group>
-<!--        底部操作end-->
+        <!--        底部操作end-->
+        <group id="SeamOrmCommandAction"
+               text="Sea Orm Commands" popup="true"
+               class="shop.itbug.salvorstool.action.seaorm.SeamOrmCommandActionGroup">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="WeighingNewGroup"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmInitAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmInitAction" text="Init"/>
+            <separator text="Generate"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmCreateTableFileAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmCreateTableFileAction" text="Create New"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunGenerateEntityAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunGenerateEntityAction" text="Entity"/>
+            <separator text="Migrate"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunUpAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunUpAction" text="Run Up"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunDownAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunDownAction" text="Run Down"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunCheckStatusAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunCheckStatusAction" text="Check Status"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunFreshAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunFreshAction" text="Fresh"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunRefreshAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunRefreshAction" text="Refresh"/>
+            <action id="shop.itbug.salvorstool.action.seaorm.SeaOrmRunResetAction"
+                    class="shop.itbug.salvorstool.action.seaorm.SeaOrmRunResetAction" text="Reset"/>
+        </group>
+
+
+        <action id="RustX.GenerateDatabaseAction" class="shop.itbug.salvorstool.action.database.GenerateDatabaseAction"
+        >
+            <add-to-group group-id="DatabaseView.AddActionGroupPopup"  />
+        </action>
     </actions>
+
+
 </idea-plugin>

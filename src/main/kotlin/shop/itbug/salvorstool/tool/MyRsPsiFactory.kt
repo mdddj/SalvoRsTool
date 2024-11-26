@@ -11,22 +11,22 @@ object MyRsPsiFactory {
 
     ///生成对象
     fun generateDto(type: GenerateDtoDialogResultEnum, psiElement: RsStructItemImpl): String {
-        psiElement.myManager.structName ?: throw MyRsPsiFactoryError("获取名称失败")
-        val tabName = psiElement.myManager.getTableName ?: throw MyRsPsiFactoryError("获取表明失败")
+        psiElement.structItemManager.structName ?: throw MyRsPsiFactoryError("获取名称失败")
+        val tabName = psiElement.structItemManager.getTableName ?: throw MyRsPsiFactoryError("获取表明失败")
         val generateStructName = type.getStructName(tabName)
         val outer = type.getOuterAttr()
         ///组装
         val sb = StringBuilder()
         sb.appendLine(outer)
         sb.appendLine("pub struct $generateStructName {")
-        var fields = psiElement.myManager.fieldList
+        var fields = psiElement.structItemManager.fieldList
         fields = type.getFields(fields)
         fields.forEach { field ->
             val pre = type.preview(field)
             if (pre != null) {
                 sb.appendLine(pre)
             }
-            sb.appendLine("    " + field.myManager.getSimpleText + if (field == fields.lastOrNull()) "" else ",")
+            sb.appendLine("    " + field.namedFieldManager.getSimpleText + if (field == fields.lastOrNull()) "" else ",")
         }
         sb.appendLine("}")
         return sb.toString()
@@ -40,17 +40,17 @@ object MyRsPsiFactory {
     fun generateServiceWithAdd(psiElement: RsStructItemImpl): String {
         val type = GenerateDtoDialogResultEnum.AddRequest
         val typeResponse = GenerateDtoDialogResultEnum.Response
-        val tabName = psiElement.myManager.getTableName ?: throw MyRsPsiFactoryError("获取表名失败")
+        val tabName = psiElement.structItemManager.getTableName ?: throw MyRsPsiFactoryError("获取表名失败")
         val structName = type.getStructName(tabName)
         val responseName = typeResponse.getStructName(tabName)
 
 
         ///生成字段
         val sb = StringBuilder()
-            val fs = psiElement.myManager.fieldList
+            val fs = psiElement.structItemManager.fieldList
         fs.forEach { field ->
             run {
-                val manager = field.myManager
+                val manager = field.namedFieldManager
                 if (manager.isPrimaryKey) {
                     sb.appendLine("\t\t\t${manager.name}: NotSet,")
                 } else {
@@ -65,15 +65,15 @@ object MyRsPsiFactory {
         }
 
         ///获取主键字段
-        val primaryField = psiElement.myManager.fieldList.find { it.myManager.isPrimaryKey }
+        val primaryField = psiElement.structItemManager.fieldList.find { it.namedFieldManager.isPrimaryKey }
             ?: throw MyRsPsiFactoryError("获取主键字段失败")
 
 
         ///获取除主键以外的其他字段
-        val fields = psiElement.myManager.fieldList.filter { !it.myManager.isPrimaryKey }
+        val fields = psiElement.structItemManager.fieldList.filter { !it.namedFieldManager.isPrimaryKey }
         val fsb = StringBuilder()
         fields.forEach { field -> run {
-            val m = field.myManager
+            val m = field.namedFieldManager
             if(fields.lastOrNull() == field){
                 fsb.append("\t\t${m.name}: req.${m.name}")
             }else{
@@ -94,7 +94,7 @@ $sb
     };
     let result = ${tabName.underlineToCamel.capitalizeFirstLetter()}::insert(model).exec(db).await?;
     Ok($responseName {
-        ${primaryField.myManager.name}: result.last_insert_id,
+        ${primaryField.namedFieldManager.name}: result.last_insert_id,
 $fsb
     })
 }""".trimIndent()
@@ -107,27 +107,27 @@ $fsb
     fun generateServiceByUpdate(psiElement: RsStructItemImpl): String {
         val type = GenerateDtoDialogResultEnum.UpdateRequest
         val typeResponse = GenerateDtoDialogResultEnum.Response
-        val tabName = psiElement.myManager.getTableName ?: throw MyRsPsiFactoryError("获取表名失败")
+        val tabName = psiElement.structItemManager.getTableName ?: throw MyRsPsiFactoryError("获取表名失败")
         val structName = type.getStructName(tabName)
         val responseName = typeResponse.getStructName(tabName)
 
         ///获取主键字段
-        val primaryField = psiElement.myManager.fieldList.find { it.myManager.isPrimaryKey }
+        val primaryField = psiElement.structItemManager.fieldList.find { it.namedFieldManager.isPrimaryKey }
             ?: throw MyRsPsiFactoryError("获取主键字段失败")
 
 
-        val fields = psiElement.myManager.fieldList.filter { !it.myManager.isPrimaryKey }
+        val fields = psiElement.structItemManager.fieldList.filter { !it.namedFieldManager.isPrimaryKey }
         val sb = StringBuilder()
         fields.forEach {
-            val m = it.myManager
+            val m = it.namedFieldManager
             sb.appendLine("\tmodel.${m.name} = Set(req.${it.name});")
         }
 
 
-        val responseFields = typeResponse.getFields(psiElement.myManager.fieldList)
+        val responseFields = typeResponse.getFields(psiElement.structItemManager.fieldList)
         val fsb = StringBuilder()
         responseFields.forEach {
-            val f = it.myManager.name
+            val f = it.namedFieldManager.name
             fsb.appendLine("\t\t$f: result.${f},")
         }
 
@@ -138,7 +138,7 @@ pub async fn update_$tabName(req: $structName) -> AppResult<$responseName> {
         .get()
         .ok_or(anyhow::anyhow!("Database connection failed."))?;
 
-    let find = ${tabName.underlineToCamel.capitalizeFirstLetter()}::find_by_id(req.${primaryField.myManager.name}).one(db).await?;
+    let find = ${tabName.underlineToCamel.capitalizeFirstLetter()}::find_by_id(req.${primaryField.namedFieldManager.name}).one(db).await?;
     if find.is_none() {
         return Err(anyhow::anyhow!("${tabName.underlineToCamel.capitalizeFirstLetter()} does not exist.").into());
     }
@@ -161,15 +161,15 @@ $fsb
      */
     fun generateServiceByDelete(psiElement: RsStructItemImpl): String {
 
-        val primaryField = psiElement.myManager.fieldList.find { it.myManager.isPrimaryKey }
+        val primaryField = psiElement.structItemManager.fieldList.find { it.namedFieldManager.isPrimaryKey }
             ?: throw MyRsPsiFactoryError("获取主键字段失败")
-        val tabName = psiElement.myManager.getTableName ?: throw MyRsPsiFactoryError("获取表名失败")
+        val tabName = psiElement.structItemManager.getTableName ?: throw MyRsPsiFactoryError("获取表名失败")
         val text = """
- pub async fn delete_$tabName(${primaryField.myManager.name}: ${primaryField.myManager.typeString}) -> AppResult<()> {
+ pub async fn delete_$tabName(${primaryField.namedFieldManager.name}: ${primaryField.namedFieldManager.typeString}) -> AppResult<()> {
      let db = DB
          .get()
          .ok_or(anyhow::anyhow!("Database connection failed."))?;
-     ${tabName.underlineToCamel.capitalizeFirstLetter()}::delete_by_id(${primaryField.myManager.name}).exec(db).await?;
+     ${tabName.underlineToCamel.capitalizeFirstLetter()}::delete_by_id(${primaryField.namedFieldManager.name}).exec(db).await?;
      Ok(())
  }
          """.trimIndent()
@@ -181,13 +181,13 @@ $fsb
      * 获取列表
      */
     fun generateServiceByAll(psiElement: RsStructItemImpl): String {
-        val tabName = psiElement.myManager.getTableName ?: throw MyRsPsiFactoryError("获取表名失败")
+        val tabName = psiElement.structItemManager.getTableName ?: throw MyRsPsiFactoryError("获取表名失败")
         val typeResponse = GenerateDtoDialogResultEnum.Response
         val typeStructName = typeResponse.getStructName(tabName)
-        val responseFields = typeResponse.getFields(psiElement.myManager.fieldList)
+        val responseFields = typeResponse.getFields(psiElement.structItemManager.fieldList)
         val fsb = StringBuilder()
         responseFields.forEach {
-            val f = it.myManager.name
+            val f = it.namedFieldManager.name
             fsb.appendLine("\t\t\t$f: r.${f},")
         }
         val text = """
@@ -213,11 +213,11 @@ $fsb
      * 获取路由
      */
     fun generateRouterFile(psiElement: RsStructItemImpl): String {
-        val tabName = psiElement.myManager.getTableName ?: throw MyRsPsiFactoryError("获取表名失败")
+        val tabName = psiElement.structItemManager.getTableName ?: throw MyRsPsiFactoryError("获取表名失败")
         val addReq = GenerateDtoDialogResultEnum.AddRequest.getStructName(tabName)
         val response = GenerateDtoDialogResultEnum.Response.getStructName(tabName)
         val updateReq = GenerateDtoDialogResultEnum.UpdateRequest.getStructName(tabName)
-        val primaryField = psiElement.myManager.primaryField ?: throw MyRsPsiFactoryError("获取主键失败")
+        val primaryField = psiElement.structItemManager.primaryField ?: throw MyRsPsiFactoryError("获取主键失败")
         val text = """
             use crate::{
                 app_writer::{AppResult, AppWriter},
@@ -231,7 +231,7 @@ $fsb
                 Request,
             };
             
-            //Router::with_path("/api/$tabName").get(get_${tabName}_all).post(post_add_$tabName).push(Router::with_path("<${primaryField.myManager.name}>").put(put_update_$tabName).delete(delete_$tabName))
+            //Router::with_path("/api/$tabName").get(get_${tabName}_all).post(post_add_$tabName).push(Router::with_path("<${primaryField.namedFieldManager.name}>").put(put_update_$tabName).delete(delete_$tabName))
             
             #[endpoint(tags("$tabName"))]
             pub async fn post_add_$tabName(new_$tabName: JsonBody<$addReq>) -> AppWriter<$response> {
@@ -247,8 +247,8 @@ $fsb
             }
 
             #[endpoint(tags("$tabName"))]
-            pub async fn delete_$tabName(${primaryField.myManager.name}: PathParam<${primaryField.myManager.typeString}>) -> AppWriter<()> {
-                let result = $tabName::delete_$tabName(${primaryField.myManager.name}.0).await;
+            pub async fn delete_$tabName(${primaryField.namedFieldManager.name}: PathParam<${primaryField.namedFieldManager.typeString}>) -> AppWriter<()> {
+                let result = $tabName::delete_$tabName(${primaryField.namedFieldManager.name}.0).await;
                 AppWriter(result)
             }
 
