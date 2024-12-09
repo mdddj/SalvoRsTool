@@ -1,7 +1,6 @@
 package shop.itbug.salvorstool.tool
 
 import com.intellij.lang.Language
-import com.intellij.lang.documentation.DocumentationSettings
 import com.intellij.lang.javascript.dialects.TypeScriptJSXLanguageDialect
 import com.intellij.openapi.application.runWriteAction
 import com.intellij.openapi.editor.richcopy.HtmlSyntaxInfoUtil
@@ -135,7 +134,7 @@ object Tools {
             lang,
             code,
             true,
-            DocumentationSettings.getHighlightingSaturation(true)
+            0.65f
         )
         return sb.toString()
     }

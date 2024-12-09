@@ -1,0 +1,14 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.profiler.ultimate" revision="IU-243.21565.193"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="intellij.profiler.ultimate" ext="jar" conf="default" url="lib/modules"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.profiler.common" rev="IU-243.21565.193"/>
+    <dependency org="bundledModule" name="intellij.profiler.ultimate.ideaAsyncProfiler" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="com.intellij.java" rev="IU-243.21565.193"/>
+  </dependencies>
+</ivy-module>

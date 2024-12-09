@@ -1,0 +1,11 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="intellij.grid.core.impl" revision="IU-243.21565.193"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="grid-core-impl" ext="jar" conf="default" url="plugins/grid-core-impl/lib"/>
+    <artifact name="jdbc-console-types" ext="jar" conf="default" url="plugins/grid-core-impl/lib"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

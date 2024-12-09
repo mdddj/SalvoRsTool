@@ -1,0 +1,13 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="TestNG-J" revision="IU-243.21565.193"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="testng-rt" ext="jar" conf="default" url="plugins/testng/lib"/>
+    <artifact name="testng-plugin" ext="jar" conf="default" url="plugins/testng/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="org.intellij.intelliLang" rev="IU-243.21565.193"/>
+  </dependencies>
+</ivy-module>

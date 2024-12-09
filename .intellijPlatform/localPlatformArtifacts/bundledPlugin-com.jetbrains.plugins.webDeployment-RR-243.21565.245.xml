@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.jetbrains.plugins.webDeployment" revision="RR-243.21565.245"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="webDeployment" ext="jar" conf="default" url="plugins/webDeployment/lib"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

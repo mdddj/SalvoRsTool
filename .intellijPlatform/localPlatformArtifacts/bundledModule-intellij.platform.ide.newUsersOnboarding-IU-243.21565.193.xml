@@ -1,0 +1,13 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.platform.ide.newUsersOnboarding" revision="IU-243.21565.193"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="intellij.platform.ide.newUsersOnboarding" ext="jar" conf="default" url="lib/modules"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.platform.ide.newUiOnboarding" rev="IU-243.21565.193"/>
+    <dependency org="bundledModule" name="intellij.platform.experiment" rev="IU-243.21565.193"/>
+  </dependencies>
+</ivy-module>

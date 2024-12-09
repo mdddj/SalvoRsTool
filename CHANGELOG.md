@@ -2,7 +2,7 @@
 
 ## Unreleased
 
-## [2.2.0] -2024-10-09
+## [2.2.0] -2024-11-27
 
 - Adaptation 2024.3
 - Optimize the use experience of salvo api window
@@ -10,7 +10,7 @@
 - changelog and images: <a href="https://mdddj.github.io/SalvoRsToolDocument/changelog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.html">Changelog</a>
 
 
-## [2.1.0] -2024-08-17
+### [2.1.0] -2024-08-17
 
 - Upgrade compatibility for 2024.2 (IU)
 - Fixed the problem of salvo api blank list in some scenarios

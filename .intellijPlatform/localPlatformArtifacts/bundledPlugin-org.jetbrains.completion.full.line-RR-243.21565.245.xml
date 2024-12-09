@@ -1,0 +1,29 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="org.jetbrains.completion.full.line" revision="RR-243.21565.245"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="fullLine" ext="jar" conf="default" url="plugins/fullLine/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.platform.inline.completion" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="com.intellij.ml.inline.completion" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.cpp" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.fullLine.css" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.css.less" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.less" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.css.postcss" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="org.intellij.plugins.postcss" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.css.sass" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.sass" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.fullLine.js" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.js.astro" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.js.svelte" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.js.vue" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.vue" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.fullLine.python" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.python.jupyter" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.rider" rev="RR-243.21565.245"/>
+  </dependencies>
+</ivy-module>

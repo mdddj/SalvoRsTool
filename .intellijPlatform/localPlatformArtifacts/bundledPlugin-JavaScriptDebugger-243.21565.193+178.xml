@@ -1,0 +1,16 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="JavaScriptDebugger" revision="243.21565.193+178"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.10.2/transforms/f9bfbda5e8ab3fe29185f796657b8172/transformed/ideaIU-2024.3-aarch64/plugins/javascript-debugger" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.jetbrains.plugins.webDeployment" rev="243.21565.193+158"/>
+    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="243.21565.193+101"/>
+    <dependency org="bundledPlugin" name="com.intellij.javaee" rev="243.21565.193+189"/>
+    <dependency org="bundledPlugin" name="com.intellij.jsp" rev="243.21565.193+950"/>
+    <dependency org="bundledModule" name="intellij.platform.dap" rev="243.21565.193+597"/>
+  </dependencies>
+</ivy-module>

@@ -1,0 +1,14 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.diagram" revision="IU-243.21565.193"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="uml-support" ext="jar" conf="default" url="plugins/uml/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.platform.navbar.frontend" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="com.intellij.java" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="com.intellij.properties" rev="IU-243.21565.193"/>
+  </dependencies>
+</ivy-module>

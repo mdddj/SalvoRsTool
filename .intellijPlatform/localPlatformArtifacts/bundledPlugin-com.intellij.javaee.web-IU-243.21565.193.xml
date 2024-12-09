@@ -1,0 +1,18 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.javaee.web" revision="IU-243.21565.193"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="javaee-web-impl" ext="jar" conf="default" url="plugins/javaee-web-impl/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.java" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="com.intellij.java-i18n" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="com.intellij.properties" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="com.intellij.css" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="com.intellij.javaee" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="Coverage" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="org.intellij.intelliLang" rev="IU-243.21565.193"/>
+  </dependencies>
+</ivy-module>

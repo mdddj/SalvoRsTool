@@ -1,0 +1,36 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.jetbrains.rust" revision="RR-243.21565.245"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="semver-jvm-1.4.2" ext="jar" conf="default" url="plugins/intellij-rust/lib"/>
+    <artifact name="JavaEWAH-1.2.3" ext="jar" conf="default" url="plugins/intellij-rust/lib"/>
+    <artifact name="jackson-dataformat-toml-2.14.2" ext="jar" conf="default" url="plugins/intellij-rust/lib"/>
+    <artifact name="intellij-rust-243.21565.245" ext="jar" conf="default" url="plugins/intellij-rust/lib"/>
+    <artifact name="commons-codec-1.16.0" ext="jar" conf="default" url="plugins/intellij-rust/lib"/>
+    <artifact name="full-line-inline-filter-rust-0.0.2" ext="jar" conf="default" url="plugins/intellij-rust/lib"/>
+    <artifact name="org.eclipse.jgit-6.9.0.202403050737-r" ext="jar" conf="default" url="plugins/intellij-rust/lib"/>
+    <artifact name="commons-text-1.12.0" ext="jar" conf="default" url="plugins/intellij-rust/lib"/>
+    <artifact name="antlr4-runtime-4.13.0" ext="jar" conf="default" url="plugins/intellij-rust/lib"/>
+    <artifact name="completion-ranking-rust-0.4.1" ext="jar" conf="default" url="plugins/intellij-rust/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.toml.json" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.platform.vcs.impl" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="org.toml.lang" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.profiler.asyncOne" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.profiler.common" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.profiler.clion" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="com.intellij.nativeDebug" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.platform.coverage" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="tanvd.grazi" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="JavaScript" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="com.intellij.completion.ml.ranking" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="com.intellij.ml.inline.completion" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.terminal" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.completion.full.line" rev="RR-243.21565.245"/>
+  </dependencies>
+</ivy-module>
