@@ -1,11 +1,13 @@
 import org.jetbrains.changelog.Changelog
 import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
 import org.jetbrains.intellij.platform.gradle.models.ProductRelease
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     idea
+    java
     id("org.jetbrains.kotlin.jvm") version "2.1.0"
     id("org.jetbrains.intellij.platform") version "2.2.0"
     id("org.jetbrains.changelog") version "2.2.0"
@@ -80,11 +82,18 @@ intellijPlatform {
     }
 }
 
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
 tasks {
 
     withType<KotlinCompile> {
         compilerOptions {
             languageVersion.set(KotlinVersion.KOTLIN_2_0)
+            jvmTarget.set(JvmTarget.JVM_21)
         }
     }
 

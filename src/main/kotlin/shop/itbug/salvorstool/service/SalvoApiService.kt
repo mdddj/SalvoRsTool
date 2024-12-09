@@ -31,6 +31,7 @@ class SalvoApiService(val project: Project) : Disposable {
         return projectApiList
     }
 
+    //重新检查salvo接口
     fun doRefresh() {
         startScan(true)
     }
