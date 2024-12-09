@@ -1,0 +1,13 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.fullLine.css" revision="RR-243.21565.245"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="intellij.fullLine.css" ext="jar" conf="default" url="plugins/fullLine/lib/modules"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.css" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="com.intellij.css" rev="RR-243.21565.245"/>
+  </dependencies>
+</ivy-module>

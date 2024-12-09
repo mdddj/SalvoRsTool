@@ -1,0 +1,11 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.ml.inline.completion.css.less" revision="RR-243.21565.245"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications/>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.css" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.less" rev="RR-243.21565.245"/>
+  </dependencies>
+</ivy-module>

@@ -1,0 +1,13 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="org.intellij.plugins.postcss" revision="RR-243.21565.245"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="postcss" ext="jar" conf="default" url="plugins/postcss/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.css" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="RR-243.21565.245"/>
+  </dependencies>
+</ivy-module>

@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.aqua.runners.js.core" revision="RR-243.21565.245"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications/>
+  <dependencies>
+    <dependency org="bundledPlugin" name="JavaScriptDebugger" rev="RR-243.21565.245"/>
+  </dependencies>
+</ivy-module>

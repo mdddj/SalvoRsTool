@@ -1,0 +1,22 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="JavaScriptDebugger" revision="IU-243.21565.193"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="ChromeConnector" ext="jar" conf="default" url="plugins/javascript-debugger/lib"/>
+    <artifact name="nashorn-debugger-9-rt" ext="jar" conf="default" url="plugins/javascript-debugger/lib"/>
+    <artifact name="nashorn-debugger-rt" ext="jar" conf="default" url="plugins/javascript-debugger/lib"/>
+    <artifact name="javascript-debugger" ext="jar" conf="default" url="plugins/javascript-debugger/lib"/>
+    <artifact name="FirefoxConnector" ext="jar" conf="default" url="plugins/javascript-debugger/lib"/>
+    <artifact name="intellij.javascript.debugger.nashorn" ext="jar" conf="default" url="plugins/javascript-debugger/lib/modules"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.jetbrains.plugins.webDeployment" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="com.intellij.javaee" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="com.intellij.jsp" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="JavaScriptDebugger" rev="IU-243.21565.193"/>
+    <dependency org="bundledModule" name="intellij.platform.dap" rev="IU-243.21565.193"/>
+  </dependencies>
+</ivy-module>

@@ -1,0 +1,16 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.jsp" revision="243.21565.193+950"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.10.2/transforms/f9bfbda5e8ab3fe29185f796657b8172/transformed/ideaIU-2024.3-aarch64/plugins/javaee-jsp-base-impl" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.javaee.web" rev="243.21565.193+335"/>
+    <dependency org="bundledPlugin" name="com.intellij.javaee.el" rev="243.21565.193+179"/>
+    <dependency org="bundledPlugin" name="com.intellij.javaee.app.servers.integration" rev="243.21565.193+289"/>
+    <dependency org="bundledPlugin" name="com.intellij.css" rev="243.21565.193+357"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="243.21565.193+476"/>
+  </dependencies>
+</ivy-module>

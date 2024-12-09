@@ -1,0 +1,24 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.ml.inline.completion" revision="RR-243.21565.245"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="ml-inline-completion" ext="jar" conf="default" url="plugins/ml-inline-completion/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.platform.inline.completion" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="com.intellij.css" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.css" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.less" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="org.intellij.plugins.postcss" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.sass" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.web" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="JavaScript" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.js" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.vue" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.fullLine.python" rev="RR-243.21565.245"/>
+    <dependency org="bundledPlugin" name="HtmlTools" rev="RR-243.21565.245"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.rider" rev="RR-243.21565.245"/>
+  </dependencies>
+</ivy-module>

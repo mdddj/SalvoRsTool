@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.indexing.shared.generator" revision="IU-243.21565.193"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="intellij.indexing.shared.generator" ext="jar" conf="default" url="plugins/indexing-shared-ultimate-plugin-bundled/lib/modules"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

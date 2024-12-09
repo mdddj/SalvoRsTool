@@ -1,0 +1,16 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="training" revision="IU-243.21565.193"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="featuresTrainer" ext="jar" conf="default" url="plugins/featuresTrainer/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.platform.tips" rev="IU-243.21565.193"/>
+    <dependency org="bundledModule" name="intellij.platform.lvcs.impl" rev="IU-243.21565.193"/>
+    <dependency org="bundledPlugin" name="Git4Idea" rev="IU-243.21565.193"/>
+    <dependency org="bundledModule" name="intellij.platform.ide.newUiOnboarding" rev="IU-243.21565.193"/>
+    <dependency org="bundledModule" name="intellij.platform.ide.newUsersOnboarding" rev="IU-243.21565.193"/>
+  </dependencies>
+</ivy-module>

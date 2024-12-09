@@ -16,15 +16,16 @@ import shop.itbug.salvorstool.tool.filterByType
 import java.io.File
 
 @Service(Service.Level.PROJECT)
-class RustProjectService (val project: Project){
+class RustProjectService(val project: Project) {
 
 
     /**
      * 是否使用了salvo的依赖
      */
-    suspend fun hasSalvoDependencies() : Boolean {
+    suspend fun hasSalvoDependencies(): Boolean {
         val tomlFilePath = project.basePath + File.separator + "Cargo.toml"
-        val tomlFile: VirtualFile = LocalFileSystem.getInstance().findFileByPath(tomlFilePath) ?: return false
+        val tomlFile: VirtualFile =
+            readAction { LocalFileSystem.getInstance().findFileByPath(tomlFilePath) } ?: return false
         val file = readAction { PsiManager.getInstance(project).findFile(tomlFile) } as? TomlFile ?: return false
         val keyValues = readAction { file.filterByType<TomlKeyValue>() }
         return keyValues.any { it.key.text == "salvo" }

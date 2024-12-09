@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.jetbrains.plugins.webDeployment" revision="243.21565.193+158"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.10.2/transforms/f9bfbda5e8ab3fe29185f796657b8172/transformed/ideaIU-2024.3-aarch64/plugins/webDeployment" type="directory" conf="default"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

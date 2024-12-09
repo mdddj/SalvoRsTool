@@ -1,5 +1,6 @@
 package shop.itbug.salvorstool.service
 
+import com.intellij.openapi.Disposable
 import com.intellij.openapi.application.EDT
 import com.intellij.openapi.application.readAction
 import com.intellij.openapi.components.Service
@@ -21,7 +22,8 @@ import shop.itbug.salvorstool.tool.rsFileType
 import shop.itbug.salvorstool.tool.rsLetDeclImplManager
 
 @Service(Service.Level.PROJECT)
-class SalvoApiService(val project: Project) {
+class SalvoApiService(val project: Project) : Disposable {
+    private val scope = CoroutineScope(SupervisorJob() + Dispatchers.EDT)
 
     private var projectApiList = mutableListOf<SalvoApiItem>()
 
@@ -33,9 +35,8 @@ class SalvoApiService(val project: Project) {
         startScan(true)
     }
 
-    @OptIn(DelicateCoroutinesApi::class)
     fun startScan(isRefresh: Boolean = false) {
-        GlobalScope.launch(Dispatchers.EDT) {
+        scope.launch {
             val hasSalvoDeps = RustProjectService.getInstance(project).hasSalvoDependencies()
             if (hasSalvoDeps) {
                 val files = readAction { FileTypeIndex.getFiles(rsFileType, SalvoSearchGlobal(project)).toList() }
@@ -60,6 +61,10 @@ class SalvoApiService(val project: Project) {
             find = find.filter { it.myManager.isReturnRouter }
             return@readAction find
         }
+    }
+
+    override fun dispose() {
+        scope.cancel()
     }
 
     companion object {

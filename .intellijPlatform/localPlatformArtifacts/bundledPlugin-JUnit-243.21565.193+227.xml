@@ -1,0 +1,13 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="JUnit" revision="243.21565.193+227"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.10.2/transforms/f9bfbda5e8ab3fe29185f796657b8172/transformed/ideaIU-2024.3-aarch64/plugins/junit" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.java" rev="243.21565.193+195"/>
+    <dependency org="bundledPlugin" name="com.intellij.properties" rev="243.21565.193+478"/>
+  </dependencies>
+</ivy-module>

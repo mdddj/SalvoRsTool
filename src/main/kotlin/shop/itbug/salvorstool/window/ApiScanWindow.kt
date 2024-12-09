@@ -62,7 +62,6 @@ class ApiScanWindow(private val myProject: Project) : JBList<SalvoApiItem>(), Ui
         model = ItemModel(allApis)
         border = Tools.emptyBorder()
         selectionMode = ListSelectionModel.SINGLE_SELECTION
-
         setExpandableItemsEnabled(false)
         ScrollingUtil.installActions(this)
         ListUiUtil.Selection.installSelectionOnRightClick(this)
@@ -71,7 +70,6 @@ class ApiScanWindow(private val myProject: Project) : JBList<SalvoApiItem>(), Ui
         TreeUIHelper.getInstance().installListSpeedSearch(this) { o -> o.api }
         busConnect.subscribe(ApiScanMessaging.TOPIC, this)
         busConnect.subscribe(DumbService.DUMB_MODE, this)
-
     }
 
 
@@ -114,7 +112,7 @@ class ApiScanWindow(private val myProject: Project) : JBList<SalvoApiItem>(), Ui
     }
 
     private fun getApiList() = SalvoApiService.getInstance(myProject).getApiList()
-    private fun listIsEmpty() = (model as? ItemModel)?.isEmpty ?: true
+    private fun listIsEmpty() = (model as? ItemModel)?.isEmpty != false
 }
 
 

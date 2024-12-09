@@ -1,0 +1,24 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.database" revision="2024.3+669"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="/Users/ldd/.gradle/caches/8.10.2/transforms/f9bfbda5e8ab3fe29185f796657b8172/transformed/ideaIU-2024.3-aarch64/plugins/DatabaseTools" type="directory" conf="default"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="JavaScript" rev="243.21565.193+680"/>
+    <dependency org="bundledPlugin" name="intellij.grid.core.impl" rev="243.21565.193+154"/>
+    <dependency org="bundledPlugin" name="org.intellij.intelliLang" rev="243.21565.193+498"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="243.21565.193+476"/>
+    <dependency org="bundledPlugin" name="com.intellij.completion.ml.ranking" rev="243.21565.193+200"/>
+    <dependency org="bundledPlugin" name="intellij.grid.impl" rev="243.21565.193+340"/>
+    <dependency org="bundledPlugin" name="com.intellij.platform.images" rev="243.21565.193+311"/>
+    <dependency org="bundledPlugin" name="com.intellij.diagram" rev="243.21565.193+577"/>
+    <dependency org="bundledPlugin" name="Docker" rev="243.21565.193+689"/>
+    <dependency org="bundledPlugin" name="tanvd.grazi" rev="243.21565.193+987"/>
+    <dependency org="bundledModule" name="intellij.platform.vcs.impl" rev="243.21565.193+597"/>
+    <dependency org="bundledModule" name="intellij.profiler.common" rev="243.21565.193+597"/>
+    <dependency org="bundledModule" name="intellij.platform.coverage" rev="243.21565.193+597"/>
+  </dependencies>
+</ivy-module>
