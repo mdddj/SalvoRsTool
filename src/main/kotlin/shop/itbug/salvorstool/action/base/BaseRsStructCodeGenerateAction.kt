@@ -45,7 +45,8 @@ abstract class BaseRsStructCodeGenerateAction : AnAction() {
 
 
     override fun update(e: AnActionEvent) {
-        e.presentation.isVisible = e.tryGetRsStructPsiElement() != null && e.project != null
+        val struct =  e.tryGetRsStructPsiElement()
+        e.presentation.isVisible = struct != null && e.project != null && struct.structItemManager.fieldList.isNotEmpty()
         super.update(e)
     }
 

@@ -9,13 +9,11 @@ plugins {
     idea
     java
     id("org.jetbrains.kotlin.jvm") version "2.1.0"
-    id("org.jetbrains.intellij.platform") version "2.2.0"
+    id("org.jetbrains.intellij.platform") version "2.2.1"
     id("org.jetbrains.changelog") version "2.2.0"
 }
-var isRust = true
-val suf = if (isRust) "RR" else "IU"
 group = "shop.itbug"
-version = "2.2.0.$suf"
+version = "2.2.2"
 
 repositories {
     mavenCentral()
@@ -34,32 +32,22 @@ repositories {
 intellijPlatform {
     pluginVerification {
         ides {
-            if(isRust){
-                ide(IntelliJPlatformType.RustRover,"2024.3")
-            }else{
-                ide(IntelliJPlatformType.IntellijIdeaUltimate,"2024.3")
-            }
+            ide(IntelliJPlatformType.RustRover,"2024.3")
         }
     }
 }
 
 fun getChangelogVersion(): String {
     val v = project.version as String
-    return v.removeSuffix(".$suf")
+    return v
 }
 
 
 dependencies {
     intellijPlatform {
-        if (isRust) {
-            rustRover("2024.3")
-            bundledPlugins("JavaScript", "com.jetbrains.rust", "org.toml.lang", "com.intellij.modules.json")
-            plugins("com.intellij.database:243.15521.0")
-        } else {
-            intellijIdeaUltimate("2024.3")
-            plugins("com.jetbrains.rust:243.21565.245")
-            bundledPlugins("org.toml.lang", "JavaScript", "com.intellij.modules.json", "com.intellij.database")
-        }
+        rustRover("2024.3")
+        bundledPlugins("JavaScript", "com.jetbrains.rust", "org.toml.lang", "com.intellij.modules.json")
+        plugins("com.intellij.database:243.15521.2")
         zipSigner()
         pluginVerifier()
         javaCompiler()
@@ -82,6 +70,14 @@ intellijPlatform {
     }
 }
 
+
+kotlin {
+    compilerOptions {
+        extraWarnings.set(true)
+        freeCompilerArgs.add("-Xnon-local-break-continue")
+        freeCompilerArgs.add("-Xmulti-dollar-interpolation")
+    }
+}
 
 java {
     sourceCompatibility = JavaVersion.VERSION_21

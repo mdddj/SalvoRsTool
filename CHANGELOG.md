@@ -2,7 +2,12 @@
 
 ## Unreleased
 
-## [2.2.0] -2024-11-27
+## [2.2.1] -2024-12-16
+
+- Dependency upgrade
+- Solve the problem that inaccurate parameters may lead to null pointers and memory leaks
+
+### [2.2.0] -2024-11-27
 
 - Adaptation 2024.3
 - Optimize the use experience of salvo api window

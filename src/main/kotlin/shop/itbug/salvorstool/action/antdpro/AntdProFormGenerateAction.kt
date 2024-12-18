@@ -22,6 +22,7 @@ class AntdProFormGenerateAction : BaseRsStructCodeGenerateAction() {
     override fun codeGenerateAction(model: Model) {
         Dialog(model).show()
     }
+
 }
 
 

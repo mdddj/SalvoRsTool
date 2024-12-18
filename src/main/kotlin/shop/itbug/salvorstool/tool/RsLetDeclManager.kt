@@ -1,7 +1,10 @@
 package shop.itbug.salvorstool.tool
 
 import com.intellij.openapi.project.Project
+import com.intellij.psi.SmartPointerManager
+import com.intellij.psi.SmartPsiElementPointer
 import com.intellij.psi.util.PsiTreeUtil
+import org.rust.lang.core.psi.RsMethodCall
 import org.rust.lang.core.psi.impl.*
 import shop.itbug.salvorstool.model.SalvoApiItem
 
@@ -52,7 +55,12 @@ class RsLetDeclManager(val psi: RsLetDeclImpl) {
             val rootMethods = rootManager.getAllApiMethods
             //添加root path
             rootMethods.forEach {
-                result.add(SalvoApiItem(rootApi, it.method, it.element, it.element.containingFile.name))
+                result.add(
+                    SalvoApiItem(
+                        rootApi, it.method,
+                        it.element, it.element.element?.containingFile?.name ?: ""
+                    )
+                )
             }
 
             // 添加子URL
@@ -66,7 +74,7 @@ class RsLetDeclManager(val psi: RsLetDeclImpl) {
                             api,
                             methodFun.method,
                             methodFun.element,
-                            methodFun.element.containingFile.name,
+                            methodFun.element.element?.containingFile?.name ?: "",
                         )
                     )
                 }

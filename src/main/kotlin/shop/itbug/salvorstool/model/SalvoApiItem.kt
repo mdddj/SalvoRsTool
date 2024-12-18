@@ -1,7 +1,7 @@
 package shop.itbug.salvorstool.model
 
+import com.intellij.psi.SmartPsiElementPointer
 import com.intellij.psi.search.GlobalSearchScope
-import org.rust.lang.core.psi.RsFunction
 import org.rust.lang.core.psi.RsMethodCall
 import org.rust.lang.core.psi.ext.RsNamedElement
 import org.rust.lang.core.psi.impl.RsPathImpl
@@ -20,12 +20,12 @@ enum class SalvoApiItemMethod {
     Unknown
 }
 
-data class SalvoApiItemFunction(val method: SalvoApiItemMethod, val element: RsMethodCall)
+data class SalvoApiItemFunction(val method: SalvoApiItemMethod, val element: SmartPsiElementPointer<RsMethodCall>)
 
 data class SalvoApiItem(
     val api: String,
     val method: SalvoApiItemMethod,
-    val rsMethodPsiElement: RsMethodCall,
+    val rsMethodPsiElement: SmartPsiElementPointer<RsMethodCall>,
     val routerFileName: String,
 ) {
     override fun toString(): String {
@@ -97,18 +97,10 @@ data class SalvoApiItem(
 
 
     /**
-     * 获取节点的路径
-     */
-    fun getElementFilePath(): String {
-        return rsMethodPsiElement.containingFile.virtualFile.path
-    }
-
-
-    /**
      * 跳到代码位置
      */
     fun navTo() {
-        rsMethodPsiElement.tryNavTo()
+        rsMethodPsiElement.element?.tryNavTo()
     }
 
     /**
@@ -122,7 +114,7 @@ data class SalvoApiItem(
     /**
      * 查找services函数的实现
      */
-     fun getServiceRefs() = findServiceRef(rsMethodPsiElement)
+     fun getServiceRefs() = findServiceRef(rsMethodPsiElement.element)
 
 
     companion object {
@@ -130,8 +122,8 @@ data class SalvoApiItem(
         /**
          * 查找指向service
          */
-        fun findServiceRef(rsMethod: RsMethodCall): RsNamedElement? {
-            val rsServiceFun = rsMethod.findFirstChild<RsPathImpl>() ?: return null
+        fun findServiceRef(rsMethod: RsMethodCall?): RsNamedElement? {
+            val rsServiceFun = rsMethod?.findFirstChild<RsPathImpl>() ?: return null
             val project = rsServiceFun.project
             val psis = RsNamedElementIndex.Helper.findElementsByName(
                 project,

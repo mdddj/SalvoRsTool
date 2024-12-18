@@ -1,6 +1,5 @@
 package shop.itbug.salvorstool.tool
 
-import com.intellij.psi.PsiElement
 import com.intellij.psi.impl.source.tree.PsiCommentImpl
 import com.intellij.psi.util.PsiTreeUtil
 import org.rust.lang.core.psi.RsMetaItem
@@ -13,24 +12,13 @@ import org.rust.lang.core.psi.impl.RsPathTypeImpl
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import org.rust.lang.doc.psi.RsDocTokenType
 import org.rust.lang.doc.psi.impl.RsDocCommentImpl
-
-val JavascriptType.typeScriptText
-    get() = when (this) {
-        JavascriptType.Number -> "number"
-        JavascriptType.String -> "string"
-        JavascriptType.Bool -> "bool"
-        JavascriptType.Unknown -> "any"
-    }
-
-//rs属性类型对应的js类型
-enum class JavascriptType {
-    Number, String, Bool, Unknown
-}
+import shop.itbug.salvorstool.tool.funs.RsStructItemFunBase
 
 
-/// struct操作管理
-class MyRsStructManager(private val psiElement: RsStructItemImpl) {
-
+/**
+ * rust struct操作管理
+ */
+class MyRsStructManager(private val psiElement: RsStructItemImpl) : RsStructItemFunBase(psiElement) {
 
     ///属性列表
     val fieldList: List<RsNamedFieldDecl> =
@@ -49,7 +37,7 @@ class MyRsStructManager(private val psiElement: RsStructItemImpl) {
             return tabName
         }
 
-    ///主键字段
+    ///主键字段 (sea-orm)
     val primaryField = fieldList.find { it.namedFieldManager.isPrimaryKey }
 
     ///js 模型列表
@@ -79,17 +67,21 @@ class MyRsStructManager(private val psiElement: RsStructItemImpl) {
         return sb.toString()
     }
 
-    val getHookForm: String get() {
-        val sb = StringBuilder()
-        jsModelList.forEach {
-            sb.appendLine(it.hookFormItem())
-        }
-        var temp = FilesUtil.loadTemplateFileList("temps/ts_dialog_warp.tsx")
-        temp = temp.replace("{model}",getTSInterface).replace("Model",structName?:"Model").replace("{fields}",sb.toString())
-        return temp
-    }
 }
 
+
+val JavascriptType.typeScriptText
+    get() = when (this) {
+        JavascriptType.Number -> "number"
+        JavascriptType.String -> "string"
+        JavascriptType.Bool -> "bool"
+        JavascriptType.Unknown -> "any"
+    }
+
+//rs属性类型对应的js类型
+enum class JavascriptType {
+    Number, String, Bool, Unknown
+}
 
 ///属性处理
 class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
