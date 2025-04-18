@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.platform.ide.provisioner" revision="RR-243.26053.17"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="platform-ide-provisioner" ext="jar" conf="default" url="plugins/platform-ide-provisioner/lib"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

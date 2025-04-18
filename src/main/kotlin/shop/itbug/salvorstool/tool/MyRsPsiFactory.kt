@@ -35,7 +35,7 @@ object MyRsPsiFactory {
 
     /**
      * service add
-     * }
+     *
      */
     fun generateServiceWithAdd(psiElement: RsStructItemImpl): String {
         val type = GenerateDtoDialogResultEnum.AddRequest

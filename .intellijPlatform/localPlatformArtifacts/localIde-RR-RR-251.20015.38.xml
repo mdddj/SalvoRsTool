@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="localIde" module="RR" revision="RR-251.20015.38"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="Users/ldd/Applications/RustRover.app/Contents" ext="directory" conf="default"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

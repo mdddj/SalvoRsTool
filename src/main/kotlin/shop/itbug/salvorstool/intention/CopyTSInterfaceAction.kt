@@ -10,13 +10,14 @@ import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import shop.itbug.salvorstool.icons.MyIcon
+import shop.itbug.salvorstool.tool.MyRsStructManager
 import shop.itbug.salvorstool.tool.Tools
 import shop.itbug.salvorstool.tool.copy
 import shop.itbug.salvorstool.tool.structItemManager
 import javax.swing.Icon
 
-///
-class CopyTSInterfaceAction : PsiElementBaseIntentionAction(), IntentionAction, Iconable {
+
+abstract class CopyTSInterfaceActionBase : PsiElementBaseIntentionAction(), IntentionAction, Iconable {
     override fun getFamilyName(): String {
         return "RustX: Copy TS interface"
     }
@@ -38,7 +39,7 @@ class CopyTSInterfaceAction : PsiElementBaseIntentionAction(), IntentionAction, 
         var preview = IntentionPreviewInfo.Html("")
         val psiElement = getElement(editor, file)?.parent as? RsStructItemImpl
         psiElement?.let {
-            val interfaceString = it.structItemManager.getTSInterface
+            val interfaceString = getTsModelString(it,it.structItemManager)
             val html = Tools.highlightCodeToHtml(interfaceString,project, Tools.jsxLanguage)
             preview = IntentionPreviewInfo.Html(html)
         }
@@ -49,4 +50,23 @@ class CopyTSInterfaceAction : PsiElementBaseIntentionAction(), IntentionAction, 
         return MyIcon.pluginIcon
     }
 
+    abstract fun getTsModelString(element: PsiElement,manager: MyRsStructManager): String
+
+}
+
+///
+class CopyTSInterfaceAction : CopyTSInterfaceActionBase() {
+    override fun getTsModelString(element: PsiElement, manager: MyRsStructManager): String {
+        return manager.getTSInterface
+    }
+}
+
+class CopyTSInterfaceActionWithCodegen : CopyTSInterfaceActionBase() {
+    override fun getTsModelString(element: PsiElement, manager: MyRsStructManager): String {
+        return manager.getTSInterfaceWithCodegen
+    }
+
+    override fun getFamilyName(): String {
+        return super.getFamilyName() + "(codegen)"
+    }
 }

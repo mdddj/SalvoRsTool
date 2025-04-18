@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.fullLine.rider" revision="RR-243.26053.17"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications/>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.rider" rev="RR-243.26053.17"/>
+  </dependencies>
+</ivy-module>

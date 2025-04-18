@@ -21,7 +21,7 @@ class AntdRequestCopyAction : AnAction() {
 
     override fun update(e: AnActionEvent) {
         super.update(e)
-        e.presentation.text = "${MyI18n.getMessage("copy")} Antd Request"
+        e.presentation.text = "${MyI18n.getMessage("copy")} Antd Request(已弃用)"
         e.presentation.icon = MyIcon.antd
           e.presentation.isEnabled = SalvoApiActionHelper.getSelectItem(e) != null
     }

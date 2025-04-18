@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="localJetBrainsRuntime" module="JBR" revision="21.0.6+9-895.109-jcef"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="Users/ldd/Library/Java/JavaVirtualMachines/jbrsdk_jcef-21.0.6/Contents/Home" ext="directory" conf="default"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

@@ -2,7 +2,28 @@
 
 ## Unreleased
 
-## [2.2.1] -2024-12-16
+### [2.2.6] -2025-04-17
+
+- adaptation 2025.1
+
+### [2.2.5] -2025-03-17
+
+- Fix known bugs
+
+
+### [2.2.4] -2025-02-12
+
+- Fix sql date text parse error
+
+### [2.2.3] -2025-02-05
+
+- Adapt EAP251
+
+### [2.2.2] -2024-12-18
+
+- Adjust the display conditions of some actions
+
+### [2.2.1] -2024-12-16
 
 - Dependency upgrade
 - Solve the problem that inaccurate parameters may lead to null pointers and memory leaks

@@ -21,6 +21,10 @@
             <className>shop.itbug.salvorstool.intention.CopyTSInterfaceAction</className>
             <language>Rust</language>
         </intentionAction>
+        <intentionAction>
+            <className>shop.itbug.salvorstool.intention.CopyTSInterfaceActionWithCodegen</className>
+            <language>Rust</language>
+        </intentionAction>
         <toolWindow factoryClass="shop.itbug.salvorstool.window.SalvoWindow" id="Salvo" anchor="bottom"
                     icon="/icons/logo.svg"/>
         <searchEverywhereContributor implementation="shop.itbug.salvorstool.searcheverywhere.SalvoSearchApi"/>
@@ -28,6 +32,7 @@
         <webHelpProvider implementation="shop.itbug.salvorstool.help.MyWebHelpProvider"/>
         <notificationGroup displayType="BALLOON" id="SeaOrmCliNotification"/>
         <postStartupActivity implementation="shop.itbug.salvorstool.service.ProjectStartActivity"/>
+        <projectConfigurable instance="shop.itbug.salvorstool.setting.RustXSetting" displayName="RustX" parentId="language" id="setting.rustX"/>
     </extensions>
     <actions>
         <!--salvo相关生成器-->
@@ -38,6 +43,9 @@
         <action id="GenerateRouterAction" class="shop.itbug.salvorstool.action.GenerateRouterAction">
         </action>
 
+        <!--代码生成-->
+        <action id="ShowSalvoCodegenDialogAction" class="shop.itbug.salvorstool.action.ShowSalvoCodegenDialogAction"
+                text="显示代码生成窗口"/>
 
         <!--ts相关生成器-->
         <action id="GenerateHookFormAction" class="shop.itbug.salvorstool.action.GenerateHookFormAction"/>
@@ -55,6 +63,7 @@
             <reference ref="GenerateDtoAction"/>
             <reference ref="GenerateServiceAction"/>
             <reference ref="GenerateRouterAction"/>
+            <reference ref="ShowSalvoCodegenDialogAction" />
             <separator text="Antd"/>
             <reference ref="AntdProFormGenerateAction"/>
             <reference ref="GenerateAntdFormAction"/>
@@ -77,6 +86,8 @@
         <action id="SalvoApiGoToDefineAction"
                 class="shop.itbug.salvorstool.action.rightmenu.SalvoApiGoToDefineAction"
         />
+
+
 
         <group id="SalvoApiRightMenuActionGroup" popup="true">
             <separator key="copy"/>
@@ -135,6 +146,7 @@
         >
             <add-to-group group-id="DatabaseView.AddActionGroupPopup"/>
         </action>
+
     </actions>
 
 

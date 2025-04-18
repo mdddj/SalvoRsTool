@@ -8,12 +8,12 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     idea
     java
-    id("org.jetbrains.kotlin.jvm") version "2.1.0"
-    id("org.jetbrains.intellij.platform") version "2.2.1"
+    id("org.jetbrains.kotlin.jvm") version "2.1.20"
+    id("org.jetbrains.intellij.platform") version "2.5.0"
     id("org.jetbrains.changelog") version "2.2.0"
 }
 group = "shop.itbug"
-version = "2.2.2"
+version = "2.2.6"
 
 repositories {
     mavenCentral()
@@ -29,13 +29,6 @@ repositories {
 }
 
 
-intellijPlatform {
-    pluginVerification {
-        ides {
-            ide(IntelliJPlatformType.RustRover,"2024.3")
-        }
-    }
-}
 
 fun getChangelogVersion(): String {
     val v = project.version as String
@@ -45,9 +38,9 @@ fun getChangelogVersion(): String {
 
 dependencies {
     intellijPlatform {
-        rustRover("2024.3")
-        bundledPlugins("JavaScript", "com.jetbrains.rust", "org.toml.lang", "com.intellij.modules.json")
-        plugins("com.intellij.database:243.15521.2")
+        rustRover("2025.1")
+        jetbrainsRuntimeLocal("/Users/ldd/Library/Java/JavaVirtualMachines/jbrsdk_jcef-21.0.6")
+        bundledPlugins("JavaScript", "com.jetbrains.rust", "org.toml.lang", "com.intellij.modules.json","com.intellij.database")
         zipSigner()
         pluginVerifier()
         javaCompiler()
@@ -65,7 +58,7 @@ if(pushToken == null){
 intellijPlatform {
     pluginVerification {
         ides {
-            local("/Applications/IntelliJ IDEA Ultimate.app")
+            local("/Applications/RustRover.app")
         }
     }
 }
@@ -73,7 +66,6 @@ intellijPlatform {
 
 kotlin {
     compilerOptions {
-        extraWarnings.set(true)
         freeCompilerArgs.add("-Xnon-local-break-continue")
         freeCompilerArgs.add("-Xmulti-dollar-interpolation")
     }
@@ -108,8 +100,8 @@ tasks {
 
 
     patchPluginXml {
-        sinceBuild.set("243")
-        untilBuild.set("243.*")
+        sinceBuild.set("251")
+        untilBuild.set("251.*")
         changeNotes.set(myChangeLog)
         pluginDescription.set(descText)
     }
@@ -137,6 +129,9 @@ tasks {
     runIde {
         autoReload = true
         jvmArgs = listOf("-XX:+AllowEnhancedClassRedefinition")
+        args = listOf(
+            "/Users/hlx/github/d_blog"
+        )
     }
 
     printProductsReleases {

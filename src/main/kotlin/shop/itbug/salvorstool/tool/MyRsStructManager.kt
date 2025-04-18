@@ -28,13 +28,23 @@ class MyRsStructManager(private val psiElement: RsStructItemImpl) : RsStructItem
     ///获取struct名称
     val structName: String? = psiElement.name
 
+
+    /// ts模型名字，eg MyModel
+    val tsModelName: String
+        get() {
+            return (getTableName?.capitalizeFirstLetter() ?: "") + "Model"
+        }
+
     ///获取表名
     val getTableName: String?
         get() {
-            val outerAttr = psiElement.outerAttrList.find { it.outerAttrManager.getSeaOrmTabName != null }
-                ?: return null
+            val outerAttr =
+                psiElement.outerAttrList.find { it.outerAttrManager.getSeaOrmTabName != null } ?: return null
             val tabName = outerAttr.outerAttrManager.getSeaOrmTabName
-            return tabName
+            if (tabName != null && tabName.isNotBlank()) {
+                return tabName
+            }
+            return structName
         }
 
     ///主键字段 (sea-orm)
@@ -43,28 +53,210 @@ class MyRsStructManager(private val psiElement: RsStructItemImpl) : RsStructItem
     ///js 模型列表
     val jsModelList: List<MyFieldPsiElementManager.JsModel> =
         fieldList.mapNotNull { it.namedFieldManager.getJsModel }
+    val primaryKeyFieldString = jsModelList.find { it.isPrimaryKey }?.fieldName ?: "id"
+
 
     ///获取ts模型
-    val getTSInterface: String get() {
-        val sb = StringBuilder()
-        sb.appendLine("interface $structName {")
-        jsModelList.forEach {
-            sb.appendLine("\t${it.propTextString},")
+    val getTSInterface: String
+        get() {
+            val sb = StringBuilder()
+            sb.appendLine("interface $structName {")
+            jsModelList.forEach {
+                sb.appendLine("\t${it.propTextString},")
+            }
+            sb.appendLine("}")
+            return sb.toString()
         }
-        sb.appendLine("}")
-        return sb.toString()
-    }
+
+    ///获取 ts模型 （代码生成）
+    val getTSInterfaceWithCodegen: String
+        get() {
+            if (getTableName == null) return "未知的表名称"
+            val sb = StringBuilder()
+            sb.appendLine("export interface ${getTableName!!.capitalizeFirstLetter()}Model {")
+            jsModelList.forEach {
+                sb.appendLine("\t${it.propTextString},")
+            }
+            sb.appendLine("}")
+            return sb.toString()
+        }
 
     /// 生成antd table 列
-    val getAntdTableColumnDefine: String get() {
-        val sb = StringBuilder()
-        sb.appendLine("[")
-        val ls = jsModelList
-        ls.map {
-            sb.append(it.antdTableColumnItem(it == ls.last()))
+    val getAntdTableColumnDefine: String
+        get() {
+            val sb = StringBuilder()
+            sb.appendLine("[")
+            val ls = jsModelList
+            ls.map {
+                sb.append(it.antdTableColumnItem(it == ls.last()))
+            }
+            sb.appendLine("]")
+            return sb.toString()
         }
-        sb.appendLine("]")
-        return sb.toString()
+
+
+    /// 生成antd table 列
+    val getAntdTableColumnDefineV2: String
+        get() {
+            val sb = StringBuilder()
+            sb.appendLine("[")
+            val ls = jsModelList
+            ls.map {
+                sb.append(it.antdTableColumnItem(it == ls.last()))
+            }
+            sb.appendLine(
+                $"""
+,{
+    dataIndex: 'actions',
+    title: '操作',
+    key: 'actions',
+    render: (dom, entity, index, action) => {
+      return <Space>
+        <AddOrUpdateForm trigger={<Button size={'small'} >编辑</Button>} initValues={entity} onSuccess={action?.reload} />
+        <Popconfirm title={'确定删除吗?'} onConfirm={ async () => {
+          try{
+            await apiIdeaPluginDeleteApi(`${'$'}{entity.${primaryKeyFieldString}}`)
+            message.success("删除成功")
+            action?.reload();
+          }catch (e) {
+            message.error(`${'$'}{e}`)
+          }
+        }}>
+          <Button type={'dashed'} size={'small'} color={'red'}>删除</Button>
+        </Popconfirm>
+      </Space>
+    }
+}
+            """.trimIndent()
+            )
+            sb.appendLine("]")
+            return sb.toString()
+        }
+
+
+    ///==============================代码生成 index.tsx
+
+    // table column 配置
+    fun genWithTableColumnDefine(): String {
+        return $"""
+            const columns: ProColumns<$tsModelName>[] = $getAntdTableColumnDefineV2
+        """.trimIndent()
+    }
+
+
+    //请求列表 api
+    fun genRequestListApiDefine(apiName: String): String {
+        return $"""
+        async () => {
+          const result = await $apiName();
+          return {
+            data: result.data,
+            success: true,
+            total: result.data.length,
+          };
+        }
+        """.trimIndent()
+    }
+
+    //生成 index组件
+    fun genExportDefaultIndex(listApiName: String): String {
+        val table = """
+<ProTable<$tsModelName>
+        actionRef={actionRef}
+      search={false}
+      request={
+        ${genRequestListApiDefine(listApiName)}
+      }
+      columns={columns}
+    >
+    </ProTable>
+        """.trimIndent()
+        return $"""
+export default function Index() {
+    const actionRef = useRef<ActionType>(undefined);
+  return <PageContainer title="列表">
+     <Flex gap={'middle'} vertical={true}>
+      <Flex align="center" gap="middle">
+        <AddOrUpdateForm trigger={<Button type="primary">新增</Button>} onSuccess={actionRef?.current?.reload} />
+      </Flex>
+      $table
+    </Flex>
+  </PageContainer>;
+}
+        """.trimMargin()
+    }
+
+    //生成首页代码
+    fun genIndexPageString(listApiName: String,deleteApi:String): String {
+        return $"""
+    import { ActionType,PageContainer, ProColumns, ProTable } from '@ant-design/pro-components';
+    import { $tsModelName } from './Model';
+    import { $listApiName,$deleteApi } from './Api';
+    import { Button,Flex,message, Popconfirm, Space } from 'antd';
+    import {AddOrUpdateForm} from './add_or_update';
+    import { useRef } from 'react';
+    
+    ${genWithTableColumnDefine()}
+    
+    ${genExportDefaultIndex(listApiName)}
+        """.trimMargin()
+    }
+
+    ///==============================代码生成 index.tsx ending
+
+
+    ///==============================代码生成 新增&编辑.tsx
+
+    fun genWithEditOrAddString(addApi: String, updateApi: String): String {
+        val prop = $"""
+            type Prop = {
+              trigger?: JSX.Element | undefined,
+              initValues?: $tsModelName | undefined,
+              onSuccess?: () => void,
+            }
+        """.trimIndent()
+
+
+
+        return $"""
+import React, { JSX } from 'react';
+import { $tsModelName } from './Model';
+import { ModalForm, ProFormDigit, ProFormText } from '@ant-design/pro-form';
+import { $addApi, $updateApi } from './Api';
+import { message } from 'antd';
+
+$prop
+
+
+const AddOrUpdateForm: React.FC<Prop> = ({ initValues, trigger, onSuccess }) => {
+  let isUpdate = initValues !== undefined;
+  //提交数据
+  const onFinish = async (values: $tsModelName) => {
+    try {
+      if (isUpdate && initValues) {
+        const {msg} = await $updateApi(`${'$'}{initValues.$primaryKeyFieldString}`, values);
+        message.success(msg);
+      } else {
+        const {msg} =  await $addApi(values);
+        message.success(msg);
+      }
+      onSuccess && onSuccess();
+      return true;
+    } catch (err) {
+      message.error(`${'$'}{err}`);
+      return false;
+    }
+  };
+  return (
+    <ModalForm<$tsModelName> trigger={trigger} initialValues={initValues} onFinish={onFinish} modalProps={{
+      destroyOnClose: true
+    }}>
+     ${jsModelList.filter { it.isPrimaryKey.not() }.joinToString("\n") { it.antdFormItem() }}
+    </ModalForm>
+  );
+};
+export { AddOrUpdateForm };
+        """.trimIndent()
     }
 
 }
@@ -115,7 +307,7 @@ class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
     val typeString: String?
         get() {
             if (isOption) {
-                return extractTextBetweenBrackets(typePsiText?:"")
+                return extractTextBetweenBrackets(typePsiText ?: "")
             }
             return psiElement.typeReference?.text
         }
@@ -213,7 +405,16 @@ class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
         }
     }
 
-    data class JsModel(val type: JavascriptType, val fieldName: String, val comment: String?, val isOption: Boolean)
+    data class JsModel(
+        val type: JavascriptType, val fieldName: String, val comment: String?, val isOption: Boolean,
+        //是否为主键
+        val isPrimaryKey: Boolean = false
+    ) {
+        fun antdFormItem(): String {
+            return AntdFactory.generateFormItem(this)
+        }
+    }
+
 
     val getJsModel: JsModel?
         get() {
@@ -222,7 +423,13 @@ class MyFieldPsiElementManager(private val psiElement: RsNamedFieldDecl) {
             } else if (name == null) {
                 return null
             }
-            return JsModel(javaScriptType, name, comment = comment, isOption = isOption)
+            return JsModel(
+                javaScriptType,
+                name,
+                comment = comment,
+                isOption = isOption,
+                isPrimaryKey = this.isPrimaryKey
+            )
         }
 
     private fun extractTextBetweenBrackets(input: String): String? {
@@ -247,50 +454,56 @@ val MyFieldPsiElementManager.JsModel.propTextString: String
     }
 
 /// antd 表格字段
-fun MyFieldPsiElementManager.JsModel.antdTableColumnItem(isLast: Boolean): String
-     {
-        val sb = StringBuilder()
-        sb.appendLine("{")
-        sb.appendLine("\tdataIndex: '${fieldName}', ")
-        sb.appendLine("\ttitle: '${comment ?: fieldName}',")
-        sb.appendLine("\tkey: '${fieldName}'")
-        sb.appendLine("}${if (isLast) "" else ","}")
-        return "$sb"
-    }
+fun MyFieldPsiElementManager.JsModel.antdTableColumnItem(isLast: Boolean): String {
+    val sb = StringBuilder()
+    sb.appendLine("{")
+    sb.appendLine("\tdataIndex: '${fieldName}', ")
+    sb.appendLine("\ttitle: '${comment ?: fieldName}',")
+    sb.appendLine("\tkey: '${fieldName}'")
+    sb.appendLine("}${if (isLast) "" else ","}")
+    return "$sb"
+}
 
 
 /// react hook form
-fun MyFieldPsiElementManager.JsModel.hookFormItem() : String {
+fun MyFieldPsiElementManager.JsModel.hookFormItem(): String {
     val sb = StringBuilder()
 
-    val requiredString = if(this.isOption){
+    val requiredString = if (this.isOption) {
         ""
     } else {
         "rules={{ required: '请输入${this.comment}' }}"
     }
 
-    when(this.type){
+    when (this.type) {
         JavascriptType.Number -> {
-            sb.appendLine("""
+            sb.appendLine(
+                """
                 <Controller render={function({ field, fieldState: { error } }) {
             return <InputWrapper label={'${this.comment}'} bottomLeftLabel={error?.message}>
               <input type={'number'} {...field} {...register("${this.fieldName}")} className={get_input_class(error?.message)} placeholder={'${this.comment}'}  />
             </InputWrapper>;
           }} name={'name'} control={control} $requiredString />
-            """.trimIndent())
+            """.trimIndent()
+            )
         }
+
         JavascriptType.String -> {
-            sb.appendLine("""
+            sb.appendLine(
+                """
                 <Controller render={function({ field, fieldState: { error } }) {
             return <InputWrapper label={'${this.comment}'} bottomLeftLabel={error?.message}>
               <input type={'text'} {...field} {...register("${this.fieldName}")} className={get_input_class(error?.message)} placeholder={'${this.fieldName}'}  />
             </InputWrapper>;
           }} name={'name'} control={control} $requiredString />
-            """.trimIndent())
+            """.trimIndent()
+            )
         }
+
         JavascriptType.Bool -> {
 
         }
+
         JavascriptType.Unknown -> {}
     }
     return sb.toString()

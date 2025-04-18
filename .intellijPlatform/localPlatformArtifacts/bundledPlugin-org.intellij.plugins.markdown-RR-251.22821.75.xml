@@ -1,0 +1,18 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="org.intellij.plugins.markdown" revision="RR-251.22821.75"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="markdown" ext="jar" conf="default" url="plugins/markdown/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="org.intellij.intelliLang" rev="RR-251.22821.75"/>
+    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="RR-251.22821.75"/>
+    <dependency org="bundledModule" name="intellij.yaml.backend" rev="RR-251.22821.75"/>
+    <dependency org="bundledPlugin" name="org.toml.lang" rev="RR-251.22821.75"/>
+    <dependency org="bundledPlugin" name="com.intellij.platform.images" rev="RR-251.22821.75"/>
+    <dependency org="bundledModule" name="intellij.platform.compose" rev="RR-251.22821.75"/>
+    <dependency org="bundledModule" name="intellij.platform.jewel.markdown.ideLafBridgeStyling" rev="RR-251.22821.75"/>
+  </dependencies>
+</ivy-module>

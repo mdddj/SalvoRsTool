@@ -1,0 +1,29 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.jetbrains.rust" revision="RR-251.20015.38"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="intellij-rust" ext="jar" conf="default" url="plugins/intellij-rust/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.toml.json" rev="RR-251.20015.38"/>
+    <dependency org="bundledModule" name="intellij.platform.vcs.impl" rev="RR-251.20015.38"/>
+    <dependency org="bundledPlugin" name="org.toml.lang" rev="RR-251.20015.38"/>
+    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="RR-251.20015.38"/>
+    <dependency org="bundledModule" name="intellij.profiler.asyncOne" rev="RR-251.20015.38"/>
+    <dependency org="bundledModule" name="intellij.profiler.common" rev="RR-251.20015.38"/>
+    <dependency org="bundledModule" name="intellij.profiler.clion" rev="RR-251.20015.38"/>
+    <dependency org="bundledModule" name="intellij.rustrover.debugger" rev="RR-251.20015.38"/>
+    <dependency org="bundledPlugin" name="com.intellij.nativeDebug" rev="RR-251.20015.38"/>
+    <dependency org="bundledPlugin" name="com.intellij.copyright" rev="RR-251.20015.38"/>
+    <dependency org="bundledModule" name="intellij.platform.coverage" rev="RR-251.20015.38"/>
+    <dependency org="bundledPlugin" name="tanvd.grazi" rev="RR-251.20015.38"/>
+    <dependency org="bundledPlugin" name="JavaScript" rev="RR-251.20015.38"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion" rev="RR-251.20015.38"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion.rust" rev="RR-251.20015.38"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.terminal" rev="RR-251.20015.38"/>
+    <dependency org="bundledPlugin" name="com.intellij.completion.ml.ranking" rev="RR-251.20015.38"/>
+    <dependency org="bundledPlugin" name="com.intellij.database" rev="RR-251.20015.38"/>
+  </dependencies>
+</ivy-module>

@@ -1,0 +1,14 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.intellij.completion.ml.ranking" revision="RR-251.22821.75"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="completionMlRanking" ext="jar" conf="default" url="plugins/completionMlRanking/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.platform.vcs.impl" rev="RR-251.22821.75"/>
+    <dependency org="bundledModule" name="intellij.ml.inline.completion" rev="RR-251.22821.75"/>
+    <dependency org="bundledPlugin" name="com.intellij.completion.ml.ranking" rev="RR-251.22821.75"/>
+  </dependencies>
+</ivy-module>

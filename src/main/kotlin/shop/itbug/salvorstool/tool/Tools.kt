@@ -2,15 +2,31 @@ package shop.itbug.salvorstool.tool
 
 import com.intellij.lang.Language
 import com.intellij.lang.javascript.dialects.TypeScriptJSXLanguageDialect
+import com.intellij.openapi.application.ApplicationManager
+import com.intellij.openapi.application.EDT
+import com.intellij.openapi.application.readAction
+import com.intellij.openapi.application.readAndWriteAction
+import com.intellij.openapi.application.runReadAction
 import com.intellij.openapi.application.runWriteAction
+import com.intellij.openapi.application.writeAction
+import com.intellij.openapi.command.WriteCommandAction
 import com.intellij.openapi.editor.richcopy.HtmlSyntaxInfoUtil
+import com.intellij.openapi.fileEditor.FileDocumentManager
+import com.intellij.openapi.progress.blockingContext
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.project.guessProjectDir
+import com.intellij.openapi.util.Computable
 import com.intellij.openapi.vfs.LocalFileSystem
 import com.intellij.openapi.vfs.VirtualFile
+import com.intellij.psi.PsiDirectory
+import com.intellij.psi.PsiDocumentManager
+import com.intellij.psi.PsiElement
 import com.intellij.psi.PsiFile
 import com.intellij.psi.PsiFileFactory
 import com.intellij.psi.PsiManager
+import com.intellij.psi.codeStyle.CodeStyleManager
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import org.rust.lang.RsLanguage
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import java.io.File
@@ -23,7 +39,6 @@ object Tools {
     val jsxLanguage: TypeScriptJSXLanguageDialect = Language.findInstance(
         TypeScriptJSXLanguageDialect::class.java
     )
-
     val rustLanguage: RsLanguage = Language.findInstance(RsLanguage::class.java)
 
     /**
@@ -120,6 +135,29 @@ object Tools {
         }
     }
 
+    suspend fun saveTo(project: Project, psiFile: PsiFile, virtualFile: VirtualFile) {
+        println("find file :${virtualFile.path}")
+        withContext(Dispatchers.EDT) {
+            val psiDirectory = ApplicationManager.getApplication().executeOnPooledThread<PsiDirectory> {
+                ApplicationManager.getApplication()
+                    .runReadAction<PsiDirectory> { PsiManager.getInstance(project).findDirectory(virtualFile) }
+            }.get()
+                ?: return@withContext
+            val newPsiFile =
+                ApplicationManager.getApplication().runWriteAction<PsiElement> { psiDirectory.add(psiFile) }
+            val document = PsiDocumentManager.getInstance(project).getDocument(newPsiFile.containingFile)
+            document?.let {
+                PsiDocumentManager.getInstance(project).commitDocument(it) // 同步PSI与文档内容
+                FileDocumentManager.getInstance().saveDocument(it) // 将文档保存到磁盘
+
+            }
+            //格式化代码
+            WriteCommandAction.runWriteCommandAction(project) {
+                CodeStyleManager.getInstance(project).reformat(newPsiFile)
+            }
+        }
+    }
+
     fun emptyBorder(): Border = BorderFactory.createEmptyBorder(0, 0, 0, 0)
 
 
@@ -139,3 +177,6 @@ object Tools {
         return sb.toString()
     }
 }
+
+
+

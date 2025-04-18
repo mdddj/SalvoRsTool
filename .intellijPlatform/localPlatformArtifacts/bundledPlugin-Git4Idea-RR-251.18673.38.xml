@@ -1,0 +1,17 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="Git4Idea" revision="RR-251.18673.38"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="vcs-git" ext="jar" conf="default" url="plugins/vcs-git/lib"/>
+    <artifact name="git4idea-rt" ext="jar" conf="default" url="plugins/vcs-git/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.jetbrains.performancePlugin" rev="RR-251.18673.38"/>
+    <dependency org="bundledModule" name="intellij.platform.collaborationTools" rev="RR-251.18673.38"/>
+    <dependency org="bundledModule" name="intellij.platform.lvcs.impl" rev="RR-251.18673.38"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.terminal" rev="RR-251.18673.38"/>
+    <dependency org="bundledModule" name="intellij.platform.coverage" rev="RR-251.18673.38"/>
+  </dependencies>
+</ivy-module>

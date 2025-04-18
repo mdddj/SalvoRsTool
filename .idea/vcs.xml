@@ -2,5 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/build/idea-sandbox/RR-2024.3.7/system/intellij-rust/crates-local-index-cargo-home/registry/index/github.com-25cdd57fae9f0462" vcs="Git" />
   </component>
 </project>

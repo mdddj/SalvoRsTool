@@ -1,0 +1,8 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.rustrover.debugger" revision="RR-251.18673.38"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications/>
+  <dependencies/>
+</ivy-module>
