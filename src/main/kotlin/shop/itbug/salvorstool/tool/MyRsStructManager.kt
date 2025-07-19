@@ -122,7 +122,7 @@ class MyRsStructManager(private val psiElement: RsStructItemImpl) : RsStructItem
             message.error(`${'$'}{e}`)
           }
         }}>
-          <Button type={'dashed'} size={'small'} color={'red'}>删除</Button>
+          <Button type={'default'} size={'small'} color={'danger'}>删除</Button>
         </Popconfirm>
       </Space>
     }
@@ -240,7 +240,7 @@ const AddOrUpdateForm: React.FC<Prop> = ({ initValues, trigger, onSuccess }) => 
         const {msg} =  await $addApi(values);
         message.success(msg);
       }
-      onSuccess && onSuccess();
+      onSuccess?.();
       return true;
     } catch (err) {
       message.error(`${'$'}{err}`);

@@ -21,10 +21,9 @@ class SalvoSearchApi : SearchEverywhereContributorFactory<SalvoApiItem> {
         return project != null
     }
 
-    private inner class MySearchEverywhereProvider(project: Project) : SearchEverywhereContributor<SalvoApiItem> {
+    private inner class MySearchEverywhereProvider(val project: Project) : SearchEverywhereContributor<SalvoApiItem> {
 
         var allApi: List<SalvoApiItem> = SalvoApiService.getInstance(project).getApiList()
-
 
         override fun getSearchProviderId(): String {
             return MySearchEverywhereProvider::class.java.name
@@ -43,7 +42,7 @@ class SalvoSearchApi : SearchEverywhereContributorFactory<SalvoApiItem> {
         }
 
         override fun getElementsRenderer(): ListCellRenderer<in SalvoApiItem> {
-            return SalvoApiItemRender()
+            return SalvoApiItemRender(project)
         }
 
         override fun getDataForItem(element: SalvoApiItem, dataId: String): Any? {
@@ -54,6 +53,8 @@ class SalvoSearchApi : SearchEverywhereContributorFactory<SalvoApiItem> {
             selected.navTo()
             return true
         }
+
+
 
         override fun fetchElements(
             pattern: String,

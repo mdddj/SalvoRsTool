@@ -2,6 +2,7 @@
 
 ## Unreleased
 
+
 ### [2.2.6] -2025-04-17
 
 - adaptation 2025.1

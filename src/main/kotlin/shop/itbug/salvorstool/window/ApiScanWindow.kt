@@ -2,6 +2,7 @@ package shop.itbug.salvorstool.window
 
 import com.intellij.icons.AllIcons
 import com.intellij.ide.BrowserUtil
+import com.intellij.ide.actions.searcheverywhere.SearchEverywhereManager
 import com.intellij.openapi.Disposable
 import com.intellij.openapi.actionSystem.ActionManager
 import com.intellij.openapi.actionSystem.DataSink
@@ -9,6 +10,7 @@ import com.intellij.openapi.actionSystem.DefaultActionGroup
 import com.intellij.openapi.actionSystem.UiDataProvider
 import com.intellij.openapi.project.DumbService
 import com.intellij.openapi.project.Project
+import com.intellij.openapi.util.TextRange
 import com.intellij.ui.*
 import com.intellij.ui.components.JBList
 import com.intellij.ui.speedSearch.SpeedSearchUtil
@@ -60,7 +62,7 @@ class ApiScanWindow(private val myProject: Project) : JBList<SalvoApiItem>(), Ui
 
 
     init {
-        cellRenderer = SalvoApiItemRender()
+        cellRenderer = SalvoApiItemRender(myProject)
         model = ItemModel(allApis)
         border = Tools.emptyBorder()
         selectionMode = ListSelectionModel.SINGLE_SELECTION
@@ -133,7 +135,7 @@ class ApiScanWindow(private val myProject: Project) : JBList<SalvoApiItem>(), Ui
 }
 
 
-class SalvoApiItemRender : ColoredListCellRenderer<SalvoApiItem>() {
+class SalvoApiItemRender(val project: Project) : ColoredListCellRenderer<SalvoApiItem>() {
     override fun customizeCellRenderer(
         list: JList<out SalvoApiItem>,
         value: SalvoApiItem?,
@@ -161,7 +163,21 @@ class SalvoApiItemRender : ColoredListCellRenderer<SalvoApiItem>() {
             )
 
         }
-        SpeedSearchUtil.applySpeedSearchHighlighting(list, this, false, selected)
+
+        val searchPopupIsShow = SearchEverywhereManager.getInstance(project).isShown
+        if (searchPopupIsShow) {
+            val text = SearchEverywhereManager.getInstance(project).currentlyShownUI.searchField.text
+            if(text.isNotBlank()){
+                val textRanges = text.toRegex().findAll(value?.api ?: "").map { it.range }
+                    .map { TextRange(it.first, it.last) }.toList()
+                SpeedSearchUtil.applySpeedSearchHighlighting(this, textRanges, selected)
+            }
+
+        } else {
+            SpeedSearchUtil.applySpeedSearchHighlighting(list, this, false, selected)
+        }
+
+
     }
 
 }

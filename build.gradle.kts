@@ -9,7 +9,7 @@ plugins {
     idea
     java
     id("org.jetbrains.kotlin.jvm") version "2.1.20"
-    id("org.jetbrains.intellij.platform") version "2.5.0"
+    id("org.jetbrains.intellij.platform") version "2.6.0"
     id("org.jetbrains.changelog") version "2.2.0"
 }
 group = "shop.itbug"
@@ -38,8 +38,7 @@ fun getChangelogVersion(): String {
 
 dependencies {
     intellijPlatform {
-        rustRover("2025.1")
-        jetbrainsRuntimeLocal("/Users/ldd/Library/Java/JavaVirtualMachines/jbrsdk_jcef-21.0.6")
+        rustRover("2025.1.3")
         bundledPlugins("JavaScript", "com.jetbrains.rust", "org.toml.lang", "com.intellij.modules.json","com.intellij.database")
         zipSigner()
         pluginVerifier()
