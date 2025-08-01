@@ -6,7 +6,6 @@
         <a href="https://github.com/mdddj/SalvoRsTool">Github</a> |
         <a href="https://mdddj.github.io/SalvoRsToolDocument/default-topic.html">Get Started</a> |
         <a href="https://mdddj.github.io/SalvoRsToolDocument/changelog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.html">Changelog</a> |
-        <a href="https://mdddj.github.io/SalvoRsToolDocument/%E6%89%93%E8%B5%8F%E5%92%8C%E8%81%94%E7%B3%BB.html">Donate</a>
     </b>
 </p>
 <br/>
@@ -37,10 +36,19 @@
             <li>Json To migration file</li>
         </ul>
     </li>
+    <li>Actix
+        <ul>
+            <li>Api endpoints window</li>
+        </ul>
+    </li>
 </ul>
 
-<h2>Example</h2>
+<h2>Images</h2>
 <div>
-    <h5>Sql generate struct</h5>
-    
+    <h5>1. <a href="https://actix.rs/">Actix</a> web api window</h5>
+    <img alt="" src="https://github.com/mdddj/SalvoRsTool/blob/main/images/actix-api-window.png?raw=true" />
+</div>
+<div>
+    <h5>2. <a href="https://salvo.rs/">Salvo</a> api window</h5>
+    <img src="https://github.com/mdddj/SalvoRsTool/blob/main/images/salvo-api-window.png?raw=true" alt="" />
 </div>

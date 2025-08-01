@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="385ba4eb-8ca7-4728-9d8d-815c227cc527" name="Changes" comment="release 2.3.0">
-      <change afterPath="$PROJECT_DIR$/images/actix-api-window.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/salvo-api-window.png" afterDir="false" />
+    <list default="true" id="385ba4eb-8ca7-4728-9d8d-815c227cc527" name="Changes" comment="添加插件截图">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DESCRIPTION.md" beforeDir="false" afterPath="$PROJECT_DIR$/DESCRIPTION.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -717,15 +717,7 @@
       <workItem from="1754014143614" duration="5491000" />
       <workItem from="1754019917750" duration="5000000" />
       <workItem from="1754030225743" duration="2762000" />
-      <workItem from="1754033020685" duration="789000" />
-    </task>
-    <task id="LOCAL-00006" summary="bug fix">
-      <option name="closed" value="true" />
-      <created>1713512974103</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1713512974103</updated>
+      <workItem from="1754033020685" duration="1174000" />
     </task>
     <task id="LOCAL-00007" summary="test">
       <option name="closed" value="true" />
@@ -1111,7 +1103,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754033196713</updated>
     </task>
-    <option name="localTasksCounter" value="55" />
+    <task id="LOCAL-00055" summary="添加插件截图">
+      <option name="closed" value="true" />
+      <created>1754033823931</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1754033823931</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1147,7 +1147,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="release1.5.2" />
     <MESSAGE value="添加react-hook-form表单生成" />
     <MESSAGE value="release1.6.0" />
     <MESSAGE value="release1.6.1" />
@@ -1172,7 +1171,8 @@
     <MESSAGE value="依赖升级" />
     <MESSAGE value="优化搜索功能，更新依赖版本" />
     <MESSAGE value="release 2.3.0" />
-    <option name="LAST_COMMIT_MESSAGE" value="release 2.3.0" />
+    <MESSAGE value="添加插件截图" />
+    <option name="LAST_COMMIT_MESSAGE" value="添加插件截图" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

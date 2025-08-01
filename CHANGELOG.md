@@ -6,6 +6,7 @@
 
 - Supported actix-web API scanning window (New Features)
 - Move the salvo api window to the right sidebar
+- ![](https://github.com/mdddj/SalvoRsTool/blob/main/images/actix-api-window.png?raw=true)
 
 ### [2.2.8] -2025-07-23
 
