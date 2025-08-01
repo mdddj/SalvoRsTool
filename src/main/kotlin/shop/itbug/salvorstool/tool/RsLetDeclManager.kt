@@ -1,11 +1,10 @@
 package shop.itbug.salvorstool.tool
 
 import com.intellij.openapi.project.Project
-import com.intellij.psi.SmartPointerManager
-import com.intellij.psi.SmartPsiElementPointer
 import com.intellij.psi.util.PsiTreeUtil
-import org.rust.lang.core.psi.RsMethodCall
-import org.rust.lang.core.psi.impl.*
+import org.rust.lang.core.psi.impl.RsLetDeclImpl
+import org.rust.lang.core.psi.impl.RsMethodCallExprImpl
+import org.rust.lang.core.psi.impl.RsMethodCallImpl
 import shop.itbug.salvorstool.model.SalvoApiItem
 
 val RsLetDeclImpl.rsLetDeclImplManager get() = RsLetDeclManager(this)

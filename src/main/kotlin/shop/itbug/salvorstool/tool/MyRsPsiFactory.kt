@@ -1,6 +1,5 @@
 package shop.itbug.salvorstool.tool
 
-import com.intellij.psi.PsiElement
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import shop.itbug.salvorstool.dialog.*
 

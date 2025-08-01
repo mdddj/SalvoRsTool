@@ -28,7 +28,7 @@ import javax.swing.JPanel
 import javax.swing.ListSelectionModel
 
 
-object SalvoApiWindowFactory {
+object SalvoApiWindowFactoryUtils {
 
     fun installActions(salvoApiWindow: ApiScanWindow): JPanel {
         val actions = ActionManager.getInstance().getAction("SalvoApiActionList") as DefaultActionGroup
@@ -56,7 +56,7 @@ class ApiScanWindow(private val myProject: Project) : JBList<SalvoApiItem>(), Ui
 
     private val busConnect = myProject.messageBus.connect(this)
 
-    private val rightMenuAction = SalvoApiWindowFactory.getDefaultActions()
+    private val rightMenuAction = SalvoApiWindowFactoryUtils.getDefaultActions()
 
     private var allApis = SalvoApiService.getInstance(myProject).getApiList()
 
@@ -167,7 +167,7 @@ class SalvoApiItemRender(val project: Project) : ColoredListCellRenderer<SalvoAp
         val searchPopupIsShow = SearchEverywhereManager.getInstance(project).isShown
         if (searchPopupIsShow) {
             val text = SearchEverywhereManager.getInstance(project).currentlyShownUI.searchField.text
-            if(text.isNotBlank()){
+            if (text.isNotBlank()) {
                 val textRanges = text.toRegex().findAll(value?.api ?: "").map { it.range }
                     .map { TextRange(it.first, it.last) }.toList()
                 SpeedSearchUtil.applySpeedSearchHighlighting(this, textRanges, selected)

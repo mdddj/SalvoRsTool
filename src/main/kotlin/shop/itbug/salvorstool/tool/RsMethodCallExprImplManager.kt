@@ -1,9 +1,7 @@
 package shop.itbug.salvorstool.tool
 
-import com.intellij.psi.PsiElement
 import com.intellij.psi.SmartPointerManager
 import com.intellij.psi.util.PsiTreeUtil
-import org.rust.lang.core.psi.RsExpr
 import org.rust.lang.core.psi.impl.*
 import shop.itbug.salvorstool.model.SalvoApiItemFunction
 import shop.itbug.salvorstool.model.SalvoApiItemMethod

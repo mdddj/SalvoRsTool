@@ -2,6 +2,19 @@
 
 ## Unreleased
 
+### [2.3.0] -2025-08-01
+
+- Supported actix-web API scanning window (New Features)
+- Move the salvo api window to the right sidebar
+
+### [2.2.8] -2025-07-23
+
+- Optimize the logic of scanning part of the Salva API
+- Add qodana to scan code quality and optimize accordingly
+
+### [2.2.7] -2025-07-19
+
+- Optimize the display logic of the salvo api window
 
 ### [2.2.6] -2025-04-17
 

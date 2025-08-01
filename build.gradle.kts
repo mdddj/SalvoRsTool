@@ -1,5 +1,8 @@
+import java.time.LocalDate
+import java.time.format.DateTimeFormatter
 import org.jetbrains.changelog.Changelog
 import org.jetbrains.intellij.platform.gradle.IntelliJPlatformType
+import org.jetbrains.intellij.platform.gradle.TestFrameworkType
 import org.jetbrains.intellij.platform.gradle.models.ProductRelease
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
@@ -8,12 +11,14 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     idea
     java
-    id("org.jetbrains.kotlin.jvm") version "2.1.20"
-    id("org.jetbrains.intellij.platform") version "2.6.0"
+    id("org.jetbrains.kotlin.jvm") version "2.2.0"
+    id("org.jetbrains.intellij.platform") version "2.7.0"
     id("org.jetbrains.changelog") version "2.2.0"
 }
+
 group = "shop.itbug"
-version = "2.2.6"
+
+version = "2.3.0"
 
 repositories {
     mavenCentral()
@@ -28,40 +33,49 @@ repositories {
     }
 }
 
-
-
 fun getChangelogVersion(): String {
     val v = project.version as String
     return v
 }
 
-
 dependencies {
     intellijPlatform {
         rustRover("2025.1.3")
-        bundledPlugins("JavaScript", "com.jetbrains.rust", "org.toml.lang", "com.intellij.modules.json","com.intellij.database")
+        bundledPlugins(
+                "JavaScript",
+                "com.jetbrains.rust",
+                "org.toml.lang",
+                "com.intellij.modules.json",
+                "com.intellij.database"
+        )
         zipSigner()
         pluginVerifier()
         javaCompiler()
         jetbrainsRuntime()
+        testFramework(TestFrameworkType.Platform)
+        testBundledPlugins("com.jetbrains.rust")
     }
+    testImplementation("junit:junit:4.13.2")
 }
-
 
 var pushToken: String? = System.getenv("PUBLISH_TOKEN")
 
-if(pushToken == null){
+if (pushToken == null) {
     pushToken = System.getenv("idea_push_token")
 }
 
 intellijPlatform {
-    pluginVerification {
-        ides {
-            local("/Applications/RustRover.app")
+    pluginVerification { ides { local("/Applications/RustRover.app") } }
+
+    pluginConfiguration {
+        productDescriptor {
+            code.set("PRUSTX")
+            releaseDate.set(getCurrentDay())
+            releaseVersion.set("23")
         }
     }
+    //
 }
-
 
 kotlin {
     compilerOptions {
@@ -75,8 +89,11 @@ java {
     targetCompatibility = JavaVersion.VERSION_21
 }
 
-tasks {
+fun getCurrentDay(): String {
+    return LocalDate.now().format(DateTimeFormatter.ofPattern("yyyyMMdd"))
+}
 
+tasks {
     withType<KotlinCompile> {
         compilerOptions {
             languageVersion.set(KotlinVersion.KOTLIN_2_0)
@@ -86,17 +103,13 @@ tasks {
 
     val myChangeLog = provider {
         changelog.renderItem(
-            changelog
-                .getOrNull(getChangelogVersion()) ?: changelog.getUnreleased()
-                .withHeader(false)
-                .withEmptySections(false),
-            Changelog.OutputType.HTML
+                changelog.getOrNull(getChangelogVersion())
+                        ?: changelog.getUnreleased().withHeader(false).withEmptySections(false),
+                Changelog.OutputType.HTML
         )
     }
 
     val descText = projectDir.resolve("DESCRIPTION.md").readText()
-
-
 
     patchPluginXml {
         sinceBuild.set("251")
@@ -108,10 +121,10 @@ tasks {
     signPlugin {
         var chain = System.getenv("CERTIFICATE_CHAIN").trimIndent()
         var privateKeyString = System.getenv("PRIVATE_KEY").trimIndent()
-        if(chain.isEmpty()){
+        if (chain.isEmpty()) {
             chain = file("chain.crt").readText()
         }
-        if(privateKeyString.isEmpty()) {
+        if (privateKeyString.isEmpty()) {
             privateKeyString = file("private.key").readText()
         }
         certificateChain.set(chain)
@@ -128,9 +141,7 @@ tasks {
     runIde {
         autoReload = true
         jvmArgs = listOf("-XX:+AllowEnhancedClassRedefinition")
-        args = listOf(
-            "/Users/hlx/github/d_blog"
-        )
+        args = listOf("/Users/hlx/github/SalvoRsTool/actix/hello-world")
     }
 
     printProductsReleases {
@@ -138,18 +149,10 @@ tasks {
         types = listOf(IntelliJPlatformType.RustRover)
     }
 
-    buildSearchableOptions {
-        enabled = false
-    }
+    buildSearchableOptions { enabled = false }
 }
 
-idea {
-    module {
-        isDownloadSources = true
-    }
-}
-
-
+idea { module { isDownloadSources = true } }
 
 changelog {
     version = getChangelogVersion()

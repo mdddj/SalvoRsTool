@@ -14,7 +14,6 @@ import com.intellij.psi.search.LocalSearchScope
 import com.intellij.psi.search.searches.ReferencesSearch
 import com.intellij.psi.util.PsiTreeUtil
 import com.intellij.util.PsiNavigateUtil
-import org.rust.lang.core.psi.RsFile
 import org.rust.lang.core.psi.RsNamedFieldDecl
 import org.rust.lang.core.psi.RsOuterAttr
 import org.rust.lang.core.psi.impl.RsStructItemImpl

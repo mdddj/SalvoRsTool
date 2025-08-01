@@ -16,13 +16,6 @@ class SeaOrmCommandHelp(private val dirPath: String, val project: Project) {
     private val COMMAND_CLI = "sea-orm-cli"
 
 
-    ///获取版本
-    fun getVersion(): String? {
-        val output = runCommand("--version")
-        return output?.stdout?.trim()
-    }
-
-
     ///初始化
     fun migrateInit(customDir: String? = null) {
         val params = mutableSetOf<String>()

@@ -10,7 +10,6 @@ import com.intellij.ui.dsl.builder.Panel
 import com.intellij.ui.dsl.builder.bindText
 import com.intellij.ui.dsl.builder.panel
 import com.intellij.util.ui.FormBuilder
-import com.intellij.util.ui.components.BorderLayoutPanel
 import org.rust.lang.core.psi.RsNamedFieldDecl
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import shop.itbug.salvorstool.dsl.SaveToBindModel

@@ -7,7 +7,6 @@ import com.intellij.openapi.project.Project
 import org.rust.lang.core.psi.RsNamedFieldDecl
 import org.rust.lang.core.psi.RsStructItem
 import shop.itbug.salvorstool.tool.MyRsStructManager
-import shop.itbug.salvorstool.tool.myManager
 import shop.itbug.salvorstool.tool.structItemManager
 import shop.itbug.salvorstool.tool.tryGetRsStructPsiElement
 

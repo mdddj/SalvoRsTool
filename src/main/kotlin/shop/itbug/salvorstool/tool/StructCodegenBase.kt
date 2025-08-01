@@ -4,12 +4,10 @@ import com.intellij.lang.javascript.JSXFileType
 import com.intellij.lang.javascript.TypeScriptFileType
 import com.intellij.openapi.application.ApplicationManager
 import com.intellij.openapi.application.readAction
-import com.intellij.openapi.fileEditor.FileDocumentManager
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.vfs.LocalFileSystem
 import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.openapi.vfs.VirtualFileManager
-import com.intellij.openapi.vfs.VirtualFileSystem
 import com.intellij.psi.PsiFileFactory
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -18,8 +16,6 @@ import shop.itbug.salvorstool.dialog.SalvoCodegenDialogConfig
 import shop.itbug.salvorstool.i18n.MyI18n
 import shop.itbug.salvorstool.model.SalvoApiItem
 import kotlin.io.path.Path
-import kotlin.properties.ReadOnlyProperty
-import kotlin.reflect.KProperty
 
 class CodegenError(msg: String) : RuntimeException(msg)
 

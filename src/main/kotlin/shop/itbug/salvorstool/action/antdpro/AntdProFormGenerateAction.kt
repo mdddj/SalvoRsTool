@@ -6,12 +6,10 @@ import com.intellij.ui.dsl.builder.bind
 import com.intellij.ui.dsl.builder.panel
 import com.intellij.util.Alarm
 import com.intellij.util.ui.FormBuilder
-import com.intellij.util.ui.components.BorderLayoutPanel
 import shop.itbug.salvorstool.action.base.BaseRsStructCodeGenerateAction
 import shop.itbug.salvorstool.tool.JavascriptType
 import shop.itbug.salvorstool.tool.MyFieldPsiElementManager
 import shop.itbug.salvorstool.widget.TypeJavaScriptEditor
-import java.awt.Dimension
 import javax.swing.JComponent
 import javax.swing.SwingUtilities
 
