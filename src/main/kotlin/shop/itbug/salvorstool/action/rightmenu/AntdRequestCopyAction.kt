@@ -1,6 +1,5 @@
 package shop.itbug.salvorstool.action.rightmenu
 
-import com.intellij.icons.AllIcons
 import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
@@ -21,7 +20,7 @@ class AntdRequestCopyAction : AnAction() {
 
     override fun update(e: AnActionEvent) {
         super.update(e)
-        e.presentation.text = "${MyI18n.getMessage("copy")} Antd Request"
+        e.presentation.text = "${MyI18n.getMessage("copy")} Antd Request(已弃用)"
         e.presentation.icon = MyIcon.antd
           e.presentation.isEnabled = SalvoApiActionHelper.getSelectItem(e) != null
     }

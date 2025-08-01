@@ -1,0 +1,15 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="Docker" revision="RR-251.18673.38"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="clouds-docker-impl" ext="jar" conf="default" url="plugins/clouds-docker-impl/lib"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.platform.clouds" rev="RR-251.18673.38"/>
+    <dependency org="bundledModule" name="intellij.libraries.ktor.client" rev="RR-251.18673.38"/>
+    <dependency org="bundledPlugin" name="org.jetbrains.plugins.yaml" rev="RR-251.18673.38"/>
+    <dependency org="bundledModule" name="intellij.platform.vcs.impl" rev="RR-251.18673.38"/>
+  </dependencies>
+</ivy-module>

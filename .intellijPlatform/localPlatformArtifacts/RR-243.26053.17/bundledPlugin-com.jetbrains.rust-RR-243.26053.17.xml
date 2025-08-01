@@ -1,0 +1,18 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="com.jetbrains.rust" revision="RR-243.26053.17"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="intellij-rust" ext="jar" conf="default" url="plugins/intellij-rust/lib"/>
+    <artifact name="intellij.rustrover.monorepo-capable" ext="jar" conf="default" url="plugins/intellij-rust/lib/modules"/>
+    <artifact name="intellij.rustrover.full-line" ext="jar" conf="default" url="plugins/intellij-rust/lib/modules"/>
+    <artifact name="intellij.rustrover.ml-completion" ext="jar" conf="default" url="plugins/intellij-rust/lib/modules"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.toml.json" rev="RR-243.26053.17"/>
+    <dependency org="bundledModule" name="intellij.platform.vcs.impl" rev="RR-243.26053.17"/>
+    <dependency org="bundledPlugin" name="org.toml.lang" rev="RR-243.26053.17"/>
+    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="RR-243.26053.17"/>
+  </dependencies>
+</ivy-module>

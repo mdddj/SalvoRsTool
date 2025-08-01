@@ -1,6 +1,5 @@
 package shop.itbug.salvorstool.tool
 
-import com.intellij.psi.PsiElement
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import shop.itbug.salvorstool.dialog.*
 
@@ -35,7 +34,7 @@ object MyRsPsiFactory {
 
     /**
      * service add
-     * }
+     *
      */
     fun generateServiceWithAdd(psiElement: RsStructItemImpl): String {
         val type = GenerateDtoDialogResultEnum.AddRequest

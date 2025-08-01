@@ -5,7 +5,6 @@ import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import shop.itbug.salvorstool.dialog.GenerateServiceDialog
 import shop.itbug.salvorstool.i18n.MyI18n
-import shop.itbug.salvorstool.tool.myManager
 import shop.itbug.salvorstool.tool.structItemManager
 import shop.itbug.salvorstool.tool.tryGetRsStructPsiElement
 

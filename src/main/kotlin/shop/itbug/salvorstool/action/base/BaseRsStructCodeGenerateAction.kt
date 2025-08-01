@@ -7,7 +7,6 @@ import com.intellij.openapi.project.Project
 import org.rust.lang.core.psi.RsNamedFieldDecl
 import org.rust.lang.core.psi.RsStructItem
 import shop.itbug.salvorstool.tool.MyRsStructManager
-import shop.itbug.salvorstool.tool.myManager
 import shop.itbug.salvorstool.tool.structItemManager
 import shop.itbug.salvorstool.tool.tryGetRsStructPsiElement
 
@@ -45,7 +44,8 @@ abstract class BaseRsStructCodeGenerateAction : AnAction() {
 
 
     override fun update(e: AnActionEvent) {
-        e.presentation.isVisible = e.tryGetRsStructPsiElement() != null && e.project != null
+        val struct =  e.tryGetRsStructPsiElement()
+        e.presentation.isVisible = struct != null && e.project != null && struct.structItemManager.fieldList.isNotEmpty()
         super.update(e)
     }
 

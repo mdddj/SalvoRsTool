@@ -2,7 +2,6 @@ package shop.itbug.salvorstool.dialog
 
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogWrapper
-import com.intellij.ui.components.JBScrollPane
 import com.intellij.ui.components.JBTabbedPane
 import com.intellij.util.ui.FormBuilder
 import com.intellij.util.ui.UIUtil

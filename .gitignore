@@ -44,3 +44,11 @@ bin/
 ### Mac OS ###
 .DS_Store
 cli.jar
+
+
+actix/hello-world/target/
+.intellijPlatform/
+
+examples/
+
+.kotlin/

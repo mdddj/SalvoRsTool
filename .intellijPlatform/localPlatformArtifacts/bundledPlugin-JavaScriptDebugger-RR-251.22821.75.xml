@@ -1,0 +1,19 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="JavaScriptDebugger" revision="RR-251.22821.75"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="ChromeConnector" ext="jar" conf="default" url="plugins/javascript-debugger/lib"/>
+    <artifact name="javascript-debugger" ext="jar" conf="default" url="plugins/javascript-debugger/lib"/>
+    <artifact name="intellij.javascript.debugger.frontend" ext="jar" conf="default" url="plugins/javascript-debugger/lib/modules"/>
+    <artifact name="intellij.javascript.debugger.shared" ext="jar" conf="default" url="plugins/javascript-debugger/lib/modules"/>
+    <artifact name="intellij.javascript.debugger.backend" ext="jar" conf="default" url="plugins/javascript-debugger/lib/modules"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.jetbrains.plugins.webDeployment" rev="RR-251.22821.75"/>
+    <dependency org="bundledPlugin" name="com.intellij.modules.json" rev="RR-251.22821.75"/>
+    <dependency org="bundledPlugin" name="JavaScriptDebugger" rev="RR-251.22821.75"/>
+    <dependency org="bundledModule" name="intellij.platform.dap" rev="RR-251.22821.75"/>
+  </dependencies>
+</ivy-module>

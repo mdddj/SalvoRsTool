@@ -19,6 +19,9 @@ object MyI18n: MyPluginBundle(){
     val fileIsExist: String get() = getMessage("file_is_exits")
     //目录不存在
     val folderIsNotFound: String get() = getMessage("folder_is_not_found")
+    //代码生成
+    val codegen: String get() = getMessage("setting.codegen.group.title")
+
 }
 
 open class MyPluginBundle : AbstractBundle("messages.pluginBundle") {

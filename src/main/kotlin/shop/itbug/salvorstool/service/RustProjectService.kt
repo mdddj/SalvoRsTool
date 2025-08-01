@@ -25,6 +25,7 @@ class RustProjectService(val project: Project) {
         return hasDependencies("salvo")
     }
 
+    suspend fun hasActixWebDependencies(): Boolean = hasDependencies("actix-web")
 
     /**
      * 检测项目中是否依赖某个包

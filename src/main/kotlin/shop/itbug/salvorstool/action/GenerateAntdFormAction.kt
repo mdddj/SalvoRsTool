@@ -4,6 +4,7 @@ import com.intellij.openapi.actionSystem.ActionUpdateThread
 import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import shop.itbug.salvorstool.dialog.GenerateAntdFormDialog
+import shop.itbug.salvorstool.tool.structItemManager
 import shop.itbug.salvorstool.tool.tryGetRsStructPsiElement
 
 
@@ -16,7 +17,8 @@ class GenerateAntdFormAction : AnAction() {
     }
 
     override fun update(e: AnActionEvent) {
-        e.presentation.isVisible = e.tryGetRsStructPsiElement() != null
+        val struct = e.tryGetRsStructPsiElement()
+        e.presentation.isVisible = struct != null && struct.structItemManager.fieldList.isNotEmpty()
         super.update(e)
     }
 

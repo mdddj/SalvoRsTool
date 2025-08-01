@@ -12,7 +12,6 @@ import shop.itbug.salvorstool.help.SeaOrmCommandHelp
 import shop.itbug.salvorstool.i18n.MyI18n
 import shop.itbug.salvorstool.icons.MyIcon
 import javax.swing.JComponent
-import javax.swing.SwingUtilities
 
 
 class SeamOrmCommandActionGroup : DefaultActionGroup() {

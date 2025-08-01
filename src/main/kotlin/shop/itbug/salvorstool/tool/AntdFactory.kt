@@ -39,7 +39,12 @@ object AntdFactory {
         val fieldSb = StringBuilder()
 
         jsModels.forEach {
-            fieldSb.appendLine("\t\t" + generateFormItem(it))
+            if(!it.isPrimaryKey){
+                fieldSb.appendLine("\t\t" + generateFormItem(it))
+            }else{
+                println("忽略主键")
+            }
+
         }
 
         //4.添加最外层的包装
@@ -49,7 +54,7 @@ object AntdFactory {
     }
 
     ///生成form item
-    private fun generateFormItem(model: MyFieldPsiElementManager.JsModel): String {
+     fun generateFormItem(model: MyFieldPsiElementManager.JsModel): String {
         val type = when (model.type) {
             JavascriptType.Number -> "ProFormDigit"
             JavascriptType.String -> "ProFormText"

@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.llmInstaller" revision="RR-243.26053.17"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications/>
+  <dependencies>
+    <dependency org="bundledPlugin" name="com.intellij.platform.ide.provisioner" rev="RR-243.26053.17"/>
+  </dependencies>
+</ivy-module>

@@ -1,7 +1,6 @@
 package shop.itbug.salvorstool.bar
 
 import com.intellij.ide.DataManager
-import com.intellij.openapi.actionSystem.ActionPlaces
 import com.intellij.openapi.actionSystem.PlatformCoreDataKeys
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.popup.JBPopupFactory

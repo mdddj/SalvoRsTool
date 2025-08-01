@@ -1,0 +1,10 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.ml.inline.completion" revision="RR-251.20015.38"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications/>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.platform.inline.completion" rev="RR-251.20015.38"/>
+  </dependencies>
+</ivy-module>

@@ -9,14 +9,17 @@ enum class SqlRustType(val typeText: String) {
     Bigint("bigint"),
     Varchar255("varchar(255)"),
     Varchar20("varchar(20)"),
+    Varchar("varchar"),
     Datetime("datetime(6)"),
     Longtext("longtext"),
     Bit1("bit(1)"),
+    DatetimeText("datetime_text"),
+    DateText("date_text"),
     Unknown("unknown");
 
     fun getRustTypeString(isOption: Boolean): String {
         val desc = when (this) {
-            Text, Varchar255, Varchar20, Longtext -> "String"
+            Text, Varchar255, Varchar20, Longtext,Varchar,DatetimeText,DateText -> "String"
             Integer, Bigint -> "i64"
             Unknown -> "Unknown"
             Float -> "f64"

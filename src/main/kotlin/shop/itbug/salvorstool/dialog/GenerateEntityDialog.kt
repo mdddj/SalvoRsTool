@@ -5,7 +5,9 @@ import com.intellij.openapi.fileChooser.FileChooserDescriptorFactory
 import com.intellij.openapi.project.Project
 import com.intellij.openapi.ui.DialogPanel
 import com.intellij.openapi.ui.DialogWrapper
+import com.intellij.openapi.ui.TextFieldWithBrowseButton
 import com.intellij.ui.components.fields.ExpandableTextField
+import com.intellij.ui.components.textFieldWithBrowseButton
 import com.intellij.ui.dsl.builder.*
 import com.intellij.util.Alarm
 import shop.itbug.salvorstool.cache.SeaOrmCache
@@ -78,6 +80,12 @@ class GenerateEntityDialog(val project: Project, val runCommand: (Config, String
         }, 1000)
     }
 
+    private fun createFolderSelectComponent(): TextFieldWithBrowseButton {
+        return textFieldWithBrowseButton(project,FileChooserDescriptorFactory.createSingleFolderDescriptor()){
+            it.path
+        }
+    }
+
     override fun createCenterPanel(): JComponent {
         this.panel = panel {
             row("Database url") {
@@ -92,11 +100,16 @@ class GenerateEntityDialog(val project: Project, val runCommand: (Config, String
                     .bindText(config::databaseSchema)
                     .comment("Database schema (default: DATABASE_SCHEMA specified in ENV)")
             }
-            row("Output dir") {
-                textFieldWithBrowseButton(FileChooserDescriptorFactory.createSingleFolderDescriptor(),project){
-                    it.path
-                }.align(Align.FILL).bindText(config::outputDir)
+
+            row("Output Dir") {
+                cell(createFolderSelectComponent()).bindText(config::outputDir).align(Align.FILL)
             }
+
+//            row("Output dir") {
+//                textFieldWithBrowseButton(FileChooserDescriptorFactory.createSingleFolderDescriptor(),project){
+//                    it.path
+//                }.align(Align.FILL).bindText(config::outputDir)
+//            }
             row("Include hidden tables") {
                 checkBox("Generate entity files from hidden tables (tables with names starting with an underscore are hidden and ignored by default)").bindSelected(
                     config::includeHiddenTables

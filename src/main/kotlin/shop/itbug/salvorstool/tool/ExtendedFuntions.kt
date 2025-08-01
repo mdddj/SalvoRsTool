@@ -120,14 +120,14 @@ fun PsiFile.getUseAge(element: PsiElement): List<PsiReference> {
  * 尝试跳转到代码为止
  */
 fun PsiElement.tryNavTo() {
-    PsiNavigateUtil.navigate(this,true)
+    PsiNavigateUtil.navigate(this, true)
 }
 
 
 /**
  * 验证[path]是否存在,可以是目录或者文件
  */
- fun fileIsExits(path: String): Boolean {
+fun fileIsExits(path: String): Boolean {
     val vf = LocalFileSystem.getInstance().findFileByPath(path)
     return vf != null
 }

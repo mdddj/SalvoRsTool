@@ -1,0 +1,12 @@
+<ivy-module version="2.0">
+  <info organisation="bundledModule" module="intellij.platform.execution.dashboard" revision="RR-243.26053.17"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="intellij.platform.execution.dashboard" ext="jar" conf="default" url="lib/modules"/>
+  </publications>
+  <dependencies>
+    <dependency org="bundledModule" name="intellij.platform.execution.serviceView" rev="RR-243.26053.17"/>
+  </dependencies>
+</ivy-module>

@@ -1,0 +1,11 @@
+<ivy-module version="2.0">
+  <info organisation="bundledPlugin" module="org.toml.lang" revision="RR-251.23774.445"/>
+  <configurations>
+    <conf name="default" visibility="public"/>
+  </configurations>
+  <publications>
+    <artifact name="toml-frontend" ext="jar" conf="default" url="plugins/toml/lib"/>
+    <artifact name="toml" ext="jar" conf="default" url="plugins/toml/lib"/>
+  </publications>
+  <dependencies/>
+</ivy-module>

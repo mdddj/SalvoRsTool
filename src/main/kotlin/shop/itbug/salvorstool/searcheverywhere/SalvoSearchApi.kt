@@ -6,7 +6,9 @@ import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.progress.ProgressIndicator
 import com.intellij.openapi.project.Project
 import com.intellij.util.Processor
+import kotlinx.coroutines.runBlocking
 import shop.itbug.salvorstool.model.SalvoApiItem
+import shop.itbug.salvorstool.service.RustProjectService
 import shop.itbug.salvorstool.service.SalvoApiService
 import shop.itbug.salvorstool.window.SalvoApiItemRender
 import javax.swing.ListCellRenderer
@@ -16,15 +18,14 @@ class SalvoSearchApi : SearchEverywhereContributorFactory<SalvoApiItem> {
     override fun createContributor(initEvent: AnActionEvent): SearchEverywhereContributor<SalvoApiItem> {
         return MySearchEverywhereProvider(initEvent.project!!)
     }
-
+    private fun Project.rustService() = RustProjectService.getInstance(this)
     override fun isAvailable(project: Project?): Boolean {
-        return project != null
+        return project != null && runBlocking { project.rustService().hasSalvoDependencies() }
     }
 
-    private inner class MySearchEverywhereProvider(project: Project) : SearchEverywhereContributor<SalvoApiItem> {
+    private inner class MySearchEverywhereProvider(val project: Project) : SearchEverywhereContributor<SalvoApiItem> {
 
         var allApi: List<SalvoApiItem> = SalvoApiService.getInstance(project).getApiList()
-
 
         override fun getSearchProviderId(): String {
             return MySearchEverywhereProvider::class.java.name
@@ -43,7 +44,7 @@ class SalvoSearchApi : SearchEverywhereContributorFactory<SalvoApiItem> {
         }
 
         override fun getElementsRenderer(): ListCellRenderer<in SalvoApiItem> {
-            return SalvoApiItemRender()
+            return SalvoApiItemRender(project)
         }
 
         override fun getDataForItem(element: SalvoApiItem, dataId: String): Any? {
@@ -54,6 +55,8 @@ class SalvoSearchApi : SearchEverywhereContributorFactory<SalvoApiItem> {
             selected.navTo()
             return true
         }
+
+
 
         override fun fetchElements(
             pattern: String,
