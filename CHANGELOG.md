@@ -2,7 +2,20 @@
 
 ## Unreleased
 
-### [2.3.0] -2025-08-01
+### [2.3.3] -2025-09-06
+
+- [salvo] Fixed a bug in code generation
+- [salvo] Replaced the code generation path rule, `/api/q/<param>` -> `/api/q/{param}`
+
+### [2.3.2] -2025-08-20
+
+- [**Actix**] Add chained call API detection, example:`route("/hey", web::get().to(manual_hello))`
+
+### [2.3.1] -2025-08-06
+
+- Adapted for 2025.2
+
+### [2.3.0] -2025-08-04
 
 - Supported actix-web API scanning window (New Features)
 - Move the salvo api window to the right sidebar

@@ -7,7 +7,7 @@ import shop.itbug.salvorstool.parser.ActixApiModelParser
 
 class ActixApiModelParserTest : BasePlatformTestCase() {
 
-    override fun getTestDataPath(): String? = "src/test/testData"
+    override fun getTestDataPath(): String = "src/test/testData"
 
     val mainRsFile get() = myFixture.configureByFile("main.rs") as RsFile
 

@@ -38,18 +38,15 @@ class SalvoApiService(val project: Project) : Disposable {
 
     fun startScan(isRefresh: Boolean = false) {
         scope.launch {
-            val hasSalvoDeps = RustProjectService.getInstance(project).hasSalvoDependencies()
-            if (hasSalvoDeps) {
-                val files = readAction { FileTypeIndex.getFiles(rsFileType, SalvoSearchGlobal(project)).toList() }
-                val tasks = files.map { file -> async { findRouterRsFunction(file) } }
-                val result = tasks.awaitAll().flatten()
-                val apis = mutableListOf<SalvoApiItem>()
-                result.forEach { r: RsFunctionImpl ->
-                    readAction { r.myManager.allLet.map { i -> apis.addAll(i.rsLetDeclImplManager.allApi) } }
-                }
-                projectApiList = apis
-                project.messageBus.syncPublisher(ApiScanMessaging.TOPIC).apiScanEnd(apis, isRefresh)
+            val files = readAction { FileTypeIndex.getFiles(rsFileType, SalvoSearchGlobal(project)).toList() }
+            val tasks = files.map { file -> async { findRouterRsFunction(file) } }
+            val result = tasks.awaitAll().flatten()
+            val apis = mutableListOf<SalvoApiItem>()
+            result.forEach { r: RsFunctionImpl ->
+                readAction { r.myManager.allLet.map { i -> apis.addAll(i.rsLetDeclImplManager.allApi) } }
             }
+            projectApiList = apis
+            project.messageBus.syncPublisher(ApiScanMessaging.TOPIC).apiScanEnd(apis, isRefresh)
         }
     }
 

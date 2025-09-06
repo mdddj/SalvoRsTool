@@ -4,10 +4,31 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="385ba4eb-8ca7-4728-9d8d-815c227cc527" name="Changes" comment="添加插件截图">
+    <list default="true" id="385ba4eb-8ca7-4728-9d8d-815c227cc527" name="Changes" comment="更新文档">
+      <change beforePath="$PROJECT_DIR$/.idea/FlutterxFullConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FlutterxFullConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/self-update.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.intellijPlatform/self-update.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DESCRIPTION.md" beforeDir="false" afterPath="$PROJECT_DIR$/DESCRIPTION.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actix/hello-world/src/main.rs" beforeDir="false" afterPath="$PROJECT_DIR$/actix/hello-world/src/main.rs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/model/ActixApiModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/model/ActixApiModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/parser/ActixApiModelParser.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/parser/ActixApiModelParser.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/searcheverywhere/SalvoSearchApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/searcheverywhere/SalvoSearchApi.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/service/SalvoApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/service/SalvoApiService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/MyRsPsiFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/MyRsPsiFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/MyRsStructManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/MyRsStructManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/RsLetDeclManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/RsLetDeclManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/RsMethodCallManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/RsMethodCallManager.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/Tools.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/Tools.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/ActixApiWindow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/ActixApiWindow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/ActixApiWindowFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/ActixApiWindowFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/ApiScanWindow.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/ApiScanWindow.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/SalvoApiWindowFactory.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/window/SalvoApiWindowFactory.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/shop/itbug/salvorstool/ActixApiModelParserTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/shop/itbug/salvorstool/ActixApiModelParserTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +61,17 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="intellij platform" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
@@ -99,6 +131,145 @@
   ]
 }</component>
   <component name="GitToolBoxStore">
+    <option name="branchesCleanupHistory">
+      <BranchesCleanupHistory>
+        <option name="history">
+          <list>
+            <BranchCleanupEntry>
+              <option name="deletions">
+                <list>
+                  <BranchDeletion>
+                    <option name="hash" value="479e34f07ea87086a7484cb6249e549687901c9e" />
+                    <option name="name" value="1.1.1" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="531aa3c4ea812090fc1abec78d38545ff708d5d7" />
+                    <option name="name" value="1.2.0" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="1f41bbf7fac8c01a0f35e0f131ea7f3002d52f89" />
+                    <option name="name" value="1.8.0" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="83e9ba6480f927b358050edd84c649e8e631f6a5" />
+                    <option name="name" value="1.3.0" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="2bacba0e736179bd0f33faded764d356fcca1c87" />
+                    <option name="name" value="2.1.0" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="4655adbd56fdb9addfdf1a1b2f31ba76c3fa8b3f" />
+                    <option name="name" value="1.5.1" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="531aa3c4ea812090fc1abec78d38545ff708d5d7" />
+                    <option name="name" value="test" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="ea2f59432eb3ae0dda7d2432eee64e2132741854" />
+                    <option name="name" value="1.3.3" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="87a65e1e118be093a693a4db338282c79118f8d7" />
+                    <option name="name" value="1.1.0" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="0fdc23f4f80204aee80e09ea7a4527f4466be3a1" />
+                    <option name="name" value="2.0.6" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="a1dd0412e33ec27b998e729db29525bcc42b2e3a" />
+                    <option name="name" value="1.7.0" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="238d84fb296f68d9a8bbd6fa4edc769756d42954" />
+                    <option name="name" value="1.6.0" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="ba32a807d74c59a2483cfec48a68365804467e2e" />
+                    <option name="name" value="2.0.0" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="59a5539c36494cddbaf5e75070b01c309f3d67b0" />
+                    <option name="name" value="1.5.2" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="a5bb28e2f1c2802e6621fcd126beceb9eb0fabf8" />
+                    <option name="name" value="2.0.5" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="25f1182f87a68858a30bb58ab4ddc45f965a6a2d" />
+                    <option name="name" value="2.0.4" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="99d1f89419876e7cc71963c996cf8c34175f721e" />
+                    <option name="name" value="1.3.5" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="9a9023228871ac29cbb5d06c22ecab5b39a506fb" />
+                    <option name="name" value="1.3.1" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="1f1440a049bbdcd8e977353f2134e6c7ac1038d3" />
+                    <option name="name" value="2.0.7" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="25f1182f87a68858a30bb58ab4ddc45f965a6a2d" />
+                    <option name="name" value="2.0.3.1" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="3749f986990ec0aa2864bc5a7a391bc12b941e24" />
+                    <option name="name" value="1.9.0" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="234243961e5d4e884015b1d8b889d2c3ecdd954d" />
+                    <option name="name" value="2.0.1" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="3b1ed24c563a32132db9fe472890145ee9ae5693" />
+                    <option name="name" value="1.6.1" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="03a416032583ffe73247f0bbe1fc658897057641" />
+                    <option name="name" value="1.3.6" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="486699dc782538005b11cc7a0ca9e5b13bbd8b37" />
+                    <option name="name" value="2.0.8" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="6f17c19e83038b79cf407d08d1ddbaca1b755b40" />
+                    <option name="name" value="2.0.3" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="64107d1957cec66ac15bc395bd97670de98b05a1" />
+                    <option name="name" value="1.5.0" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="6402e064955ff6c62e42004057f49a0b2568cc11" />
+                    <option name="name" value="1.3.2" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="077f62b7c603e897590bcbc9ec1eb568b67a2051" />
+                    <option name="name" value="2.1.1" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="ad8da8ff29a242695e98c375943d94b89d3d4280" />
+                    <option name="name" value="idea.241" />
+                  </BranchDeletion>
+                  <BranchDeletion>
+                    <option name="hash" value="c7258ea47241967e5378b18cf7875d30191cbe2f" />
+                    <option name="name" value="1.3.4" />
+                  </BranchDeletion>
+                </list>
+              </option>
+              <option name="timestamp" value="1754039030206" />
+            </BranchCleanupEntry>
+          </list>
+        </option>
+      </BranchesCleanupHistory>
+    </option>
     <option name="recentBranches">
       <RecentBranches>
         <option name="branchesForRepo">
@@ -143,6 +314,7 @@
     &quot;repository&quot;: &quot;SalvoRsTool&quot;
   }
 }</component>
+  <component name="GradleScriptDefinitionsStorage" workingDir="$PROJECT_DIR$" gradleHome="$USER_HOME$/.gradle/wrapper/dists/gradle-8.11.1-bin/bpt9gzteqjrbo1mjrsomdt32c/gradle-8.11.1" javaHome="$USER_HOME$/Library/Java/JavaVirtualMachines/jbrsdk_jcef-21.0.8-1/Contents/Home" gradleVersion="8.11.1" />
   <component name="KotlinScriptingSettings">
     <scriptDefinition className="org.jetbrains.kotlin.scripting.resolve.KotlinScriptDefinitionFromAnnotatedTemplate" definitionName="KotlinBuildScript">
       <order>2147483647</order>
@@ -211,10 +383,13 @@
     &quot;Gradle.下载 IntelliJ 平台源….executor&quot;: &quot;Run&quot;,
     &quot;Gradle.下载源代码.executor&quot;: &quot;Run&quot;,
     &quot;Gradle.构建 SalvoRsTool.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.整个项目 (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.整个项目.executor&quot;: &quot;Run&quot;,
     &quot;Kotlin.MyJsonParseKt.executor&quot;: &quot;Run&quot;,
     &quot;Kotlin.MyRsPsiElementManagerKt.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
@@ -235,10 +410,10 @@
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
     &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;项目&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.41099477&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.IDE.editor.colors&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;ts.external.directory.path&quot;: &quot;/Users/ldd/Applications/IntelliJ IDEA Ultimate 2024.1.1.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
@@ -291,7 +466,7 @@
       <command value="gradle patchChangelog" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Run Plugin">
+  <component name="RunManager" selected="Gradle.SalvoRsTool [publishPlugin]">
     <configuration name="ActixApiModelParserTest.testParse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -316,31 +491,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="PsiElementPatternTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;shop.itbug.salvorstool.PsiElementPatternTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="SalvoRsTool [buildPlugin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SalvoRsTool [classes]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -351,7 +502,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="buildPlugin" />
+            <option value="classes" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -406,21 +557,31 @@
       <RunAsTest>false</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="整个项目 (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Gradle.Run Plugin" />
       <item itemvalue="Gradle.ActixApiModelParserTest.testParse" />
-      <item itemvalue="Gradle.PsiElementPatternTest" />
-      <item itemvalue="Gradle.SalvoRsTool [buildPlugin]" />
+      <item itemvalue="Gradle.SalvoRsTool [classes]" />
       <item itemvalue="Gradle.SalvoRsTool [publishPlugin]" />
       <item itemvalue="Gradle.SalvoRsTool [verifyPlugin]" />
+      <item itemvalue="JUnit.整个项目 (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ActixApiModelParserTest.testParse" />
-        <item itemvalue="Gradle.PsiElementPatternTest" />
         <item itemvalue="Gradle.SalvoRsTool [publishPlugin]" />
-        <item itemvalue="Gradle.SalvoRsTool [buildPlugin]" />
+        <item itemvalue="Gradle.ActixApiModelParserTest.testParse" />
         <item itemvalue="Gradle.SalvoRsTool [verifyPlugin]" />
+        <item itemvalue="JUnit.整个项目 (1)" />
+        <item itemvalue="Gradle.SalvoRsTool [classes]" />
       </list>
     </recent_temporary>
   </component>
@@ -451,8 +612,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.27812.49" />
-        <option value="bundled-js-predefined-d6986cc7102b-09060db00ec0-JavaScript-IU-251.27812.49" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.25557.131" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-IU-252.25557.131" />
       </set>
     </attachedChunks>
   </component>
@@ -717,15 +878,21 @@
       <workItem from="1754014143614" duration="5491000" />
       <workItem from="1754019917750" duration="5000000" />
       <workItem from="1754030225743" duration="2762000" />
-      <workItem from="1754033020685" duration="1174000" />
-    </task>
-    <task id="LOCAL-00007" summary="test">
-      <option name="closed" value="true" />
-      <created>1713516007444</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1713516007444</updated>
+      <workItem from="1754033020685" duration="1497000" />
+      <workItem from="1754034598597" duration="2033000" />
+      <workItem from="1754037197765" duration="1940000" />
+      <workItem from="1754039152479" duration="42000" />
+      <workItem from="1754039196714" duration="1648000" />
+      <workItem from="1754096896849" duration="1369000" />
+      <workItem from="1754098470543" duration="175000" />
+      <workItem from="1754098653812" duration="7000" />
+      <workItem from="1754269505575" duration="316000" />
+      <workItem from="1754297647912" duration="1212000" />
+      <workItem from="1754299625484" duration="16000" />
+      <workItem from="1754384836924" duration="1092000" />
+      <workItem from="1754442049519" duration="1253000" />
+      <workItem from="1755676032402" duration="3248000" />
+      <workItem from="1757146880191" duration="1519000" />
     </task>
     <task id="LOCAL-00008" summary="test">
       <option name="closed" value="true" />
@@ -1111,7 +1278,15 @@
       <option name="project" value="LOCAL" />
       <updated>1754033823931</updated>
     </task>
-    <option name="localTasksCounter" value="56" />
+    <task id="LOCAL-00056" summary="更新文档">
+      <option name="closed" value="true" />
+      <created>1754034248300</created>
+      <option name="number" value="00056" />
+      <option name="presentableId" value="LOCAL-00056" />
+      <option name="project" value="LOCAL" />
+      <updated>1754034248300</updated>
+    </task>
+    <option name="localTasksCounter" value="57" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1147,7 +1322,6 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/.." />
     </ignored-roots>
-    <MESSAGE value="添加react-hook-form表单生成" />
     <MESSAGE value="release1.6.0" />
     <MESSAGE value="release1.6.1" />
     <MESSAGE value="241" />
@@ -1172,7 +1346,8 @@
     <MESSAGE value="优化搜索功能，更新依赖版本" />
     <MESSAGE value="release 2.3.0" />
     <MESSAGE value="添加插件截图" />
-    <option name="LAST_COMMIT_MESSAGE" value="添加插件截图" />
+    <MESSAGE value="更新文档" />
+    <option name="LAST_COMMIT_MESSAGE" value="更新文档" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>

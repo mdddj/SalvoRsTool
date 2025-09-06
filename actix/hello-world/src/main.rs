@@ -1,6 +1,7 @@
 use actix_web::{
     delete, get, head, patch, post, put, web, App, HttpRequest, HttpResponse, HttpServer, Responder,
 };
+use actix_web::web::get;
 use serde::{Deserialize, Serialize};
 
 // 数据模型
@@ -25,7 +26,6 @@ async fn hello() -> impl Responder {
 #[get("/users/{id}")]
 async fn get_user(path: web::Path<u32>) -> impl Responder {
     let id = path.into_inner();
-    // 模拟从数据库获取用户
     let user = User {
         id,
         name: format!("User {}", id),
@@ -34,9 +34,9 @@ async fn get_user(path: web::Path<u32>) -> impl Responder {
     HttpResponse::Ok().json(user)
 }
 
+//
 #[post("/users")]
 async fn create_user(user_req: web::Json<CreateUserRequest>) -> impl Responder {
-    // 模拟创建用户
     let new_user = User {
         id: 1,
         name: user_req.name.clone(),
@@ -144,7 +144,7 @@ async fn main() -> std::io::Result<()> {
             .route("/hey", web::get().to(manual_hello))
             .route("/echo", web::post().to(manual_echo))
             .route("/users", web::get().to(get_all_users))
-            .route("/options", web::get().to(options_handler))
+            .route("/options", get().to(options_handler))
             // 默认路由处理 404
             .default_service(
                 web::route().to(|| async { HttpResponse::NotFound().body("Not Found") }),

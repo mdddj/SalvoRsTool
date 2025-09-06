@@ -26,11 +26,14 @@
             <className>shop.itbug.salvorstool.intention.CopyTSInterfaceActionWithCodegen</className>
             <language>Rust</language>
         </intentionAction>
-        <toolWindow factoryClass="shop.itbug.salvorstool.window.SalvoApiWindowFactory" id="Salvo Endpoints" anchor="right"
-                    icon="/icons/logo.svg"/>
+
         <toolWindow factoryClass="shop.itbug.salvorstool.window.ActixApiWindowFactory" id="Actix Endpoints"
                     anchor="right"
                     icon="/icons/logo.svg"/>
+        <toolWindow factoryClass="shop.itbug.salvorstool.window.SalvoApiWindowFactory" id="Salvo Endpoints"
+                    anchor="right"
+                    icon="/icons/logo.svg"/>
+
         <searchEverywhereContributor implementation="shop.itbug.salvorstool.searcheverywhere.SalvoSearchApi"/>
         <statusBarWidgetFactory implementation="shop.itbug.salvorstool.bar.BottomStatusBar" id="SalvoToolBar"/>
         <webHelpProvider implementation="shop.itbug.salvorstool.help.MyWebHelpProvider"/>

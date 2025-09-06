@@ -19,9 +19,7 @@ import com.intellij.psi.search.FileTypeIndex
 import com.intellij.psi.search.GlobalSearchScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import org.rust.lang.RsFileType
 import org.rust.lang.RsLanguage
-import org.rust.lang.core.psi.RsFile
 import org.rust.lang.core.psi.impl.RsStructItemImpl
 import java.io.File
 import javax.swing.BorderFactory

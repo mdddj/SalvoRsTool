@@ -15,7 +15,7 @@ val RsLetDeclImpl.rsLetDeclImplManager get() = RsLetDeclManager(this)
  *  let product_router = Router::with_path("/api/product").get(get_product_all)
  *         .post(post_add_product)
  *         .push(
- *             Router::with_path("<id>")
+ *             Router::with_path("{id}")
  *                 .put(put_update_product)
  *                 .delete(delete_product),
  *         );
