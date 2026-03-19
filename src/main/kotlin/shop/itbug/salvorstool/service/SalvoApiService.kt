@@ -12,14 +12,11 @@ import com.intellij.openapi.vfs.VirtualFile
 import com.intellij.psi.PsiManager
 import com.intellij.psi.search.FileTypeIndex
 import com.intellij.psi.search.GlobalSearchScope
-import com.intellij.psi.util.PsiTreeUtil
 import kotlinx.coroutines.*
-import org.rust.lang.core.psi.impl.RsFunctionImpl
 import shop.itbug.salvorstool.messageing.ApiScanMessaging
 import shop.itbug.salvorstool.model.SalvoApiItem
-import shop.itbug.salvorstool.tool.myManager
+import shop.itbug.salvorstool.tool.SalvoRouterParser
 import shop.itbug.salvorstool.tool.rsFileType
-import shop.itbug.salvorstool.tool.rsLetDeclImplManager
 
 @Service(Service.Level.PROJECT)
 class SalvoApiService(val project: Project) : Disposable {
@@ -39,25 +36,18 @@ class SalvoApiService(val project: Project) : Disposable {
     fun startScan(isRefresh: Boolean = false) {
         scope.launch {
             val files = readAction { FileTypeIndex.getFiles(rsFileType, SalvoSearchGlobal(project)).toList() }
-            val tasks = files.map { file -> async { findRouterRsFunction(file) } }
-            val result = tasks.awaitAll().flatten()
-            val apis = mutableListOf<SalvoApiItem>()
-            result.forEach { r: RsFunctionImpl ->
-                readAction { r.myManager.allLet.map { i -> apis.addAll(i.rsLetDeclImplManager.allApi) } }
-            }
-            projectApiList = apis
+            val tasks = files.map { file -> async { parseFileApis(file) } }
+            val apis = tasks.awaitAll().flatten()
+            projectApiList = apis.toMutableList()
             project.messageBus.syncPublisher(ApiScanMessaging.TOPIC).apiScanEnd(apis, isRefresh)
         }
     }
 
 
-    private suspend fun findRouterRsFunction(file: VirtualFile): List<RsFunctionImpl> {
+    private suspend fun parseFileApis(file: VirtualFile): List<SalvoApiItem> {
         return readAction {
-            val psi = PsiManager.getInstance(project).findFile(file)
-            var find =
-                PsiTreeUtil.findChildrenOfType(psi, RsFunctionImpl::class.java).toList()
-            find = find.filter { it.myManager.isReturnRouter }
-            return@readAction find
+            val psi = PsiManager.getInstance(project).findFile(file) ?: return@readAction emptyList()
+            return@readAction SalvoRouterParser(project).parseFile(psi)
         }
     }
 

@@ -7,19 +7,21 @@ import org.jetbrains.intellij.platform.gradle.models.ProductRelease
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.dsl.KotlinVersion
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 
 plugins {
     idea
-    id("org.jetbrains.kotlin.jvm") version "2.1.21"
-    id("org.jetbrains.intellij.platform") version "2.7.0"
+    id("org.jetbrains.kotlin.jvm") version "2.2.21"
+    id("org.jetbrains.intellij.platform") version "2.13.1"
     id("org.jetbrains.changelog") version "2.2.0"
+
+    // compose
+    id("org.jetbrains.compose") version "1.10.0"
+    id("org.jetbrains.kotlin.plugin.compose") version "2.2.21"
 }
 
 group = "shop.itbug"
 
-version = "2.3.3"
+version = "2.4.0"
 
 repositories {
     mavenCentral()
@@ -41,7 +43,8 @@ fun getChangelogVersion(): String {
 
 dependencies {
     intellijPlatform {
-        rustRover("2025.2")
+//        rustRover("2025.2")
+        local("/Users/ldd/Applications/RustRover.app")
         bundledPlugins(
             "JavaScript",
             "com.jetbrains.rust",
@@ -55,6 +58,9 @@ dependencies {
         jetbrainsRuntime()
         testFramework(TestFrameworkType.Platform)
         testBundledPlugins("com.jetbrains.rust")
+
+        // jewel
+        composeUI()
     }
     testImplementation("junit:junit:4.13.2")
 }
@@ -75,11 +81,10 @@ intellijPlatform {
     pluginConfiguration {
         productDescriptor {
             code.set("PRUSTX")
-            releaseDate.set("20250804")
-            releaseVersion.set("23")
+            releaseDate.set("20260319")
+            releaseVersion.set("24")
         }
     }
-    //
 }
 
 kotlin {
@@ -115,7 +120,6 @@ tasks {
 
     patchPluginXml {
         sinceBuild.set("251")
-        untilBuild.set("252.*")
         changeNotes.set(myChangeLog)
         pluginDescription.set(descText)
     }
@@ -143,12 +147,26 @@ tasks {
     runIde {
         autoReload = true
         jvmArgs = listOf("-XX:+AllowEnhancedClassRedefinition")
-        args = listOf("/Users/hlx/github/SalvoRsTool/actix/hello-world")
+//        args = listOf("/Users/hlx/github/SalvoRsTool/actix/hello-world")
+//        args = listOf("/Users/hlx/github/d_blog")
+        args = listOf("/Users/ldd/ai-projects/xiaohongshu-helper/src-tauri")
     }
 
     printProductsReleases {
         channels = listOf(ProductRelease.Channel.RELEASE)
         types = listOf(IntelliJPlatformType.RustRover)
+    }
+
+    prepareSandbox {
+        doLast {
+            val sandboxPathsFile = sandboxConfigDirectory.file("disabled_plugins.txt").get().asFile
+
+            sandboxPathsFile.writeText(
+                """
+                    org.jetbrains.junie
+                    """.trimIndent()
+            )
+        }
     }
 
     buildSearchableOptions { enabled = false }

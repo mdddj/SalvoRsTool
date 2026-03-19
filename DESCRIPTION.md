@@ -3,7 +3,7 @@
 <p>
     <b>
         <a href="https://mdddj.github.io/SalvoRsToolDocument">Document</a> |
-        <a href="https://github.com/mdddj/SalvoRsTool">Github</a> |
+        <a href="https://github.com/mdddj/SalvoRsTool">GitHub</a> |
         <a href="https://mdddj.github.io/SalvoRsToolDocument/default-topic.html">Get Started</a> |
         <a href="https://mdddj.github.io/SalvoRsToolDocument/changelog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.html">Changelog</a> |
     </b>

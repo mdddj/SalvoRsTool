@@ -2,6 +2,15 @@
 
 ## Unreleased
 
+### [2.4.0] -2026-03-19
+
+- [salvo] Reworked API scanning with a unified recursive router parser
+- [salvo] Added support for direct router-returning functions and nested `push(...)` references
+- [salvo] Removed the old dependency on `Router` return-type filtering during project scans
+- [salvo] Improved path normalization for `"/"` child routes and parameter formats such as `:id`, `<id>`, and `{id}`
+- [salvo] Fixed multiple cases where chained or nested routes were not detected
+- Adapted for RustRover 2025.2
+
 ### [2.3.3] -2025-09-06
 
 - [salvo] Fixed a bug in code generation
