@@ -80,8 +80,8 @@ intellijPlatform {
     pluginConfiguration {
         productDescriptor {
             code.set("PRUSTX")
-            releaseDate.set("20261103")
-            releaseVersion.set("25")
+            releaseDate.set("20260319")
+            releaseVersion.set("24")
         }
     }
 }
