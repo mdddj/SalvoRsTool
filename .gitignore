@@ -52,3 +52,5 @@ actix/hello-world/target/
 examples/
 
 .kotlin/
+### Local machine config ###
+local.properties

@@ -1,33 +1,992 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
+    <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="385ba4eb-8ca7-4728-9d8d-815c227cc527" name="Changes" comment="更新文档">
-      <change afterPath="$PROJECT_DIR$/.idea/AndroidProjectSystem.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/SalvoRouterParser.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/shop/itbug/salvorstool/templete/BaseTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/migrations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.memory/gradle-setupdependencies-removed.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradle/gradle-daemon-jvm.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/kotlinc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/coroutines-javaagent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/21.0.6+9-895.109-jcef/localJetBrainsRuntime-JBR-21.0.6+9-895.109-jcef.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledModule-intellij.libraries.microba-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledModule-intellij.platform.navbar-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledModule-intellij.platform.navbar.frontend-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledModule-intellij.platform.vcs.impl-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledModule-intellij.toml.json-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledPlugin-JavaScript-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledPlugin-com.intellij.css-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledPlugin-com.intellij.database-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledPlugin-com.intellij.modules.json-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledPlugin-com.intellij.platform.images-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledPlugin-com.jetbrains.rust-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledPlugin-intellij.charts-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledPlugin-intellij.grid.core.impl-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledPlugin-intellij.grid.impl-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-243.26053.17/bundledPlugin-org.toml.lang-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledModule-intellij.grid-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledModule-intellij.grid.core.impl-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledModule-intellij.grid.csv.core.impl-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledModule-intellij.grid.types-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledModule-intellij.json.split-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledModule-intellij.libraries.microba-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledModule-intellij.platform.vcs.impl-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledModule-intellij.platform.vcs.impl.shared-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledModule-intellij.toml.json-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledPlugin-JavaScript-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledPlugin-com.intellij.css-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledPlugin-com.intellij.database-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledPlugin-com.intellij.modules.json-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledPlugin-com.intellij.platform.images-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledPlugin-com.jetbrains.rust-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/bundledPlugin-org.toml.lang-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/RR-251.23774.445/localIde-RR-RR-251.23774.445.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.aqua.runners.js.core-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.aqua.runners.js.core-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.aqua.runners.js.core-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.aqua.runners.js.core-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.aqua.runners.js.core-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.aqua.runners.js.core-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.cppCore-242.20224.309+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.css-242.20224.309+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.css-243.16718.64+256.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.css-243.16718.64+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.css-243.16718.64+653.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.css-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.css-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.css-243.21565.245+59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.css-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.css-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.js-242.20224.309+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.js-243.16718.64+256.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.js-243.16718.64+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.js-243.16718.64+653.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.js-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.js-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.js-243.21565.245+59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.js-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.js-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.python-242.20224.309+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.python-243.16718.64+256.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.python-243.16718.64+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.python-243.16718.64+653.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.python-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.python-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.python-243.21565.245+59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.python-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.python-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.fullLine.rider-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.grid-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.grid-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.grid.core.impl-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.grid.core.impl-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.grid.core.impl-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.grid.csv.core.impl-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.grid.csv.core.impl-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.grid.csv.core.impl-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.grid.types-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.grid.types-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.grid.types-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.indexing.shared.generator-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.indexing.shared.generator-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.indexing.shared.generator-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.indexing.shared.generator-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.javascript.sharedIndexes-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.javascript.sharedIndexes-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.javascript.sharedIndexes-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.javascript.sharedIndexes-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.javascript.sharedIndexes-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.javascript.sharedIndexes-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.compose.desktop-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.compose.foundation.desktop-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.compose.foundation.desktop-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.compose.foundation.desktop-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.ktor.client-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.ktor.client-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.ktor.client-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.ktor.client-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.ktor.client-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.ktor.client-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.ktor.client-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.ktor.client-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.microba-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.microba-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.microba-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.microba-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.microba-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.microba-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.microba-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.microba-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.microba-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.skiko-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.skiko-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.skiko-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.libraries.skiko-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.llmInstaller-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.cpp-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.cpp-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.css-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.css-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.css.less-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.css.less-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.css.postcss-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.css.postcss-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.css.sass-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.css.sass-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.go-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.html-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.java-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.js-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.js-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.js.astro-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.js.astro-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.js.svelte-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.js.svelte-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.js.vue-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.js.vue-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.kotlin-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.php-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.python-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.python-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.python.jupyter-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.python.jupyter-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.rider-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.rider-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.rider.cpp-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.ruby-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.rust-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.rust-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.terraform-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.web-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.ml.inline.completion.web-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.performanceTesting.vcs-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.clouds-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.clouds-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.clouds-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.clouds-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.clouds-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.clouds-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.clouds-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.clouds-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-242.20224.309+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-242.21829.114+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-243.16718.64+256.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-243.16718.64+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-243.16718.64+653.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-243.21565.245+59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.collaborationTools-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.compose-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.compose-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.compose-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.compose-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage-242.21829.114+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage-243.21565.245+59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage.agent-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage.agent-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage.agent-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage.agent-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage.agent-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.coverage.agent-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-242.20224.309+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-242.21829.114+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-243.16718.64+256.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-243.16718.64+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-243.16718.64+653.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-243.21565.245+59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.dap-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.execution.dashboard-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.execution.dashboard-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.execution.dashboard-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.execution.dashboard-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.execution.dashboard-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.execution.serviceView-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.execution.serviceView-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.execution.serviceView-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.execution.serviceView-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.execution.serviceView-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.experiment-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.ide.newUiOnboarding-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.ide.newUiOnboarding-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.ide.newUiOnboarding-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.ide.newUiOnboarding-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.ide.newUsersOnboarding-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.ide.newUsersOnboarding-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.ide.newUsersOnboarding-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.inline.completion-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.inline.completion-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.inline.completion-243.21565.245+59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.inline.completion-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.inline.completion-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.inline.completion-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.inline.completion-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.inline.completion-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.foundation-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.foundation-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.foundation-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.ideLafBridge-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.ideLafBridge-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.ideLafBridge-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.markdown.core-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.markdown.core-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.markdown.core-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.markdown.extension.gfmAlerts-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.markdown.extension.gfmTables-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.markdown.ideLafBridgeStyling-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.markdown.ideLafBridgeStyling-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.markdown.ideLafBridgeStyling-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.ui-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.ui-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.jewel.ui-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.kernel.backend-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.kernel.backend-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.kernel.backend-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.lvcs.impl-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.lvcs.impl-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.lvcs.impl-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.lvcs.impl-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.lvcs.impl-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.lvcs.impl-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-242.20224.309+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-242.21829.114+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-243.16718.64+256.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-243.16718.64+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-243.16718.64+653.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-243.21565.245+59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.navbar.frontend-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.rpc.backend-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.rpc.backend-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.rpc.backend-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.tips-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.tips-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.tips-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.dvcs.impl-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.dvcs.impl-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.dvcs.impl-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.dvcs.impl-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.dvcs.impl-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.dvcs.impl-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.dvcs.impl.shared-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-242.20224.309+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-242.21829.114+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-243.16718.64+256.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-243.16718.64+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-243.16718.64+653.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-243.21565.245+59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl.backend-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl.backend-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl.backend-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl.shared-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl.shared-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.impl.shared-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-242.20224.309+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-242.21829.114+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-243.16718.64+256.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-243.16718.64+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-243.16718.64+653.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-243.21565.245+59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.platform.vcs.log.impl-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-242.20224.309+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-243.16718.64+256.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-243.16718.64+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-243.16718.64+653.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-243.21565.245+59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.asyncOne-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.clion-242.20224.309+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.clion-243.16718.64+256.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.clion-243.16718.64+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.clion-243.16718.64+653.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.clion-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.clion-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.clion-243.21565.245+59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.clion-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.clion-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.clion-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.clion-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.clion-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-242.20224.309+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-243.16718.64+256.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-243.16718.64+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-243.16718.64+653.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-243.21565.245+59.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.common-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.ultimate-242.20224.300+980.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.ultimate-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.ultimate-243.21565.193+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.ultimate-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.profiler.ultimate.ideaAsyncProfiler-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.rustrover.debugger-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.rustrover.debugger-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.rustrover.debugger-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.rustrover.debugger-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.rustrover.inline-completion-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.sh.terminal-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.sh.terminal-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.sh.terminal-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.sh.terminal-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.sh.terminal-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.sh.terminal-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.toml.json-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.toml.json-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.toml.json-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.toml.json-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.toml.json-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledModule-intellij.yaml.backend-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Coverage-242.20224.300+577.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Coverage-243.21565.193+491.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Coverage-243.21565.193+720.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Coverage-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Docker-242.20224.300+184.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Docker-243.21565.193+204.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Docker-243.21565.193+689.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Docker-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Docker-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Docker-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Docker-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Docker-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-241.17890.39+199.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-242.20224.300+529.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-242.20224.309+180.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-242.21829.114+180.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-243.16718.64+180.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-243.16718.64+35.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-243.16718.64+394.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-243.21565.136+180.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-243.21565.193+739.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-243.21565.193+784.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-243.21565.245+180.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-243.21565.245+440.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-Git4Idea-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-HtmlTools-242.20224.309+840.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-HtmlTools-243.16718.64+135.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-HtmlTools-243.16718.64+840.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-HtmlTools-243.16718.64+982.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-HtmlTools-243.21565.136+840.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-HtmlTools-243.21565.245+788.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-HtmlTools-243.21565.245+840.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-HtmlTools-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-HtmlTools-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JUnit-242.20224.300+940.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JUnit-243.21565.193+227.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JUnit-243.21565.193+64.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JUnit-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-2024.2+521.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-2024.2+92.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-2024.3+469.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-2024.3+680.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-2024.3+92.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-242.20224.300+521.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-243.16718.64+597.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-243.16718.64+92.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-243.16718.64+946.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-243.21565.136+92.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-243.21565.193+469.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-243.21565.193+680.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-243.21565.245+680.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-243.21565.245+92.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScript-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptBase-2024.1.5+75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptBase-2024.2+694.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-241.17890.39+683.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-242.20224.300+505.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-242.20224.309+510.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-242.21829.114+510.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-243.16718.64+344.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-243.16718.64+510.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-243.16718.64+541.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-243.21565.136+510.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-243.21565.193+178.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-243.21565.193+461.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-243.21565.245+366.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-243.21565.245+510.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-JavaScriptDebugger-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-TestNG-J-242.20224.300+91.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-TestNG-J-243.21565.193+641.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-TestNG-J-243.21565.193+806.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-TestNG-J-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-241.17890.39+55.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-242.20224.300+115.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-242.20224.309+642.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-242.21829.114+642.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-243.16718.64+425.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-243.16718.64+642.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-243.16718.64+940.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-243.21565.136+642.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-243.21565.193+239.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-243.21565.193+402.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-243.21565.245+642.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-243.21565.245+774.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-XPathView-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-241.17890.39+705.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-242.20224.300+527.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-242.20224.309+532.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-242.21829.114+532.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-243.16718.64+437.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-243.16718.64+532.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-243.16718.64+634.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-243.21565.136+532.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-243.21565.193+200.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-243.21565.193+483.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-243.21565.245+532.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-243.21565.245+952.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.completion.ml.ranking-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.configurationScript-242.20224.300+303.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.configurationScript-243.21565.193+370.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.configurationScript-243.21565.193+653.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.configurationScript-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-241.17890.39+829.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-242.20224.300+749.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-242.20224.309+688.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-242.21829.114+688.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-243.16718.64+190.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-243.16718.64+327.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-243.16718.64+688.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-243.21565.136+688.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-243.21565.193+31.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-243.21565.193+476.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-243.21565.245+676.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-243.21565.245+688.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.copyright-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-241.17890.39+146.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-242.20224.300+732.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-242.20224.309+863.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-242.21829.114+863.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-243.16718.64+253.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-243.16718.64+336.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-243.16718.64+863.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-243.21565.136+863.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-243.21565.193+192.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-243.21565.193+357.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-243.21565.245+373.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-243.21565.245+863.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.css-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.database-2024.3+542.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.database-2024.3+669.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.database-242.20224.300+526.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.database-243.21565.193+542.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.database-243.21565.193+669.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.database-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.database-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.database-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.database-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.database-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-241.17890.39+288.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-242.20224.300+158.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-242.20224.309+269.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-242.21829.114+269.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-243.16718.64+269.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-243.16718.64+78.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-243.16718.64+851.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-243.21565.136+269.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-243.21565.193+577.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-243.21565.193+966.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-243.21565.245+269.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-243.21565.245+33.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.diagram-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.java-242.20224.300+540.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.java-243.21565.193+195.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.java-243.21565.193+248.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.java-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.java-i18n-242.20224.300+985.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.java-i18n-243.21565.193+258.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.java-i18n-243.21565.193+531.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.java-i18n-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee-242.20224.300+708.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee-243.21565.193+189.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee-243.21565.193+24.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee.app.servers.integration-242.20224.300+6.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee.app.servers.integration-243.21565.193+289.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee.app.servers.integration-243.21565.193+522.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee.app.servers.integration-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee.el-242.20224.300+756.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee.el-243.21565.193+179.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee.el-243.21565.193+792.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee.el-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee.web-242.20224.300+974.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee.web-243.21565.193+335.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee.web-243.21565.193+674.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.javaee.web-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.jsp-242.20224.300+813.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.jsp-243.21565.193+769.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.jsp-243.21565.193+950.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.jsp-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.ml.inline.completion-242.20224.309+961.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.ml.inline.completion-243.16718.64+664.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.ml.inline.completion-243.16718.64+851.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.ml.inline.completion-243.16718.64+961.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.ml.inline.completion-243.21565.136+961.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.ml.inline.completion-243.21565.245+13.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.ml.inline.completion-243.21565.245+961.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.ml.inline.completion-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.ml.inline.completion-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-2024.3+101.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-2024.3+154.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-2024.3+241.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-2024.3+291.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-243.16718.64+239.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-243.16718.64+241.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-243.16718.64+866.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-243.21565.136+241.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-243.21565.193+101.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-243.21565.193+154.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-243.21565.245+241.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-243.21565.245+291.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.modules.json-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-241.17890.39+736.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-242.20224.309+211.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-243.16718.64+211.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-243.16718.64+682.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-243.16718.64+867.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-243.21565.136+211.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-243.21565.245+127.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-243.21565.245+211.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.nativeDebug-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.ide.provisioner-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-241.17890.39+250.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-242.20224.300+328.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-242.20224.309+131.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-242.21829.114+131.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-243.16718.64+131.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-243.16718.64+575.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-243.16718.64+924.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-243.21565.136+131.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-243.21565.193+311.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-243.21565.193+972.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-243.21565.245+131.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-243.21565.245+841.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.platform.images-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.properties-242.20224.300+421.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.properties-243.21565.193+385.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.properties-243.21565.193+478.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.intellij.properties-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-241.17890.39+340.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-242.20224.300+562.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-242.20224.309+815.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-242.21829.114+815.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-243.16718.64+263.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-243.16718.64+286.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-243.16718.64+815.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-243.21565.136+815.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-243.21565.193+458.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-243.21565.193+861.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-243.21565.245+731.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-243.21565.245+815.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.performancePlugin-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-241.17890.39+555.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-242.20224.300+15.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-242.20224.309+130.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-242.21829.114+130.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-243.16718.64+130.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-243.16718.64+827.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-243.16718.64+976.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-243.21565.136+130.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-243.21565.193+158.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-243.21565.193+53.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-243.21565.245+130.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-243.21565.245+938.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.plugins.webDeployment-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-2024.1.5+754.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-2024.2+931.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-2024.3+159.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-2024.3+931.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-243.16718.64+628.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-243.16718.64+777.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.rust-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-241.17890.39+465.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-242.20224.300+327.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-242.20224.309+772.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-242.21829.114+772.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-243.16718.64+326.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-243.16718.64+772.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-243.16718.64+963.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-243.21565.136+772.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-243.21565.193+176.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-243.21565.193+515.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-243.21565.245+32.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-243.21565.245+772.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-com.jetbrains.sh-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.charts-242.20224.300+57.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.charts-243.21565.193+675.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.charts-243.21565.193+840.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.charts-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.charts-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.grid.core.impl-242.20224.300+207.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.grid.core.impl-243.21565.193+154.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.grid.core.impl-243.21565.193+171.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.grid.core.impl-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.grid.core.impl-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.grid.core.plugin-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.grid.impl-242.20224.300+613.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.grid.impl-243.21565.193+167.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.grid.impl-243.21565.193+340.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.grid.impl-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.grid.impl-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.indexing.shared.core-242.20224.300+920.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.indexing.shared.core-243.21565.193+281.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.indexing.shared.core-243.21565.193+380.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.indexing.shared.core-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.prettierJS-243.16718.64+334.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.prettierJS-243.16718.64+845.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.prettierJS-243.16718.64+987.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.prettierJS-243.21565.136+987.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.prettierJS-243.21565.245+615.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.prettierJS-243.21565.245+987.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.prettierJS-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.prettierJS-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.webpack-243.16718.64+127.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.webpack-243.16718.64+556.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.webpack-243.16718.64+982.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.webpack-243.21565.136+982.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.webpack-243.21565.245+722.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.webpack-243.21565.245+982.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.webpack-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-intellij.webpack-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-241.17890.39+619.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-242.20224.300+503.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-242.20224.309+382.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-242.21829.114+382.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-243.16718.64+382.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-243.16718.64+787.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-243.16718.64+832.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-243.21565.136+382.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-243.21565.193+498.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-243.21565.193+93.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-243.21565.245+322.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-243.21565.245+382.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.intelliLang-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-241.17890.39+717.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-242.20224.300+697.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-242.20224.309+566.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-242.21829.114+566.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-243.16718.64+176.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-243.16718.64+566.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-243.16718.64+765.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-243.21565.136+566.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-243.21565.193+237.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-243.21565.193+510.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-243.21565.245+494.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-243.21565.245+566.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.markdown-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.postcss-243.16718.64+387.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.postcss-243.16718.64+532.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.postcss-243.16718.64+958.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.postcss-243.21565.136+532.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.postcss-243.21565.245+532.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.postcss-243.21565.245+792.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.postcss-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.intellij.plugins.postcss-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.completion.full.line-242.20224.309+122.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.completion.full.line-243.16718.64+122.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.completion.full.line-243.16718.64+732.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.completion.full.line-243.16718.64+975.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.completion.full.line-243.21565.136+122.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.completion.full.line-243.21565.245+122.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.completion.full.line-243.21565.245+62.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.completion.full.line-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.completion.full.line-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.less-243.16718.64+609.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.less-243.16718.64+982.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.less-243.16718.64+984.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.less-243.21565.136+984.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.less-243.21565.245+548.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.less-243.21565.245+984.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.less-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.less-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.sass-243.16718.64+289.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.sass-243.16718.64+291.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.sass-243.16718.64+916.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.sass-243.21565.136+291.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.sass-243.21565.245+241.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.sass-243.21565.245+291.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.sass-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.sass-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-241.17890.39+480.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-242.20224.300+66.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-242.20224.309+197.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-242.21829.114+197.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-243.16718.64+197.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-243.16718.64+2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-243.16718.64+587.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-243.21565.136+197.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-243.21565.193+23.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-243.21565.193+526.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-243.21565.245+197.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-243.21565.245+39.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.terminal-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.vue-243.16718.64+184.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.vue-243.16718.64+398.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.vue-243.16718.64+967.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.vue-243.21565.136+184.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.vue-243.21565.245+184.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.vue-243.21565.245+316.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.vue-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.vue-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-241.17890.39+565.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-242.20224.300+943.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-242.20224.309+738.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-242.21829.114+738.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-243.16718.64+363.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-243.16718.64+736.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-243.16718.64+738.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-243.21565.136+738.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-243.21565.193+598.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-243.21565.193+651.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-243.21565.245+738.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-243.21565.245+794.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.jetbrains.plugins.yaml-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-2024.1.5+66.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-2024.2+239.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-2024.2+444.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-2024.3+152.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-2024.3+239.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-2024.3+293.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-2024.3+99.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-241.17890.39+66.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-242.20224.300+444.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-242.20224.309+239.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-242.21829.114+239.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-243.16718.64+237.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-243.16718.64+239.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-243.16718.64+864.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-243.21565.136+239.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-243.21565.193+152.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-243.21565.193+99.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-243.21565.245+239.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-243.21565.245+293.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-org.toml.lang-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-241.17890.39+740.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-242.20224.300+910.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-242.20224.309+529.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-242.21829.114+529.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-243.16718.64+529.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-243.16718.64+638.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-243.16718.64+665.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-243.21565.136+529.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-243.21565.193+822.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-243.21565.193+987.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-243.21565.245+253.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-243.21565.245+529.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-RR-243.21565.245.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-tanvd.grazi-RR-251.22821.75.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-training-242.20224.300+266.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-training-243.21565.193+34.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-training-243.21565.193+373.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/bundledPlugin-training-IU-243.21565.193.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-IU-242.21829.15+570.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-IU-243.21565.193+520.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-IU-IU-243.23654.189.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-RR-242.20224.309+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-RR-242.20224.393+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-RR-242.20224.421+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-RR-242.21829.114+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-RR-243.16718.64+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-RR-243.21565.136+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-RR-243.21565.245+441.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-RR-RR-243.26053.17.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-RR-RR-251.18673.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-RR-RR-251.20015.38.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.intellijPlatform/localPlatformArtifacts/localIde-RR-RR-251.22821.75.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.intellijPlatform/self-update.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.intellijPlatform/self-update.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CHANGELOG.md" beforeDir="false" afterPath="$PROJECT_DIR$/CHANGELOG.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DESCRIPTION.md" beforeDir="false" afterPath="$PROJECT_DIR$/DESCRIPTION.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/cache/SeaOrmCache.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/cache/SeaOrmCache.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/service/SalvoApiService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/service/SalvoApiService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/RsLetDeclManager.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/tool/RsLetDeclManager.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/shop/itbug/salvorstool/ServiceTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/shop/itbug/salvorstool/ServiceTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/shop/itbug/salvorstool/ToolManagerTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/shop/itbug/salvorstool/ToolManagerTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/searcheverywhere/SalvoSearchApi.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/shop/itbug/salvorstool/searcheverywhere/SalvoSearchApi.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,11 +1005,7 @@
     <system id="GRADLE">
       <state>
         <task path="$PROJECT_DIR$">
-          <activation>
-            <after_sync>
-              <task name="setupDependencies" />
-            </after_sync>
-          </activation>
+          <activation />
         </task>
         <projects_view>
           <tree_state>
@@ -68,23 +1023,24 @@
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
                 <item name="Tasks" type="e4a08cd1:TasksNode" />
-                <item name="build" type="c8890929:TasksNode$1" />
-              </path>
-              <path>
-                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
-                <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
-                <item name="Tasks" type="e4a08cd1:TasksNode" />
                 <item name="intellij platform" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
-                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="intellij platform info" type="c8890929:TasksNode$1" />
               </path>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
                 <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
-                <item name="运行配置" type="7b0102dc:RunConfigurationsNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="intellij platform verification" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="SalvoRsTool" type="f1a62948:ProjectNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
               </path>
             </expand>
             <select />
@@ -363,87 +1319,93 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;Gradle.ActixApiModelParserTest.testParse.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.BaseTest.testTemp.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.Build SalvoRsTool.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Download IntelliJ Platform sources.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.PsiElementPatternTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.Run Plugin.executor&quot;: &quot;Debug&quot;,
-    &quot;Gradle.SalvoApiTest.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoApiTest.test.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [buildNeeded].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [buildPlugin].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [buildSearchableOptions].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [classes].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [clean].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [getChangelog].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [initializeChangelog].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [kotlinSourcesJar].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [patchChangelog].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [patchPluginXml].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [printBundledPlugins].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [printProductsReleases].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [publishPlugin].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [runIde].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [setupDependencies].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [signPlugin].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [testIdePerformance].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.SalvoRsTool [verifyPlugin].executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.下载 IntelliJ 平台源.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.下载 IntelliJ 平台源….executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.下载源代码.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.升级 Gradle 包装器.executor&quot;: &quot;Run&quot;,
-    &quot;Gradle.构建 SalvoRsTool.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.整个项目 (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.整个项目.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.MyJsonParseKt.executor&quot;: &quot;Run&quot;,
-    &quot;Kotlin.MyRsPsiElementManagerKt.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.rust.reset.selective.auto.import&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;android.gradle.sync.needed&quot;: &quot;true&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
-    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
-    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;2.3.3&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last.edited.regexp&quot;: &quot;/api/post/&lt;id&gt;/&lt;param&gt;&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/hlx/github/SalvoRsTool&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon&quot;: &quot;&quot;,
-    &quot;org.rust.first.attach.projects&quot;: &quot;true&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;模块&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.41099477&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;/Users/ldd/Applications/IntelliJ IDEA Ultimate 2024.1.1.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "CidrDebugProfileConversion": "true",
+    "Gradle.ActixApiModelParserTest.testParse.executor": "Debug",
+    "Gradle.BaseTest.testTemp.executor": "Debug",
+    "Gradle.Build SalvoRsTool.executor": "Run",
+    "Gradle.Configure Daemon JVM Criteria.executor": "Run",
+    "Gradle.Download IntelliJ Platform sources.executor": "Run",
+    "Gradle.PsiElementPatternTest.executor": "Run",
+    "Gradle.Run Plugin.executor": "Debug",
+    "Gradle.SalvoApiTest.executor": "Run",
+    "Gradle.SalvoApiTest.test.executor": "Run",
+    "Gradle.SalvoRsTool [buildNeeded].executor": "Run",
+    "Gradle.SalvoRsTool [buildPlugin].executor": "Run",
+    "Gradle.SalvoRsTool [buildSearchableOptions].executor": "Run",
+    "Gradle.SalvoRsTool [classes].executor": "Run",
+    "Gradle.SalvoRsTool [clean].executor": "Run",
+    "Gradle.SalvoRsTool [getChangelog].executor": "Run",
+    "Gradle.SalvoRsTool [initializeChangelog].executor": "Run",
+    "Gradle.SalvoRsTool [kotlinSourcesJar].executor": "Run",
+    "Gradle.SalvoRsTool [patchChangelog].executor": "Run",
+    "Gradle.SalvoRsTool [patchPluginXml].executor": "Run",
+    "Gradle.SalvoRsTool [printBundledModules].executor": "Run",
+    "Gradle.SalvoRsTool [printBundledPlugins].executor": "Run",
+    "Gradle.SalvoRsTool [printProductsReleases].executor": "Run",
+    "Gradle.SalvoRsTool [publishPlugin].executor": "Run",
+    "Gradle.SalvoRsTool [runIde].executor": "Debug",
+    "Gradle.SalvoRsTool [signPlugin].executor": "Run",
+    "Gradle.SalvoRsTool [testIdePerformance].executor": "Run",
+    "Gradle.SalvoRsTool [verifyPlugin].executor": "Run",
+    "Gradle.Upgrade Gradle wrapper.executor": "Run",
+    "Gradle.下载 IntelliJ 平台源.executor": "Run",
+    "Gradle.下载 IntelliJ 平台源….executor": "Run",
+    "Gradle.下载源代码.executor": "Run",
+    "Gradle.升级 Gradle 包装器.executor": "Run",
+    "Gradle.构建 SalvoRsTool.executor": "Run",
+    "GradleDaemonJvmCriteriaMigrationNotification.isNotificationDisabled": "true",
+    "JUnit.整个项目 (1).executor": "Run",
+    "JUnit.整个项目.executor": "Run",
+    "Kotlin.MyJsonParseKt.executor": "Run",
+    "Kotlin.MyRsPsiElementManagerKt.executor": "Run",
+    "RunOnceActivity.MCP Project settings loaded": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.rust.reset.selective.auto.import": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cidr.known.project.marker": "true",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "dart.analysis.tool.window.visible": "false",
+    "git-widget-placeholder": "2.4.1",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last.edited.regexp": "/api/post/<id>/<param>",
+    "last_opened_file_path": "/Users/hlx/github/SalvoRsTool",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "org.rust.cargo.project.model.impl.CargoExternalSystemProjectAware.subscribe.first.balloon": "",
+    "org.rust.first.attach.projects": "true",
+    "project.structure.last.edited": "Dependencies",
+    "project.structure.proportion": "0.17",
+    "project.structure.side.proportion": "0.41099477",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle",
+    "show.migrate.to.gradle.popup": "false",
+    "ts.external.directory.path": "/Users/ldd/Applications/IntelliJ IDEA Ultimate 2024.1.1.app/Contents/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;sqlite&quot;,
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "sqlite",
+      "mysql"
     ],
-    &quot;stardust.markdown.MarkdownSplitEditorSuppressor:keyList&quot;: []
+    "stardust.markdown.MarkdownSplitEditorSuppressor:keyList": []
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test/testData" />
@@ -484,34 +1446,7 @@
       <command value="gradle patchChangelog" />
     </option>
   </component>
-  <component name="RunManager" selected="Gradle.Run Plugin">
-    <configuration name="ActixApiModelParserTest.testParse" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;shop.itbug.salvorstool.ActixApiModelParserTest.testParse&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <GradleProfilingDisabled>false</GradleProfilingDisabled>
-      <GradleCoverageDisabled>false</GradleCoverageDisabled>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.SalvoRsTool [runIde]">
     <configuration name="BaseTest.testTemp" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -533,6 +1468,10 @@
       <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <EXTENSION ID="com.android.tools.idea.testartifacts.testsuite.GradleRunConfigurationExtension">
+        <com.android.tools.idea.testartifacts.testsuite.SHOW_TEST_RESULT_IN_ANDROID_TEST_SUITE_VIEW>false</com.android.tools.idea.testartifacts.testsuite.SHOW_TEST_RESULT_IN_ANDROID_TEST_SUITE_VIEW>
+        <android.execution.deploysToLocalDevice>false</android.execution.deploysToLocalDevice>
+      </EXTENSION>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
       <GradleProfilingDisabled>false</GradleProfilingDisabled>
@@ -558,13 +1497,17 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <EXTENSION ID="com.android.tools.idea.testartifacts.testsuite.GradleRunConfigurationExtension">
+        <com.android.tools.idea.testartifacts.testsuite.SHOW_TEST_RESULT_IN_ANDROID_TEST_SUITE_VIEW>false</com.android.tools.idea.testartifacts.testsuite.SHOW_TEST_RESULT_IN_ANDROID_TEST_SUITE_VIEW>
+        <android.execution.deploysToLocalDevice>false</android.execution.deploysToLocalDevice>
+      </EXTENSION>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>false</RunAsTest>
       <GradleProfilingDisabled>false</GradleProfilingDisabled>
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="SalvoRsTool [publishPlugin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SalvoRsTool [printBundledModules]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -575,7 +1518,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="publishPlugin" />
+            <option value="printBundledModules" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -583,13 +1526,17 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <EXTENSION ID="com.android.tools.idea.testartifacts.testsuite.GradleRunConfigurationExtension">
+        <com.android.tools.idea.testartifacts.testsuite.SHOW_TEST_RESULT_IN_ANDROID_TEST_SUITE_VIEW>false</com.android.tools.idea.testartifacts.testsuite.SHOW_TEST_RESULT_IN_ANDROID_TEST_SUITE_VIEW>
+        <android.execution.deploysToLocalDevice>false</android.execution.deploysToLocalDevice>
+      </EXTENSION>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>false</RunAsTest>
       <GradleProfilingDisabled>false</GradleProfilingDisabled>
       <GradleCoverageDisabled>false</GradleCoverageDisabled>
       <method v="2" />
     </configuration>
-    <configuration name="SalvoRsTool [verifyPlugin]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SalvoRsTool [printBundledPlugins]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -600,7 +1547,7 @@
         </option>
         <option name="taskNames">
           <list>
-            <option value="verifyPlugin" />
+            <option value="printBundledPlugins" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -608,6 +1555,39 @@
       <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <EXTENSION ID="com.android.tools.idea.testartifacts.testsuite.GradleRunConfigurationExtension">
+        <com.android.tools.idea.testartifacts.testsuite.SHOW_TEST_RESULT_IN_ANDROID_TEST_SUITE_VIEW>false</com.android.tools.idea.testartifacts.testsuite.SHOW_TEST_RESULT_IN_ANDROID_TEST_SUITE_VIEW>
+        <android.execution.deploysToLocalDevice>false</android.execution.deploysToLocalDevice>
+      </EXTENSION>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>false</RunAsTest>
+      <GradleProfilingDisabled>false</GradleProfilingDisabled>
+      <GradleCoverageDisabled>false</GradleCoverageDisabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="SalvoRsTool [runIde]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="runIde" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <ExternalSystemDebugDisabled>false</ExternalSystemDebugDisabled>
+      <EXTENSION ID="com.android.tools.idea.testartifacts.testsuite.GradleRunConfigurationExtension">
+        <com.android.tools.idea.testartifacts.testsuite.SHOW_TEST_RESULT_IN_ANDROID_TEST_SUITE_VIEW>false</com.android.tools.idea.testartifacts.testsuite.SHOW_TEST_RESULT_IN_ANDROID_TEST_SUITE_VIEW>
+        <android.execution.deploysToLocalDevice>false</android.execution.deploysToLocalDevice>
+      </EXTENSION>
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>false</RunAsTest>
       <GradleProfilingDisabled>false</GradleProfilingDisabled>
@@ -615,20 +1595,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Gradle.Run Plugin" />
+      <item itemvalue="Gradle.SalvoRsTool [printBundledModules]" />
+      <item itemvalue="Gradle.SalvoRsTool [printBundledPlugins]" />
+      <item itemvalue="Gradle.SalvoRsTool [runIde]" />
       <item itemvalue="Gradle.SalvoRsTool [clean]" />
       <item itemvalue="Gradle.BaseTest.testTemp" />
-      <item itemvalue="Gradle.ActixApiModelParserTest.testParse" />
-      <item itemvalue="Gradle.SalvoRsTool [publishPlugin]" />
-      <item itemvalue="Gradle.SalvoRsTool [verifyPlugin]" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.SalvoRsTool [runIde]" />
+        <item itemvalue="Gradle.SalvoRsTool [printBundledPlugins]" />
+        <item itemvalue="Gradle.SalvoRsTool [printBundledModules]" />
         <item itemvalue="Gradle.SalvoRsTool [clean]" />
         <item itemvalue="Gradle.BaseTest.testTemp" />
-        <item itemvalue="Gradle.SalvoRsTool [publishPlugin]" />
-        <item itemvalue="Gradle.ActixApiModelParserTest.testParse" />
-        <item itemvalue="Gradle.SalvoRsTool [verifyPlugin]" />
       </list>
     </recent_temporary>
   </component>
@@ -952,7 +1931,7 @@
       <workItem from="1759998494640" duration="4304000" />
       <workItem from="1761532288310" duration="3184000" />
       <workItem from="1773890991387" duration="3223000" />
-      <workItem from="1773907618846" duration="3535000" />
+      <workItem from="1773907618846" duration="4704000" />
     </task>
     <task id="LOCAL-00009" summary="test">
       <option name="closed" value="true" />
