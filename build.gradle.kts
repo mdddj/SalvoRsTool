@@ -21,7 +21,7 @@ plugins {
 
 group = "shop.itbug"
 
-version = "2.4.0"
+version = "2.4.1"
 
 repositories {
     mavenCentral()
@@ -73,17 +73,17 @@ if (pushToken == null) {
 intellijPlatform {
     pluginVerification {
         ides {
-            create(IntelliJPlatformType.RustRover,"2025.2")
+            create(IntelliJPlatformType.RustRover,"2026.2")
         }
     }
 
-//    pluginConfiguration {
-//        productDescriptor {
-//            code.set("PRUSTX")
-//            releaseDate.set("20260319")
-//            releaseVersion.set("24")
-//        }
-//    }
+    pluginConfiguration {
+        productDescriptor {
+            code.set("PRUSTX")
+            releaseDate.set("20261103")
+            releaseVersion.set("25")
+        }
+    }
 }
 
 kotlin {
@@ -118,7 +118,8 @@ tasks {
     val descText = projectDir.resolve("DESCRIPTION.md").readText()
 
     patchPluginXml {
-        sinceBuild.set("251")
+        sinceBuild.set("262")
+        untilBuild.set("262.*")
         changeNotes.set(myChangeLog)
         pluginDescription.set(descText)
     }

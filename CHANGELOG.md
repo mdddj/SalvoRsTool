@@ -2,7 +2,14 @@
 
 ## Unreleased
 
-### [2.4.0] -2026-03-19
+## [2.4.1] - 2026-11-03
+
+- Adapted for RustRover 2026.2 (`since-build` bumped to `262`)
+- [salvo] Fixed a crash on RustRover 2026.2: the Rust plugin moved `RsFunction.block` out of `RsFunctionKt`, so the old call still compiled but threw `NoSuchMethodError` at runtime. It broke API scanning, code generation, the Salvo tool window and Search Everywhere
+- [salvo] API scanning and code generation now go through platform PSI APIs instead of Rust plugin internals, so they survive future Rust plugin refactoring
+- Build toolchain upgraded: Kotlin 2.3.20, IntelliJ Platform Gradle Plugin 2.19.0, Gradle 9.8.2, JDK 25
+
+## [2.4.0] -2026-03-19
 
 - [salvo] Reworked API scanning with a unified recursive router parser
 - [salvo] Added support for direct router-returning functions and nested `push(...)` references
