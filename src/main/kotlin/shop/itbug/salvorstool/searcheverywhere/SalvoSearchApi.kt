@@ -49,7 +49,6 @@ class SalvoSearchApi : SearchEverywhereContributorFactory<SalvoApiItem> {
         override fun getDataForItem(element: SalvoApiItem, dataId: String): Any? {
             return null
         }
-
         override fun processSelectedItem(selected: SalvoApiItem, modifiers: Int, searchText: String): Boolean {
             selected.navTo()
             return true

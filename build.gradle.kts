@@ -10,13 +10,13 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     idea
-    id("org.jetbrains.kotlin.jvm") version "2.2.21"
-    id("org.jetbrains.intellij.platform") version "2.13.1"
-    id("org.jetbrains.changelog") version "2.2.0"
+    id("org.jetbrains.kotlin.jvm") version "2.3.20"
+    id("org.jetbrains.intellij.platform") version "2.19.0"
+    id("org.jetbrains.changelog") version "2.2.1"
 
     // compose
-    id("org.jetbrains.compose") version "1.10.0"
-    id("org.jetbrains.kotlin.plugin.compose") version "2.2.21"
+    id("org.jetbrains.compose") version "1.8.2"
+    id("org.jetbrains.kotlin.plugin.compose") version "2.3.20"
 }
 
 group = "shop.itbug"
@@ -43,8 +43,7 @@ fun getChangelogVersion(): String {
 
 dependencies {
     intellijPlatform {
-//        rustRover("2025.2")
-        local("/Users/ldd/Applications/RustRover.app")
+        rustRover("2026.2.5")
         bundledPlugins(
             "JavaScript",
             "com.jetbrains.rust",
@@ -78,13 +77,13 @@ intellijPlatform {
         }
     }
 
-    pluginConfiguration {
-        productDescriptor {
-            code.set("PRUSTX")
-            releaseDate.set("20260319")
-            releaseVersion.set("24")
-        }
-    }
+//    pluginConfiguration {
+//        productDescriptor {
+//            code.set("PRUSTX")
+//            releaseDate.set("20260319")
+//            releaseVersion.set("24")
+//        }
+//    }
 }
 
 kotlin {
@@ -95,16 +94,16 @@ kotlin {
 }
 
 java {
-    sourceCompatibility = JavaVersion.VERSION_21
-    targetCompatibility = JavaVersion.VERSION_21
+    sourceCompatibility = JavaVersion.VERSION_25
+    targetCompatibility = JavaVersion.VERSION_25
 }
 
 
 tasks {
     withType<KotlinCompile> {
         compilerOptions {
-            languageVersion.set(KotlinVersion.KOTLIN_2_2)
-            jvmTarget.set(JvmTarget.JVM_21)
+            languageVersion.set(KotlinVersion.KOTLIN_2_3)
+            jvmTarget.set(JvmTarget.JVM_25)
         }
     }
 
@@ -145,7 +144,6 @@ tasks {
     }
 
     runIde {
-        autoReload = true
         jvmArgs = listOf("-XX:+AllowEnhancedClassRedefinition")
 //        args = listOf("/Users/hlx/github/SalvoRsTool/actix/hello-world")
 //        args = listOf("/Users/hlx/github/d_blog")
