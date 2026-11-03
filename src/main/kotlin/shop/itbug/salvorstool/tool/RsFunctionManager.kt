@@ -1,8 +1,8 @@
 package shop.itbug.salvorstool.tool
 
 import com.intellij.psi.util.PsiTreeUtil
+import org.rust.lang.core.psi.RsBlock
 import org.rust.lang.core.psi.RsTypeReference
-import org.rust.lang.core.psi.ext.block
 import org.rust.lang.core.psi.impl.RsFunctionImpl
 import org.rust.lang.core.psi.impl.RsLetDeclImpl
 
@@ -22,7 +22,9 @@ class RsFunctionManager(private val rsFunction: RsFunctionImpl) {
 
     //获取所有的let表达式
     val allLet : List<RsLetDeclImpl> get(){
-        val block = rsFunction.block ?: return emptyList()
+        // 不能用 org.rust.lang.core.psi.ext.block：该扩展属性在 RustRover 2026.2 已从
+        // RsFunctionKt 移到 RsFunctionImplMixinKt，编译期无感知、运行期 NoSuchMethodError。
+        val block = PsiTreeUtil.getChildOfType(rsFunction, RsBlock::class.java) ?: return emptyList()
         return PsiTreeUtil.findChildrenOfType(block, RsLetDeclImpl::class.java).toList()
     }
 }

@@ -6,9 +6,9 @@ import com.intellij.psi.PsiFile
 import com.intellij.psi.SmartPointerManager
 import com.intellij.psi.search.GlobalSearchScope
 import com.intellij.psi.util.PsiTreeUtil
+import org.rust.lang.core.psi.RsBlock
 import org.rust.lang.core.psi.RsExpr
 import org.rust.lang.core.psi.RsMethodCall
-import org.rust.lang.core.psi.ext.block
 import org.rust.lang.core.psi.impl.RsBlockExprImpl
 import org.rust.lang.core.psi.impl.RsCallExprImpl
 import org.rust.lang.core.psi.impl.RsExprStmtImpl
@@ -180,7 +180,8 @@ class SalvoRouterParser(private val project: Project) {
     }
 
     private fun findFunctionResultExpr(function: RsFunctionImpl): RsExpr? {
-        val block = function.block ?: return null
+        // 与 RsFunctionManager 一致：直接查 PSI 子节点，不用 Rust 插件的 block 扩展属性
+        val block = PsiTreeUtil.getChildOfType(function, RsBlock::class.java) ?: return null
         val directExprStmts = PsiTreeUtil.getChildrenOfTypeAsList(block, RsExprStmtImpl::class.java)
         directExprStmts.lastOrNull()?.let { stmt ->
             getDirectExpr(stmt)?.let { return it }
