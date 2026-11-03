@@ -13,7 +13,7 @@ val RsMethodCall.methodCallManager: RsMethodCallManager get() = RsMethodCallMana
 /**
  *
  * push(
- *             Router::with_path("<id>")
+ *             Router::with_path("{id}")
  *                 .put(put_update_post)
  *                 .delete(delete_post)
  *                 .get(get_post_by_id),

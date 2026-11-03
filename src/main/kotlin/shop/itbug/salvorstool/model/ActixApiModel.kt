@@ -4,6 +4,7 @@ import com.intellij.openapi.module.Module
 import com.intellij.psi.SmartPsiElementPointer
 import org.rust.lang.core.psi.RsFile
 import org.rust.lang.core.psi.RsFunction
+import org.rust.lang.core.psi.impl.RsMethodCallImpl
 
 /** actix api 模型 */
 class ActixApiModel(
@@ -12,7 +13,8 @@ class ActixApiModel(
     val functionElement: SmartPsiElementPointer<RsFunction>? = null,
     val comment: String? = null,
     val psiFile: RsFile? = null,
-    val module: Module? = null
+    val module: Module? = null,
+    val methodElement: SmartPsiElementPointer<RsMethodCallImpl>? = null
 )
 
 enum class ActixApiModelMethod {

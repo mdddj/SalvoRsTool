@@ -96,16 +96,15 @@ class MyRsStructManager(private val psiElement: RsStructItemImpl) : RsStructItem
 
 
     /// 生成antd table 列
-    val getAntdTableColumnDefineV2: String
-        get() {
-            val sb = StringBuilder()
-            sb.appendLine("[")
-            val ls = jsModelList
-            ls.map {
-                sb.append(it.antdTableColumnItem(it == ls.last()))
-            }
-            sb.appendLine(
-                $"""
+    fun getAntdTableColumnDefineV2(deleteApi: String): String {
+        val sb = StringBuilder()
+        sb.appendLine("[")
+        val ls = jsModelList
+        ls.map {
+            sb.append(it.antdTableColumnItem(it == ls.last()))
+        }
+        sb.appendLine(
+            $"""
 ,{
     dataIndex: 'actions',
     title: '操作',
@@ -115,7 +114,7 @@ class MyRsStructManager(private val psiElement: RsStructItemImpl) : RsStructItem
         <AddOrUpdateForm trigger={<Button size={'small'} >编辑</Button>} initValues={entity} onSuccess={action?.reload} />
         <Popconfirm title={'确定删除吗?'} onConfirm={ async () => {
           try{
-            await apiIdeaPluginDeleteApi(`${'$'}{entity.${primaryKeyFieldString}}`)
+            await ${deleteApi}(`${'$'}{entity.${primaryKeyFieldString}}`)
             message.success("删除成功")
             action?.reload();
           }catch (e) {
@@ -128,18 +127,18 @@ class MyRsStructManager(private val psiElement: RsStructItemImpl) : RsStructItem
     }
 }
             """.trimIndent()
-            )
-            sb.appendLine("]")
-            return sb.toString()
-        }
+        )
+        sb.appendLine("]")
+        return sb.toString()
+    }
 
 
     ///==============================代码生成 index.tsx
 
     // table column 配置
-    fun genWithTableColumnDefine(): String {
+    fun genWithTableColumnDefine(deleteApi: String): String {
         return $"""
-            const columns: ProColumns<$tsModelName>[] = $getAntdTableColumnDefineV2
+            const columns: ProColumns<$tsModelName>[] = ${getAntdTableColumnDefineV2(deleteApi)}
         """.trimIndent()
     }
 
@@ -187,7 +186,7 @@ export default function Index() {
     }
 
     //生成首页代码
-    fun genIndexPageString(listApiName: String,deleteApi:String): String {
+    fun genIndexPageString(listApiName: String, deleteApi: String): String {
         return $"""
     import { ActionType,PageContainer, ProColumns, ProTable } from '@ant-design/pro-components';
     import { $tsModelName } from './Model';
@@ -196,7 +195,7 @@ export default function Index() {
     import {AddOrUpdateForm} from './add_or_update';
     import { useRef } from 'react';
     
-    ${genWithTableColumnDefine()}
+    ${genWithTableColumnDefine(deleteApi)}
     
     ${genExportDefaultIndex(listApiName)}
         """.trimMargin()

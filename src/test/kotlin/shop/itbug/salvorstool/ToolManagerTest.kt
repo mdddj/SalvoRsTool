@@ -5,6 +5,7 @@ import org.rust.lang.core.psi.RsFunction
 import org.rust.lang.core.psi.RsStructItem
 import org.rust.lang.core.psi.impl.RsFunctionImpl
 import org.rust.lang.core.psi.impl.RsStructItemImpl
+import shop.itbug.salvorstool.model.SalvoApiItemMethod
 import shop.itbug.salvorstool.tool.*
 
 /** 工具管理器测试类 测试插件中的各种PSI管理器和工具类的功能 */
@@ -189,11 +190,20 @@ class ToolManagerTest : BasePlatformTestCase() {
         allLets.forEach { letDecl ->
             val manager = letDecl.rsLetDeclImplManager
             assertNotNull("每个let声明都应该有管理器", manager)
-
-            // 测试API提取（假设rsLetDeclImplManager有allApi属性）
-            // val apis = manager.allApi
-            // 这里可以根据实际的manager实现来添加更多测试
         }
+
+        val routerApis = allLets.first { it.pat?.text == "router" }.rsLetDeclImplManager.allApi
+        assertTrue("router let 应该解析出 GET /users", routerApis.any {
+            it.api == "/users" && it.method == SalvoApiItemMethod.Get
+        })
+        assertTrue("router let 应该解析出 POST /users", routerApis.any {
+            it.api == "/users" && it.method == SalvoApiItemMethod.Post
+        })
+
+        val adminApis = allLets.first { it.pat?.text == "admin_router" }.rsLetDeclImplManager.allApi
+        assertTrue("admin_router let 应该解析出 GET /admin/stats", adminApis.any {
+            it.api == "/admin/stats" && it.method == SalvoApiItemMethod.Get
+        })
     }
 
     /** 测试RsPsiElementTools */
@@ -371,5 +381,70 @@ class ToolManagerTest : BasePlatformTestCase() {
 
         val mainRouterLets = mainRouter!!.myManager.allLet
         assertEquals("主路由应该有3个let声明", 3, mainRouterLets.size)
+    }
+
+    fun testSalvoRouterParserHandlesDirectFunctionsAndPushRefs() {
+        val code =
+                """
+            use salvo::prelude::*;
+
+            fn user_router() -> Router {
+                let router = Router::with_path("/users")
+                    .get("/", list_users)
+                    .post("/", create_user);
+                router
+            }
+
+            fn product_router() -> Router {
+                Router::with_path("/products")
+                    .get("/", list_products)
+                    .patch("/:id/status", update_product_status)
+            }
+
+            fn api_router() -> Router {
+                Router::new()
+                    .push(user_router())
+                    .push(product_router())
+                    .get("/health", health_check)
+            }
+        """.trimIndent()
+
+        val file = myFixture.configureByText("salvo_router_parser_test.rs", code)
+        val functions = mutableListOf<RsFunctionImpl>()
+
+        file.accept(
+                object : com.intellij.psi.PsiRecursiveElementVisitor() {
+                    override fun visitElement(element: com.intellij.psi.PsiElement) {
+                        if (element is RsFunctionImpl) {
+                            functions.add(element)
+                        }
+                        super.visitElement(element)
+                    }
+                }
+        )
+
+        val productRouter = functions.first { it.name == "product_router" }
+        val productApis = productRouter.parseSalvoApis()
+        assertTrue("应该解析出 GET /products", productApis.any {
+            it.api == "/products" && it.method == SalvoApiItemMethod.Get
+        })
+        assertTrue("应该解析出 PATCH /products/{id}/status", productApis.any {
+            it.api == "/products/{id}/status" && it.method == SalvoApiItemMethod.Patch
+        })
+
+        val apiRouter = functions.first { it.name == "api_router" }
+        val apiApis = apiRouter.parseSalvoApis()
+        assertTrue("主路由应该包含 GET /users", apiApis.any {
+            it.api == "/users" && it.method == SalvoApiItemMethod.Get
+        })
+        assertTrue("主路由应该包含 POST /users", apiApis.any {
+            it.api == "/users" && it.method == SalvoApiItemMethod.Post
+        })
+        assertTrue("主路由应该包含 PATCH /products/{id}/status", apiApis.any {
+            it.api == "/products/{id}/status" && it.method == SalvoApiItemMethod.Patch
+        })
+        assertTrue("主路由应该包含 GET /health", apiApis.any {
+            it.api == "/health" && it.method == SalvoApiItemMethod.Get
+        })
     }
 }

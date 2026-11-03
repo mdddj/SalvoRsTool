@@ -362,6 +362,7 @@ class ActixApiWindow(val project: Project) : BorderLayoutPanel(), Disposable, Ac
 
     private fun navigateToCode(api: ActixApiModel) {
         api.functionElement?.element?.navigate(true)
+        api.methodElement?.element?.navigate(true)
     }
 
     override fun dispose() {

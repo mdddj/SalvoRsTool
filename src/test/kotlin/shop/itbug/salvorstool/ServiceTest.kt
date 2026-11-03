@@ -5,6 +5,7 @@ import com.intellij.testFramework.fixtures.BasePlatformTestCase
 import kotlinx.coroutines.runBlocking
 import org.rust.lang.core.psi.impl.RsFunctionImpl
 import shop.itbug.salvorstool.model.SalvoApiItem
+import shop.itbug.salvorstool.model.SalvoApiItemMethod
 import shop.itbug.salvorstool.service.RustProjectService
 import shop.itbug.salvorstool.service.SalvoApiService
 import shop.itbug.salvorstool.tool.myManager
@@ -76,6 +77,24 @@ class ServiceTest : BasePlatformTestCase() {
 
             // 验证扫描到的API数量
             assertTrue("应该扫描到API项", apiList.isNotEmpty())
+            assertTrue("应该扫描到 GET /users", apiList.any {
+                it.api == "/users" && it.method == SalvoApiItemMethod.Get
+            })
+            assertTrue("应该扫描到 POST /users", apiList.any {
+                it.api == "/users" && it.method == SalvoApiItemMethod.Post
+            })
+            assertTrue("应该扫描到 GET /products", apiList.any {
+                it.api == "/products" && it.method == SalvoApiItemMethod.Get
+            })
+            assertTrue("应该扫描到 POST /products", apiList.any {
+                it.api == "/products" && it.method == SalvoApiItemMethod.Post
+            })
+            assertTrue("应该扫描到 PATCH /products/{id}/status", apiList.any {
+                it.api == "/products/{id}/status" && it.method == SalvoApiItemMethod.Patch
+            })
+            assertTrue("应该扫描到 GET /health", apiList.any {
+                it.api == "/health" && it.method == SalvoApiItemMethod.Get
+            })
 
             // 验证API项的结构
             apiList.forEach { api ->

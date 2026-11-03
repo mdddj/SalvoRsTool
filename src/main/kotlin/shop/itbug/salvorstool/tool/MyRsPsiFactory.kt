@@ -46,16 +46,16 @@ object MyRsPsiFactory {
 
         ///生成字段
         val sb = StringBuilder()
-            val fs = psiElement.structItemManager.fieldList
+        val fs = psiElement.structItemManager.fieldList
         fs.forEach { field ->
             run {
                 val manager = field.namedFieldManager
                 if (manager.isPrimaryKey) {
                     sb.appendLine("\t\t\t${manager.name}: NotSet,")
                 } else {
-                    if(fs.lastOrNull() == field){
+                    if (fs.lastOrNull() == field) {
                         sb.append("\t\t\t${manager.name}: Set(req.${manager.name}.clone())")
-                    }else{
+                    } else {
                         sb.appendLine("\t\t\t${manager.name}: Set(req.${manager.name}.clone()),")
                     }
 
@@ -71,16 +71,17 @@ object MyRsPsiFactory {
         ///获取除主键以外的其他字段
         val fields = psiElement.structItemManager.fieldList.filter { !it.namedFieldManager.isPrimaryKey }
         val fsb = StringBuilder()
-        fields.forEach { field -> run {
-            val m = field.namedFieldManager
-            if(fields.lastOrNull() == field){
-                fsb.append("\t\t${m.name}: req.${m.name}")
-            }else{
-                fsb.appendLine("\t\t${m.name}: req.${m.name},")
+        fields.forEach { field ->
+            run {
+                val m = field.namedFieldManager
+                if (fields.lastOrNull() == field) {
+                    fsb.append("\t\t${m.name}: req.${m.name}")
+                } else {
+                    fsb.appendLine("\t\t${m.name}: req.${m.name},")
+                }
+
             }
-
-        }}
-
+        }
 
 
         val text = """
@@ -190,7 +191,7 @@ $fsb
             fsb.appendLine("\t\t\t$f: r.${f},")
         }
         val text = """
-pub async fn ${tabName+"_find_all"}() -> AppResult<Vec<$typeStructName>> {
+pub async fn ${tabName + "_find_all"}() -> AppResult<Vec<$typeStructName>> {
     let db = DB
         .get()
         .ok_or(anyhow::anyhow!("Database connection failed."))?;
@@ -230,7 +231,7 @@ $fsb
                 Request,
             };
             
-            //Router::with_path("/api/$tabName").get(get_${tabName}_all).post(post_add_$tabName).push(Router::with_path("<${primaryField.namedFieldManager.name}>").put(put_update_$tabName).delete(delete_$tabName))
+            //Router::with_path("/api/$tabName").get(get_${tabName}_all).post(post_add_$tabName).push(Router::with_path("{${primaryField.namedFieldManager.name}}").put(put_update_$tabName).delete(delete_$tabName))
             
             #[endpoint(tags("$tabName"))]
             pub async fn post_add_$tabName(new_$tabName: JsonBody<$addReq>) -> AppWriter<$response> {

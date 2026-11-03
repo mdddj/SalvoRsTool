@@ -8,6 +8,15 @@
     <depends>org.toml.lang</depends>
     <depends>com.intellij.database</depends>
     <depends>com.intellij.modules.json</depends>
+    <dependencies>
+        <module name="intellij.platform.jewel.foundation"/>
+        <module name="intellij.platform.jewel.ui"/>
+        <module name="intellij.platform.jewel.ideLafBridge"/>
+        <module name="intellij.libraries.compose.foundation.desktop"/>
+        <module name="intellij.libraries.skiko"/>
+        <module name="intellij.platform.jewel.markdown.core"/>
+        <module name="intellij.platform.jewel.markdown.ideLafBridgeStyling"/>
+    </dependencies>
     <resource-bundle>messages.pluginBundle</resource-bundle>
     <!--    <product-descriptor code="PMYFLUTTER" release-date="20250723" release-version="2025201" />-->
     <extensions defaultExtensionNs="org.jetbrains.kotlin">
@@ -26,11 +35,14 @@
             <className>shop.itbug.salvorstool.intention.CopyTSInterfaceActionWithCodegen</className>
             <language>Rust</language>
         </intentionAction>
-        <toolWindow factoryClass="shop.itbug.salvorstool.window.SalvoApiWindowFactory" id="Salvo Endpoints" anchor="right"
-                    icon="/icons/logo.svg"/>
+
         <toolWindow factoryClass="shop.itbug.salvorstool.window.ActixApiWindowFactory" id="Actix Endpoints"
                     anchor="right"
                     icon="/icons/logo.svg"/>
+        <toolWindow factoryClass="shop.itbug.salvorstool.window.SalvoApiWindowFactory" id="Salvo Endpoints"
+                    anchor="right"
+                    icon="/icons/logo.svg"/>
+
         <searchEverywhereContributor implementation="shop.itbug.salvorstool.searcheverywhere.SalvoSearchApi"/>
         <statusBarWidgetFactory implementation="shop.itbug.salvorstool.bar.BottomStatusBar" id="SalvoToolBar"/>
         <webHelpProvider implementation="shop.itbug.salvorstool.help.MyWebHelpProvider"/>
@@ -163,6 +175,4 @@
         </action>
 
     </actions>
-
-
 </idea-plugin>

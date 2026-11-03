@@ -6,7 +6,6 @@ import shop.itbug.salvorstool.dialog.GenerateEntityDialog
 
 @Service(Service.Level.PROJECT)
 @State(name = "SeaOrmGenerateEntityConfig.xml", category = SettingsCategory.PLUGINS)
-@Storage(roamingType = RoamingType.DEFAULT)
 class SeaOrmCache: SimplePersistentStateComponent<GenerateEntityDialog.Config>(GenerateEntityDialog.Config()) {
 
     companion object{

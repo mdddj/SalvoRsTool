@@ -18,9 +18,8 @@ class SalvoSearchApi : SearchEverywhereContributorFactory<SalvoApiItem> {
     override fun createContributor(initEvent: AnActionEvent): SearchEverywhereContributor<SalvoApiItem> {
         return MySearchEverywhereProvider(initEvent.project!!)
     }
-    private fun Project.rustService() = RustProjectService.getInstance(this)
     override fun isAvailable(project: Project?): Boolean {
-        return project != null && runBlocking { project.rustService().hasSalvoDependencies() }
+        return project != null
     }
 
     private inner class MySearchEverywhereProvider(val project: Project) : SearchEverywhereContributor<SalvoApiItem> {
@@ -50,7 +49,6 @@ class SalvoSearchApi : SearchEverywhereContributorFactory<SalvoApiItem> {
         override fun getDataForItem(element: SalvoApiItem, dataId: String): Any? {
             return null
         }
-
         override fun processSelectedItem(selected: SalvoApiItem, modifiers: Int, searchText: String): Boolean {
             selected.navTo()
             return true

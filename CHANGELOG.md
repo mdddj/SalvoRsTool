@@ -2,10 +2,40 @@
 
 ## Unreleased
 
-### [2.3.0] -2025-08-01
+## 2.4.1 - 2026-11-03
+
+- Adapted for RustRover 2026.2 (`since-build` bumped to `262`)
+- [salvo] Fixed a crash on RustRover 2026.2: the Rust plugin moved `RsFunction.block` out of `RsFunctionKt`, so the old call still compiled but threw `NoSuchMethodError` at runtime. It broke API scanning, code generation, the Salvo tool window and Search Everywhere
+- [salvo] API scanning and code generation now go through platform PSI APIs instead of Rust plugin internals, so they survive future Rust plugin refactoring
+- Build toolchain upgraded: Kotlin 2.3.20, IntelliJ Platform Gradle Plugin 2.19.0, Gradle 9.8.2, JDK 25
+
+## 2.4.0 -2026-03-19
+
+- [salvo] Reworked API scanning with a unified recursive router parser
+- [salvo] Added support for direct router-returning functions and nested `push(...)` references
+- [salvo] Removed the old dependency on `Router` return-type filtering during project scans
+- [salvo] Improved path normalization for `"/"` child routes and parameter formats such as `:id`, `<id>`, and `{id}`
+- [salvo] Fixed multiple cases where chained or nested routes were not detected
+- Adapted for RustRover 2025.2
+
+### [2.3.3] -2025-09-06
+
+- [salvo] Fixed a bug in code generation
+- [salvo] Replaced the code generation path rule, `/api/q/<param>` -> `/api/q/{param}`
+
+### [2.3.2] -2025-08-20
+
+- [**Actix**] Add chained call API detection, example:`route("/hey", web::get().to(manual_hello))`
+
+### [2.3.1] -2025-08-06
+
+- Adapted for 2025.2
+
+### [2.3.0] -2025-08-04
 
 - Supported actix-web API scanning window (New Features)
 - Move the salvo api window to the right sidebar
+- ![](https://github.com/mdddj/SalvoRsTool/blob/main/images/actix-api-window.png?raw=true)
 
 ### [2.2.8] -2025-07-23
 
@@ -23,7 +53,6 @@
 ### [2.2.5] -2025-03-17
 
 - Fix known bugs
-
 
 ### [2.2.4] -2025-02-12
 
@@ -48,7 +77,6 @@
 - Optimize the use experience of salvo api window
 - Add sql table to struct operation
 - changelog and images: <a href="https://mdddj.github.io/SalvoRsToolDocument/changelog%E6%9B%B4%E6%96%B0%E6%97%A5%E5%BF%97.html">Changelog</a>
-
 
 ### [2.1.0] -2024-08-17
 
@@ -99,7 +127,6 @@
 
 - 适配2024.1
 
-
 ### [1.6.0] - 2024-05-13
 
 - 注意:下面的功能需要在前端项目中添加两个前端框架(<a href='https://tailwindcss.com/docs/installation/'>tailwindcss</a>和<a href='https://daisyui.com/'>daisy ui</a>)
@@ -124,7 +151,6 @@
 - 添加salvo api 接口搜索功能
 - 添加salvo tool window
 - 调整生成dto弹窗样式
-
 
 ### [1.3.5] - 2024-04-25
 
